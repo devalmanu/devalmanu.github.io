@@ -2,174 +2,422 @@
 <html lang="ru">
 
 <head>
-	<!-- Важная техническая информация для браузера -->
+
 	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>DevManu Portfolio</title>
+	<meta name="description" content="создание сайтов, разработка сайтов, DevMANU">
+	<meta name="Keywords" content="создание сайтов, разработка сайтов, DevMANU">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!-- Информация об Авторе и описание проекта -->
-	<meta name="description" content="Портфолио">
-	<meta name="author" content="Валентина Андреева">
+	<!-- Favicon -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Template Basic Images End -->
 
-	<!-- Иконка, которая будет на вкладке в браузере -->
-	<link rel="icon" href="/favicon.ico">
-	<!-- Заголовок на вкладке в браузере -->
-	<title>Портфолио - Валентина Андреева</title>
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#181818">
+	<meta name="msapplication-navbutton-color" content="#181818">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#181818">
+	<!-- Custom Browsers Color End -->
 
-	<!-- Подключаем наш файл со стилями, который находится в папке css-->
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:100,300,400,500" rel="stylesheet">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	<!-- <style>
+		body {
+			opacity: 0;
+			overflow-x: hidden;
+		}
+
+		html {
+			background-color: #181818;
+		}
+	</style> -->
+
+
+
 </head>
 
-<body>
-	<header class="header animated slideInLeft">
-		<div class="row">
-			<div class="container">
-				<div class="header-text">
-					<h1 class="block-title animated slideInLeft">Делаю сайты <span>для вашего бизнеса</span></h1>
-					<p class="block-description header-description">
-						<span>Я, Валентина Андреева,</span> разрабатываю сайты для бизнеса.
-						Продающие одностраничники,
-						имиджевые сайты-визитки <span>или полноценные интернет-магазины.</span>
-					</p>
-					<a href="#" class="header-button">Примеры работ</a>
-					<a href="#" class="header-button header-button_0">Обсудить проект</a>
+<body class="ishome">
+	<div class="preloader">
+		<div class="pulse"></div>
+	</div>
+	<div id="my-page">
+
+		<div id="my-header">
+			<header class="site-header" style="background-image: url(img/bg.jpg);">
+				<div class="top-line">
+					<a href="#" class="logo"><img src="img/logo/logo-white.svg" alt="website development"></a>
+					<div class="phone-numb d-none d-sm-block">
+						<i class="fa fa-mobile" aria-hidden="true"></i>
+						<a class="number" href="tel:+375256264923">+375 (25) 626-49-23</a>
+					</div>
+					<a href="#my-menu" class="mburger mburger--collapse">
+						<b></b>
+						<b></b>
+						<b></b>
+					</a>
+
+					<nav id="my-menu">
+						<ul>
+							<li>
+								<a href="#our-services">Услуги</a>
+							</li>
+							<li class="Selected">
+								<a href="#">Портфолио</a>
+							</li>
+							<li>
+								<a href="#call-form">Сотрудничество</a>
+							</li>
+							<li>
+								<a href="#">Контакты</a>
+							</li>
+						</ul>
+
+					</nav>
+				</div>
+				<div class="header-flex">
+					<div class="flex-center">
+
+						<div class="container">
+							<div class="row">
+								<div class="col-md-7 col-10">
+									<div class="header__offer">
+										<div class="header__title">
+											<p><span>Поможем вашему бизнесу</span>
+											</p>
+											<h1 class="h1">Разработка сайтов</h1>
+										</div>
+										<div class="header__subtitle">
+											<p class="header__text">Разработаем современный сайт любой сложности для решения
+												задач вашего бизнеса.</p>
+											<a href="#" class="button">Начать проект</a>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="header-social">
+					<nav class="social">
+						<ul>
+							<li>
+								<a href="tg://resolve?domain=valiamanu"><i class="fa fa-telegram" aria-hidden=" true"></i></a>
+							</li>
+							<li>
+								<a href="skype:live:manuilova-1986_2?chat"><i class="fa fa-skype" aria-hidden="true"></i></a>
+							</li>
+							<li>
+								<a href="https://github.com/devalmanu"><i class="fa fa-github" aria-hidden="true"></i></a>
+							</li>
+
+						</ul>
+					</nav>
+				</div>
+
+			</header>
+		</div>
+
+
+
+		<div id="my-content">
+
+			<section class="s-services" id="our-services">
+				<div class="owl-carousel carousel-services">
+
+					<div class="carousel-services-item">
+						<div class="carousel-services-content">
+							<div class="carousel-services-composition">
+								<div class="carousel-logo"><img src="img/logo/DevMANU-black.svg" alt="DevMANU"></div>
+								<h3 class="h3">Дизайн сайта</h3>
+								<ul class="carousel-services-list">
+									<li>Разработка макета</li>
+									<li>Разработка дизайна сайта</li>
+									<li>Разработка логотипа</li>
+								</ul>
+								<a href="#" class="button button-white">все услуги</a>
+							</div>
+						</div>
+						<div class="carousel-services-image"
+							style="background-image: url(img/photos/services/4-services.jpg);">
+						</div>
+					</div>
+
+					<div class="carousel-services-item">
+						<div class="carousel-services-content">
+							<div class="carousel-services-composition">
+								<div class="carousel-logo"><img src="img/logo/DevMANU-black.svg" alt="DevMANU"></div>
+								<h3 class="h3">Верстка сайта</h3>
+								<ul class="carousel-services-list">
+									<li>Верстка по макетам</li>
+									<li>Адаптивная верстка</li>
+									<li>Мобильная версия сайта</li>
+								</ul>
+								<a href="#" class="button button-white">все услуги</a>
+							</div>
+						</div>
+						<div class="carousel-services-image"
+							style="background-image: url(img/photos/services/1-services.jpg);">
+						</div>
+					</div>
+
+					<div class="carousel-services-item">
+						<div class="carousel-services-content">
+							<div class="carousel-services-composition">
+								<div class="carousel-logo"><img src="img/logo/DevMANU-black.svg" alt="DevMANU"></div>
+								<h3 class="h3">Верстка писем</h3>
+								<ul class="carousel-services-list">
+									<li>Дизайн письма</li>
+									<li>Адаптивная html-верстка</li>
+									<li>Рассылка средствами сервисов</li>
+								</ul>
+								<a href="#" class="button button-white">все услуги</a>
+							</div>
+						</div>
+						<div class="carousel-services-image"
+							style="background-image: url(img/photos/services/2-services.jpg);">
+						</div>
+					</div>
+
+					<div class="carousel-services-item">
+						<div class="carousel-services-content">
+							<div class="carousel-services-composition">
+								<div class="carousel-logo"><img src="img/logo/DevMANU-black.svg" alt="DevMANU"></div>
+								<h3 class="h3">Дизайн сайта</h3>
+								<ul class="carousel-services-list">
+									<li>Ключевая услуга 1</li>
+									<li>Ключевая услуга 1</li>
+									<li>Ключевая услуга 1</li>
+								</ul>
+								<a href="#" class="button button-white">все услуги</a>
+							</div>
+						</div>
+						<div class="carousel-services-image"
+							style="background-image: url(img/photos/services/3-services.jpg);">
+						</div>
+					</div>
+
+
+
+				</div>
+			</section>
+
+			<section class="s-about inverse section-overlay" style="background-image: url(img/photo-form.jpg);">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5 s-about_title">
+							<h2 class="h2">Наша задача</h2>
+							<p>Предлагаем услуги создания сайтов, онлайн магазинов, которые увеличат узнаваемость вашего
+								бизнеса в сети: дизайн и разработка уникальных решений.</p>
+							<p>Ваш сайт будет обладать высокой производительностью и безопасностью в зависимости от конкретных
+								требований бизнеса и отрасли.</p>
+						</div>
+						<div class="col-md-7">
+							<div class="section-gallery fotorama" data-nav="thumbs" data-minwidth="320" data-width="100%"
+								data-thumbwidth="112" data-thumbheight="63" data-thumbborder="4" data-thumbmargin="15"
+								data-transition="crossfade">
+								<a href="img/photos/7-gallery.jpg"><img src="img/photos/small/7-small.jpg"
+										alt="Разработка сайтов"></a>
+								<a href="img/photos/2-gallery.jpg"><img src="img/photos/small/2-small.jpg"
+										alt="Разработка сайтов"></a>
+								<a href="img/photos/3-gallery.jpg"><img src="img/photos/small/3-small.jpg"
+										alt="Разработка сайтов"></a>
+								<a href="img/photos/4-gallery.jpg"><img src="img/photos/small/4-small.jpg"
+										alt="Разработка сайтов"></a>
+								<a href="img/photos/5-gallery.jpg"><img src="img/photos/small/5-small.jpg"
+										alt="Разработка сайтов"></a>
+								<a href="img/photos/6-gallery.jpg"><img src="img/photos/small/6-small.jpg"
+										alt="Разработка сайтов"></a>
+								<a href="img/photos/1-gallery.jpg"><img src="img/photos/small/1-small.jpg"
+										alt="Разработка сайтов"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="s-call inverse" id="call-form" style="background-image: url(img/form.jpg);">
+				<div class="container">
+					<div class="row justify-content-end">
+						<div class="col-md-5 col-sm-7">
+
+							<form class="callback">
+								<div class="success"><span>Спасибо за заявку!</span></div>
+								<!-- hidden required feilds -->
+								<input type="hidden" name="project_name" value="DevManu">
+								<input type="hidden" name="admin_email" value="manuilova-1986@mail.ru">
+								<input type="hidden" name="form_subject" value="Form subject">
+								<!-- END hidden required feilds -->
+								<input type="hidden" name="Страница" value="">
+								<div class="callback-logo"><img src="img/logo/DevMANU-black.svg" alt="Разработка сайтов">
+								</div>
+								<div class="formhead h2">Оставить заявку</div>
+								<p>Заполните форму и мы перезвоним Вам в течение 15 минут</p>
+								<input type="text" name="text" placeholder="Ваше имя" required>
+								<input type="email" name="email" placeholder="Ваш email" required>
+								<select name="Услуга">
+									<option>Выберите услугу ...</option>
+									<option>Дизайн сайта</option>
+									<option>Верстка макета</option>
+									<option>Одностраничный сайт</option>
+									<option>Интернет-магазин</option>
+									<option>Сотрудничество</option>
+								</select>
+								<button class="button">Отправить</button>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="s-review inverse section-overlay" style="background-image: url(img/bg-review.jpg);">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-sm-12">
+							<h2 class="h2 text-center h-first">Отзывы наших клиентов</h2>
+						</div>
+						<div class="col-sm-8">
+							<div class="quotes"></div>
+							<div class="owl-carousel reviews">
+
+								<div class="review">
+									<div class="review-header">Антон</div>
+									<div class="review-date">20.08.2019</div>
+									<div class="review-stars">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="review-text">Нашёл для себя оптимального исполнителя. Помогли сформировать четкое
+										ТЗ, так как даже не имел сам представления о этапах работы. Работают до результата.
+										Рекомендую всем, кому нужны надёжные люди для реализации задачи!
+									</div>
+								</div>
+
+								<div class="review">
+									<div class="review-header">Павел</div>
+									<div class="review-date">23.01.2020</div>
+									<div class="review-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+											class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="review-text">Проект оказался сложней чем казался изначально, но это не
+										помешалоего выполнить в полном обьеме. Совместно решали вопросы, принимали правильные
+										решения. Будем дальше сотрудничать.
+									</div>
+								</div>
+
+								<div class="review">
+									<div class="review-header">Александр</div>
+									<div class="review-date">17.05.2020</div>
+									<div class="review-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+											class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="review-text">Верстка была выполнена на высоком уровне, все вопросы по ходу
+										разработки решались оперативно. В течение всего сотрудничества был виден самый
+										ответственный подход, всегда была адекватная обратная связь
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<div id="my-footer">
+			<div class="main-footer">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-lg-3 col-sm-6">
+							<div class="footer-column">
+								<img src="img/logo/logo-footer.svg" alt="Разработка сайтов" class="logo-footer">
+								<p>Разработка сайтов</p>
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-sm-6">
+							<div class="footer-column">
+								<nav class="footer-menu">
+									<ul>
+										<li class="active">
+											<a href="#">Услуги</a>
+										</li>
+										<li>
+											<a href="#">Портфолио</a>
+										</li>
+										<li>
+											<a href="#">Сотрудничество</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-sm-6">
+							<div class="footer-column">
+								<nav class="footer-contact">
+									<li><i class="fa fa-envelope-o" aria-hidden="true"></i>
+										<a href="mailto: manuilova-1986@mail.ru">devmanu@inbox.ru</a></li>
+									<li><i class="fa fa-mobile" aria-hidden="true"></i>
+										<a class="number" href="tel:+375256264923">+375 (25) 626-49-23</a></li>
+								</nav>
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-sm-6">
+							<div class="footer-column">
+								<div class="footer-social">
+									<nav class="social">
+										<ul>
+											<li>
+												<a href="tg://resolve?domain=valiamanu"><i class="fa fa-telegram"
+														aria-hidden="true"></i></a>
+											</li>
+											<li>
+												<a href="skype:live:manuilova-1986_2?chat"><i class="fa fa-skype"
+														aria-hidden="true"></i></a>
+											</li>
+											<li>
+												<a href="https://github.com/devalmanu"><i class="fa fa-github"
+														aria-hidden="true"></i></a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</header>
-	<section class="works">
-		<div class="row">
-			<div class="container">
-				<h2 class="block-title">Мои работы</h2>
-				<div class="works-items">
+	</div>
 
-					<!-- work-item start -->
-					<div class="work-item">
-						<div class="work-img">
-							<img src="img/works/work-img-01.jpg" alt="image work">
-						</div>
-						<div class="work-text">
-							<p class="work-description">
-								Одностраничный сайт для рекламы нового термобелья российского производства
-							</p>
-							<a href="#" class="work-link">Подробнее</a>
-						</div>
-					</div>
-					<!-- work-item end -->
+	<div class="top"><i class="fa fa-angle-double-up" aria-hidden="true"></i>
+	</div>
 
-					<!-- work-item start -->
-					<div class="work-item">
-						<div class="work-img">
-							<img src="img/works/work-img-02.jpg" alt="image work">
-						</div>
-						<div class="work-text">
-							<p class="work-description">
-								Адаптивный сайт для службы доставок наборов для похудения и детокса по Новосибирску
-							</p>
-							<a href="#" class="work-link">Подробнее</a>
-						</div>
-					</div>
-					<!-- work-item end -->
 
-				</div>
-			</div>
-		</div>
-	</section>
+	<script src=" js/scripts.min.js">
+	</script>
 
-	<section class="action">
-		<div class="row">
-			<div class="container">
-				<div class="action-container">
-					<div class="action-text">
-						<h2 class="block-title">Нужен сайт</h2>
-						<p class="block-description action-description">
-							Если у вас есть задумки по сайту давайте обсудим их. Я сориентирую по срокам и стоимости
-						</p>
-					</div>
-					<form action="#" class="action-form">
-						<input type="text" class="action-input" placeholder="e-mail">
-						<input type="submit" class="action-submit" value="Отправить">
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="about">
-		<div class="row">
-			<div class="container">
-				<div class="about-container">
-					<div class="about-experience">
-						<h2 class="block-title">Про опыт</h2>
-						<p class="block-description about-description">
-							Делать сайты я учился в Академии верстки на курсе «Веб-разработчик»
-						</p>
-						<img src="img/sertificate.jpg" class="about-img" alt="about img">
-					</div>
-					<div class="about-text">
-						<h2 class="block-title">Связаться со мной</h2>
-						<div class="about-contacts">
-							<div class="contacts-item">
-								<div class="contact-name">Телефон:</div>
-								<div class="contact-value">
-									<a href="tel:+375-25-626-49-23" class="contact-link" target="_blank">+375-25-626-49-23</a>
-								</div>
-							</div>
-							<div class="contacts-item">
-								<div class="contact-name">E-mail:</div>
-								<div class="contact-value">
-									<a href="mailto:manuilova-1986@mail.ru" class="contact-link" target="_blank">manuilova-1986@mail.ru</a>
-								</div>
-							</div>
-							<div class="contacts-item">
-								<div class="contact-name">Vk:</div>
-								<div class="contact-value">
-									<a href="vk.com/username" class="contact-link" target="_blank">vk.com/username</a>
-								</div>
-							</div>
-							<div class="contacts-item">
-								<div class="contact-name">Fb:</div>
-								<div class="contact-value">
-									<a href="facebook.com/username" class="contact-link" target="_blank">facebook.com/username</a>
-								</div>
-							</div>
-							<div class="contacts-item">
-								<div class="contact-name">Git:</div>
-								<div class="contact-value">
-									<a href="github.com/username" class="contact-link" target="_blank">github.com/username</a>
-								</div>
-							</div>
-						</div>
-						<form action="#" class="about-form">
-							<input type="text" class="about-input" placeholder="Имя Фамилия">
-							<input type="text" class="about-input" placeholder="Телефон">
-							<input type="email" class="about-input" placeholder="e-mail">
-							<input type="submit" class="about-submit" value="Отправить">
-							<div class="form-check">
-								<div class="about-input-checkbox"></div>
-								<p class="form-description">
-									Подтверждаю, что я ознакомлен и согласен с условиями <a href="#" class="form-link" target="_blank">политики
-										конфиденциальности</a>
-								</p>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<footer class="footer">
-		<div class="row">
-			<div class="container">
-				<p class="footer-text">2018, Сайт портфолио Андреевой Валентины</p>
-				<a href="#" class="footer-link footer-politic">Политика конфиденциальности.©</a>
-				<a href="#" class="footer-link footer-ofert">Договор оферты</a>
-			</div>
-		</div>
-	</footer>
 </body>
 
 </html>
