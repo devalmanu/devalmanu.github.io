@@ -9856,7 +9856,7 @@ body {
 body.ishome .site-header {
   min-height: 600px;
   height: 100vh;
-  background-color: #181818;
+  background-color: #2a303a;
   color: #ffffff;
 }
 
@@ -9874,7 +9874,7 @@ body.ishome .site-header .top-line {
   bottom: 0;
   right: 0;
   z-index: 100;
-  background-color: #181818;
+  background-color: #2a303a;
 }
 
 .pulse {
@@ -9887,7 +9887,7 @@ body.ishome .site-header .top-line {
 
 .pulse::before, .pulse::after {
   content: '';
-  border: 5px solid #474747;
+  border: 5px solid #555555;
   width: 5em;
   height: 5em;
   border-radius: 500px;
@@ -10038,18 +10038,18 @@ body.ishome .site-header .top-line {
 }
 
 .phone-numb .fa {
-  color: #181818;
+  color: #2a303a;
   font-size: 22px;
   margin-right: 5px;
 }
 
 .phone-numb .number {
   font-weight: 700;
-  color: #181818;
+  color: #2a303a;
 }
 
 .mburger {
-  color: #181818;
+  color: #2a303a;
   position: absolute;
   right: 0;
   top: 3em;
@@ -10063,7 +10063,7 @@ body.ishome .site-header .top-line {
 }
 
 .mburger:hover {
-  color: #181818;
+  color: #2a303a;
 }
 
 html.mm-opened {
@@ -10135,7 +10135,7 @@ section {
 
 section.inverse {
   color: #ffffff;
-  background-color: #181818;
+  background-color: #2a303a;
   background-image: url("../img/photos/about.jpg");
 }
 
@@ -10313,7 +10313,7 @@ section.inverse.s-call {
 }
 
 .carousel-services {
-  background-color: #181818;
+  background-color: #2a303a;
 }
 
 .carousel-services-item {
@@ -10440,7 +10440,7 @@ section.inverse.s-call {
 .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
   width: 2.8em;
   height: 2.8em;
-  color: #181818;
+  color: #2a303a;
   font-size: 1.25em;
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.3);
@@ -10524,7 +10524,7 @@ section.inverse.s-call {
 }
 
 .fotorama {
-  background-color: rgba(24, 24, 24, 0.4);
+  background-color: rgba(42, 48, 58, 0.4);
 }
 
 .fotorama__nav-wrap {
@@ -10584,7 +10584,7 @@ input, textarea, select,
   color: #383838;
   background-color: transparent;
   border-radius: 3px;
-  border: rgba(24, 24, 24, 0.15) 1px solid;
+  border: rgba(42, 48, 58, 0.15) 1px solid;
   padding: 0.5em 1.2em;
   outline: none;
   -webkit-box-shadow: none;
@@ -10862,7 +10862,7 @@ select {
 }
 
 .main-footer {
-  background-color: #303030;
+  background-color: #2a303a;
   padding: 3% 0;
   color: #ffffff;
   font-size: 15px;
@@ -10953,7 +10953,7 @@ select {
 }
 
 .footer-social .social li a:hover {
-  color: #2c2c2c;
+  color: #2a303a;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
