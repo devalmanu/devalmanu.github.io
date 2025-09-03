@@ -1,0 +1,189 @@
+form {
+	margin-top: 38px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 30px;
+	row-gap: 26px;
+
+	@include breakpoint(phablet) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.form-label {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		.just-validate-error-field {
+			border: 1px solid $accent;
+		}
+	}
+
+	input:not(.range-input) {
+		color: $color-black;
+		border-radius: 3px;
+		background: $color-thin;
+		border: 1px solid $color-white;
+		font-size: 16px;
+		font-style: normal;
+		font-family: $Lato-Regular;
+		line-height: 24px;
+		padding: 12px 10px;
+	}
+
+	span.file-title {
+		max-width: 100%;
+		display: inline-flex;
+		align-items: center;
+		column-gap: 10px;
+		font-family: $Lato-SemiBold;
+		font-size: 15px;
+		line-height: 1.4;
+		margin-bottom: 0;
+		background: $color-white;
+		padding: 13px 40px;
+		border: 2px solid #3e9cdc;
+		caret-color: transparent;
+		cursor: pointer;
+		&:hover,
+		&:active,
+		&:focus {
+			color: #ffffff;
+			background: #3e9cdc;
+			border: 2px solid #3e9cdc;
+		}
+	}
+
+	input[type="file"] {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+	}
+
+	.choices {
+		overflow: visible;
+	}
+
+	.just-validate-error-field {
+		border: 1px solid $accent;
+	}
+
+	.just-validate-error-label {
+		opacity: 1;
+		bottom: -20px;
+		left: 0;
+		position: absolute;
+		font-size: 12px;
+		line-height: 1.5;
+		color: $accent !important;
+	}
+
+	.cost-calculation__bottom {
+		margin-top: 20px;
+		grid-column: span 3;
+		@include breakpoint(phablet) {
+			margin-top: 15px;
+		}
+	}
+
+	.flex-wrap {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 30px;
+		@include breakpoint(phablet) {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+	}
+
+	.flex-wrap-2 {
+		grid-column: span 2;
+		label {
+			width: 70%;
+		}
+	}
+
+	.btn-submit {
+		font-family: $Lato-SemiBold;
+		padding: 16px 35px;
+		max-width: 370px;
+		margin: 0 auto;
+	}
+
+	&.order-calculation {
+		.btn-submit {
+			min-width: auto;
+		}
+	}
+
+	.text-desc__popup {
+		font-size: 15px;
+		line-height: 1.5;
+		color: #75767c;
+		max-width: 300px;
+		a {
+			color: $accent;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.cost-calculation {
+	padding: 121px 0 150px;
+	background: $color-black-light url("/img/@1x/cost.png") no-repeat center/contain;
+	@include breakpoint(desktop) {
+		padding: 90px 0 120px;
+		background-size: cover;
+	}
+
+	@include breakpoint(mobileonly) {
+		padding: 70px 0 90px;
+	}
+
+	&__wrapper {
+		&-top {
+			p {
+				color: #bbbbbb;
+				line-height: 1;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+		}
+
+		h2 {
+			font-family: $Lato-Heavy;
+			font-size: 36px;
+			line-height: 1.3;
+			color: $color-white;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+			@include breakpoint(tablet) {
+				font-size: 30px;
+			}
+			@include breakpoint(mobileonly) {
+				font-size: 26px;
+				margin-bottom: 20px;
+			}
+			span {
+				padding-left: 10px;
+			}
+		}
+
+		&-form {
+			width: 100%;
+			padding-top: 9px;
+			@include breakpoint(tablet) {
+				width: 100%;
+				padding-top: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="50" height="48"><svg width="50" height="48" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 11.3198C0 5.5838 4.64996 0.933838 10.386 0.933838H32.6495L25.5055 10.2454H11.6196C10.3449 10.2454 9.31158 11.2787 9.31158 12.5534V17.249C9.31158 18.5237 10.3449 19.557 11.6196 19.557H39.2758C45.0118 19.557 49.6617 24.2069 49.6617 29.943V37.1057C49.6617 42.8418 45.0118 47.4917 39.2758 47.4917H26.3828L33.5217 38.1801H38.0422C39.3168 38.1801 40.3502 37.1468 40.3502 35.8721V31.1766C40.3502 29.9019 39.3168 28.8686 38.0422 28.8686H10.386C4.64997 28.8686 0 24.2186 0 18.4826V11.3198ZM12.4154 31.3516H24.1984L18.9335 38.1801H30.4178L23.2789 47.4917H0L12.4154 31.3516ZM47.4887 0.933838H35.694L23.2786 17.0739H35.0732L47.4887 0.933838Z" fill="white"></path>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: contrast(1) brightness(0.1); } }
+@media (prefers-color-scheme: dark) { :root { filter: invert(100%); } }
+</style></svg>

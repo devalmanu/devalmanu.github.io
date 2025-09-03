@@ -1,0 +1,54 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  background: #10101de5;
+  &__container {
+    padding: 34px 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 25px;
+    @include breakpoint(tablet) {
+      padding: 23px 0;
+    }
+  }
+  &__logo {
+    p {
+      font-family: $Raleway-ExtraBold;
+      font-size: 28px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: $color-white;
+      span {
+        color: $accent;
+      }
+
+      @include breakpoint(tablet) {
+        font-size: 23px;
+      }
+
+      @include breakpoint(mobileonly) {
+        font-size: 18px;
+      }
+    }
+  }
+  &__contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2.75em;
+
+    @include breakpoint(tablet) {
+      align-items: flex-start;
+      flex-direction: column;
+      row-gap: 8px;
+      margin-top: 32px;
+      width: 100%;
+    }
+  }
+}

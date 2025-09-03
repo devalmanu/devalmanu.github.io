@@ -1,0 +1,7 @@
+@import "_mixins/font-face";
+
+@include font-face("Lato-Regular", "../fonts/Lato-Regular", 400, normal);
+@include font-face("Lato-SemiBold", "../fonts/Lato-SemiBold", 600, normal);
+@include font-face("Lato-Bold", "../fonts/Lato-Bold", 700, normal);
+@include font-face("Lato-Heavy", "../fonts/Lato-Heavy", 900, normal);
+@include font-face("Raleway-ExtraBold", "../fonts/Raleway-ExtraBold", 800, normal);

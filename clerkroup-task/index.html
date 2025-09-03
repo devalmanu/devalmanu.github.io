@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>ClerkGroup | Test task</title>
+	<meta name="description" content="test">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="./path/to/image.jpg">
+	<link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="ClerkGroup" />
+	<link rel="manifest" href="img/favicon/site.webmanifest" />
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/choices.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body class="main-page">
+	<!-- content -->
+	<div class="site-container">
+		<header class="header" id="header">
+			<div class="container">
+				<div class="header__container">
+					<a href="./" class="header__logo">
+						<p>LoremIpsum.<span>Net</span></p>
+					</a>
+					<div class="nav" data-nav>
+						<nav>
+							<ul class="nav__list">
+								<li class="nav__item"><a href="#" class="nav__link active">Бизнес</a>
+								</li>
+								<li class="nav__item"><a href="#" class="nav__link">О нас</a>
+								</li>
+								<li class="nav__item"><a href="#" class="nav__link">Цены</a>
+								</li>
+								<li class="nav__item"><a href="#calculation" class="nav__link link-button">Оформить
+										заказ</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- burger -->
+					<button class="burger" data-burger aria-label="open-menu" aria-expanded="false">
+						<span class="burger__line"></span>
+					</button>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="banner banner-main">
+				<!-- <div class="banner-bg">
+					<picture class="full-banner">
+						<source srcset="img/@1x/bg-main-image.webp, img/@2x/bg-main-image@2x.webp 2x" type="image/webp" class="lazy-loaded">
+						<img srcset="img/@2x/bg-main-image@2x.jpg 2x" alt="banner clerkgroup"
+							src="img/@1x/bg-main-image.jpg" class="lazy-loaded">
+					</picture>
+				</div> -->
+				<div class="container">
+					<div class="banner__container">
+						<div class="banner__content">
+							<h1 class="h1 banner__title"><span>Lorem ipsum</span> dolor sit ametconsectetur
+								<span>adipiscing</span>
+							</h1>
+							<p class="banner__subtitle text-20">At vero eos et
+								accusamus et iusto odio dignissimos ducimus!</p>
+							<ul class="list-reset banner__list">
+								<li>
+									<p class="text-20">Totam rem aperiam eaque ipsa</p>
+								</li>
+								<li>
+									<p class="text-20">Sit voluptatem accusantium doloremque laudantium</p>
+								</li>
+								<li>
+									<p class="text-20">Sed ut perspiciatis, unde omnis iste natus error</p>
+								</li>
+							</ul>
+
+							<div class="banner__content-buttons d-flex">
+								<a href="#calculation" class="btn-reset btn-accent btn-popup link-button">Заказать</a>
+								<button type="submit" class="btn-reset btn-accent btn-accent-revert">Подробнее</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="cost-calculation" id="cost-calculation">
+				<div class="container">
+
+					<div class="cost-calculation__wrapper">
+						<div class="cost-calculation__wrapper-top">
+							<h2>Оформление <span>заказа</span></h2>
+							<p>Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+						</div>
+
+						<div class="adventures">
+							<div class="adventures__list d-flex content-center">
+								<div class="adventures__item">
+									<div class="adventures__item-top d-flex align-center content-center">
+										<img src="./img/icon/adv-1.svg" alt="icon">
+									</div>
+									<div class="adventures__item-text">
+										Lorem ipsum dolor
+										sit amet
+									</div>
+								</div>
+								<div class="adventures__item">
+									<div class="adventures__item-top d-flex align-center content-center">
+										<img src="./img/icon/adv-2.svg" alt="icon">
+									</div>
+									<div class="adventures__item-text">
+										Сonsecteturadipiscing elit
+									</div>
+								</div>
+								<div class="adventures__item">
+									<div class="adventures__item-top d-flex align-center content-center">
+										<img src="./img/icon/adv-3.svg" alt="icon">
+									</div>
+									<div class="adventures__item-text">
+										Sed do eiusmod tempor
+									</div>
+								</div>
+								<div class="adventures__item">
+									<div class="adventures__item-top d-flex align-center content-center">
+										<img src="./img/icon/adv-4.svg" alt="icon">
+									</div>
+									<div class="adventures__item-text">
+										Esse cillum dolore
+										eu fugiat
+									</div>
+								</div>
+								<div class="adventures__item">
+									<div class="adventures__item-top d-flex align-center content-center">
+										<img src="./img/icon/adv-5.svg" alt="icon">
+									</div>
+									<div class="adventures__item-text">
+										Excepteur sint occaecat cupidatat non proident
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cost-calculation__wrapper-form" id="calculation">
+							<form action="#" enctype="multipart/form-data" class="form form-сost-calculation"
+								method="POST">
+
+								<div class="cost-element">
+									<select name="services" class="select-default form-label select-default__cost"
+										aria-label="Выберите тип системы">
+										<option value="">Выберите тип системы</option>
+										<option value="1">Sed ut perspiciatis</option>
+										<option value="2">Nemo enim ipsam</option>
+										<option value="3">Et harum quidem</option>
+										<option value="4">Temporibus autem</option>
+										<option value="5">Itaque earum rerum</option>
+										<option value="6">Et harum quidem</option>
+										<option value="7">Sed ut perspiciatis</option>
+										<option value="8">Nemo enim ipsam</option>
+										<option value="9">Et harum quidem</option>
+										<option value="10">Temporibus autem</option>
+									</select>
+								</div>
+
+								<div class="cost-element">
+									<label class="form-label">
+										<input type="email" class="form-control input-mail" name="email"
+											placeholder="Ваш e-mail" required>
+									</label>
+								</div>
+
+								<div class="cost-element">
+									<label class="form-label">
+										<input type="text" class="form-control input-name" placeholder="Ваше имя"
+											name="name" required>
+									</label>
+								</div>
+
+								<div class="cost-element flex-wrap-2">
+									<div class="range" style="--value: 75">
+										<label class="range-label" for="tailmetr">Sed ut perspiciatis, unde
+											omnis iste natus</label>
+										<div class="track"></div>
+										<div class="progress"></div>
+										<input class="range-input" id="tailmetr" type="range" min="0" max="100"
+											value="75" step="1" aria-valuemin="0" aria-valuemax="100"
+											aria-orientation="horizontal">
+										<output class="range-output" id="output" for="tailmetr">75</output>
+									</div>
+								</div>
+
+								<div class="cost-element">
+									<label class="form-label file-label ">
+										<p class="d-flex align-center"><span
+												class="file-title btn-accent btn-accent-revert">
+												<img src="./img/icon/file.svg" alt="файл">
+												Прикрепить файл</span></p>
+										<input type="file" name="file" multiple id="myfile" class="input-file">
+									</label>
+								</div>
+
+								<div class="cost-calculation__bottom">
+									<button type="submit" class="btn-reset btn-accent btn-submit">Отправить</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer" id="footer">
+			<div class="container">
+				<div class="footer__container">
+					<p class="footer__copyrigth footer-element">
+						© 2018 <span>«LoremIpsum.net»</span> Все права защищены.</p>
+					<ul class="footer__payment d-flex footer-element">
+						<li>
+							<img src="./img/icon/wallet.svg" alt="Qiwi wallet">
+							<p>Qiwi wallet</p>
+						</li>
+						<li>
+							<img src="./img/icon/yandex.svg" alt="Yandex Money">
+							<p>Yandex Money</p>
+						</li>
+						<li>
+							<img src="./img/icon/web-money.svg" alt="Web Money">
+							<p>Web Money</p>
+						</li>
+					</ul>
+
+					<ul class="footer__nav d-flex footer-element">
+						<li>
+							<a href="mailto:info@ipsum228.com">
+								<img src="./img/icon/icon-mail.svg" alt="mail">
+								info@ipsum228.com
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/icon/icon-vk.svg" alt="vkontakte">
+								Мы вконтакте
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</footer>
+		<div class="overlay-menu"></div>
+		<div class="modals">
+			<div class="modal-overlay">
+				<div class="modal modal-wind modal-success" data-target="popup-success">
+					<div class="modal-order__content">
+						<h2>Заявка принята</h2>
+						<p class="text-20">Спасибо! Ваше сообщение отправлено.
+							Мы свяжемся с вами в ближайшее время.</p>
+					</div>
+					<button class="btn-reset modal-close">
+						<img src="./img/icon/close.svg" alt="закрыть">
+					</button>
+				</div>
+
+				<div class="modal modal-wind modal-success-error" data-target="popup-success-error">
+					<div class="modal-order__content">
+						<h2>Произошла ошибка</h2>
+						<p class="text-20">Попробуйте заполнить форму снова</p>
+					</div>
+					<button class="btn-reset modal-close">
+						<img src="./img/icon/close.svg" alt="закрыть">
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="libs/choices.min.js"></script>
+	<script src="libs/just-validate3.3.3.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+</body>
+
+</html>
