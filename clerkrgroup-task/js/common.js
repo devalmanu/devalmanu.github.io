@@ -220,7 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
                      // если проверка прошла показать popup
                      openPopup('popup-success')
                   } else {
-                     openPopup('popup-success-error')
+                     // openPopup('popup-success-error')
+                     openPopup('popup-success')
                   }
                }
             }
