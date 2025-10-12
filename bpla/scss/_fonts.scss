@@ -1,0 +1,7 @@
+@import "_mixins/font-face";
+
+@include font-face("Furore-Regular", "../fonts/Furore-Regular", 400, normal);
+
+@include font-face("TTNorms-Regular", "../fonts/TTNorms-Regular", 400, normal);
+@include font-face("TTNorms-Medium", "../fonts/TTNorms-Medium", 500, normal);
+@include font-face("TTNorms-Bold", "../fonts/TTNorms-Bold", 700, normal);

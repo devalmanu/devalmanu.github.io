@@ -1,0 +1,226 @@
+// body.page_body {
+//    .banner {
+//       position: relative;
+//       margin-top: 20px;
+//       height: 455px;
+//       margin-bottom: 24px;
+//       display: flex;
+//       flex-direction: column;
+
+//       @include breakpoint(tablet) {
+//          // min-height: auto;
+//       }
+
+//       @include breakpoint(mobileonly) {
+//          margin-top: 0;
+//          margin-bottom: 10px;
+//       }
+
+//       &__container {
+//          position: relative;
+//          width: calc(100% + 20px);
+//          display: flex;
+//          flex-direction: column;
+//          z-index: 2;
+//          padding: 0 10px;
+//          margin: 0 -10px;
+//          @include breakpoint(bigdesktop) {
+//             width: 100%;
+//             padding: 0;
+//             margin: 0;
+//          }
+//          .swiper-button-prev,
+//          .swiper-container-rtl .swiper-button-next {
+//             top: 190px;
+//             left: -10px;
+//             right: auto;
+//             @include breakpoint(bigdesktop) {
+//                left: 10px;
+//             }
+//             @include breakpoint(tablet) {
+//                display: none;
+//             }
+//          }
+//          .swiper-button-next,
+//          .swiper-container-rtl .swiper-button-prev {
+//             top: 190px;
+//             right: -10px;
+//             left: auto;
+//             @include breakpoint(bigdesktop) {
+//                right: 10px;
+//             }
+//             @include breakpoint(tablet) {
+//                display: none;
+//             }
+//          }
+//          .swiper-button-next.swiper-button-disabled,
+//          .swiper-button-prev.swiper-button-disabled {
+//             background: $color-black;
+//             svg {
+//                path {
+//                   fill: $color-white;
+//                }
+//             }
+//          }
+//       }
+//       &__content {
+//          display: flex;
+//          flex-direction: column;
+//          max-width: 1145px;
+//          margin-top: auto;
+//       }
+//       &__subtitle {
+//          font-family: $TTNorms-Regular;
+//          color: #b2b5b8;
+//          margin-bottom: 40px;
+//       }
+//       &__title {
+//          color: $color-white;
+//          margin-bottom: 18px;
+//          .banner-contacts & {
+//             margin-bottom: 35px;
+//          }
+//       }
+
+//       &-swiper {
+//          position: relative;
+//          overflow: hidden;
+//          margin-bottom: 18px;
+//       }
+
+//       &-slide {
+//          height: 400px;
+//          background-color: $color-grey-stroke;
+//          border-radius: 18px;
+//          overflow: hidden;
+//          &__content {
+//             position: relative;
+//             color: $color-black;
+//             padding: 88px 120px;
+
+//             // overflow: hidden;
+//             height: 100%;
+//             @include breakpoint(desktop) {
+//                padding: 70px;
+//             }
+//             @include breakpoint(tablet) {
+//                padding: 36px;
+//             }
+
+//             @include breakpoint(mobileonly) {
+//                padding: 24px;
+//             }
+//             h2 {
+//                font-size: 32px;
+//                line-height: 1.25;
+//                margin-bottom: 12px;
+//                @include breakpoint(tablet) {
+//                   font-size: 28px;
+//                   margin-bottom: 12px;
+//                }
+//                @include breakpoint(mobileonly) {
+//                   font-size: 24px;
+//                   margin-bottom: 12px;
+//                }
+//             }
+//             p {
+//                font-size: 16px;
+//                line-height: 1.5;
+//                mix-blend-mode: multiply;
+//             }
+//          }
+//       }
+
+//       .swiper-pagination {
+//          margin-top: 24px;
+//       }
+//       .banner-badge {
+//          font-family: $TTNorms-Bold;
+//          font-size: 72px;
+//          line-height: 1;
+//          color: $accent;
+//          margin-bottom: 16px;
+//          margin-top: -5px;
+//          @include breakpoint(tablet) {
+//             font-size: 60px;
+//          }
+//          @include breakpoint(mobileonly) {
+//             font-size: 48px;
+//          }
+//       }
+//       .btn-accent {
+//          margin-top: 26px;
+//          max-width: fit-content;
+//       }
+//       &-main-text {
+//          position: relative;
+//          width: 100%;
+//          max-width: 489px;
+//          z-index: 3;
+//          @include breakpoint(desktop) {
+//             max-width: 43%;
+//          }
+//          @include breakpoint(tablet) {
+//             max-width: 50%;
+//          }
+//          @include breakpoint(phablet) {
+//             max-width: 78%;
+//          }
+//          @include breakpoint(mobileonly) {
+//             max-width: 87%;
+//          }
+//          @include breakpoint(mobilemini) {
+//             max-width: 100%;
+//          }
+//       }
+
+//       &__picture {
+//          position: absolute;
+//          display: block;
+//          top: -17%;
+//          right: -2.4%;
+//          width: 56%;
+//          height: 150%;
+//          z-index: 2;
+//          @media (max-width: 1376px) {
+//             top: -5%;
+//             right: -2.7%;
+//             width: 55%;
+//             height: 130%;
+//          }
+//          @include breakpoint(desktop) {
+//             top: 5%;
+//             right: -2%;
+//             width: 55%;
+//             height: 100%;
+//          }
+//          @include breakpoint(tablet) {
+//             top: 20%;
+//          }
+//          @include breakpoint(phablet) {
+//             top: 20%;
+//             right: -10%;
+//             width: 80%;
+//          }
+//          @include breakpoint(mobileonly) {
+//             top: 30%;
+//             right: -17%;
+//             width: 106%;
+//          }
+//          @include breakpoint(mobilemini) {
+//             top: 47%;
+//             right: -25%;
+//             width: 106%;
+//          }
+//          picture {
+//             display: block;
+//             height: 100%;
+//             width: 100%;
+//             img {
+//                object-fit: cover;
+//                margin: auto;
+//             }
+//          }
+//       }
+//    }
+// }

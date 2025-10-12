@@ -1,0 +1,61 @@
+.breadcrumbs {
+    position: relative;
+    padding: 0 0 20px;
+    background: transparent;
+    margin-bottom: 0;
+    z-index: 5;
+    @include breakpoint(tablet) {
+        padding-bottom: 22px;
+    }
+    &__list {
+        position: relative;
+        @include flex-v-center;
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    &__item {
+        position: relative;
+        @include flex-all-center;
+        white-space: nowrap;
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 4px;
+            height: 4px;
+            top: 6px;
+            border-radius: $radius-50;
+            right: -14px;
+            background: $color-light-gray;
+        }
+        &:last-child {
+            overflow: hidden;
+            &:after {
+                display: none;
+            }
+            a {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @include breakpoint(tablet) {
+                    text-overflow: inherit;
+                }
+            }
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 1.2;
+        color: $color-light-gray;
+        transition: color 0.25s ease;
+        white-space: nowrap;
+        &.breadcrumbs__current,
+        &[href^="javascript:void(0)"],
+        &.active {
+            color: $color-dark;
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+}

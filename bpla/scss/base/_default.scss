@@ -1,0 +1,550 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+*:hover,
+*:focus {
+	outline: 0;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	min-width: 320px;
+	position: relative;
+	font-family: $TTNorms-Regular;
+	font-size: 14px;
+	line-height: 1.2;
+	overflow-x: hidden;
+	min-height: 100vh;
+	padding: 0;
+	color: $color-dark-gray;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	overflow-anchor: none;
+	background: $color-ultra-light;
+	caret-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+}
+input,
+button,
+textarea,
+select {
+	font-family: $TTNorms-Regular;
+	font-size: 14px;
+	line-height: 1.45;
+	color: $color-dark;
+	caret-color: $color-dark;
+}
+*::placeholder {
+	font-family: $TTNorms-Regular;
+	font-size: 14px;
+	line-height: 1.45;
+	color: $color-light-gray;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+	appearance: button;
+}
+
+.site-container {
+	@include flex-h-column;
+	min-height: 100%;
+	position: relative;
+}
+.container {
+	width: 100%;
+	max-width: 1260px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+.header {
+	flex: 0 0 auto;
+}
+.main {
+	flex: 1 0 auto;
+	margin-top: 110px;
+	padding: 24px 0 80px;
+	min-height: 300px;
+	overflow: hidden;
+	@include breakpoint(tablet) {
+		margin-top: 130px;
+		padding: 30px 0 48px;
+	}
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+img {
+	@include block;
+	max-width: 100%;
+	height: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+ul,
+li,
+ol {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: $color-dark;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	&:hover,
+	&:active,
+	&:focus {
+		color: $accent;
+		text-decoration: none;
+	}
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: $Furore-Regular;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	color: $color-dark;
+}
+h1,
+.h1 {
+	font-size: 32px;
+	margin-bottom: 20px;
+	line-height: 1.2;
+	@include breakpoint(tablet) {
+		font-size: 26px;
+		margin-bottom: 12px;
+	}
+	@include breakpoint(mobileonly) {
+		font-size: 20px;
+		margin-bottom: 8px;
+	}
+
+	.front-page & {
+		color: $color-white;
+	}
+}
+
+h2,
+.h2 {
+	font-size: 40px;
+	margin-bottom: 20px;
+	@include breakpoint(tablet) {
+		font-size: 36px;
+		margin-bottom: 12px;
+	}
+	@include breakpoint(mobileonly) {
+		font-size: 32px;
+		margin-bottom: 8px;
+	}
+}
+h3,
+.h3 {
+	font-size: 32px;
+	margin-bottom: 20px;
+	@include breakpoint(tablet) {
+		font-size: 26px;
+		margin-bottom: 12px;
+	}
+	@include breakpoint(mobileonly) {
+		font-size: 20px;
+		margin-bottom: 8px;
+	}
+}
+h4,
+.h4 {
+	font-size: 32px;
+	margin-bottom: 20px;
+	@include breakpoint(tablet) {
+		font-size: 26px;
+		margin-bottom: 12px;
+	}
+	@include breakpoint(mobileonly) {
+		font-size: 20px;
+		margin-bottom: 8px;
+	}
+}
+h5,
+.h5,
+h6,
+.h6 {
+	font-size: 26px;
+	@include breakpoint(tablet) {
+		font-size: 22px;
+		margin-bottom: 12px;
+	}
+	@include breakpoint(mobileonly) {
+		font-size: 20px;
+		margin-bottom: 8px;
+	}
+}
+
+p {
+	margin: 0;
+	font-family: $TTNorms-Regular;
+	font-size: 14px;
+	line-height: 1.2;
+	color: $color-dark;
+}
+
+.text-14 {
+	font-size: 14px;
+	line-height: 1.2;
+}
+
+.text-16 {
+	font-size: 16px;
+	line-height: 1.2;
+}
+
+.bg-white {
+	background-color: $color-white;
+}
+
+.bg-accent {
+	background-color: $accent;
+}
+
+.color-accent {
+	color: $accent;
+}
+
+a.color-accent {
+	color: $accent;
+	&:hover {
+		color: $accent-hover;
+	}
+}
+
+.color-dark {
+	color: $color-dark;
+}
+
+.is-vishidden {
+	position: absolute;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.btn-reset {
+	border: none;
+	padding: 0;
+	background: 0 0;
+	cursor: pointer;
+}
+
+.btn-accent {
+	display: inline-block;
+	padding: 15px 39px;
+	font-family: $TTNorms-Bold;
+	color: $color-white;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.07em;
+	white-space: nowrap;
+	background: $accent;
+	border: 1px solid $accent;
+	border-radius: $radius-16;
+	text-decoration: none;
+	transition: all 0.25s linear;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+	@include breakpoint(tablet) {
+		width: min-content;
+	}
+	@include breakpoint(mobileonly) {
+		width: 100%;
+		max-width: 380px;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $color-white;
+		background: $accent-hover;
+		border: 1px solid $accent-hover;
+	}
+
+	&:disabled,
+	&[disabled],
+	&.disabled {
+		opacity: 0.8;
+	}
+}
+
+.stop-scroll {
+	overflow: hidden;
+	.overlay-menu {
+		@include block;
+		width: 100%;
+		opacity: 1;
+		overflow: visible;
+		// pointer-events: all;
+		left: 0;
+	}
+}
+.overlay-menu {
+	@include breakpoint(tablet) {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: -100%;
+		bottom: 0;
+		z-index: 36;
+		transition: 0.6s ease-in-out;
+		background: transparent;
+		opacity: 0;
+		overflow: hidden;
+		pointer-events: none;
+	}
+}
+// checkbox
+.checkBlock {
+	position: relative;
+	display: block;
+
+	/* Стиль для скрытого input элемента */
+	.custom-control-input {
+		-webkit-appearance: none;
+		appearance: none;
+		position: absolute;
+		top: 31px;
+		left: 20px;
+		width: 20px;
+		height: 20px;
+		border: 1px solid $color-light-gray;
+		border-radius: 4px;
+		background-color: transparent;
+		cursor: pointer;
+		margin: 0;
+		z-index: 2;
+		transition:
+			color 0.15s ease-in-out,
+			background-color 0.15s ease-in-out,
+			border-color 0.15s ease-in-out,
+			box-shadow 0.15s ease-in-out;
+
+		/* Оформление состояния checked */
+		&:checked {
+			color: $color-white;
+			border-color: $accent;
+			background-color: $accent;
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgNS41TDQuNjQ2NDUgOS4xNDY0NUM0Ljg0MTcxIDkuMzQxNzEgNS4xNTgyOSA5LjM0MTcxIDUuMzUzNTUgOS4xNDY0NUwxMyAxLjUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 70%;
+		}
+	}
+	.complect-icon {
+		display: block;
+		width: 80px;
+		height: 80px;
+		object-fit: contain;
+	}
+	.custom-control-label:hover,
+	.custom-control-input:checked ~ .custom-control-label {
+		background-color: rgba(254, 71, 25, 0.1);
+		color: $color-light-gray;
+	}
+	/* Стиль для label элемента */
+	.custom-control-label {
+		display: flex;
+		align-items: center;
+		position: relative;
+		margin-bottom: 0;
+		vertical-align: top;
+		padding: 2px 20px 2px 40px;
+		border-radius: $radius-16;
+		background-color: $color-ultra-light;
+		width: 100%;
+		min-height: 83px;
+		cursor: pointer;
+		transition:
+			background-color 0.2s linear,
+			color 0.2s linear;
+		.complect__title {
+			font-family: $TTNorms-Medium;
+			font-size: 14px;
+			color: $color-light-gray;
+		}
+		.complect__price {
+			display: block;
+			font-family: $TTNorms-Bold;
+			font-size: 16px;
+			color: $color-dark;
+			margin-top: 5px;
+		}
+	}
+}
+
+.swiper-button-next::after,
+.swiper-container-rtl .swiper-button-prev::after,
+.swiper-button-prev::after,
+.swiper-container-rtl .swiper-button-next::after {
+	content: none;
+}
+
+main {
+	.swiper-pagination {
+		position: relative;
+		width: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+		bottom: 0;
+		text-align: center;
+		left: 0;
+		right: 0;
+		&.swiper-pagination-progressbar {
+			max-width: 24px;
+			background: #f6f5f5;
+			opacity: 1;
+			border-radius: 6px;
+			top: auto;
+			.swiper-pagination-progressbar-fill {
+				display: block;
+				position: relative;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 3px;
+				background: $accent;
+				border-radius: 6px;
+				overflow: hidden;
+				-webkit-transform: scale(0);
+				-ms-transform: scale(0);
+				transform: scale(0);
+				-webkit-transform-origin: left top;
+				-ms-transform-origin: left top;
+				transform-origin: left top;
+			}
+		}
+		.swiper-pagination-bullets {
+			bottom: 12px;
+		}
+		.swiper-pagination-bullet {
+			width: 24px;
+			margin: 0 2px;
+			height: 4px;
+			border-radius: 6px;
+			position: relative;
+			overflow: hidden;
+			background: #252525;
+			opacity: 0.05;
+			&-active {
+				background: $accent;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.contacts-offer {
+	display: flex;
+	flex-direction: column;
+	row-gap: 26px;
+	@include breakpoint(phablet) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 30px;
+	}
+
+	.header & {
+		@include breakpoint(tablet) {
+			row-gap: 32px;
+			margin: 0 auto;
+		}
+	}
+
+	.contacts-link {
+		font-family: $TTNorms-Bold;
+		font-size: 20px;
+		color: $color-dark;
+		padding: 0;
+		text-decoration: none;
+
+		.footer & {
+			color: $color-white;
+		}
+
+		.header & {
+			@include breakpoint(tablet) {
+				font-size: 24px;
+				text-align: center;
+			}
+		}
+	}
+	span {
+		display: block;
+		padding-top: 10px;
+		.header & {
+			@include breakpoint(tablet) {
+				color: $color-light-gray;
+				font-size: 12px;
+				padding-top: 8px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 991.9px) {
+	.hidden-mobile {
+		display: none !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.hidden-desktop {
+		display: none !important;
+	}
+}
+
+@include breakpoint(desktop) {
+	.hidden-fixed-mob {
+		display: none !important;
+	}
+}

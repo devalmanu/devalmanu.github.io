@@ -1,0 +1,319 @@
+.detail {
+    &__page {
+        display: flex;
+        flex-direction: column;
+        row-gap: 22px;
+        padding: 40px;
+        border-radius: 40px;
+        @include breakpoint(tablet) {
+            padding: 32px;
+            border-radius: 32px;
+        }
+        @include breakpoint(mobileonly) {
+            padding: 16px;
+        }
+        h1 {
+            @include breakpoint(mobileonly) {
+                margin-bottom: 8px;
+            }
+        }
+
+        h2,
+        .h2 {
+            font-family: $TTNorms-Bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+            @include breakpoint(mobileonly) {
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+        }
+
+        h3,
+        .h3 {
+            font-family: $TTNorms-Bold;
+            font-size: 16px;
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+    }
+    &__content {
+        display: flex;
+        column-gap: 20px;
+
+        @include breakpoint(tablet) {
+            flex-direction: column;
+            row-gap: 16px;
+        }
+
+        .detail__content-left {
+            width: 49%;
+            @include breakpoint(tablet) {
+                width: 100%;
+            }
+        }
+        .detail__content-right {
+            width: calc(51% - 20px);
+            @include breakpoint(tablet) {
+                width: 100%;
+            }
+        }
+        &-info {
+            display: flex;
+            flex-direction: column;
+            .btn-more {
+                display: block;
+                font-family: $TTNorms-Bold;
+                font-size: 16px;
+                line-height: 1.2;
+                margin-top: 4px;
+            }
+            .btn-pay {
+                margin-top: 40px;
+                @include breakpoint(tablet) {
+                    margin-top: 24px;
+                }
+                @include breakpoint(mobileonly) {
+                    margin-top: 16px;
+                    max-width: 100%;
+                }
+            }
+        }
+        &-description {
+            p {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                color: $color-light-gray;
+                font-size: 16px;
+                line-height: 1.15;
+                @include breakpoint(mobileonly) {
+                font-size: 14px;
+            }
+            }
+        }
+        &-exposition {
+            p {
+                font-size: 16px;
+                color: $color-light-gray;
+                @include breakpoint(mobileonly) {
+                font-size: 14px;
+            }
+            }
+        }
+        &-price {
+            margin-top: 40px;
+            @include breakpoint(tablet) {
+                margin-top: 24px;
+            }
+            @include breakpoint(mobileonly) {
+                margin-top: 16px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 1;
+                color: $color-dark-gray;
+                margin-bottom: 14px;
+            }
+            .old-price {
+                font-family: $TTNorms-Medium;
+                font-size: 20px;
+                line-height: 1;
+                color: $color-light-gray;
+                margin-bottom: 6px;
+                text-decoration: line-through;
+            }
+            .new-price {
+                font-family: $TTNorms-Bold;
+                font-size: 32px;
+                line-height: 1.1;
+                color: $color-dark;
+                @include breakpoint(tablet) {
+                    font-size: 28px;
+                }
+                @include breakpoint(mobileonly) {
+                    font-size: 24px;
+                }
+            }
+        }
+        &-complect {
+            padding: 16px;
+            border-radius: $radius-32;
+            background: $color-thin;
+            @include breakpoint(tablet) {
+                padding: 12px;
+                border-radius: $radius-24;
+            }
+            @include breakpoint(mobileonly) {
+                padding: 8px;
+                border-radius: $radius-16;
+            }
+        }
+    }
+    .complect__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 10px;
+        .checkBlock {
+            width: calc(33.33% - 7px);
+            @include breakpoint(tablet) {
+                width: calc(50% - 5px);
+            }
+            @include breakpoint(phablet) {
+                width: 100%;
+            }
+        }
+    }
+    &-images {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+
+        @include breakpoint(desktop) {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        @include breakpoint(tablet) {
+            padding: 0 0 17px;
+        }
+        &__swiper {
+            position: relative;
+            width: 464px;
+            height: 464px;
+            min-width: 0;
+            overflow: hidden;
+            @include breakpoint(tablet) {
+                width: 370px;
+                height: 370px;
+                margin: 0 auto;
+            }
+            @include breakpoint(mobileonly) {
+                width: 296px;
+                height: 296px;
+            }
+            .swiper-slide {
+                height: 464px;
+                border-radius: $radius-16;
+                overflow: hidden;
+                @include breakpoint(tablet) {
+                    height: 370px;
+                }
+                @include breakpoint(mobileonly) {
+                    height: 296px;
+                }
+            }
+        }
+        .swiper-slide {
+            cursor: pointer;
+            img {
+                @include block;
+                @include image-fit;
+            }
+        }
+
+        &__thumb {
+            width: 80px;
+            flex-shrink: 0;
+            overflow: hidden;
+            margin-right: 20px;
+            height: 464px;
+            position: relative;
+            .swiper-slide {
+                position: relative;
+                width: 80px;
+                height: 80px;
+                opacity: 1;
+                border-radius: $radius-16;
+                overflow: hidden;
+                z-index: 1;
+                &.swiper-slide-thumb-active {
+                    opacity: 1;
+                    &:before {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        width: calc(100% + 4px);
+                        height: calc(100% + 4px);
+                        top: -2px;
+                        left: -2px;
+                        background: $accent;
+                        z-index: -1;
+                    }
+                }
+                @include breakpoint(tablet) {
+                    width: 80px;
+                    height: 80px;
+                }
+                @include breakpoint(mobileonly) {
+                    width: 40px;
+                    height: 40px;
+                }
+                img {
+                    position: relative;
+                    z-index: 3;
+                    width: calc(100% - 4px);
+                    height: calc(100% - 4px);
+                    top: 2px;
+                    left: 2px;
+                    border-radius: $radius-16;
+                    overflow: hidden;
+                    @include breakpoint(tablet) {
+                        border-radius: 6px;
+                    }
+                }
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                width: 100%;
+                height: 15px;
+                background: linear-gradient(180deg, transparent, #ffffff 100%);
+                z-index: 5;
+            }
+        }
+    }
+}
+
+.specifications {
+    padding-top: 2px;
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+    &__list {
+        column-gap: 20px;
+        column-count: 2;
+        @include breakpoint(tablet) {
+            column-count: 1;
+        }
+        li {
+            display: flex;
+            align-items: baseline;
+            font-size: 14px;
+            line-height: 1.1;
+            color: $color-dark;
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+            &::before {
+                content: "";
+                border-bottom: 1px dotted $color-light;
+                flex-grow: 1;
+                order: 2;
+                margin: 0 3px;
+            }
+            .value {
+                width: 210px;
+                order: 3;
+                text-align: left;
+                font-size: 14px;
+                color: $color-dark;
+                margin-left: 3px;
+            }
+        }
+    }
+}
