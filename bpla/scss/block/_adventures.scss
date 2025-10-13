@@ -1,0 +1,109 @@
+.adventures {
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 20px;
+        @include breakpoint(phablet) {
+            grid-template-columns: 1fr;
+        }
+        @include breakpoint(mobileonly) {
+            row-gap: 12px;
+        }
+    }
+    &__item {
+        position: relative;
+        padding: 20px;
+        background-color: $color-white;
+        border-radius: $radius-40;
+        overflow: hidden;
+        @include breakpoint(mobileonly) {
+            padding: 16px;
+            border-radius: $radius-32;
+        }
+        &:nth-child(1) {
+            .adventures__item-count {
+                right: -20px;
+                @include breakpoint(tablet) {
+                    right: -12px;
+                }
+                @include breakpoint(mobileonly) {
+                    right: -7px;
+                }
+            }
+        }
+        &:nth-child(4) {
+            .adventures__item-count {
+                right: -60px;
+                @include breakpoint(tablet) {
+                    right: -50px;
+                }
+                @include breakpoint(mobileonly) {
+                    right: -20px;
+                }
+            }
+        }
+        h3 {
+            max-width: 400px;
+            margin-top: 80px;
+            margin-bottom: 10px;
+            @include breakpoint(tablet) {
+                margin-top: 60px;
+                margin-bottom: 16px;
+            }
+            @include breakpoint(mobileonly) {
+                margin-top: 32px;
+                margin-bottom: 16px;
+            }
+        }
+        p {
+            font-size: 16px;
+            @include breakpoint(mobileonly) {
+                font-size: 12px;
+            }
+        }
+        &-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            background-color: $accent;
+            border-radius: $radius-50;
+            @include breakpoint(mobileonly) {
+                width: 40px;
+                height: 40px;
+            }
+            .icon {
+                width: 32px;
+                height: 32px;
+                @include breakpoint(mobileonly) {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        &-count {
+            position: absolute;
+            font-family: $Quantify;
+            font-size: 300px;
+            color: $accent;
+            right: -40px;
+            bottom: -23.4%;
+            opacity: 0.05;
+            @include breakpoint(tablet) {
+                font-size: 250px;
+                bottom: -63px;
+            }
+            @include breakpoint(phablet) {
+                font-size: 200px;
+                bottom: -53px;
+            }
+            @include breakpoint(mobileonly) {
+                font-size: 150px;
+                right: -18px;
+                bottom: -38px;
+            }
+        }
+    }
+}

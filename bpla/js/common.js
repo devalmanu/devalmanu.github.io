@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
          header.classList.remove("scrolled");
       }
    };
-
    // burder open/close
    burger.addEventListener('click', (e) => {
       body.classList.add('stop-scroll');
@@ -47,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
          nav.classList.remove('nav--visible');
       });
    });
-  
+
    // scroll into block class link-button
    document.querySelectorAll('a.link-button[href^="#"').forEach(link => {
       link.addEventListener('click', function (e) {
@@ -118,6 +117,58 @@ document.addEventListener('DOMContentLoaded', () => {
             }
          })
       })
+   }
+
+   let productsSwiper = document.querySelector(".product-swiper");
+   if (productsSwiper) {
+      const productsSwiperList = new Swiper(productsSwiper, {
+         slidesPerView: 3,
+         spaceBetween: 20,
+         freeMode: true,
+         watchOverflow: true,
+         watchSlidesProgress: true,
+         breakpoints: {
+            320: {
+               slidesPerView: 2.1,
+               spaceBetween: 8,
+            },
+            578: {
+               slidesPerView: 2.5,
+               spaceBetween: 16,
+            },
+            992: {
+               slidesPerView: 3,
+               spaceBetween: 20,
+            },
+         },
+
+      });
+   }
+
+   let partnersSwiper = document.querySelector(".partners-swiper");
+   if (partnersSwiper) {
+      const partnersSwiperList = new Swiper(partnersSwiper, {
+         slidesPerView: 4,
+         spaceBetween: 20,
+         freeMode: true,
+         watchOverflow: true,
+         watchSlidesProgress: true,
+         breakpoints: {
+            320: {
+               slidesPerView: 2,
+               spaceBetween: 8,
+            },
+            578: {
+               slidesPerView: 3,
+               spaceBetween: 16,
+            },
+            992: {
+               slidesPerView: 4,
+               spaceBetween: 20,
+            },
+         },
+
+      });
    }
 
    const detailBlock = document.querySelector('.detail');

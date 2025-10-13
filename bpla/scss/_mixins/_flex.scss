@@ -130,12 +130,6 @@
    height: 100%;
    object-fit: cover;
 }
-@mixin section-padding {
-   padding: 80px 0 100px;
-   @include breakpoint(mobileonly) {
-      padding: 42px 0;
-   }
-}
 
 @mixin hover {
 	@media (hover: hover) { @content; }
