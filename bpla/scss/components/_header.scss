@@ -148,8 +148,12 @@
       background-color: $color-white;
       column-gap: 10px;
       @include breakpoint(tablet) {
+        color: $color-dark;
         border-radius: $radius-16;
         background: $color-ultra-light;
+        &:hover {
+          color: $color-dark;
+        }
       }
 
       span {

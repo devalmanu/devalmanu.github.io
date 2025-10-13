@@ -1,19 +1,22 @@
 .partners {
     &-swiper {
-        display: flex;
+        min-width: 0;
+        // display: flex;
         width: 100%;
         height: 100%;
-        position: relative;
+        // position: relative;
         overflow: hidden;
         column-gap: 20px;
-         @include breakpoint(tablet) {
+        @include breakpoint(tablet) {
             column-gap: 16px;
         }
         @include breakpoint(mobileonly) {
             column-gap: 8px;
+            overflow: visible;
         }
     }
     &__list {
+        align-items: stretch;
         // display: grid;
         // grid-template-columns: repeat(4, 1fr);
         // @include breakpoint(tablet) {
@@ -26,19 +29,26 @@
         // }
     }
     &__item {
+        width: 292px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         position: relative;
         padding: 20px;
         background-color: $color-white;
         border-radius: $radius-40;
+        height: auto;
         @include breakpoint(mobileonly) {
             padding: 16px;
             border-radius: $radius-32;
         }
-        img, .icon {
+        img,
+        .icon {
+            width: 100%;
+            max-width: 128px;
             max-height: 128px;
+            object-fit: contain;
         }
     }
 }

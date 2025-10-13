@@ -30,36 +30,32 @@
         width: calc(33.33% - 13px);
         position: relative;
         @include flex-h-column;
-        max-height: 598px;
+        // max-height: 598px;
         height: auto;
         background: $color-white;
         border-radius: $radius-40;
         overflow: hidden;
         transition: all 0.25s ease;
         @include breakpoint(tablet) {
-            max-height: 400px;
+            // max-height: 440px;
             border-radius: $radius-32;
         }
         @include breakpoint(mobileonly) {
-            min-height: 312px;
-            // border-radius: $radius-32;
+            border-radius: 24px;
         }
 
         &__img {
             height: 396px;
-            // width: 396px;
             overflow: hidden;
             background: $color-white;
             margin: 0 auto;
             flex-shrink: 0;
             @include breakpoint(tablet) {
                 height: 250px;
-                // width: 250px;
             }
             @include breakpoint(mobileonly) {
                 border-radius: 6px;
                 height: 156px;
-                // width: 156px;
                 margin-bottom: 12px;
             }
 
@@ -119,20 +115,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            column-gap: 8px;
             min-height: 50px;
             margin-top: 28px;
-            @include breakpoint(mobileonly) {
+            @include breakpoint(tablet) {
                 align-items: flex-start;
                 flex-direction: column-reverse;
                 min-height: 65px;
                 margin-top: 8px;
+                row-gap: 8px;
             }
 
             .btn-accent {
                 border-radius: $radius-16;
+                @include breakpoint(tablet) {
+                    width: -webkit-fill-available;
+                    max-width: -webkit-fill-available;
+                }
                 @include breakpoint(mobileonly) {
-                    padding: 8px;
-                    border-radius: $radius-16;
+                    font-size: 12px;
+                    padding: 12px;
                 }
             }
         }
@@ -143,10 +145,12 @@
             line-height: 1.1;
             white-space: nowrap;
             margin-left: auto;
+            @include breakpoint(tablet) {
+                font-size: 18px;
+                margin-left: 0;
+            }
             @include breakpoint(mobileonly) {
                 font-size: 16px;
-                line-height: 1.1;
-                margin-left: 0;
                 margin-bottom: 8px;
             }
         }

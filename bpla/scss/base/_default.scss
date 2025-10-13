@@ -37,14 +37,14 @@ textarea,
 select {
 	font-family: $TTNorms-Regular;
 	font-size: 14px;
-	line-height: 1.45;
+	line-height: 1.1;
 	color: $color-dark;
 	caret-color: $color-dark;
 }
 *::placeholder {
 	font-family: $TTNorms-Regular;
 	font-size: 14px;
-	line-height: 1.45;
+	line-height: 1.1;
 	color: $color-light-gray;
 }
 
@@ -72,12 +72,12 @@ html [type="button"],
 .main {
 	flex: 1 0 auto;
 	margin-top: 110px;
-	padding: 24px 0 80px;
+	padding: 24px 0 0;
 	min-height: 300px;
 	overflow: hidden;
 	@include breakpoint(tablet) {
 		margin-top: 130px;
-		padding: 30px 0 48px;
+		padding: 30px 0 0;
 	}
 }
 .footer {
@@ -299,9 +299,8 @@ a.color-accent {
 	padding: 15px 40px;
 	font-family: $TTNorms-Bold;
 	color: $color-white;
-	font-size: 14px;
-	line-height: 20px;
-	letter-spacing: 0.07em;
+	font-size: 16px;
+	line-height: 1.1;
 	white-space: nowrap;
 	background: $accent;
 	border: 1px solid $accent;
@@ -333,15 +332,13 @@ a.color-accent {
 		opacity: 0.8;
 	}
 }
-
 .btn-light {
 	display: inline-block;
 	padding: 15px 40px;
 	font-family: $TTNorms-Bold;
 	color: $color-white;
-	font-size: 14px;
-	line-height: 20px;
-	letter-spacing: 0.07em;
+	font-size: 16px;
+	line-height: 1.1;
 	white-space: nowrap;
 	background: transparent;
 	border: 1px solid $color-white;
@@ -373,7 +370,53 @@ a.color-accent {
 		opacity: 0.8;
 	}
 }
+.btn-blue {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 8px;
+	padding: 15px 40px;
+	font-family: $TTNorms-Bold;
+	color: $color-white;
+	font-size: 16px;
+	line-height: 1.1;
+	white-space: nowrap;
+	background: #2fa7e3;
+	border: 1px solid #2fa7e3;
+	border-radius: $radius-16;
+	text-decoration: none;
+	transition: all 0.25s linear;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+	@include breakpoint(tablet) {
+		width: min-content;
+	}
+	@include breakpoint(mobileonly) {
+		width: 100%;
+		max-width: 100%;
+	}
 
+	&:hover,
+	&:active,
+	&:focus {
+		color: $color-white;
+		background: #1d9bda;
+		border: 1px solid #1d9bda;
+	}
+
+	&:disabled,
+	&[disabled],
+	&.disabled {
+		opacity: 0.8;
+	}
+	.icon {
+		display: block;
+		width: 20px;
+		height: 20px;
+		fill: $color-white;
+	}
+}
 .stop-scroll {
 	overflow: hidden;
 	.overlay-menu {

@@ -119,17 +119,16 @@ document.addEventListener('DOMContentLoaded', () => {
       })
    }
 
-   let productsSwiper = document.querySelector(".product-swiper");
+   const productsSwiper = document.querySelector(".product-swiper");
    if (productsSwiper) {
       const productsSwiperList = new Swiper(productsSwiper, {
          slidesPerView: 3,
          spaceBetween: 20,
          freeMode: true,
          watchOverflow: true,
-         watchSlidesProgress: true,
          breakpoints: {
             320: {
-               slidesPerView: 2.1,
+               slidesPerView: 2,
                spaceBetween: 8,
             },
             578: {
@@ -145,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
    }
 
-   let partnersSwiper = document.querySelector(".partners-swiper");
+   const partnersSwiper = document.querySelector(".partners-swiper");
    if (partnersSwiper) {
       const partnersSwiperList = new Swiper(partnersSwiper, {
          slidesPerView: 4,
