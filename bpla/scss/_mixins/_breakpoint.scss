@@ -1,10 +1,6 @@
 /*==========  Desktop First  ==========*/
 @mixin breakpoint($point) {
-  @if $point == bigdesktop {
-    @media (max-width: 1460px) {
-      @content;
-    }
-  } @else if $point == desktop {
+  @if $point == desktop {
     @media (max-width: 1280px) {
       @content;
     }
@@ -22,11 +18,6 @@
     }  
   } @else if $point == mobileonly {
     @media (max-width: 576px) {
-      @content;
-    }
-  } 
-  @else if $point == mobilemini {
-    @media (max-width: 460px) {
       @content;
     }
   }

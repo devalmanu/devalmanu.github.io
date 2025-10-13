@@ -67,11 +67,9 @@
          }
       }
       &:hover,
-      &:active,
       &.active {
          color: $color-dark;
       }
-      &:active,
       &.active {
          font-family: $TTNorms-Medium;
          color: $color-dark;

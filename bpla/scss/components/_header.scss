@@ -46,7 +46,7 @@
       }
     }
   }
-  
+
   &__container {
     position: relative;
     display: flex;
@@ -113,7 +113,7 @@
   &__buttons {
     display: flex;
     column-gap: 20px;
-    
+
     @include breakpoint(tablet) {
       width: 100%;
       flex-direction: column;
@@ -145,11 +145,9 @@
     .icon {
       width: 20px;
       height: 20px;
+      
       &.contact-link-telegram {
         fill: $color-dark;
-        path {
-          fill: $color-white;
-        }
       }
 
       &.contact-link-mail {
@@ -241,7 +239,7 @@
     background-color: transparent;
 
     .scrolled & {
-margin-top: 50px;
+      margin-top: 50px;
     }
 
     .burger__line {

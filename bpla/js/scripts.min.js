@@ -129,22 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
    }
 
-   if (textareas) {
-      textareas.forEach(textarea => {
-         textarea.addEventListener('keyup', (e) => {
-            textarea.classList.add('filled');
-         });
-         textarea.addEventListener("focus", () => {
-            textarea.classList.add("filled")
-         })
-         textarea.addEventListener("blur", () => {
-            if (textarea.value.length === 0) {
-               textarea.classList.remove("filled")
-            }
-         })
-      })
-   }
-
    const detailBlock = document.querySelector('.detail');
    if (detailBlock) {
       const moreText = detailBlock.querySelector('.detail__content-description p');
@@ -225,87 +209,87 @@ document.addEventListener('DOMContentLoaded', () => {
       }
    }
 
-   const telSelectorS = document.querySelectorAll('.j-phone-mask');
-   if (telSelectorS) {
-      telSelectorS.forEach(item => {
-         const inputMask = new Inputmask('+7 (999) 999-99-99');
-         inputMask.mask(item);
-      })
-   }
+   // const telSelectorS = document.querySelectorAll('.j-phone-mask');
+   // if (telSelectorS) {
+   //    telSelectorS.forEach(item => {
+   //       const inputMask = new Inputmask('+7 (999) 999-99-99');
+   //       inputMask.mask(item);
+   //    })
+   // }
 
-   const callBackForm = document.querySelector('.form-modal-callback');
+   // const callBackForm = document.querySelector('.form-modal-callback');
 
-   if (callBackForm) {
-      // const telCallBack = callBackForm.querySelector('input[type="tel"]');
-      let btnCallBackForm = callBackForm.querySelector('.btn-submit');
-      btnCallBackForm.disabled = true;
+   // if (callBackForm) {
+   //    // const telCallBack = callBackForm.querySelector('input[type="tel"]');
+   //    let btnCallBackForm = callBackForm.querySelector('.btn-submit');
+   //    btnCallBackForm.disabled = true;
 
-      const validationCallBack = new JustValidate('.form-modal-callback', {
-         validateBeforeSubmitting: true,
-         testingMode: true,
-      });
+   //    const validationCallBack = new JustValidate('.form-modal-callback', {
+   //       validateBeforeSubmitting: true,
+   //       testingMode: true,
+   //    });
 
-      validationCallBack
-         .addField('.callback-name', [
-            {
-               rule: 'minLength',
-               value: 3,
-               errorMessage: 'Введите минимум 3 символа',
-            },
-            {
-               rule: 'maxLength',
-               value: 20,
-               errorMessage: 'Введите не больше 20 символов',
-            },
-            {
-               rule: 'required',
-               value: true,
-               errorMessage: 'Поле обязательно для заполнения',
-            }
-         ])
-         .addField('.callback-tel', [
-            {
-               rule: 'required',
-               value: true,
-               errorMessage: 'Поле обязательно для заполнения',
-            },
-            {
-               rule: 'function',
-               validator: function () {
-                  const phoneBackForm = callBackForm.querySelector('input[type="tel"]').inputmask.unmaskedvalue();
-                  return phoneBackForm.length === 10;
-               },
-               errorMessage: 'Введите корректный номер',
-            },
-         ])
+   //    validationCallBack
+   //       .addField('.callback-name', [
+   //          {
+   //             rule: 'minLength',
+   //             value: 3,
+   //             errorMessage: 'Введите минимум 3 символа',
+   //          },
+   //          {
+   //             rule: 'maxLength',
+   //             value: 20,
+   //             errorMessage: 'Введите не больше 20 символов',
+   //          },
+   //          {
+   //             rule: 'required',
+   //             value: true,
+   //             errorMessage: 'Поле обязательно для заполнения',
+   //          }
+   //       ])
+   //       .addField('.callback-tel', [
+   //          {
+   //             rule: 'required',
+   //             value: true,
+   //             errorMessage: 'Поле обязательно для заполнения',
+   //          },
+   //          {
+   //             rule: 'function',
+   //             validator: function () {
+   //                const phoneBackForm = callBackForm.querySelector('input[type="tel"]').inputmask.unmaskedvalue();
+   //                return phoneBackForm.length === 10;
+   //             },
+   //             errorMessage: 'Введите корректный номер',
+   //          },
+   //       ])
 
-         .onSuccess((event) => {
-            console.log('Проверка проходит и форма отправлена', event);
-            // если проверка прошла показать popup
-            // openPopup('popup-success')
+   //       .onSuccess((event) => {
+   //          console.log('Проверка проходит и форма отправлена', event);
+   //          // если проверка прошла показать popup
+   //          // openPopup('popup-success')
 
-            // let formData = new FormData(event.target);
-            // console.log(...formData);
+   //          // let formData = new FormData(event.target);
+   //          // console.log(...formData);
 
-            // let xhr = new XMLHttpRequest();
+   //          // let xhr = new XMLHttpRequest();
 
-            // xhr.onreadystatechange = function () {
-            //    if (xhr.readyState === 4) {
-            //       // let response = JSON.parse(xhr.responseText);
-            //       if (xhr.status === 200) {
-            //          console.log('Отправлено');
-            //          // если проверка прошла показать popup
-            //          // openPopup('popup-success')
-            //       } else {
-            //          openPopup('popup-success-error')
-            //       }
-            //    }
-            // }
-            // xhr.open('POST', callBackForm.action, true);
-            // xhr.send(formData);
-            // event.target.reset();
-         });
-   }
+   //          // xhr.onreadystatechange = function () {
+   //          //    if (xhr.readyState === 4) {
+   //          //       // let response = JSON.parse(xhr.responseText);
+   //          //       if (xhr.status === 200) {
+   //          //          console.log('Отправлено');
+   //          //          // если проверка прошла показать popup
+   //          //          // openPopup('popup-success')
+   //          //       } else {
+   //          //          openPopup('popup-success-error')
+   //          //       }
+   //          //    }
+   //          // }
+   //          // xhr.open('POST', callBackForm.action, true);
+   //          // xhr.send(formData);
+   //          // event.target.reset();
+   //       });
+   // }
 });
 
 function initSlider(slider, options) {

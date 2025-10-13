@@ -7,8 +7,6 @@
 	<meta name="description" content="BPLA">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- Template Basic Images Start -->
-	<!-- <meta property="og:image" content="./path/to/image.jpg"> -->
 	<link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96">
 	<link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg">
 	<link rel="shortcut icon" href="./img/favicon/favicon.ico">
@@ -21,7 +19,6 @@
 </head>
 
 <body class="page_body">
-	<!-- content -->
 	<div class="site-container">
 		<header class="header" id="header">
 			<div class="header-top">
@@ -32,7 +29,7 @@
 							<button class="burger" data-burger aria-label="open-menu" aria-expanded="false">
 								<span class="burger__line"></span>
 							</button>
-							<a href="./" class="header__logo">
+							<a href="./" class="header__logo" >
 								<svg class="icon">
 									<use xlink:href="./img/sprite/sprite.svg#logo"></use>
 								</svg>
@@ -54,7 +51,6 @@
 								<!-- <button class="burger" data-burger aria-label="open-menu" aria-expanded="false">
 									<span class="burger__line"></span>
 								</button> -->
-
 							</div>
 							<div class="header-top__nav">
 								<nav>
@@ -70,11 +66,11 @@
 							</div>
 							<div class="contacts-offer hidden-desktop">
 								<div class="text-center">
-									<a href="tel:88002222222" class="btn-reset contacts-link">8 (800) 222-22-22</a>
+									<a href="tel:88002222222" class="btn-reset contacts-link" target="_blank">8 (800) 222-22-22</a>
 									<span>Многоконтактный телефон</span>
 								</div>
 								<div class="text-center">
-									<a href="mailto:info@bpla.ru" class="btn-reset contacts-link">info@bpla.ru</a>
+									<a href="mailto:info@bpla.ru" class="btn-reset contacts-link" target="_blank">info@bpla.ru</a>
 									<span>Электронная почта</span>
 								</div>
 							</div>
@@ -143,29 +139,60 @@
 									<div class="swiper detail-images__swiper">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
-												<img src="./img/@2x/detail-1.jpg" alt="detail 1">
+												<picture>
+													<source srcset="./img/@2x/detail-1.webp" type="image/webp">
+													<source srcset="./img/@2x/detail-1.jpg" type="image/jpeg">
+													<img src="./img/@2x/detail-1.jpg" alt="detail 1">
+												</picture>
 											</div>
 											<div class="swiper-slide">
-												<img src="./img/@2x/detail-1.jpg" alt="detail 1">
+												<picture>
+													<source srcset="./img/@2x/detail-1.webp" type="image/webp">
+													<source srcset="./img/@2x/detail-1.jpg" type="image/jpeg">
+													<img src="./img/@2x/detail-1.jpg" alt="detail 1">
+												</picture>
 											</div>
 											<div class="swiper-slide">
-												<img src="./img/@2x/detail-1.jpg" alt="detail 1">
+												<picture>
+													<source srcset="./img/@2x/detail-1.webp" type="image/webp">
+													<source srcset="./img/@2x/detail-1.jpg" type="image/jpeg">
+													<img src="./img/@2x/detail-1.jpg" alt="detail 1">
+												</picture>
 											</div>
 											<div class="swiper-slide">
-												<img src="./img/@2x/detail-1.jpg" alt="detail 1">
+												<picture>
+													<source srcset="./img/@2x/detail-1.webp" type="image/webp">
+													<source srcset="./img/@2x/detail-1.jpg" type="image/jpeg">
+													<img src="./img/@2x/detail-1.jpg" alt="detail 1">
+												</picture>
 											</div>
 											<div class="swiper-slide">
-												<img src="./img/@2x/detail-2.jpg" alt="detail 1">
+												<picture>
+													<source srcset="./img/@2x/detail-2.webp" type="image/webp">
+													<source srcset="./img/@2x/detail-2.jpg" type="image/jpeg">
+													<img src="./img/@2x/detail-2.jpg" alt="detail 1">
+												</picture>
 											</div>
 											<div class="swiper-slide">
-												<img src="./img/@2x/detail-2.jpg" alt="detail 1">
+												<picture>
+													<source srcset="./img/@2x/detail-2.webp" type="image/webp">
+													<source srcset="./img/@2x/detail-2.jpg" type="image/jpeg">
+													<img src="./img/@2x/detail-2.jpg" alt="detail 1">
+												</picture>
 											</div>
 										</div>
-
-										<!-- pagination-->
 										<div class="swiper-pagination banner-swiper-pagination hidden-desktop"></div>
 									</div>
-
+									<div class="swiper-button-prev detail-images-prev hidden-desktop">
+										<svg class="icon">
+											<use xlink:href="./img/sprite/sprite.svg#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="swiper-button-next detail-images-next hidden-desktop">
+										<svg class="icon">
+											<use xlink:href="./img/sprite/sprite.svg#arrow-right"></use>
+										</svg>
+									</div>
 								</div>
 							</div>
 							<div class="detail__content-right">
@@ -182,7 +209,7 @@
 											активного радиоэлектронного противодействия. Конструкция дрона обеспечивает
 											высокую устойчивость к помехам, стабильную связь и точное выполнение миссий
 											на дальних дистанциях
-										БПЛА «ТЁЩА» — это многофункциональный беспилотный комплекс, разработанный
+											БПЛА «ТЁЩА» — это многофункциональный беспилотный комплекс, разработанный
 											для выполнения разведывательных, корректировочныхи ударных задач в условиях
 											активного радиоэлектронного противодействия. Конструкция дрона обеспечивает
 											высокую устойчивость к помехам, стабильную связь и точное выполнение миссий
@@ -345,7 +372,7 @@
 										Гарантийный срок <span class="value">14 дней</span>
 									</li>
 									<li>
-										Материал <span class="value">Пластик, Металлический сплав</span>
+										Материал <span class="value">Пластик, Металлический сплав</span>
 									</li>
 									<li>
 										Датчики контроллера <span class="value">GPS-трекер</span>
@@ -357,7 +384,6 @@
 				</div>
 			</section>
 		</main>
-
 		<footer class="footer" id="footer">
 			<div class="container">
 				<div class="footer__content">
@@ -392,11 +418,11 @@
 						</div>
 						<div class="footer__content-block contacts-offer">
 							<div>
-								<a href="tel:88002222222" class="btn-reset contacts-link">8 (800) 222-22-22</a>
+								<a href="tel:88002222222" class="btn-reset contacts-link" target="_blank">8 (800) 222-22-22</a>
 								<span>Многоконтактный телефон</span>
 							</div>
 							<div>
-								<a href="mailto:info@bpla.ru" class="btn-reset contacts-link">info@bpla.ru</a>
+								<a href="mailto:info@bpla.ru" class="btn-reset contacts-link" target="_blank">info@bpla.ru</a>
 								<span>Электронная почта</span>
 							</div>
 						</div>
@@ -441,9 +467,6 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- <script src="./libs/inputmask.min.js"></script> -->
-	<!-- <script src="./libs/just-validate3.3.3.min.js"></script> -->
 	<script src="./libs/swiper-bundle.min.js"></script>
 	<script src="./js/scripts.min.js"></script>
 </body>

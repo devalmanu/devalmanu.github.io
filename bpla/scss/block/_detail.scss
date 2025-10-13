@@ -10,6 +10,7 @@
             border-radius: 32px;
         }
         @include breakpoint(mobileonly) {
+            row-gap: 20px;
             padding: 16px;
         }
         h1 {
@@ -17,7 +18,6 @@
                 margin-bottom: 8px;
             }
         }
-
         h2,
         .h2 {
             font-family: $TTNorms-Bold;
@@ -28,24 +28,24 @@
                 margin-bottom: 16px;
             }
         }
-
         h3,
         .h3 {
             font-family: $TTNorms-Bold;
             font-size: 16px;
             line-height: 1.15;
             margin-bottom: 10px;
+            @include breakpoint(mobileonly) {
+                margin-bottom: 4px;
+            }
         }
     }
     &__content {
         display: flex;
         column-gap: 20px;
-
         @include breakpoint(tablet) {
             flex-direction: column;
-            row-gap: 16px;
+            row-gap: 10px;
         }
-
         .detail__content-left {
             width: 49%;
             @include breakpoint(tablet) {
@@ -67,6 +67,10 @@
                 font-size: 16px;
                 line-height: 1.2;
                 margin-top: 4px;
+                @include breakpoint(mobileonly) {
+                    letter-spacing: -0.06em;
+                    margin-top: 0;
+                }
             }
             .btn-pay {
                 margin-top: 40px;
@@ -76,6 +80,8 @@
                 @include breakpoint(mobileonly) {
                     margin-top: 16px;
                     max-width: 100%;
+                    padding: 13.5px 30px;
+                    letter-spacing: -0.01em;
                 }
             }
         }
@@ -89,8 +95,9 @@
                 font-size: 16px;
                 line-height: 1.15;
                 @include breakpoint(mobileonly) {
-                font-size: 14px;
-            }
+                    font-size: 14px;
+                    line-height: 1.25;
+                }
             }
         }
         &-exposition {
@@ -98,8 +105,9 @@
                 font-size: 16px;
                 color: $color-light-gray;
                 @include breakpoint(mobileonly) {
-                font-size: 14px;
-            }
+                    font-size: 14px;
+                    line-height: 1.22;
+                }
             }
         }
         &-price {
@@ -115,6 +123,10 @@
                 line-height: 1;
                 color: $color-dark-gray;
                 margin-bottom: 14px;
+                @include breakpoint(mobileonly) {
+                    font-size: 12px;
+                    margin-bottom: 7px;
+                }
             }
             .old-price {
                 font-family: $TTNorms-Medium;
@@ -148,13 +160,18 @@
             @include breakpoint(mobileonly) {
                 padding: 8px;
                 border-radius: $radius-16;
+                margin-top: -3px;
             }
         }
     }
     .complect__list {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px 10px;
+        row-gap: 10px;
+        column-gap: 10px;
+        @include breakpoint(mobileonly) {
+            row-gap: 8px;
+        }
         .checkBlock {
             width: calc(33.33% - 7px);
             @include breakpoint(tablet) {
@@ -168,16 +185,12 @@
     &-images {
         position: relative;
         display: flex;
-        overflow: hidden;
         width: 100%;
-
-        @include breakpoint(desktop) {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-        }
         @include breakpoint(tablet) {
-            padding: 0 0 17px;
+            width: 100%;
+            max-width: 600px;
+            padding-bottom: 18px;
+            margin: 0 auto;
         }
         &__swiper {
             position: relative;
@@ -191,20 +204,32 @@
                 margin: 0 auto;
             }
             @include breakpoint(mobileonly) {
-                width: 296px;
-                height: 296px;
+                width: 300px;
+                height: 300px;
             }
             .swiper-slide {
                 height: 464px;
                 border-radius: $radius-16;
                 overflow: hidden;
                 @include breakpoint(tablet) {
-                    height: 370px;
+                    height: 350px;
                 }
                 @include breakpoint(mobileonly) {
-                    height: 296px;
+                    height: 280px;
                 }
             }
+        }
+        .swiper-button-prev,
+        .swiper-container-rtl .swiper-button-next {
+            left: 0;
+        }
+        .swiper-button-next,
+        .swiper-container-rtl .swiper-button-prev {
+            right: 0;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 43%;
         }
         .swiper-slide {
             cursor: pointer;
@@ -213,7 +238,6 @@
                 @include image-fit;
             }
         }
-
         &__thumb {
             width: 80px;
             flex-shrink: 0;
@@ -258,7 +282,7 @@
                     height: calc(100% - 4px);
                     top: 2px;
                     left: 2px;
-                    border-radius: $radius-16;
+                    border-radius: 14px;
                     overflow: hidden;
                     @include breakpoint(tablet) {
                         border-radius: 6px;
@@ -296,8 +320,19 @@
             font-size: 14px;
             line-height: 1.1;
             color: $color-dark;
+            @include breakpoint(phablet) {
+                justify-content: space-between;
+                padding: 12px 0 8px;
+                border-bottom: 1px solid $color-ultra-light;
+            }
+            @include breakpoint(mobileonly) {
+                font-size: 12px;
+            }
             &:not(:last-child) {
                 margin-bottom: 12px;
+                @include breakpoint(phablet) {
+                    margin-bottom: 0;
+                }
             }
             &::before {
                 content: "";
@@ -305,14 +340,23 @@
                 flex-grow: 1;
                 order: 2;
                 margin: 0 3px;
+                @include breakpoint(phablet) {
+                    display: none;
+                }
             }
             .value {
+                flex-shrink: 0;
                 width: 210px;
                 order: 3;
-                text-align: left;
                 font-size: 14px;
                 color: $color-dark;
+                text-align: left;
                 margin-left: 3px;
+                @include breakpoint(phablet) {
+                    width: calc(50% - 8px);
+                    font-size: 12px;
+                    text-align: right;
+                }
             }
         }
     }
