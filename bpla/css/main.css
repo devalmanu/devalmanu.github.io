@@ -841,7 +841,7 @@ main .swiper-button-prev.swiper-button-disabled svg {
 }
 .header__logo .icon,
 .header__logo svg {
-  max-width: 100px;
+  width: 100px;
   height: 24px;
 }
 .header__logo-group {
