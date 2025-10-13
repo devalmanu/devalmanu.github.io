@@ -40,6 +40,12 @@
          row-gap: 0;
          text-align: center;
       }
+      .scrolled & {
+         background: $color-ultra-light;
+         @include breakpoint(tablet) {
+            background: $color-white;
+         }
+      }
    }
    &__link {
       display: block;

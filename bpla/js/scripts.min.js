@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
    const burger = document.querySelector('[data-burger]');
-   const overlayMenu = document.querySelector('.overlay-menu');
+   const burgerClose = document.querySelector('.burger-close');
    const nav = document.querySelector('[data-nav]');
    const navItems = nav.querySelectorAll('a');
    const body = document.body;
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
    // const modalOverlay = document.querySelector('.modal-overlay');
    // const modalCloseAll = document.querySelectorAll('.modal-close');
    // const modalsWindows = document.querySelectorAll('.modal-wind');
-
    document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
 
    window.addEventListener("scroll", function () {
@@ -31,11 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
    // burder open/close
    burger.addEventListener('click', (e) => {
-      body.classList.toggle('stop-scroll');
-      burger.classList.toggle('burger--active');
-      nav.classList.toggle('nav--visible');
+      body.classList.add('stop-scroll');
+      burger.classList.add('burger--active');
+      nav.classList.add('nav--visible');
    });
-
+   burgerClose.addEventListener('click', (e) => {
+      body.classList.remove('stop-scroll');
+      burger.classList.remove('burger--active');
+      nav.classList.remove('nav--visible');
+   });
    // click item menu -> no-scroll + close menu
    navItems.forEach(el => {
       el.addEventListener('click', () => {
@@ -44,28 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
          nav.classList.remove('nav--visible');
       });
    });
-
-   // click overlay - burder close
-   overlayMenu.addEventListener('click', (e) => {
-      if (e.target == overlayMenu) {
-         body.classList.remove('stop-scroll');
-         burger.classList.remove('burger--active');
-         nav.classList.remove('nav--visible');
-      }
-   });
-
+  
    // scroll into block class link-button
    document.querySelectorAll('a.link-button[href^="#"').forEach(link => {
       link.addEventListener('click', function (e) {
          e.preventDefault();
-
          let href = this.getAttribute('href').substring(1);
-
          const scrollTarget = document.getElementById(href);
          const topOffsetHeader = document.querySelector('.header').offsetHeight;
          const elementPosition = scrollTarget.getBoundingClientRect().top;
          const offsetPosition = elementPosition;
-
          window.scrollBy({
             top: offsetPosition,
             behavior: 'smooth'
@@ -133,35 +124,24 @@ document.addEventListener('DOMContentLoaded', () => {
    if (detailBlock) {
       const moreText = detailBlock.querySelector('.detail__content-description p');
       const moreButton = detailBlock.querySelector('.btn-more');
-      // console.dir(moreText)
-      // if (moreText.offsetHeight > 60) {
-      //    moreButton.style.display = 'inline-block';
-      //    moreButton.addEventListener('click', function () {
-      //       if (moreText.style.webkitLineClamp == '3') {
-      //          moreText.style.webkitLineClamp = 'inherit';
-      //          moreButton.textContent = 'Скрыть';
-      //       } else {
-      //          moreText.style.webkitLineClamp = '3';
-      //          moreButton.textContent = 'Подробнее';
-      //       }
-      //    });
 
-      // } else {
-      //    moreButton.style.display = 'none';
-      // }
+      if (moreText.offsetHeight > 53) {
+         moreButton.style.display = 'inline-block';
+         moreButton.addEventListener('click', function () {
+            if (moreText.style.webkitLineClamp == '3') {
+               moreText.style.webkitLineClamp = 'inherit';
+               moreButton.textContent = 'Скрыть';
+            } else {
+               moreText.style.webkitLineClamp = '3';
+               moreButton.textContent = 'Подробнее';
+            }
+         });
 
-      moreButton.addEventListener('click', function () {
-         if (moreText.style.webkitLineClamp == '3') {
-            moreText.style.webkitLineClamp = 'inherit';
-            moreButton.textContent = 'Скрыть';
-         } else {
-            moreText.style.webkitLineClamp = '3';
-            moreButton.textContent = 'Подробнее';
-         }
-      });
+      } else {
+         moreButton.style.display = 'none';
+      }
 
       const detailSwiper = detailBlock.querySelector('.detail-images');
-
       if (detailSwiper) {
          const detailImagesThumbs = new Swiper(".detail-images__thumb", {
             spaceBetween: 9,
@@ -184,7 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
          const detailImagesMain = new Swiper(".detail-images__swiper", {
             spaceBetween: 0,
             slidesPerView: 1,
-            loop: true,
             effect: 'fade',
             fadeEffect: {
                crossFade: true
