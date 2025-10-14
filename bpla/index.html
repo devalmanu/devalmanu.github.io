@@ -15,7 +15,7 @@
 	<link rel="manifest" href="./img/favicon/site.webmanifest">
 	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body class="page_body front-page">
@@ -96,14 +96,15 @@
 					<div class="banner__content">
 						<div class="banner__picture">
 							<picture>
-								<source srcset="./img/@2x/banner-1.webp" type="image/webp">
-								<source srcset="./img/@2x/banner-1.jpg" type="image/jpeg">
-								<img src="./img/@2x/banner-1.jpg" alt="banner 1">
+								<source media="(max-width: 600px)" srcset="./img/@2x/banner-mobile.webp"
+									data-src="./img/@2x/banner-mobile.jpg">
+								<img src="./img/@2x/banner-1.webp" alt="О компании"
+									data-src="./img/@2x/banner-1.jpg" loading="lazy">
 							</picture>
 						</div>
 						<div class="banner__content-block">
 							<div class="banner__content-title">
-								<h1>Производство и поставка доступных рам и грузовых дрнов от 5 до 15 кг</h1>
+								<h1>Производство и поставка доступных рам и грузовых дронов от 5 до 15 кг</h1>
 							</div>
 							<div class="banner__content-subtitle">
 								<p>Полностью локализованное производство в России из российских компонентов.
@@ -194,11 +195,11 @@
 						<div class="swiper-wrapper product-swiper-wrapper">
 							<div class="product-item swiper-slide">
 								<div class="product-item__img">
-									<img src="./img/products/product-1.webp" alt="Вобла">
+									<img src="./img/products/product-1.webp" alt="Вобла" loading="lazy">
 								</div>
 								<div class="product-item__info">
 									<h3 class="h3 product-item__title">Вобла</h3>
-									<div class="product-item__tag">Грузоподъемность до 100 кг</div>
+									<div class="product-item__tag">Грузоподъемность до 100&nbsp;кг</div>
 									<div class="product-item__footer">
 										<a href="./detail.html" class="btn-reset btn-accent">Подробнее</a>
 										<div class="new-price">от 1500 ₽</div>
@@ -207,7 +208,7 @@
 							</div>
 							<div class="product-item swiper-slide">
 								<div class="product-item__img">
-									<img src="./img/products/product-2.webp" alt="Тёща">
+									<img src="./img/products/product-2.webp" alt="Тёща" loading="lazy">
 								</div>
 								<div class="product-item__info">
 									<h3 class="h3 product-item__title">Тёща</h3>
@@ -220,11 +221,11 @@
 							</div>
 							<div class="product-item swiper-slide">
 								<div class="product-item__img">
-									<img src="./img/products/product-3.webp" alt="Дриада">
+									<img src="./img/products/product-3.webp" alt="Дриада" loading="lazy" width="128">
 								</div>
 								<div class="product-item__info">
 									<h3 class="h3 product-item__title">Дриада</h3>
-									<div class="product-item__tag">Грузоподъемность до 100 кг</div>
+									<div class="product-item__tag">Грузоподъемность до 100&nbsp;кг</div>
 									<div class="product-item__footer">
 										<a href="./detail.html" class="btn-reset btn-accent">Подробнее</a>
 										<div class="new-price">от 2500 ₽</div>
@@ -233,11 +234,11 @@
 							</div>
 							<div class="product-item swiper-slide">
 								<div class="product-item__img">
-									<img src="./img/products/product-1.webp" alt="Вобла">
+									<img src="./img/products/product-1.webp" alt="Вобла" loading="lazy">
 								</div>
 								<div class="product-item__info">
 									<h3 class="h3 product-item__title">Вобла</h3>
-									<div class="product-item__tag">Грузоподъемность до 100 кг</div>
+									<div class="product-item__tag">Грузоподъемность до 100&nbsp;кг</div>
 									<div class="product-item__footer">
 										<a href="./detail.html" class="btn-reset btn-accent">Подробнее</a>
 										<div class="new-price">от 1500 ₽</div>
@@ -246,7 +247,7 @@
 							</div>
 							<div class="product-item swiper-slide">
 								<div class="product-item__img">
-									<img src="./img/products/product-2.webp" alt="Тёща">
+									<img src="./img/products/product-2.webp" alt="Тёща" loading="lazy">
 								</div>
 								<div class="product-item__info">
 									<h3 class="h3 product-item__title">Тёща</h3>
@@ -270,10 +271,183 @@
 					</div>
 					<div class="drons__list">
 						<div class="drons__item">
-
+							<div class="drons__item-info">
+								<h3>Тёща</h3>
+								<p class="drons__item-info-desc">Защита от РЭБ, разведка, тепловизор, ночная камера</p>
+								<div class="info__list">
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#component"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Компоненты сборки</span>
+											<p>Российские</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#range"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Дальность полета</span>
+											<p>До 35 километров</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#speed"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Скорость полета</span>
+											<p>до 140 км/ч</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#control"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Управление дроном</span>
+											<p>TBS, ELRS, Гермес, Кузнечик</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#frequency"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Частоты управления</span>
+											<p>200 - 2500</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#videosignal"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Частоты видеосигнала</span>
+											<p>1,2-6 ГГц от 1,6-10W</p>
+										</div>
+									</div>
+								</div>
+								<div class="drons__item-bottom">
+									<span class="h4">от 750 000 ₽</span>
+									<a href="./detail.html" class="btn-reset btn-accent">Подробнее</a>
+								</div>
+							</div>
+							<div class="drons__item-img">
+								<picture class="drons__item-banner">
+									<source srcset="./img/@2x/dron-bg-1.webp, ./img/@2x/dron-bg-1@2x.webp 2x"
+										type="image/webp">
+									<img src="./img/@2x/dron-bg-1.jpg" alt="Солдат" loading="lazy"
+										srcset="./img/@2x/dron-bg-1@2x.jpg 2x">
+								</picture>
+								<div class="drons__item-dron">
+									<img src="./img/@2x/dron-1.webp" alt="дрон" loading="lazy">
+								</div>
+							</div>
 						</div>
 						<div class="drons__item">
-
+							<div class="drons__item-info">
+								<h3>Мобла</h3>
+								<p class="drons__item-info-desc">Защита от РЭБ, разведка, тепловизор, ночная камера,
+									сброс</p>
+								<div class="info__list">
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#component"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Компоненты сборки</span>
+											<p>Российские</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#range"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Дальность полета</span>
+											<p>До 35 километров</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#speed"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Скорость полета</span>
+											<p>до 140 км/ч</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#control"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Управление дроном</span>
+											<p>TBS, ELRS, Гермес, Кузнечик</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#frequency"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Частоты управления</span>
+											<p>200 - 2500</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#videosignal"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Частоты видеосигнала</span>
+											<p>1,2-6 ГГц от 1,6-10W</p>
+										</div>
+									</div>
+								</div>
+								<div class="drons__item-bottom">
+									<span class="h4">от 1 750 000 ₽</span>
+									<a href="./detail.html" class="btn-reset btn-accent">Подробнее</a>
+								</div>
+							</div>
+							<div class="drons__item-img">
+								<picture class="drons__item-banner">
+									<source srcset="./img/@2x/dron-bg-2.webp, ./img/@2x/dron-bg-2@2x.webp 2x"
+										type="image/webp">
+									<img src="./img/@2x/dron-bg-2.jpg" alt="Солдат" loading="lazy"
+										srcset="./img/@2x/dron-bg-2@2x.jpg 2x">
+								</picture>
+								<div class="drons__item-dron">
+									<img src="./img/@2x/dron-2.webp" alt="дрон" loading="lazy">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -287,19 +461,19 @@
 					<div class="swiper partners-swiper">
 						<div class="swiper-wrapper partners-swiper-wrapper">
 							<div class="partners__item swiper-slide">
-								<img src="./img/@1x/partners-1.webp" alt="партнер 1">
+								<img src="./img/@1x/partners-1.webp" alt="партнер 1" loading="lazy">
 							</div>
 							<div class="partners__item swiper-slide">
-								<img src="./img/@1x/partners-2.webp" alt="партнер 1">
+								<img src="./img/@1x/partners-2.webp" alt="партнер 1" loading="lazy">
 							</div>
 							<div class="partners__item swiper-slide">
-								<img src="./img/@1x/partners-3.webp" alt="партнер 1">
+								<img src="./img/@1x/partners-3.webp" alt="партнер 1" loading="lazy">
 							</div>
 							<div class="partners__item swiper-slide">
-								<img src="./img/@1x/partners-4.webp" alt="партнер 1">
+								<img src="./img/@1x/partners-4.webp" alt="партнер 1" loading="lazy">
 							</div>
 							<div class="partners__item swiper-slide">
-								<img src="./img/@1x/partners-2.webp" alt="партнер 1">
+								<img src="./img/@1x/partners-2.webp" alt="партнер 1" loading="lazy">
 							</div>
 						</div>
 					</div>
@@ -333,7 +507,15 @@
 							</form>
 						</div>
 						<div class="feedback__content-img">
-							<img src="" alt="">
+							<picture class="feedback__content-banner">
+								<source srcset="./img/@2x/solder-bg.webp, ./img/@2x/solder-bg@2x.webp 2x"
+									type="image/webp">
+								<img src="./img/@2x/solder-bg.jpg" alt="Солдат" loading="lazy"
+									srcset="./img/@2x/solder-bg@2x.jpg 2x">
+							</picture>
+							<div class="feedback__content-solder">
+								<img src="./img/@2x/solder.webp" alt="Солдат" loading="lazy">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -349,8 +531,7 @@
 									<use xlink:href="./img/sprite/sprite.svg#logo"></use>
 								</svg>
 							</a>
-							<p><span>BPLA</span> - Производство и поставка доступных Грузовых дронов от 6 до 100
-								кг
+							<p><span>BPLA</span> - Производство и поставка доступных Грузовых дронов от 6 до 100&nbsp;кг
 							</p>
 						</div>
 						<div class="footer__content-block footer__content-navigation">
@@ -423,6 +604,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- <script src="./libs/inputmask.min.js"></script> -->
 	<script src="./libs/swiper-bundle.min.js"></script>
 	<script src="./js/scripts.min.js"></script>
 </body>

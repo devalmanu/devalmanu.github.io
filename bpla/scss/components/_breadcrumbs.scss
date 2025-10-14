@@ -1,11 +1,11 @@
 .breadcrumbs {
     position: relative;
-    padding: 0 0 20px;
+    padding: 22px 0 20px;
     background: transparent;
     margin-bottom: 0;
     z-index: 5;
     @include breakpoint(tablet) {
-        padding-bottom: 22px;
+        padding: 22px 0;
     }
     &__list {
         position: relative;

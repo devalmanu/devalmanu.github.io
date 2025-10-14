@@ -2,16 +2,10 @@
 	&__content {
 		width: 100%;
 		display: flex;
-		padding: 40px;
 		background: $color-white;
 		border-radius: $radius-40;
-		overflow: hidden;
-		@include breakpoint(phablet) {
+		@include breakpoint(tablet) {
 			flex-direction: column-reverse;
-			padding: 24px;
-		}
-		@include breakpoint(mobileonly) {
-			padding: 16px;
 		}
 		h3 {
 			margin-bottom: 16px;
@@ -27,11 +21,98 @@
 			}
 		}
 		&-form {
-			width: 58.2%;
+			width: 57.7%;
+			padding: 40px 0 40px 40px;
+			@include breakpoint(tablet) {
+				width: 100%;
+				padding: 24px;
+			}
+			@include breakpoint(mobileonly) {
+				padding: 16px;
+				border-radius: 0 0 32px 32px;
+			}
 		}
 
 		&-img {
-			width: 41.8%;
+			width: 42.3%;
+			position: relative;
+			border-radius: 0 40px 40px 0;
+			@include breakpoint(tablet) {
+				width: 100%;
+				border-radius: 40px 40px 0 0;
+			}
+			@include breakpoint(mobileonly) {
+				border-radius: 32px 32px 0 0;
+			}
+			.feedback__content-banner {
+				display: block;
+				width: 100%;
+				height: 100%;
+				@include breakpoint(tablet) {
+					max-height: 400px;
+				}
+				img {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					right: 0;
+					left: 0;
+					bottom: 0;
+					border-radius: 0 40px 40px 0;
+					@include breakpoint(tablet) {
+						position: relative;
+						max-width: 100%;
+						max-height: 400px;
+						object-fit: cover;
+						border-radius: 40px 40px 0 0;
+					}
+					@include breakpoint(mobileonly) {
+						max-height: 213px;
+						object-fit: cover;
+						object-position: top;
+						border-radius: 32px 32px 0 0;
+					}
+				}
+			}
+			&:before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				border-radius: 0 40px 40px 0;
+				background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+				z-index: 2;
+				@media (min-width: 992px) and (max-width: 1240px) {
+					background: linear-gradient(90deg, #fff 50%, rgba(255, 255, 255, 0) 100%);
+				}
+				@include breakpoint(tablet) {
+					background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+					border-radius: 40px 40px 0 0;
+				}
+			}
+		}
+		&-solder {
+			position: absolute;
+			right: 7.5%;
+			bottom: 0;
+			z-index: 3;
+			@media (min-width: 992px) and (max-width: 1240px) {
+				right: 20px;
+			}
+			img {
+				width: 310px;
+				height: 520px;
+				@media (min-width: 992px) and (max-width: 1240px) {
+					width: 325px;
+					height: 543px;
+				}
+			}
+			@include breakpoint(tablet) {
+				display: none;
+			}
 		}
 	}
 }
@@ -77,19 +158,8 @@ form {
 	.btn-accent,
 	.btn-blue {
 		width: 100%;
-	}
-
-	.just-validate-error-field {
-		border: 1px solid $accent;
-	}
-
-	.just-validate-error-label {
-		opacity: 1;
-		bottom: -12px;
-		left: 0;
-		position: absolute;
-		font-size: 12px;
-		line-height: 1.35;
-		color: $accent !important;
+		@include breakpoint(mobileonly) {
+			min-width: 100%;
+		}
 	}
 }

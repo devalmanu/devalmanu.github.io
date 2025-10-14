@@ -1,0 +1,257 @@
+.drons {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        
+    }
+    &__item {
+        box-sizing: border-box;
+        display: flex;
+        background: $color-white;
+        border-radius: $radius-40;
+        @include breakpoint(tablet) {
+            flex-direction: column-reverse;
+        }
+        @include breakpoint(mobileonly) {
+                margin-top: -10px;
+            }
+        h3 {
+            margin-bottom: 0;
+        }
+
+        &-info {
+            width: 49%;
+            height: 100%;
+            min-height: 604px;
+            @include flex-h-column;
+            row-gap: 10px;
+            padding: 40px;
+            @include breakpoint(tablet) {
+                width: 100%;
+                min-height: auto;
+            }
+            @include breakpoint(phablet) {
+                padding: 24px;
+            }
+            @include breakpoint(mobileonly) {
+                padding: 16px;
+            }
+            &-desc {
+                font-size: 20px;
+                @include breakpoint(phablet) {
+                    font-size: 16px;
+                }
+                @include breakpoint(mobileonly) {
+                    font-size: 12px;
+                }
+            }
+        }
+        &-bottom {
+            @include flex-v-center;
+            justify-content: space-between;
+            column-gap: 20px;
+            margin-top: 20px;
+            @include breakpoint(tablet) {
+                margin-top: 26px;
+            }
+            @include breakpoint(mobileonly) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            span {
+                display: block;
+                font-family: $TTNorms-Bold;
+                font-size: 32px;
+                color: $color-dark;
+                margin-bottom: 0;
+                white-space: nowrap;
+                @include breakpoint(desktop) {
+                    font-size: 28px;
+                }
+                @include breakpoint(mobileonly) {
+                    font-size: 24px;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+        &-img {
+            width: 51%;
+            position: relative;
+            border-radius: 0 40px 40px 0;
+            @include breakpoint(tablet) {
+                width: 100%;
+                border-radius: 40px 40px 0 0;
+            }
+            @include breakpoint(mobileonly) {
+                border-radius: 32px 32px 0 0;
+            }
+            .drons__item-banner {
+                display: block;
+                width: 100%;
+                height: 100%;
+                @include breakpoint(tablet) {
+                    max-height: 400px;
+                }
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    object-fit: cover;
+                    border-radius: 0 40px 40px 0;
+                    @include breakpoint(tablet) {
+                        position: relative;
+                        max-width: 100%;
+                        max-height: 400px;
+                        min-height: 328px;
+                        object-fit: cover;
+                        border-radius: 40px 40px 0 0;
+                    }
+                    @include breakpoint(mobileonly) {
+                        max-height: 328px;
+                        object-fit: cover;
+                        object-position: top;
+                        border-radius: 32px 32px 0 0;
+                    }
+                }
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border-radius: 0 40px 40px 0;
+                background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+                z-index: 2;
+                @media (min-width: 992px) and (max-width: 1240px) {
+                    background: linear-gradient(90deg, #fff 00%, rgba(255, 255, 255, 0) 100%);
+                }
+                @include breakpoint(tablet) {
+                    background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+                    border-radius: 40px 40px 0 0;
+                }
+            }
+        }
+        &-dron {
+            position: absolute;
+            width: 336px;
+            height: 336px;
+            top: -120px;
+            left: 120px;
+            z-index: 3;
+        }
+
+        &:first-child {
+            .drons__item-dron {
+                top: -120px;
+                left: 20%;
+                @include breakpoint(phablet) {
+                    width: 220px;
+                    width: 220px;
+                    top: -65px;
+                }
+                @include breakpoint(mobileonly) {
+                    width: 156px;
+                    height: 156px;
+                    right: -30px;
+                    left: auto;
+                    transform: rotate(8deg);
+                }
+            }
+        }
+        &:nth-child(2) {
+            .drons__item-dron {
+                top: -140px;
+                left: 21.5%;
+                @include breakpoint(phablet) {
+                    width: 220px;
+                    width: 220px;
+                    top: -90px;
+                }
+                @include breakpoint(mobileonly) {
+                    width: 210px;
+                    height: 210px;
+                    top: -77px;
+                    left: -40px;
+                }
+            }
+        }
+    }
+    .info {
+        &__list {
+            @include flex-v-center;
+            flex-wrap: wrap;
+            column-gap: 6px;
+            row-gap: 20px;
+            margin: auto 0;
+            height: 100%;
+            @include breakpoint(tablet) {
+                margin-top: 22px;
+            }
+            @include breakpoint(mobileonly) {
+            row-gap: 12px;
+                column-gap: 0;
+            }
+        }
+        &__characteristic {
+            &:nth-child(odd) {
+                width: 45%;
+                @include breakpoint(mobileonly) {
+                    width: 50%;
+                }
+            }
+            &:nth-child(even) {
+                width: calc(55% - 6px);
+                @include breakpoint(mobileonly) {
+                    width: 50%;
+                }
+            }
+            @include flex-v-center;
+            .info-icon {
+                @include flex-all-center;
+                width: 44px;
+                height: 44px;
+                border-radius: $radius-12;
+                background: $accent;
+                margin-right: 10px;
+                flex-shrink: 0;
+                @include breakpoint(mobileonly) {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 8px;
+                    margin-right: 6px;
+                }
+                .icon {
+                    width: 24px;
+                    height: 24px;
+                    fill: $color-white;
+                }
+            }
+            .info-content {
+                span {
+                    display: block;
+                    font-size: 14px;
+                    color: $color-light-gray;
+                    margin-bottom: 5px;
+                    @include breakpoint(mobileonly) {
+                        font-size: 8px;
+                    }
+                }
+                p {
+                    font-family: $TTNorms-Medium;
+                    font-size: 16px;
+                    @include breakpoint(mobileonly) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
