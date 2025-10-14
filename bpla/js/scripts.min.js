@@ -173,6 +173,14 @@ document.addEventListener('DOMContentLoaded', () => {
                swiper: detailImagesThumbs,
             },
          });
+
+         detailImagesMain.navigation.prevEl.addEventListener('click', function () {
+            this.blur();
+         });
+
+         detailImagesMain.navigation.nextEl.addEventListener('click', function () {
+            this.blur();
+         });
       }
    }
 
