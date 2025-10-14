@@ -324,6 +324,7 @@ a.color-accent {
 	transition: all 0.25s linear;
 	position: relative;
 	text-align: center;
+	max-height: 51px;
 	z-index: 1;
 	@include breakpoint(tablet) {
 		width: min-content;
@@ -363,6 +364,7 @@ a.color-accent {
 	transition: all 0.25s linear;
 	position: relative;
 	text-align: center;
+	max-height: 51px;
 	z-index: 1;
 	@include breakpoint(tablet) {
 		width: min-content;
@@ -405,6 +407,7 @@ a.color-accent {
 	transition: all 0.25s linear;
 	position: relative;
 	text-align: center;
+	max-height: 51px;
 	z-index: 1;
 	@include breakpoint(tablet) {
 		width: min-content;

@@ -176,13 +176,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
    }
 
-   const telSelectorS = document.querySelectorAll('.j-phone-mask');
-   if (telSelectorS) {
-      telSelectorS.forEach(item => {
-         const inputMask = new Inputmask('+7 (999) 999-99-99');
-         inputMask.mask(item);
-      })
-   }
+   // const telSelectorS = document.querySelectorAll('.j-phone-mask');
+   // if (telSelectorS) {
+   //    telSelectorS.forEach(item => {
+   //       const inputMask = new Inputmask('+7 (999) 999-99-99');
+   //       inputMask.mask(item);
+   //    })
+   // }
 });
 
 function initSlider(slider, options) {
