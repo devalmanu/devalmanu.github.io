@@ -603,7 +603,7 @@ main {
 		color: $color-white;
 		border-radius: $radius-50;
 		background: $color-white;
-		transition: all 0.25s ease;
+		transition: all 0.5s ease;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 		svg {
 			display: block;
@@ -611,14 +611,20 @@ main {
 			height: 10px;
 			fill: $color-dark;
 		}
-		&:hover,
-		&:active,
-		&:focus {
-			background: $accent;
+		&:hover {
+			background: $color-ultra-light;
 			svg {
-				fill: $color-white;
+				fill: $color-dark;
 			}
 		}
+
+		// &:active,
+		// &:focus {
+		// 	background: $color-white;
+		// 	svg {
+		// 		fill: $color-dark;
+		// 	}
+		// }
 		&.swiper-button-disabled {
 			opacity: 1;
 			color: $color-dark;
