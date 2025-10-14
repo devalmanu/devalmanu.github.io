@@ -1,4 +1,5 @@
 .drons {
+    overflow: hidden;
     &__list {
         display: flex;
         flex-direction: column;
@@ -39,11 +40,13 @@
             }
             &-desc {
                 font-size: 20px;
+                height: 22px;
                 @include breakpoint(phablet) {
                     font-size: 16px;
                 }
                 @include breakpoint(mobileonly) {
                     font-size: 12px;
+                    height: auto;
                 }
             }
         }
@@ -130,9 +133,6 @@
                 border-radius: 0 40px 40px 0;
                 background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
                 z-index: 2;
-                @media (min-width: 992px) and (max-width: 1240px) {
-                    background: linear-gradient(90deg, #fff 00%, rgba(255, 255, 255, 0) 100%);
-                }
                 @include breakpoint(tablet) {
                     background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
                     border-radius: 40px 40px 0 0;

@@ -5,6 +5,8 @@
         position: relative;
         overflow: hidden;
         @include breakpoint(tablet) {
+            width: calc(100% - 16px);
+            margin: 0 auto;
             overflow: visible;
         }
     }
@@ -17,14 +19,15 @@
         position: relative;
         background-color: $color-white;
         border-radius: $radius-40;
-        @include breakpoint(mobileonly) {
+        @include breakpoint(tablet) {
             width: 200px;
             height: 120px;
+            border-radius: $radius-32;
         }
         @include breakpoint(mobileonly) {
             width: 150px;
             height: 96px;
-            border-radius: $radius-32;
+            border-radius: $radius-24;
         }
         img,
         .icon {
@@ -32,7 +35,11 @@
             max-height: 128px;
             margin: 20px;
             object-fit: contain;
+            @include breakpoint(tablet) {
+                max-height: 90px;
+            }
             @include breakpoint(mobileonly) {
+                max-height: 64px;
                 margin: 16px;
             }
         }

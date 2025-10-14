@@ -69,9 +69,6 @@
             @include breakpoint(mobileonly) {
                 row-gap: 8px;
             }
-            a {
-                letter-spacing: 0.085em;
-            }
         }
     }
     &__picture {

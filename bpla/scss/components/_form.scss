@@ -9,9 +9,17 @@
 		}
 		h3 {
 			margin-bottom: 16px;
+			@include breakpoint(mobileonly) {
+				margin-bottom: 8px;
+			}
 		}
 		.section-description {
 			padding-right: 0;
+			@include breakpoint(mobileonly) {
+				font-size: 12px;
+				padding-bottom: 0;
+				margin-bottom: 32px;
+			}
 			p {
 				font-size: 16px;
 				padding-right: 0;
@@ -49,21 +57,24 @@
 				width: 100%;
 				height: 100%;
 				@include breakpoint(tablet) {
-					max-height: 400px;
+					max-height: 315px;
+				}
+				@include breakpoint(mobileonly) {
+					max-height: 213px;
 				}
 				img {
 					position: absolute;
 					width: 100%;
 					height: 100%;
 					top: 0;
-					right: 0;
+					// right: 0;
 					left: 0;
 					bottom: 0;
 					border-radius: 0 40px 40px 0;
 					@include breakpoint(tablet) {
 						position: relative;
 						max-width: 100%;
-						max-height: 400px;
+						max-height: 315px;
 						object-fit: cover;
 						border-radius: 40px 40px 0 0;
 					}
@@ -85,33 +96,36 @@
 				border-radius: 0 40px 40px 0;
 				background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
 				z-index: 2;
-				@media (min-width: 992px) and (max-width: 1240px) {
-					background: linear-gradient(90deg, #fff 50%, rgba(255, 255, 255, 0) 100%);
-				}
 				@include breakpoint(tablet) {
 					background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
 					border-radius: 40px 40px 0 0;
+					z-index: 5;
 				}
 			}
 		}
 		&-solder {
 			position: absolute;
-			right: 7.5%;
+			right: 42px;
 			bottom: 0;
 			z-index: 3;
-			@media (min-width: 992px) and (max-width: 1240px) {
-				right: 20px;
+			@include breakpoint(tablet) {
+				left: auto;
+				right: auto;
+				bottom: 0;
+				z-index: 3;
+				left: 50%;
+				transform: translate(-50%, -0);
 			}
 			img {
-				width: 310px;
-				height: 520px;
-				@media (min-width: 992px) and (max-width: 1240px) {
-					width: 325px;
-					height: 543px;
+				width: 313px;
+				@include breakpoint(tablet) {
+					width: auto;
+					max-width: 230px;
 				}
-			}
-			@include breakpoint(tablet) {
-				display: none;
+				@include breakpoint(mobileonly) {
+					width: auto;
+					max-width: 158px;
+				}
 			}
 		}
 	}
@@ -121,6 +135,9 @@ form {
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;
+	@include breakpoint(mobileonly) {
+		row-gap: 8px;
+	}
 	input {
 		width: 100%;
 		font-style: normal;
@@ -133,10 +150,9 @@ form {
 		background: $color-ultra-light;
 		border: 1px solid $color-ultra-light;
 		transition: border 0.2s ease;
-		&::placeholder {
-			font-size: 14px;
-			line-height: 1.1;
-			color: $color-light-gray;
+		@include breakpoint(mobileonly) {
+			padding: 16px;
+			font-size: 12px;
 		}
 		&:disabled,
 		&[disabled] {
@@ -160,6 +176,7 @@ form {
 		width: 100%;
 		@include breakpoint(mobileonly) {
 			min-width: 100%;
+			padding: 17px;
 		}
 	}
 }

@@ -54,6 +54,7 @@
             @include breakpoint(mobileonly) {
                 margin-top: 32px;
                 margin-bottom: 16px;
+                padding-right: 7%;
             }
         }
         p {
@@ -102,7 +103,7 @@
             @include breakpoint(mobileonly) {
                 font-size: 150px;
                 right: -18px;
-                bottom: -38px;
+                bottom: -47px;
             }
         }
     }

@@ -40,12 +40,17 @@ select {
 	line-height: 1.1;
 	color: $color-dark;
 	caret-color: $color-dark;
+	@include breakpoint(mobileonly) {
+		font-size: 12px;
+	}
 }
 *::placeholder {
-	font-family: $TTNorms-Regular;
 	font-size: 14px;
 	line-height: 1.1;
 	color: $color-light-gray;
+	@include breakpoint(mobileonly) {
+		font-size: 12px;
+	}
 }
 
 button,
@@ -256,9 +261,9 @@ p {
 		}
 	}
 	@include breakpoint(tablet) {
-				padding-right: 0;
-				padding-bottom: 4px;
-			}
+		padding-right: 0;
+		padding-bottom: 4px;
+	}
 }
 .icon {
 	display: block;
@@ -306,7 +311,7 @@ a.color-accent {
 }
 .btn-accent {
 	display: inline-block;
-	padding: 15px 40px;
+	padding: 16px 40px;
 	font-family: $TTNorms-Bold;
 	color: $color-white;
 	font-size: 16px;
@@ -325,6 +330,7 @@ a.color-accent {
 	}
 	@include breakpoint(mobileonly) {
 		width: 100%;
+		font-size: 14px;
 		max-width: 380px;
 	}
 
@@ -344,7 +350,7 @@ a.color-accent {
 }
 .btn-light {
 	display: inline-block;
-	padding: 15px 40px;
+	padding: 16px 40px;
 	font-family: $TTNorms-Bold;
 	color: $color-white;
 	font-size: 16px;
@@ -364,6 +370,7 @@ a.color-accent {
 	@include breakpoint(mobileonly) {
 		width: 100%;
 		max-width: 380px;
+		font-size: 14px;
 	}
 
 	&:hover,
@@ -385,7 +392,7 @@ a.color-accent {
 	align-items: center;
 	justify-content: center;
 	column-gap: 8px;
-	padding: 15px 40px;
+	padding: 16px 40px;
 	font-family: $TTNorms-Bold;
 	color: $color-white;
 	font-size: 16px;
@@ -405,6 +412,7 @@ a.color-accent {
 	@include breakpoint(mobileonly) {
 		width: 100%;
 		max-width: 100%;
+		font-size: 14px;
 	}
 
 	&:hover,
@@ -424,6 +432,7 @@ a.color-accent {
 		width: 20px;
 		height: 20px;
 		fill: $color-white;
+		flex-shrink: 0;
 	}
 }
 .stop-scroll {
