@@ -6,7 +6,7 @@
    &__content {
       padding: 40px;
       border-radius: $radius-40;
-      background: $color-dark-gray url("../img/@1x/footer-main-bg.jpg") no-repeat center/cover;
+      background: $color-dark-gray url("../img/@2x/footer-main-bg.jpg") no-repeat center/cover;
       color: $color-white;
       @include breakpoint(tablet) {
          border-radius: $radius-36;
@@ -15,7 +15,7 @@
       @include breakpoint(mobileonly) {
          padding: 16px;
          border-radius: $radius-32;
-         background: $color-dark-gray url("../img/@1x/footer-main-bg-mobile.jpg") no-repeat center/cover;
+         background: $color-dark-gray url("../img/@2x/footer-main-bg-mobile.jpg") no-repeat center/cover;
       }
 
       &-block {
