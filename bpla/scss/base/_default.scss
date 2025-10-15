@@ -603,7 +603,8 @@ main {
 		color: $color-white;
 		border-radius: $radius-50;
 		background-color: $color-white;
-		transition: background-color 1s ease-in;
+		transition: background-color 0.5s ease-in-out;
+		transition-delay: 0.5s;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 		svg {
 			display: block;
@@ -611,12 +612,13 @@ main {
 			height: 10px;
 			fill: $color-dark;
 		}
-		// &:hover {
-		// 	background-color: $color-ultra-light;
-		// 	svg {
-		// 		fill: $color-dark;
-		// 	}
-		// }
+		&:active {
+			background-color: $color-ultra-light;
+			svg {
+				fill: $color-dark;
+			}
+		}
+
 		&.swiper-button-disabled {
 			opacity: 1;
 			color: $color-dark;
@@ -635,9 +637,6 @@ main {
 	.swiper-button-prev {
 		&:hover {
 			background-color: $color-ultra-light;
-			svg {
-				fill: $color-dark;
-			}
 		}
 	}
 }
@@ -647,9 +646,6 @@ main {
 	.swiper-button-prev {
 		&:active {
 			background-color: $color-ultra-light;
-			svg {
-				fill: $color-dark;
-			}
 		}
 	}
 }

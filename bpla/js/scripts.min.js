@@ -135,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             spaceBetween: 9,
             slidesPerView: 5.2,
             freeMode: true,
+            speed: 600,
             centeredSlides: true,
             centeredSlidesBounds: true,
             watchOverflow: true,
@@ -156,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fadeEffect: {
                crossFade: true
             },
+            speed: 600,
             watchOverflow: true,
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
