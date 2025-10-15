@@ -603,20 +603,13 @@ main {
 		color: $color-white;
 		border-radius: $radius-50;
 		background-color: $color-white;
-		transition: background-color 0.5s ease-in-out;
-		transition-delay: 0.5s;
+		transition: background-color 0.3s ease 0.3s;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 		svg {
 			display: block;
 			width: 5px;
 			height: 10px;
 			fill: $color-dark;
-		}
-		&:active {
-			background-color: $color-ultra-light;
-			svg {
-				fill: $color-dark;
-			}
 		}
 
 		&.swiper-button-disabled {
