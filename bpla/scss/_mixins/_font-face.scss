@@ -7,11 +7,9 @@
 		@if $asset-pipeline == true {
 			src: font-url("#{$file-path}.woff") format("woff");
 			src: font-url("#{$file-path}.woff2") format("woff2");
-			src: font-url("#{$file-path}.otf") format('opentype');
 		} @else {
 			src: url("#{$file-path}.woff") format("woff");
 			src: url("#{$file-path}.woff2") format("woff2");
-			src: url("#{$file-path}.otf") format('opentype');
 		}
 	}
 }
