@@ -138,17 +138,22 @@ form {
 	@include breakpoint(mobileonly) {
 		row-gap: 8px;
 	}
+	.inputBlock {
+		position: relative;
+		width: 100%;
+	}
 	input {
+		position: relative;
 		width: 100%;
 		font-style: normal;
 		font-family: $TTNorms-Regular;
-		font-size: 14px;
-		line-height: 1.1;
+		font-size: 12px;
+		line-height: 1;
 		color: $color-dark;
-		padding: 17px 16px;
+		padding: 15px 16px;
 		border-radius: $radius-16;
 		background: $color-ultra-light;
-		border: 1px solid $color-ultra-light;
+		border: 2px solid $color-light;
 		transition: border 0.2s ease;
 		@include breakpoint(mobileonly) {
 			padding: 16px;
@@ -160,7 +165,7 @@ form {
 		}
 
 		&.filled {
-			border: 1px solid $color-dark;
+			border: 2px solid $color-dark-gray;
 		}
 	}
 
@@ -178,5 +183,18 @@ form {
 		@include breakpoint(mobileonly) {
 			min-width: 100%;
 		}
+	}
+	.just-validate-error-field {
+		border: 2px solid $accent;
+	}
+
+	.just-validate-error-label {
+		opacity: 1;
+		bottom: -3px;
+		left: 15px;
+		position: relative;
+		font-size: 12px;
+		line-height: 1;
+		color: $accent !important;
 	}
 }

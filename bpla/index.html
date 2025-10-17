@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>Главная | BPLA</title>
 	<meta name="description" content="BPLA">
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://localhost:3000/"> -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96">
@@ -25,21 +26,23 @@
 				<div class="container">
 					<div class="header__container header-top__container">
 						<div class="header__logo-group">
-							<button class="burger" data-burger aria-label="open-menu" aria-expanded="false">
-								<span class="burger__line"></span>
-							</button>
+							
 							<a href="./" class="header__logo" aria-label="Название компании">
 								<svg class="icon">
-									<use xlink:href="./img/sprite/sprite.svg#logo"></use>
+									<use xlink:href="./img/sprite/sprite.svg#logo-header"></use>
 								</svg>
 							</a>
+							
 						</div>
-						<a href="mailto:info@bpla.ru" class="bg-accent hidden-desktop contact-link" target="_blank"
+						<button class="burger" data-burger aria-label="open-menu" aria-expanded="false">
+								<span class="burger__line"></span>
+							</button>
+						<!-- <a href="mailto:info@bpla.ru" class="bg-accent hidden-desktop contact-link" target="_blank"
 							rel="nofollow">
 							<svg class="icon contact-link-mail">
 								<use xlink:href="./img/sprite/sprite.svg#mail"></use>
 							</svg>
-						</a>
+						</a> -->
 						<div class="nav" data-nav>
 							<div class="header__menu-group hidden-desktop">
 								<a href="./" class="header__logo" aria-label="Название компании">
@@ -59,7 +62,8 @@
 										</li>
 										<li class="nav__item"><a href="#" class="nav__link">Преимущества</a>
 										</li>
-										<li class="nav__item"><a href="#" class="nav__link">Наша продукция</a></li>
+										<li class="nav__item"><a href="#our-products" class="nav__link link-button">Наша
+												продукция</a></li>
 										<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
 									</ul>
 								</nav>
@@ -77,7 +81,8 @@
 								</div>
 							</div>
 							<div class="header__buttons">
-								<a href="#" class="contact-link btn-contact-link" target="_blank" rel="nofollow" aria-label="ссылка телеграм">
+								<a href="#" class="contact-link btn-contact-link" target="_blank" rel="nofollow"
+									aria-label="ссылка телеграм">
 									<svg class="icon contact-link-telegram">
 										<use xlink:href="./img/sprite/sprite.svg#telegram"></use>
 									</svg>
@@ -98,8 +103,8 @@
 							<picture>
 								<source media="(max-width: 600px)" srcset="./img/@2x/banner-mobile.webp"
 									data-src="./img/@2x/banner-mobile.jpg">
-								<img src="./img/@2x/banner-1.webp" alt="О компании"
-									data-src="./img/@2x/banner-1.jpg" loading="lazy">
+								<img src="./img/@2x/banner-1.webp" alt="О компании" data-src="./img/@2x/banner-1.jpg"
+									loading="lazy">
 							</picture>
 						</div>
 						<div class="banner__content-block">
@@ -111,7 +116,7 @@
 									Индивидуальные решения, проверенные в небе</p>
 							</div>
 							<div class="banner__content-buttons">
-								<a href="#" class="btn-reset btn-light">Наша продукция</a>
+								<a href="#our-products" class="btn-reset btn-light link-button">Наша продукция</a>
 								<a href="#" class="btn-reset btn-accent">Приобрести дрон</a>
 							</div>
 						</div>
@@ -180,7 +185,7 @@
 					</ul>
 				</div>
 			</section>
-			<section class="product__list section">
+			<section class="product__list section" id="our-products">
 				<div class="container">
 					<h2>Рамы БПЛА</h2>
 					<div class="section-description">
@@ -225,7 +230,7 @@
 								</div>
 								<div class="product-item__info">
 									<h3 class="h3 product-item__title">Дриада</h3>
-									<div class="product-item__tag">Грузоподъемность до 100&nbsp;кг</div>
+									<div class="product-item__tag">Грузоподъемность до 200&nbsp;кг</div>
 									<div class="product-item__footer">
 										<a href="./detail.html" class="btn-reset btn-accent">Подробнее</a>
 										<div class="new-price">от 2500 ₽</div>
@@ -349,8 +354,7 @@
 							</div>
 							<div class="drons__item-img">
 								<picture class="drons__item-banner">
-									<source srcset="./img/@2x/dron-bg-1@2x.webp"
-										type="image/webp">
+									<source srcset="./img/@2x/dron-bg-1@2x.webp" type="image/webp">
 									<img src="./img/@2x/dron-bg-1@2x.jpg" alt="Солдат" loading="lazy">
 								</picture>
 								<div class="drons__item-dron">
@@ -438,8 +442,97 @@
 							</div>
 							<div class="drons__item-img">
 								<picture class="drons__item-banner">
-									<source srcset="./img/@2x/dron-bg-2@2x.webp"
-										type="image/webp">
+									<source srcset="./img/@2x/dron-bg-2@2x.webp" type="image/webp">
+									<img src="./img/@2x/dron-bg-2@2x.jpg" alt="Солдат" loading="lazy">
+								</picture>
+								<div class="drons__item-dron">
+									<img src="./img/@2x/dron-2.webp" alt="дрон" loading="lazy">
+								</div>
+							</div>
+						</div>
+						<div class="drons__item drons__item-processing">
+							<div class="processing-badge">
+								<img src="./img/@2x/processing-badge.png" alt="Скоро в продаже">
+							</div>
+							<div class="drons__item-info">
+								<h3>Мобла</h3>
+								<p class="drons__item-info-desc">Сейчас проходит тестирование. Старт продаж — скоро</p>
+								<div class="info__list">
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#component"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Компоненты сборки</span>
+											<p>Российские</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#range"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Дальность полета</span>
+											<p>До 35 километров</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#speed"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Скорость полета</span>
+											<p>до 140 км/ч</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#control"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Управление дроном</span>
+											<p>TBS, ELRS, Гермес, Кузнечик</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#frequency"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Частоты управления</span>
+											<p>200 - 2500</p>
+										</div>
+									</div>
+									<div class="info__characteristic">
+										<div class="info-icon">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#videosignal"></use>
+											</svg>
+										</div>
+										<div class="info-content">
+											<span>Частоты видеосигнала</span>
+											<p>1,2-6 ГГц от 1,6-10W</p>
+										</div>
+									</div>
+								</div>
+								<div class="drons__item-bottom">
+									<span class="h4">от 1 750 000 ₽</span>
+									<a href="./detail.html" class="btn-reset btn-accent">Скоро доступно</a>
+								</div>
+							</div>
+							<div class="drons__item-img">
+								<picture class="drons__item-banner">
+									<source srcset="./img/@2x/dron-bg-2@2x.webp" type="image/webp">
 									<img src="./img/@2x/dron-bg-2@2x.jpg" alt="Солдат" loading="lazy">
 								</picture>
 								<div class="drons__item-dron">
@@ -487,16 +580,21 @@
 								<p>Поговорите с нашим экспертом. Оставьте заявку в форме ниже, и мы
 									перезвоним вам</p>
 							</div>
-							<form action="#" enctype="multipart/form-data" class="form form-feedback" method="POST">
-								<input type="text" id="input-feedback-name" class="inputBlock__input"
-									placeholder="Ваше имя" aria-label="Имя" data-required="true">
-								<input type="tel" id="input-feedback-tel"
-									class="inputBlock__input input-feedback-tel j-phone-mask"
-									placeholder="Номер телефона" aria-label="Телефон" data-required="true"
-									inputmode="text">
+							<form action="#" class="form form-feedback" autocomplete="off" novalidate="novalidate">
+								<div class="inputBlock">
+									<input type="text" id="input-feedback-name"
+										class="inputBlock__input input-feedback-name" placeholder="Ваше имя"
+										aria-label="Имя" data-required="true">
+								</div>
+								<div class="inputBlock">
+									<input type="tel" id="input-feedback-tel"
+										class="inputBlock__input input-feedback-tel j-phone-mask"
+										placeholder="Номер телефона" aria-label="Телефон" data-required="true"
+										inputmode="text">
+								</div>
 								<button type="submit" class="btn-reset btn-accent btn-submit">Оставить заявку
 								</button>
-								<a href="#" class="btn-reset btn-blue btn-submit" aria-label="ссылка телеграм">
+								<a href="#" class="btn-reset btn-blue" aria-label="ссылка телеграм">
 									<svg class="icon contact-link-telegram">
 										<use xlink:href="./img/sprite/sprite.svg#telegram"></use>
 									</svg>
@@ -578,31 +676,36 @@
 				<!-- окно с ответом 200 -->
 				<div class="modal modal-wind modal-success" data-target="popup-success">
 					<div class="modal__body">
-						<div class="modal-order__content">
-							<h2>Заявка принята</h2>
-							<p>МЫ свяжемся с вами в ближайшее время</p>
-						</div>
+						<svg class="icon icon-success">
+								<use xlink:href="./img/sprite/sprite.svg#form-check"></use>
+							</svg>
+							<div>
+								<h2>Данные <span class="color-accent">успешно отправлены</span></h2>
+								<p>Мы ответим вам в ближайшее время</p>
+							</div>
+							<button class="btn-reset btn-accent modal-close">
+								Ок
+							</button>
 					</div>
-					<button class="btn-reset modal-close">
-						<img src="./img/svg/close-menu.svg" alt="закрыть">
-					</button>
 				</div>
 				<!-- окно с ответом при ошибке -->
 				<div class="modal modal-wind modal-success-error" data-target="popup-success-error">
 					<div class="modal__body">
-						<div class="modal-order__content">
+						<div>
 							<h2>Произошла ошибка</h2>
 							<p>Попробуйте заполнить форму снова</p>
 						</div>
+						<button class="btn-reset btn-accent modal-close">
+							Ок
+						</button>
 					</div>
-					<button class="btn-reset modal-close">
-						<img src="./img/svg/close-menu.svg" alt="закрыть">
-					</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- <script src="./libs/inputmask.min.js"></script> -->
+	<script src="./libs/inputmask.min.js"></script>
+	<!-- скрипт для валидации формы, отключить при необходимости -->
+	<script src="./libs/just-validate.production.min.js"></script>
 	<script src="./libs/swiper-bundle.min.js"></script>
 	<script src="./js/scripts.min.js"></script>
 </body>

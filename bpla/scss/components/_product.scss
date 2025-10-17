@@ -47,7 +47,7 @@
         background: $color-white;
         border-radius: $radius-40;
         overflow: hidden;
-        transition: all 0.25s ease;
+        transition: all 0.2s ease;
         @include breakpoint(tablet) {
             border-radius: $radius-32;
         }

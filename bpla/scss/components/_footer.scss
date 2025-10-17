@@ -96,13 +96,10 @@
       background-color: transparent;
       @include breakpoint(phablet) {
          margin-bottom: 16px;
-         padding: 14px 24px;
-         border-radius: $radius-16;
-         background-color: $accent;
       }
       .icon {
-         width: 100px;
-         height: 24px;
+         width: 140px;
+         height: 40px;
          path {
             fill: $color-white;
          }

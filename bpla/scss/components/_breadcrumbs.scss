@@ -48,7 +48,7 @@
         font-size: 14px;
         line-height: 1.2;
         color: $color-light-gray;
-        transition: color 0.25s ease;
+        transition: color 0.2s ease;
         white-space: nowrap;
         &.breadcrumbs__current,
         &[href^="javascript:void(0)"],

@@ -6,8 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
    const body = document.body;
    const header = document.querySelector('.header');
    const inputs = document.querySelectorAll('input');
-   const textareas = document.querySelectorAll('textarea');
    const headerHeight = header.offsetHeight;
+
+   const btnsPopup = document.querySelectorAll('.btn-popup');
+   const modalOverlay = document.querySelector('.modal-overlay');
+   const modalCloseAll = document.querySelectorAll('.modal-close');
+   const modalsWindows = document.querySelectorAll('.modal-wind');
+
    document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
 
    window.addEventListener("scroll", function () {
@@ -22,16 +27,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
    };
 
+   // scroll into block class link-button
+   document.querySelectorAll('a.link-button[href^="#"').forEach(link => {
+      link.addEventListener('click', function (e) {
+         e.preventDefault();
+
+         let href = this.getAttribute('href').substring(1);
+         const scrollTarget = document.getElementById(href);
+         const topOffsetHeader = header.offsetHeight;
+         const elementPosition = scrollTarget.getBoundingClientRect().top;
+         const offsetPosition = elementPosition - topOffsetHeader;
+
+         window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth'
+         });
+      });
+   });
+
    burger.addEventListener('click', (e) => {
       body.classList.add('stop-scroll');
       burger.classList.add('burger--active');
       nav.classList.add('nav--visible');
    });
+
    burgerClose.addEventListener('click', (e) => {
       body.classList.remove('stop-scroll');
       burger.classList.remove('burger--active');
       nav.classList.remove('nav--visible');
    });
+
    navItems.forEach(el => {
       el.addEventListener('click', () => {
          body.classList.remove('stop-scroll');
@@ -39,6 +64,44 @@ document.addEventListener('DOMContentLoaded', () => {
          nav.classList.remove('nav--visible');
       });
    });
+
+   function openPopup(path) {
+      modalsWindows.forEach((el) => {
+         el.classList.remove('modal--visible');
+      });
+      document.querySelector(`[data-target=${path}]`).classList.add('modal--visible');
+      body.classList.add('stop-scroll')
+      modalOverlay.classList.add('modal-overlay--visible');
+   }
+
+   btnsPopup.forEach((el) => {
+      el.addEventListener('click', (e) => {
+         let path = e.currentTarget.getAttribute('data-path');
+         openPopup(path)
+      });
+   });
+
+   modalOverlay.addEventListener('click', (e) => {
+      if (e.target == modalOverlay) {
+         modalOverlay.classList.remove('modal-overlay--visible');
+         modalsWindows.forEach((el) => {
+            el.classList.remove('modal--visible');
+         });
+         body.classList.remove('stop-scroll')
+      }
+   });
+
+   modalCloseAll.forEach((modalClose) => {
+      modalClose.addEventListener('click', (e) => {
+         if (e.target == modalClose) {
+            modalOverlay.classList.remove('modal-overlay--visible');
+            modalsWindows.forEach((el) => {
+               el.classList.remove('modal--visible');
+            });
+            body.classList.remove('stop-scroll')
+         }
+      });
+   })
 
    if (inputs) {
       inputs.forEach(input => {
@@ -114,14 +177,20 @@ document.addEventListener('DOMContentLoaded', () => {
    if (detailBlock) {
       const moreText = detailBlock.querySelector('.detail__content-description p');
       const moreButton = detailBlock.querySelector('.btn-more');
-      if (moreText.offsetHeight > 53) {
+      if (moreText.scrollHeight > 55) {
          moreButton.style.display = 'inline-block';
-         moreButton.addEventListener('click', function () {
-            if (moreText.style.webkitLineClamp == '3') {
-               moreText.style.webkitLineClamp = 'inherit';
+         moreButton.addEventListener('click', function (e) {
+            e.preventDefault()
+            moreText.classList.toggle('open');
+            if (moreText.classList.contains('open')) {
+               // moreText.setAttribute('aria-hidden', false);
+               // moreText.style.webkitLineClamp = 'inherit';
+               // moreText.style.maxHeight = moreText.scrollHeight + 'px';
                moreButton.textContent = 'Скрыть';
             } else {
-               moreText.style.webkitLineClamp = '3';
+               // moreText.style.webkitLineClamp = '3';
+               // moreText.setAttribute('aria-hidden', true);
+               // moreText.style.maxHeight = 52 + 'px'
                moreButton.textContent = 'Подробнее';
             }
          });
@@ -176,15 +245,117 @@ document.addEventListener('DOMContentLoaded', () => {
             },
          });
       }
+
+      const checkboxes = detailBlock.querySelectorAll('.custom-control-input');
+      const fullPrice = detailBlock.querySelector('.detail__total-price span');
+
+      const priceWithoutSpaces = (str) => {
+         return str.replace(/\s/g, '');
+      };
+
+      const normalPrice = (str) => {
+         return String(str).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+      };
+
+      const printFullPrice = (data) => {
+         let totalSum = data + price;
+         fullPrice.textContent = `${normalPrice(totalSum)} ₽`;
+      };
+
+      checkboxes.forEach(checkbox => {
+         checkbox.addEventListener('click', function () {
+            var price = 0;
+            let currentPrice = parseInt(priceWithoutSpaces(fullPrice.textContent));
+
+            if (checkbox.checked) {
+               // Получаем цену из data-атрибута и преобразуем ее в число
+               price += parseFloat(checkbox.dataset.price);
+            } else {
+               price -= parseFloat(checkbox.dataset.price);
+
+            }
+            totalSum = currentPrice + price;
+            fullPrice.textContent = `${normalPrice(totalSum)}`;
+         })
+      });
    }
 
-   // const telSelectorS = document.querySelectorAll('.j-phone-mask');
-   // if (telSelectorS) {
-   //    telSelectorS.forEach(item => {
-   //       const inputMask = new Inputmask('+7 (999) 999-99-99');
-   //       inputMask.mask(item);
-   //    })
-   // }
+   const telSelectorS = document.querySelectorAll('.j-phone-mask');
+   if (telSelectorS) {
+      telSelectorS.forEach(item => {
+         const inputMask = new Inputmask('+7 (999) 999-99-99');
+         inputMask.mask(item);
+      })
+   }
+
+   const feedbackForm = document.querySelector('.form-feedback');
+   if (feedbackForm) {
+      const telFeedback = feedbackForm.querySelector('input[type="tel"]');
+
+      const validator = new JustValidate('.form-feedback', {
+         validateBeforeSubmitting: true,
+         testingMode: true,
+      });
+
+      validator
+         .addField(document.querySelector('#input-feedback-name'), [
+            {
+               rule: 'minLength',
+               value: 3,
+               errorMessage: 'Введите минимум 3 символа',
+            },
+            {
+               rule: 'maxLength',
+               value: 20,
+               errorMessage: 'Введите не больше 20 символов',
+            },
+            {
+               rule: 'required',
+               value: true,
+               errorMessage: 'Поле обязательно для заполнения',
+            }
+         ])
+         .addField(document.querySelector('#input-feedback-tel'), [
+            {
+               rule: 'required',
+               value: true,
+               errorMessage: 'Поле обязательно для заполнения',
+            },
+            {
+               rule: 'function',
+               validator: function () {
+                  const phoneBackForm = document.querySelector('.input-feedback-tel').inputmask.unmaskedvalue();
+                  return phoneBackForm.length === 10;
+               },
+               errorMessage: 'Введите корректный номер',
+            },
+         ])
+         .onSuccess((event) => {
+            console.log('Проверка проходит и форма отправлена', event);
+            // если проверка прошла показать popup
+            openPopup('popup-success')
+
+            let formData = new FormData(event.target);
+            console.log(...formData);
+
+            let xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+               if (xhr.readyState === 4) {
+                  // let response = JSON.parse(xhr.responseText);
+                  if (xhr.status === 200) {
+                     console.log('Отправлено');
+                     // openPopup('popup-success')
+                  } else {
+                     // openPopup('popup-success-error')
+                  }
+               }
+            }
+            xhr.open('POST', feedbackForm.action, true);
+            xhr.send(formData);
+            event.target.reset();
+         });
+   }
 });
 
 function initSlider(slider, options) {

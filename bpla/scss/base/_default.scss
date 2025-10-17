@@ -45,8 +45,8 @@ select {
 	}
 }
 *::placeholder {
-	font-size: 14px;
-	line-height: 1.1;
+	font-size: 12px;
+	line-height: 1;
 	color: $color-light-gray;
 	@include breakpoint(mobileonly) {
 		font-size: 12px;
@@ -81,7 +81,7 @@ html [type="button"],
 	min-height: 300px;
 	overflow: hidden;
 	@include breakpoint(tablet) {
-		margin-top: 130px;
+		margin-top: 90px;
 		padding: 8px 0 0;
 	}
 }
@@ -321,7 +321,7 @@ a.color-accent {
 	border: 1px solid $accent;
 	border-radius: $radius-16;
 	text-decoration: none;
-	transition: all 0.25s linear;
+	transition: all 0.2s linear;
 	position: relative;
 	text-align: center;
 	max-height: 51px;
@@ -358,10 +358,10 @@ a.color-accent {
 	line-height: 1.1;
 	white-space: nowrap;
 	background: transparent;
-	border: 1px solid $color-white;
+	border: 2px solid $color-white;
 	border-radius: $radius-16;
 	text-decoration: none;
-	transition: all 0.25s linear;
+	transition: all 0.2s linear;
 	position: relative;
 	text-align: center;
 	max-height: 51px;
@@ -380,7 +380,7 @@ a.color-accent {
 	&:focus {
 		color: $color-dark;
 		background: $color-white;
-		border: 1px solid $color-white;
+		border: 2px solid $color-white;
 	}
 
 	&:disabled,
@@ -404,7 +404,7 @@ a.color-accent {
 	border: 1px solid #2fa7e3;
 	border-radius: $radius-16;
 	text-decoration: none;
-	transition: all 0.25s linear;
+	transition: all 0.2s linear;
 	position: relative;
 	text-align: center;
 	max-height: 51px;
@@ -438,16 +438,9 @@ a.color-accent {
 		flex-shrink: 0;
 	}
 }
+
 .stop-scroll {
 	overflow: hidden;
-	.overlay-menu {
-		@include block;
-		width: 100%;
-		opacity: 1;
-		overflow: visible;
-		// pointer-events: all;
-		left: 0;
-	}
 }
 // checkbox
 .checkBlock {
@@ -468,10 +461,9 @@ a.color-accent {
 		margin: 0;
 		z-index: 2;
 		transition:
-			color 0.15s ease-in-out,
-			background-color 0.15s ease-in-out,
-			border-color 0.15s ease-in-out,
-			box-shadow 0.15s ease-in-out;
+			color 0.2s ease-in-out,
+			background-color 0.2s ease-in-out,
+			border-color 0.25s ease-in-out;
 
 		&:checked {
 			color: $color-white;
@@ -489,13 +481,20 @@ a.color-accent {
 		height: 80px;
 		object-fit: contain;
 	}
-	.custom-control-label:hover,
+
 	.custom-control-input:checked ~ .custom-control-label {
-		background-color: rgba(254, 71, 25, 0.1);
 		color: $color-light-gray;
+		border-color: transparent;
+		background-color: rgba(254, 71, 25, 0.1);
 	}
-	.custom-control-input:not(:checked) ~ .custom-control-label {
-		background-color: $color-ultra-light;
+	.custom-control-input:not(:checked) {
+		& ~ .custom-control-label {
+			background-color: $color-ultra-light;
+			border-color: $color-ultra-light;
+			&:hover {
+				border-color: $accent;
+			}
+		}
 	}
 	.custom-control-label {
 		display: flex;
@@ -503,14 +502,16 @@ a.color-accent {
 		position: relative;
 		margin-bottom: 0;
 		vertical-align: top;
-		padding: 2px 20px 2px 40px;
+		padding: 0 20px 0 40px;
 		border-radius: $radius-16;
+		border: 2px solid $color-ultra-light;
 		background-color: $color-ultra-light;
 		width: 100%;
 		min-height: 83px;
 		cursor: pointer;
 		transition:
 			background-color 0.2s linear,
+			border-color 0.25s linear,
 			color 0.2s linear;
 		.complect__title {
 			font-family: $TTNorms-Medium;

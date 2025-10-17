@@ -30,7 +30,7 @@
 							</button>
 							<a href="./" class="header__logo" aria-label="Название компании">
 								<svg class="icon">
-									<use xlink:href="./img/sprite/sprite.svg#logo"></use>
+									<use xlink:href="./img/sprite/sprite.svg#logo-header"></use>
 								</svg>
 							</a>
 						</div>
@@ -42,12 +42,13 @@
 						</a>
 						<div class="nav" data-nav>
 							<div class="header__menu-group hidden-desktop">
-								<a href="./" class="header__logo">
+								<a href="./" class="header__logo" aria-label="Название компании">
 									<svg class="icon">
 										<use xlink:href="./img/sprite/sprite.svg#logo-dark"></use>
 									</svg>
 								</a>
-								<button type="button" class="btn-reset burger-close" aria-label="close-menu" aria-expanded="false">
+								<button type="button" class="btn-reset burger-close" aria-label="close-menu"
+									aria-expanded="false">
 									<img src="./img/svg/close-menu.svg" alt="закрыть меню">
 								</button>
 							</div>
@@ -58,23 +59,27 @@
 										</li>
 										<li class="nav__item"><a href="#" class="nav__link">Преимущества</a>
 										</li>
-										<li class="nav__item"><a href="#" class="nav__link">Наша продукция</a></li>
+										<li class="nav__item"><a href="#our-products" class="nav__link link-button">Наша
+												продукция</a></li>
 										<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
 									</ul>
 								</nav>
 							</div>
 							<div class="contacts-offer hidden-desktop">
 								<div class="text-center">
-									<a href="tel:88002222222" class="btn-reset contacts-link" target="_blank">8 (800) 222-22-22</a>
+									<a href="tel:88002222222" class="btn-reset contacts-link" target="_blank">8 (800)
+										222-22-22</a>
 									<span>Многоконтактный телефон</span>
 								</div>
 								<div class="text-center">
-									<a href="mailto:info@bpla.ru" class="btn-reset contacts-link" target="_blank">info@bpla.ru</a>
+									<a href="mailto:info@bpla.ru" class="btn-reset contacts-link"
+										target="_blank">info@bpla.ru</a>
 									<span>Электронная почта</span>
 								</div>
 							</div>
 							<div class="header__buttons">
-								<a href="#" class="contact-link btn-contact-link" target="_blank" rel="nofollow" aria-label="ссылка телеграм">
+								<a href="#" class="contact-link btn-contact-link" target="_blank" rel="nofollow"
+									aria-label="ссылка телеграм">
 									<svg class="icon contact-link-telegram">
 										<use xlink:href="./img/sprite/sprite.svg#telegram"></use>
 									</svg>
@@ -190,7 +195,7 @@
 								<h1 class="detail__title">БПЛА Тёща</h1>
 								<div class="detail__content-info">
 									<div class="detail__content-description">
-										<p style="-webkit-line-clamp: 3;">БПЛА «ТЁЩА» — это многофункциональный
+										<p class="text">БПЛА «ТЁЩА» — это многофункциональный
 											беспилотный комплекс, разработанный для выполнения разведывательных,
 											корректировочных и ударных задач в условиях активного радиоэлектронного
 											противодействия. Конструкция дрона обеспечивает высокую устойчивость к
@@ -211,7 +216,7 @@
 										<p>Цена</p>
 										<!-- если нужно показывать цену до скидки -->
 										<!-- <div class="old-price">782 120 ₽</div> -->
-										<div class="new-price">752 120 ₽</div>
+										<div class="new-price detail__total-price"><span>752 120</span> ₽</div>
 										<a href="#" class="btn-reset btn-accent btn-pay">
 											Заказать
 										</a>
@@ -224,7 +229,7 @@
 							<div class="complect__list">
 								<div class="checkBlock">
 									<input type="checkbox" value="1" name="complect-1" class="custom-control-input"
-										id="complect-1">
+										id="complect-1" data-price="2120">
 									<label class="custom-control-label" for="complect-1">
 										<img class="complect-icon" src="./img/icon/complect-1.png" alt="icon" loading="lazy">
 										<span>
@@ -235,7 +240,7 @@
 								</div>
 								<div class="checkBlock">
 									<input type="checkbox" value="2" name="complect-2" class="custom-control-input"
-										id="complect-2">
+										id="complect-2" data-price="2120">
 									<label class="custom-control-label" for="complect-2">
 										<img class="complect-icon" src="./img/icon/complect-2.png" alt="icon" loading="lazy">
 										<span>
@@ -246,7 +251,7 @@
 								</div>
 								<div class="checkBlock">
 									<input type="checkbox" value="3" name="complect-3" class="custom-control-input"
-										id="complect-3">
+										id="complect-3" data-price="2120">
 									<label class="custom-control-label" for="complect-3">
 										<img class="complect-icon" src="./img/icon/complect-3.png" alt="icon" loading="lazy">
 										<span>
@@ -257,7 +262,7 @@
 								</div>
 								<div class="checkBlock">
 									<input type="checkbox" value="4" name="complect-4" class="custom-control-input"
-										id="complect-4">
+										id="complect-4" data-price="2120">
 									<label class="custom-control-label" for="complect-4">
 										<img class="complect-icon" src="./img/icon/complect-4.png" alt="icon" loading="lazy">
 										<span>
@@ -268,23 +273,23 @@
 								</div>
 								<div class="checkBlock">
 									<input type="checkbox" value="5" name="complect-5" class="custom-control-input"
-										id="complect-5">
+										id="complect-5" data-price="2000">
 									<label class="custom-control-label" for="complect-5">
 										<img class="complect-icon" src="./img/icon/complect-5.png" alt="icon" loading="lazy">
 										<span>
 											<span class="complect__title">Плата распределения 2 шт</span>
-											<span class="complect__price">+2120 ₽</span>
+											<span class="complect__price">+2000 ₽</span>
 										</span>
 									</label>
 								</div>
 								<div class="checkBlock">
 									<input type="checkbox" value="6" name="complect-6" class="custom-control-input"
-										id="complect-6">
+										id="complect-6" data-price="1000">
 									<label class="custom-control-label" for="complect-6">
 										<img class="complect-icon" src="./img/icon/complect-6.png" alt="icon" loading="lazy">
 										<span>
 											<span class="complect__title">Индивидуальная упаковка (гофра картон)</span>
-											<span class="complect__price">+2120 ₽</span>
+											<span class="complect__price">+1000 ₽</span>
 										</span>
 									</label>
 								</div>
@@ -457,7 +462,9 @@
 			</div>
 		</div>
 	</div>
-	<!-- <script src="./libs/inputmask.min.js"></script> -->
+	<script src="./libs/inputmask.min.js"></script>
+	<!-- скрипт для валидации формы, отключить при необходимости -->
+	<script src="./libs/just-validate.production.min.js"></script>
 	<script src="./libs/swiper-bundle.min.js"></script>
 	<script src="./js/scripts.min.js"></script>
 </body>
