@@ -26,45 +26,28 @@
 				<div class="container">
 					<div class="header__container header-top__container">
 						<div class="header__logo-group">
-							
 							<a href="./" class="header__logo" aria-label="Название компании">
 								<svg class="icon">
 									<use xlink:href="./img/sprite/sprite.svg#logo-header"></use>
 								</svg>
 							</a>
-							
 						</div>
 						<button class="burger" data-burger aria-label="open-menu" aria-expanded="false">
-								<span class="burger__line"></span>
-							</button>
-						<!-- <a href="mailto:info@bpla.ru" class="bg-accent hidden-desktop contact-link" target="_blank"
-							rel="nofollow">
-							<svg class="icon contact-link-mail">
-								<use xlink:href="./img/sprite/sprite.svg#mail"></use>
-							</svg>
-						</a> -->
+							<span class="burger__line"></span>
+						</button>
 						<div class="nav" data-nav>
-							<div class="header__menu-group hidden-desktop">
-								<a href="./" class="header__logo" aria-label="Название компании">
-									<svg class="icon">
-										<use xlink:href="./img/sprite/sprite.svg#logo-dark"></use>
-									</svg>
-								</a>
-								<button type="button" class="btn-reset burger-close" aria-label="close-menu"
-									aria-expanded="false">
-									<img src="./img/svg/close-menu.svg" alt="закрыть меню">
-								</button>
-							</div>
 							<div class="header-top__nav">
 								<nav>
 									<ul class="nav__list">
 										<li class="nav__item"><a href="./" class="nav__link active">Главная</a>
 										</li>
-										<li class="nav__item"><a href="#" class="nav__link">Преимущества</a>
+										<li class="nav__item"><a href="#adventures"
+												class="nav__link link-button">Преимущества</a>
 										</li>
 										<li class="nav__item"><a href="#our-products" class="nav__link link-button">Наша
 												продукция</a></li>
-										<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+										<li class="nav__item"><a href="#contacts"
+												class="nav__link link-button">Контакты</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -123,7 +106,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="adventures section">
+			<section class="adventures section" id="adventures">
 				<div class="container">
 					<h2>Преимущества компании</h2>
 					<div class="section-description">
@@ -452,7 +435,12 @@
 						</div>
 						<div class="drons__item drons__item-processing">
 							<div class="processing-badge">
-								<img src="./img/@2x/processing-badge.png" alt="Скоро в продаже">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./img/@2x/processing-badge-mobile.webp"
+										data-src="./img/@2x/processing-badge-mobile.png">
+									<img src="./img/@2x/processing-badge.webp" alt="О компании"
+										data-src="./img/@2x/processing-badge.png" loading="lazy">
+								</picture>
 							</div>
 							<div class="drons__item-info">
 								<h3>Мобла</h3>
@@ -677,15 +665,15 @@
 				<div class="modal modal-wind modal-success" data-target="popup-success">
 					<div class="modal__body">
 						<svg class="icon icon-success">
-								<use xlink:href="./img/sprite/sprite.svg#form-check"></use>
-							</svg>
-							<div>
-								<h2>Данные <span class="color-accent">успешно отправлены</span></h2>
-								<p>Мы ответим вам в ближайшее время</p>
-							</div>
-							<button class="btn-reset btn-accent modal-close">
-								Ок
-							</button>
+							<use xlink:href="./img/sprite/sprite.svg#form-check"></use>
+						</svg>
+						<div>
+							<h2>Данные <span class="color-accent">успешно отправлены</span></h2>
+							<p>Мы ответим вам в ближайшее время</p>
+						</div>
+						<button class="btn-reset btn-accent modal-close">
+							Ок
+						</button>
 					</div>
 				</div>
 				<!-- окно с ответом при ошибке -->

@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
    const burger = document.querySelector('[data-burger]');
-   const burgerClose = document.querySelector('.burger-close');
    const nav = document.querySelector('[data-nav]');
    const navItems = nav.querySelectorAll('a');
    const body = document.body;
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
          const scrollTarget = document.getElementById(href);
          const topOffsetHeader = header.offsetHeight;
          const elementPosition = scrollTarget.getBoundingClientRect().top;
-         const offsetPosition = elementPosition - topOffsetHeader;
+         const offsetPosition = elementPosition - (topOffsetHeader + 30);
 
          window.scrollBy({
             top: offsetPosition,
@@ -46,20 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
    });
 
    burger.addEventListener('click', (e) => {
-      body.classList.add('stop-scroll');
-      burger.classList.add('burger--active');
-      nav.classList.add('nav--visible');
-   });
-
-   burgerClose.addEventListener('click', (e) => {
-      body.classList.remove('stop-scroll');
-      burger.classList.remove('burger--active');
-      nav.classList.remove('nav--visible');
+      body.classList.toggle('stop-scroll');
+      header.classList.toggle('header-open');
+      burger.classList.toggle('burger--active');
+      nav.classList.toggle('nav--visible');
    });
 
    navItems.forEach(el => {
       el.addEventListener('click', () => {
          body.classList.remove('stop-scroll');
+         header.classList.remove('header-open');
          burger.classList.remove('burger--active');
          nav.classList.remove('nav--visible');
       });
@@ -179,18 +174,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const moreButton = detailBlock.querySelector('.btn-more');
       if (moreText.scrollHeight > 55) {
          moreButton.style.display = 'inline-block';
+         moreText.style.position = 'relative';
          moreButton.addEventListener('click', function (e) {
             e.preventDefault()
             moreText.classList.toggle('open');
+            
             if (moreText.classList.contains('open')) {
-               // moreText.setAttribute('aria-hidden', false);
-               // moreText.style.webkitLineClamp = 'inherit';
-               // moreText.style.maxHeight = moreText.scrollHeight + 'px';
+               moreText.style.maxHeight = moreText.scrollHeight + 'px';
                moreButton.textContent = 'Скрыть';
             } else {
-               // moreText.style.webkitLineClamp = '3';
-               // moreText.setAttribute('aria-hidden', true);
-               // moreText.style.maxHeight = 52 + 'px'
+               moreText.style.maxHeight = 55 + 'px'
                moreButton.textContent = 'Подробнее';
             }
          });

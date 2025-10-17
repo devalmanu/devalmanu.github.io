@@ -71,22 +71,3 @@
 .modal--visible {
    display: block;
 }
-
-// .modal-close {
-//    position: absolute;
-//    top: 40px;
-//    right: 40px;
-//    padding: 8px;
-//    z-index: 65;
-//    @include breakpoint(tablet) {
-//       top: 28px;
-//       right: 28px;
-//    }
-//    @include breakpoint(mobileonly) {
-//       top: 10px;
-//       right: 10px;
-//    }
-//    img {
-//       pointer-events: none;
-//    }
-// }

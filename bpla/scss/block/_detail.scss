@@ -85,26 +85,35 @@
             }
         }
         &-description {
-            transition: max-height 0.5s ease;
             p {
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 3;
                 overflow: hidden;
                 color: $color-light-gray;
                 font-size: 16px;
                 line-height: 1.15;
                 max-height: 55px;
-                transition: all 0.3s ease-out;
+                transition: all 0.5s ease;
                 @include breakpoint(mobileonly) {
                     font-size: 14px;
                     line-height: 1.25;
                 }
-                &.open {
+                &:after {
+                    content: " ...";
+                    position: absolute;
+                    right: 0;
+                    bottom: -1px;
+                    background-color: $color-white;
+                    z-index: 1;
                     opacity: 1;
-                    max-height: inherit;
-                    -webkit-line-clamp: inherit;
-                    // transition: max-height 0.5s ease;
+                    @include breakpoint(mobileonly) {
+                        bottom: 2px;
+                    }
+                }
+                &.open {
+                    max-height: auto;
+                    transition: all 0.5s ease;
+                    &:after {
+                        opacity: 0;
+                    }
                 }
             }
         }

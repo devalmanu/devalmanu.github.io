@@ -81,7 +81,7 @@ html [type="button"],
 	min-height: 300px;
 	overflow: hidden;
 	@include breakpoint(tablet) {
-		margin-top: 90px;
+		margin-top: 82px;
 		padding: 8px 0 0;
 	}
 }
@@ -492,6 +492,11 @@ a.color-accent {
 			background-color: $color-ultra-light;
 			border-color: $color-ultra-light;
 		}
+		&:hover {
+			& ~ .custom-control-label {
+				border-color: $accent;
+			}
+		}
 	}
 	.custom-control-label {
 		display: flex;
@@ -499,7 +504,7 @@ a.color-accent {
 		position: relative;
 		margin-bottom: 0;
 		vertical-align: top;
-		padding: 0 20px 0 40px;
+		padding: 0 18px 0 40px;
 		border-radius: $radius-16;
 		border: 2px solid $color-ultra-light;
 		background-color: $color-ultra-light;
@@ -510,9 +515,7 @@ a.color-accent {
 			background-color 0.2s linear,
 			border-color 0.25s linear,
 			color 0.2s linear;
-		&:hover {
-			border-color: $accent;
-		}
+
 		.complect__title {
 			font-family: $TTNorms-Medium;
 			font-size: 14px;
