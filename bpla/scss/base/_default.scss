@@ -232,9 +232,10 @@ p {
 	font-family: $TTNorms-Regular;
 	font-size: 14px;
 	line-height: 1.2;
-	color: $color-dark;
+	color: $color-dark-gray;
 }
 .section-text {
+	color: $color-dark-gray;
 	font-size: 20px;
 	@include breakpoint(tablet) {
 		font-size: 16px;
