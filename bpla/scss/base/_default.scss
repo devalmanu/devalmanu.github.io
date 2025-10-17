@@ -491,9 +491,6 @@ a.color-accent {
 		& ~ .custom-control-label {
 			background-color: $color-ultra-light;
 			border-color: $color-ultra-light;
-			&:hover {
-				border-color: $accent;
-			}
 		}
 	}
 	.custom-control-label {
@@ -513,6 +510,9 @@ a.color-accent {
 			background-color 0.2s linear,
 			border-color 0.25s linear,
 			color 0.2s linear;
+		&:hover {
+			border-color: $accent;
+		}
 		.complect__title {
 			font-family: $TTNorms-Medium;
 			font-size: 14px;
