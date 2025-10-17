@@ -29,7 +29,7 @@
       padding: 0 60px;
       border-radius: $radius-16;
       background: $color-white;
-      @include breakpoint(desktop) {
+      @media (max-width: 1140px) {
          column-gap: 32px;
          padding: 0 32px;
       }
