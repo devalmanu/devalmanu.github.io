@@ -1,17 +1,17 @@
-@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false) {
 	@font-face {
 		font-family: $font-family;
 		font-weight: $weight;
 		font-style: $style;
-
+		font-display: swap;
 		@if $asset-pipeline == true {
-			src: font-url('#{$file-path}.woff') format('woff');
-			src: font-url('#{$file-path}.woff2') format('woff2');
-			src: font-url('#{$file-path}.ttf') format('truetype');
+			src: font-url("#{$file-path}.woff") format("woff");
+			src: font-url("#{$file-path}.woff2") format("woff2");
+			src: font-url("#{$file-path}.otf") format('opentype');
 		} @else {
-			src: url('#{$file-path}.woff') format('woff');
-			src: url('#{$file-path}.woff2') format('woff2');
-			src: url('#{$file-path}.ttf') format('truetype');
+			src: url("#{$file-path}.woff") format("woff");
+			src: url("#{$file-path}.woff2") format("woff2");
+			src: url("#{$file-path}.otf") format('opentype');
 		}
 	}
 }
