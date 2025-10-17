@@ -261,7 +261,7 @@
       opacity: 1;
     }
   }
-  @include breakpoint(desktop) {
+  @include breakpoint(tablet) {
     @include block;
     z-index: 30;
   }
