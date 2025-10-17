@@ -26,23 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
    };
 
-   var hash = window.location.hash;
-   if (hash == '' || document.querySelector(hash).length == 0) return true;
-
-   setTimeout(function () {
-
-      document.querySelector('html, body').animate({
-
-         scrollTop: document.querySelector(hash).offset().top
-      }
-         , 900, function () {
-
-            window.location.hash = hash;
-         }
-      );
-   }
-      , 100);
-
    // scroll into block class link-button
    document.querySelectorAll('a.link-button[href^="#"').forEach(link => {
       link.addEventListener('click', function (e) {
