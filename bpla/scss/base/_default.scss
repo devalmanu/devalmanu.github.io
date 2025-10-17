@@ -13,6 +13,7 @@ html {
 html,
 body {
 	height: 100%;
+	scroll-behavior: smooth;
 }
 body {
 	min-width: 320px;
@@ -217,6 +218,7 @@ h6,
 	}
 }
 .section {
+	scroll-margin-top: 120px; 
 	margin-bottom: 80px;
 	@include breakpoint(tablet) {
 		margin-bottom: 64px;
