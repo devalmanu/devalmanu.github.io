@@ -5,10 +5,8 @@
 		font-style: $style;
 		font-display: swap;
 		@if $asset-pipeline == true {
-			src: font-url("#{$file-path}.woff") format("woff");
 			src: font-url("#{$file-path}.woff2") format("woff2");
 		} @else {
-			src: url("#{$file-path}.woff") format("woff");
 			src: url("#{$file-path}.woff2") format("woff2");
 		}
 	}

@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
    window.addEventListener("scroll", function () {
       fixedHeader();
    });
+
    fixedHeader();
    function fixedHeader() {
       if (window.scrollY > 5) {
@@ -26,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
    };
 
-   // scroll into block class link-button
    document.querySelectorAll('a.link-button[href^="#"').forEach(link => {
       link.addEventListener('click', function (e) {
          e.preventDefault();
@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
             top: offsetPosition,
             behavior: 'smooth'
          });
-         // window.scrollTo(0, offsetPosition)
       });
    });
 
@@ -262,7 +261,6 @@ document.addEventListener('DOMContentLoaded', () => {
             let currentPrice = parseInt(priceWithoutSpaces(fullPrice.textContent));
 
             if (checkbox.checked) {
-               // Получаем цену из data-атрибута и преобразуем ее в число
                price += parseFloat(checkbox.dataset.price);
             } else {
                price -= parseFloat(checkbox.dataset.price);
@@ -326,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
          ])
          .onSuccess((event) => {
             console.log('Проверка проходит и форма отправлена', event);
-            // если проверка прошла показать popup
+            // test popup
             openPopup('popup-success')
 
             let formData = new FormData(event.target);
