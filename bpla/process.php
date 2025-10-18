@@ -12,13 +12,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Валидация имени
     if (empty($name)) {
         $errors[] = "Имя обязательно для заполнения";
-    } elseif (strlen($name) < 2 || strlen($name) > 30) {
-        $errors[] = "Имя должно быть от 2 до 30 символов";
+    } elseif (strlen($name) < 3 || strlen($name) > 20) {
+        $errors[] = "Имя должно быть от 3 до 20 символов";
     } elseif (!preg_match('/^[a-zA-Zа-яА-ЯёЁ\s\-]+$/u', $name)) {
         $errors[] = "Имя содержит недопустимые символы";
     }
 
-    // Валидация телефона
+    // // Валидация телефона
     if (empty($phone)) {
         $errors[] = "Телефон обязателен для заполнения";
     } elseif (strlen($phone) < 10 || strlen($phone) > 20) {
@@ -54,11 +54,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
 
         // Раскомментируйте для реальной отправки email
-        // if (mail($to, $subject, $message, $headers)) {
-        //     echo "Спасибо, " . htmlspecialchars($name) . "! Мы свяжемся с вами в ближайшее время.";
-        // } else {
-        //     throw new Exception("Ошибка при отправке email");
-        // }
+        if (mail($to, $subject, $message, $headers)) {
+            echo "Спасибо, " . htmlspecialchars($name) . "! Мы свяжемся с вами в ближайшее время.";
+        } else {
+            throw new Exception("Ошибка при отправке email");
+        }
 
         // Для демонстрации просто выводим успешное сообщение
         echo "Спасибо, " . htmlspecialchars($name) . "! Мы свяжемся с вами по номеру " . htmlspecialchars($phone) . " в ближайшее время.";

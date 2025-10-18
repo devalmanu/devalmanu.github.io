@@ -567,14 +567,14 @@
 								<p>Поговорите с нашим экспертом. Оставьте заявку в форме ниже, и мы
 									перезвоним вам</p>
 							</div>
-							<form action="#" class="form form-feedback" autocomplete="off" novalidate="novalidate">
+							<form action="./process.php" method="POST" class="form form-feedback" autocomplete="off" novalidate="novalidate">
 								<div class="inputBlock">
-									<input type="text" id="input-feedback-name"
+									<input type="text" id="input-feedback-name" name="name"
 										class="inputBlock__input input-feedback-name" placeholder="Ваше имя"
 										aria-label="Имя" data-required="true">
 								</div>
 								<div class="inputBlock">
-									<input type="tel" id="input-feedback-tel"
+									<input type="tel" id="input-feedback-tel" name="phone"
 										class="inputBlock__input input-feedback-tel j-phone-mask"
 										placeholder="Номер телефона" aria-label="Телефон" data-required="true"
 										inputmode="text">
@@ -660,7 +660,6 @@
 		</footer>
 		<div class="modals">
 			<div class="modal-overlay">
-				<!-- окно с ответом 200 -->
 				<div class="modal modal-wind modal-success" data-target="popup-success">
 					<div class="modal__body">
 						<svg class="icon icon-success">
@@ -675,7 +674,6 @@
 						</button>
 					</div>
 				</div>
-				<!-- окно с ответом при ошибке -->
 				<div class="modal modal-wind modal-success-error" data-target="popup-success-error">
 					<div class="modal__body">
 						<div>

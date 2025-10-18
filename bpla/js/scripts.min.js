@@ -325,66 +325,57 @@ document.addEventListener('DOMContentLoaded', () => {
          .onSuccess((event) => {
             // console.log('Проверка проходит и форма отправлена', event);
             // test popup
-            // openPopup('popup-success')
+            openPopup('popup-success')
 
-            // let formData = new FormData(event.target);
-            // formData.append('ajx', 'y');
-            // console.log(...formData);
+            let formData = new FormData(event.target);
+            console.log(...formData);
 
-            // let xhr = new XMLHttpRequest();
+            let xhr = new XMLHttpRequest();
 
-            // xhr.onreadystatechange = function () {
-            //    if (xhr.readyState === 4) {
-            //       let response = JSON.parse(xhr.responseText);
-            //       if (xhr.status === 200 && response.success) {
-            //          console.log(xhr.response);
-            //          openPopup('popup-success')
-            //       } else {
-            //          openPopup('popup-success-error')
-            //       }
-            //    }
-            // }
-            // xhr.open('POST', feedbackForm.action, true);
-            // xhr.send(formData);
-            // event.target.reset();
-
-            // Останавливаем стандартную отправку формы
-            event.preventDefault();
-            // Получаем форму
-            const form = event.target;
-            const submitButton = form.querySelector('button[type="submit"]');
-
-            // Блокируем кнопку отправки
-            submitButton.disabled = true;
-
-            // Создаем FormData
-            const formData = new FormData(form);
-
-            // Отправляем данные на сервер
-            fetch('./process.php', {
-               method: 'POST',
-               body: formData
-            })
-               .then(response => {
-                  if (!response.ok) {
-                     throw new Error('Ошибка сети');
+            xhr.onreadystatechange = function () {
+               if (xhr.readyState === 4) {
+                  let response = JSON.parse(xhr.responseText);
+                  if (xhr.status === 200 && response.success) {
+                     console.log(xhr.response);
+                     openPopup('popup-success')
+                  } else {
+                     openPopup('popup-success-error')
                   }
-                  return response.text();
-               })
-               .then(data => {
-                  openPopup('popup-success')
-                  // Очищаем форму
-                  form.reset();
-               })
-               .catch(error => {
-                  openPopup('popup-success-error');
-                  console.error('Ошибка:', error);
-               })
-               .finally(() => {
-                  // Разблокируем кнопку отправки
-                  submitButton.disabled = false;
-                  
-               });
+               }
+            }
+            xhr.open('POST', feedbackForm.action, true);
+            xhr.send(formData);
+            event.target.reset();
+
+             event.preventDefault();
+
+            // const form = event.target;
+            // const submitButton = form.querySelector('button[type="submit"]');
+            // submitButton.disabled = true;
+
+            // const formData = new FormData(form);
+
+            // fetch('../process.php', {
+            //    method: 'POST',
+            //    body: formData
+            // })
+            //    .then(response => {
+            //       if (!response.ok) {
+            //          throw new Error('Ошибка сети');
+            //       }
+            //       return response.text();
+            //    })
+            //    .then(data => {
+            //       openPopup('popup-success')
+            //       form.reset();
+            //    })
+            //    .catch(error => {
+            //       openPopup('popup-success-error');
+            //       console.error('Ошибка:', error);
+            //    })
+            //    .finally(() => {
+            //       submitButton.disabled = false;
+            //    });
 
          })
          .onFail((fields) => {
