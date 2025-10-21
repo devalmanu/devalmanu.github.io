@@ -20,6 +20,10 @@
     @media (max-width: 576px) {
       @content;
     }
+  } @else if $point == mobilemini {
+    @media (max-width: 359px) {
+      @content;
+    }
   }
 }
  

@@ -1,0 +1,49 @@
+.error-content {
+    &__block {
+        position: relative;
+        text-align: center;
+        padding-bottom: 5px;
+        @include breakpoint(mobileonly) {
+            padding-bottom: 25px;
+        }
+    }
+    &__sub {
+        display: block;
+        font-family: $Quantify;
+        font-size: 500px;
+        line-height: 1;
+        margin-top: -28px;
+        background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include breakpoint(tablet) {
+            margin-top: 16px;
+            font-size: calc(20rem + 1.28vw);
+        }
+        @include breakpoint(mobileonly) {
+            font-size: 208px;
+            margin-right: -16px;
+            margin-left: -16px;
+        }
+        @include breakpoint(mobilemini) {
+            font-size: calc(10rem + 1.28vw);
+        }
+    }
+    &__content {
+        margin-top: -60px;
+        @include breakpoint(tablet) {
+            margin-top: -40px;
+        }
+        @include breakpoint(mobileonly) {
+            margin-top: 0;
+        }
+        h1 {
+            color: $color-dark;
+            margin-bottom: 32px;
+            @include breakpoint(mobileonly) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
