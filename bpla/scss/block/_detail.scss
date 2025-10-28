@@ -272,18 +272,12 @@
                 z-index: 1;
                 &.swiper-slide-thumb-active {
                     opacity: 1;
-                    &:before {
-                        display: block;
-                        content: "";
-                        position: absolute;
-                        width: calc(100% + 4px);
-                        height: calc(100% + 4px);
-                        top: -2px;
-                        left: -2px;
-                        background: $accent;
-                        z-index: -1;
+                    img {
+                        box-sizing: border-box;
+                        border: 2px solid $accent;
                     }
                 }
+
                 @include breakpoint(tablet) {
                     width: 80px;
                     height: 80px;
@@ -292,17 +286,21 @@
                     width: 40px;
                     height: 40px;
                 }
+
                 img {
+                    display: block;
                     position: relative;
                     z-index: 3;
-                    width: calc(100% - 4px);
-                    height: calc(100% - 4px);
-                    top: 2px;
-                    left: 2px;
-                    border-radius: 14px;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 16px;
                     overflow: hidden;
                     @include breakpoint(tablet) {
                         border-radius: 6px;
+                    }
+                    @include breakpoint(mobileonly) {
+                        width: 40px;
+                        height: 40px;
                     }
                 }
             }

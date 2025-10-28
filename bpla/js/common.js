@@ -205,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
             watchSlidesProgress: true,
             slideToClickedSlide: true,
             direction: 'vertical',
+            slideThumbActiveClass: 'thumb-is-active',
             breakpoints: {
                992: {
                   spaceBetween: 10,
