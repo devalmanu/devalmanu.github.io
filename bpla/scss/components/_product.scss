@@ -80,6 +80,7 @@
             }
         }
         &__info {
+            height: 100%;
             padding: 20px;
             @include flex-h-column;
             row-gap: 12px;
@@ -126,12 +127,14 @@
             @include flex-all-center;
             column-gap: 8px;
             min-height: 50px;
-            margin-top: 28px;
+            margin-top: auto;
+            padding-top: 28px;
+            
             @include breakpoint(tablet) {
                 align-items: flex-start;
                 flex-direction: column-reverse;
                 min-height: 65px;
-                margin-top: 8px;
+                padding-top: 8px;
                 row-gap: 8px;
             }
 

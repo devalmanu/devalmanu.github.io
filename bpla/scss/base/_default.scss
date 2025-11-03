@@ -692,7 +692,7 @@ main {
 		.header & {
 			@include breakpoint(tablet) {
 				color: $color-light-gray;
-				font-size: 12px;
+				font-size: 18px;
 				padding-top: 8px;
 				text-align: center;
 			}
