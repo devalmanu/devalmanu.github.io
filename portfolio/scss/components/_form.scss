@@ -1,0 +1,68 @@
+form {
+	display: flex;
+	column-gap: 36px;
+	row-gap: 20px;
+	@include breakpoint(mobileonly) {
+		row-gap: 8px;
+	}
+	.inputBlock {
+		position: relative;
+		width: 100%;
+	}
+	input {
+		position: relative;
+		width: 100%;
+		font-style: normal;
+		font-family: $OpenSans;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 1;
+		color: $color-white;
+		padding: 15px 25px;
+		border-radius: $radius-8;
+		background: #101010;
+		border: none;
+		transition: border 0.2s ease;
+		@include breakpoint(mobileonly) {
+			padding: 16px;
+			font-size: 12px;
+		}
+		&:disabled,
+		&[disabled] {
+			background: $color-dark-grey;
+		}
+
+		&.filled {
+			border: none;
+			background: $color-dark-grey;
+		}
+
+		&[lang="en"] {
+			font-family: $Poppins-light;
+		}
+	}
+
+	button {
+		&:disabled {
+			opacity: 0.8;
+			cursor: not-allowed;
+		}
+		@include breakpoint(mobileonly) {
+			min-width: 100%;
+		}
+	}
+
+	.just-validate-error-field {
+		border: 2px solid $gradient;
+	}
+
+	.just-validate-error-label {
+		opacity: 1;
+		bottom: -3px;
+		left: 15px;
+		position: relative;
+		font-size: 12px;
+		line-height: 1;
+		color: $gradient !important;
+	}
+}

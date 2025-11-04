@@ -1,0 +1,207 @@
+.philosophy {
+    &__content {
+        display: flex;
+        column-gap: 102px;
+        height: 100%;
+        align-items: stretch;
+        @include breakpoint(desktop) {
+            column-gap: 32px;
+        }
+        @include breakpoint(laptop) {
+            flex-direction: column;
+            row-gap: 64px;
+        }
+        &-image {
+            position: relative;
+            width: 36%;
+            @include breakpoint(laptop) {
+                width: 60%;
+                margin: 0 auto;
+            }
+            @include breakpoint(mobileonly) {
+                width: 100%;
+            }
+            .image__badge {
+                position: absolute;
+                top: auto;
+                bottom: -1px;
+                left: 0;
+                // width: 21.3%;
+                // height: 35.2%;
+                width: 117px;
+                height: 308px;
+                display: flex;
+                background: url("../img/@2x/badge-bg.png") no-repeat left bottom / cover;
+                &-text {
+                    transform: rotate(180deg);
+                    writing-mode: tb-rl;
+                }
+                p {
+                    margin-top: 1px;
+                    margin-right: -4px;
+                    color: $color-white;
+                    font-size: 20px;
+                    line-height: 1;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    &[lang="en"] {
+                        font-family: $Poppins-medium;
+                    }
+                }
+            }
+        }
+        picture {
+            display: block;
+            width: 100%;
+            height: 100%;
+            img {
+                @include image-fit;
+                border-radius: $radius-30;
+                overflow: hidden;
+            }
+        }
+
+        &-description {
+            width: calc(64% - 102px);
+            font-weight: 400;
+            margin-bottom: 13px;
+            @include breakpoint(desktop) {
+                width: calc(64% - 32px);
+            }
+            @include breakpoint(laptop) {
+                width: 100%;
+                margin-bottom: 0;
+            }
+            .description__column {
+                display: flex;
+                column-gap: 36px;
+                align-items: flex-end;
+                @include breakpoint(mobileonly) {
+                    flex-direction: column;
+                    row-gap: 32px;
+                }
+                &-text {
+                    width: calc(65.5% - 36px);
+                    @include breakpoint(mobileonly) {
+                        width: 100%;
+                    }
+                }
+                &-image {
+                    width: 34.5%;
+                    @include breakpoint(mobileonly) {
+                        width: 100%;
+                    }
+                    .content {
+                        height: 290px;
+                    }
+                    .image-descr {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-bottom: 40px;
+                        @include breakpoint(tablet) {
+                            margin-bottom: 20px;
+                        }
+                        .tabs__item {
+                            .tabs__btn {
+                                position: relative;
+                                min-width: 170px;
+                                caret-color: transparent;
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    width: 100%;
+                                    height: 1.5px;
+                                    background: url("../img/icon/tabs-line.svg") no-repeat left bottom/cover;
+                                }
+                            }
+                            &:last-child {
+                                .tabs__btn {
+                                    &:after {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .image-full {
+                        position: relative;
+                        &:before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            right: 0;
+                            bottom: 0;
+                            z-index: 2;
+                            background: rgba(0, 0, 0, 0.2);
+                        }
+                        img {
+                            // @include image-fit;
+                            border-radius: $radius-20;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+            h2 {
+                margin-top: -30px;
+                line-height: 1.35;
+            }
+            p {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 38px;
+                @include breakpoint(desktop) {
+                    font-size: 20px;
+                    line-height: 1.5;
+                }
+                @include breakpoint(tablet) {
+                    font-size: 16px;
+                }
+                @include breakpoint(mobileonly) {
+                    font-size: 14px;
+                }
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            ul {
+                padding-top: 12px;
+                li {
+                    position: relative;
+                    padding-left: 35px;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 15px;
+                        left: 13px;
+                        width: 7px;
+                        height: 7px;
+                        border-radius: $radius-50;
+                        background: $color-dark-grey;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 37px;
+                    }
+                }
+            }
+            .btn-accent {
+                margin-top: 88px;
+                margin-left: 22px;
+                @include breakpoint(tablet) {
+                    margin-top: 48px;
+                }
+                @include breakpoint(mobileonly) {
+                    margin-left: 0;
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Darya Corbeau</title>
+	<meta name="description" content="Darya Corbeau">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg">
+	<link rel="shortcut icon" href="./img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="Darya Corbeau">
+	<link rel="manifest" href="./img/favicon/site.webmanifest">
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./css/main.min.css">
+
+</head>
+
+<body class="page_body front-page">
+	<div class="site-container">
+		<header class="header" id="header">
+			<div class="header-top">
+				<div class="container">
+					<div class="header__container header-top__container">
+						<div class="header__logo-group">
+							<a href="./" class="header__logo" aria-label="Название компании">
+								<svg class="icon">
+									<use xlink:href="./img/sprite/sprite.svg#logo-header"></use>
+								</svg>
+							</a>
+						</div>
+						<button class="burger" data-burger aria-label="open-menu" aria-expanded="false">
+							<span class="burger__line"></span>
+						</button>
+						<div class="nav" data-nav>
+							<div class="header-top__nav">
+								<nav>
+									<ul class="nav__list">
+										<li class="nav__item"><a href="./" class="nav__link active">Home</a>
+										</li>
+										<li class="nav__item"><a href="#about" class="nav__link link-button">О
+												художнике</a>
+										</li>
+										<li class="nav__item"><a href="#portfolio"
+												class="nav__link link-button">Портфолио</a></li>
+										<li class="nav__item"><a href="#contacts"
+												class="nav__link link-button">Contact</a></li>
+										<li class="nav__item"><a href="#blog" class="nav__link link-button">Blog</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+							<div class="contacts-offer hidden-desktop">
+								<div class="text-center">
+									<a href="tel:+777777777777" class="btn-reset contacts-link" target="_blank">+7 777
+										7777 7777</a>
+									<span>Многоконтактный телефон</span>
+								</div>
+								<div class="text-center">
+									<a href="mailto:contact@contact.com" class="btn-reset contacts-link"
+										target="_blank">contact@contact.com</a>
+									<span>Электронная почта</span>
+								</div>
+							</div>
+							<div class="header__buttons">
+								<a href="tel:+79200162999" class="btn-reset btn-accent">Login</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main site-main" id="main">
+			<section class="banner section">
+				<div class="container">
+					<h1 class="font-gradient" lang="en">Darya Corbeau</h1>
+					<div class="banner__content">
+						<div class="banner__content-block">
+							<div class="banner__content-title">
+								<h2>Искусство объема и смысла</h2>
+								<p class="color-dark-grey" lang="ru">Уникальные картины в смешанной технике акрилом с
+									авторской
+									текстурой для Вашего интерьера и коллекции.</p>
+							</div>
+							<div class="banner__content-buttons">
+								<a href="#" class="btn-reset btn-accent">Обсудить заказ</a>
+								<a href="#" class="btn-reset btn-video">
+									<svg class="icon">
+										<use xlink:href="./img/sprite/sprite.svg#sound"></use>
+									</svg>
+									Видео процессы</a>
+							</div>
+							<div class="preview__works">
+								<span>Доступные работы</span>
+								<a href="#" class="btn-reset btn-light">Перейти в каталог</a>
+							</div>
+						</div>
+						<div class="banner__content-ellipse">
+							<img src="./img/@2x/banner-ellipse.webp" alt="light" data-src="./img/@2x/banner-ellipse.png"
+								loading="lazy">
+						</div>
+						<div class="banner__picture">
+							<picture>
+								<source media="(max-width: 600px)" srcset="./img/@2x/banner-mobile.webp"
+									data-src="./img/@2x/banner-mobile.png">
+								<img src="./img/@2x/banner-1.webp" alt="Автор" data-src="./img/@2x/banner-1.png"
+									loading="lazy">
+							</picture>
+						</div>
+						<div class="percentage">
+							<div class="percentage__item item-first">
+								<span>45%</span>
+								<p>Художник</p>
+							</div>
+							<div class="percentage__line">
+								<img src="./img/@2x/banner-line.svg" alt="line">
+							</div>
+							<div class="percentage__item item-second">
+								<span>55%</span>
+								<p>Кандидат<br>технических наук</p>
+							</div>
+
+						</div>
+						<div class="banner__content-vertical">
+							<span>Acrylic Art</span>
+							<span>Installations</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about section" id="about">
+				<div class="container">
+					<h2 class="text-center text-upp">
+						<span lang="en">MY STORY</span>
+						<span lang="ru">О художнике</span>
+					</h2>
+					<div class="about__content">
+						<div class="about__content-description">
+							<h3 class="color-white text-upp" lang="ru">Кто я<span lang="en">?</span></h3>
+							<p>Директор по развитию и кандидат технических наук, который пишет душой.
+								Мой путь в искусстве начался не в детской школе, а на стыке строгой логики бизнеса и
+								свободы творчества. Я убеждена, что создание цифрового продукта и тактильной картины —
+								это один процесс творчества, просто в разных материалах.</p>
+							<p class="font-italic">Мои работы — это синтез дисциплины и интуиции, классических сюжетов и
+								смелых современных техник</p>
+						</div>
+						<div class="about__content-image">
+							<picture>
+								<source media="(max-width: 600px)" srcset="./img/@2x/about-mobile.webp"
+									data-src="./img/@2x/about-mobile.jpg">
+								<img src="./img/@2x/about-1.webp" alt="Автор" data-src="./img/@2x/about-1.jpg"
+									loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="philosophy section" id="philosophy">
+				<div class="container">
+
+					<div class="philosophy__content">
+						<div class="philosophy__content-image">
+							<picture>
+								<source media="(max-width: 600px)" srcset="./img/@2x/philosophy-statue-mobile.webp"
+									data-src="./img/@2x/philosophy-statue-mobile.jpg">
+								<img src="./img/@2x/philosophy-statue.webp" alt="Скульптура"
+									data-src="./img/@2x/philosophy-statue.jpg" loading="lazy">
+							</picture>
+							<div class="image__badge">
+								<div class="image__badge-text">
+									<p class="text-upp" lang="en">Modern art of soul</p>
+								</div>
+							</div>
+						</div>
+						<div class="philosophy__content-description">
+							<h2 class="text-upp" lang="ru">Философия бренда</h2>
+							<div class="description__column">
+								<div class="description__column-text">
+									<ul class="list-reset">
+										<li>
+											<p><span>Текстурный реализм:</span> Акрил, мастихин, объемные пасты.
+												Картины, которые хочется трогать.</p>
+										</li>
+										<li>
+											<p><span>Диалог эпох:</span> Античные образы и современные абстракции,
+												вдохновленные Херстом и поп-артом.</p>
+										</li>
+										<li>
+											<p><span>Искусство с историей:</span> Каждая работа — это часть моей личной
+												истории или история заказчика, воплощенная в красках.</p>
+										</li>
+									</ul>
+									<a href="#" class="btn-reset btn-accent">Узнать больше</a>
+								</div>
+								<div class="description__column-image">
+									<div class="tabs">
+										<div class="image-descr tabs__list">
+											<div class="tabs__item"><button class="btn-reset tabs__btn"
+													data-tabs-path="legends" lang="en">Legends</button>
+											</div>
+											<div class="tabs__item"><button
+													class="btn-reset tabs__btn tabs__btn--active"
+													data-tabs-path="texture" lang="en">Texture</button></div>
+											<div class="tabs__item"><button class="btn-reset tabs__btn"
+													data-tabs-path="emotions" lang="en">Emotions</button>
+											</div>
+										</div>
+
+										<div class="tabs__content" data-tabs-target="legends">
+											<div class="content">
+												<picture class="image-full">
+													<source media="(max-width: 600px)"
+														srcset="./img/@2x/philosophy-2-mobile.webp"
+														data-src="./img/@2x/philosophy-2-mobile.jpg">
+													<img src="./img/@2x/philosophy-2.webp" alt="ворон"
+														data-src="./img/@2x/philosophy-2.jpg" loading="lazy">
+												</picture>
+											</div>
+										</div>
+										<div class="tabs__content tabs__content--active" data-tabs-target="texture">
+											<div class="content">
+												<picture class="image-full">
+													<source media="(max-width: 600px)"
+														srcset="./img/@2x/philosophy-crow-mobile.webp"
+														data-src="./img/@2x/philosophy-crow-mobile.jpg">
+													<img src="./img/@2x/philosophy-crow.webp" alt="ворон"
+														data-src="./img/@2x/philosophy-crow.jpg" loading="lazy">
+												</picture>
+											</div>
+										</div>
+										<div class="tabs__content" data-tabs-target="emotions">
+											<div class="content">
+												<picture class="image-full">
+													<source media="(max-width: 600px)"
+														srcset="./img/@2x/philosophy-3-mobile.webp"
+														data-src="./img/@2x/philosophy-3-mobile.jpg">
+													<img src="./img/@2x/philosophy-3.webp" alt="ворон"
+														data-src="./img/@2x/philosophy-3.jpg" loading="lazy">
+												</picture>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<section class="portfolio section" id="portfolio">
+				<div class="container">
+
+					<div class="portfolio__content">
+						
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer" id="footer">
+			<div class="container">
+				<div class="footer__content">
+					<div class="footer__container">
+						<div class="footer__content-block footer__subs">
+							<h3 lang="en">Join a Telegrmm</h3>
+							<div class="subscribe-form-wrapper">
+								<span lang="en">Your Email</span>
+								<form onsubmit="return false;" class="subscribe-form">
+									<input placeholder="Enter Your Email" name="email" type="email" lang="en">
+									<button type="button"
+										class="subs-form__send btn-reset btn-accent j-submit" lang="en">Subscribe</button>
+								</form>
+							</div>
+							<div>
+								<ul class="footer__col">
+									<li class="footer__col-item--social">
+										<a href="#" target="_blank" rel="nofollow">
+											<svg class="icon" width="20" height="20">
+												<use xlink:href="./img/sprite/sprite.svg#icon-1-footer"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="footer__col-item--social">
+										<a href="#" target="_blank" rel="nofollow">
+											<svg class="icon" width="26" height="17">
+												<use xlink:href="./img/sprite/sprite.svg#icon-2-footer"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="footer__col-item--social">
+										<a href="#" target="_blank" rel="nofollow">
+											<svg class="icon" width="20" height="20">
+												<use xlink:href="./img/sprite/sprite.svg#icon-3-footer"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="footer__col-item--social">
+										<a href="#" target="_blank" rel="nofollow">
+											<svg class="icon" width="25" height="20">
+												<use xlink:href="./img/sprite/sprite.svg#icon-4-footer"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__content-block footer__content-navigation">
+							<h3 lang="en">Quick Links</h3>
+							<div class="footer__content-nav">
+								<ul class="footer__nav">
+									<li class="footer__nav-link">
+										<a href="./">Home</a>
+									</li>
+									<li class="footer__nav-link">
+										<a href="#">О художнике</a>
+									</li>
+									<li class="footer__nav-link">
+										<a href="#">Услуги</a>
+									</li>
+									<li class="footer__nav-link">
+										<a href="#">Портфолио</a>
+									</li>
+									<li class="footer__nav-link">
+										<a href="#">Blog</a>
+									</li>
+									<li class="footer__nav-link">
+										<a href="#">Отзывы</a>
+									</li>
+									<li class="footer__nav-link">
+										<a href="#">FAQs</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__content-block footer__info">
+							<a href="./" class="footer__logo" aria-label="Darya Corbeau" lang="en">
+								Darya Corbeau
+							</a>
+							<p>Официально:о том, как системный подход и любовь к текстуре рождают искусство. 💫</p>
+							<p>Неофициально:ваш личный арт-дневник и источник вдохновения без воды. ✨</p>
+							<a href="https://t.me/d_corbeau" class="btn-reset footer__info-link" lang="en">https://t.me/d_corbeau</a>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<p class="footer__copyrigth">Darya Corbeau Site</p>
+						<div class="footer__bottom-links">
+							<a href="#" class="footer__policy">Kemerovo</a>
+							<a href="mailto:contact@contact.com" class="footer__policy">contact@contact.com</a>
+							<a href="tel:+777777777777" class="footer__policy">+7 777 7777 7777</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="modals">
+			<div class="modal-overlay">
+				<div class="modal modal-wind modal-success" data-target="popup-success">
+					<div class="modal__body">
+						<svg class="icon icon-success">
+							<use xlink:href="./img/sprite/sprite.svg#form-check"></use>
+						</svg>
+						<div>
+							<h2>Данные <span class="color-accent">успешно отправлены</span></h2>
+							<p>Мы ответим вам в ближайшее время</p>
+						</div>
+						<button class="btn-reset btn-accent modal-close">
+							Ок
+						</button>
+					</div>
+				</div>
+				<div class="modal modal-wind modal-success-error" data-target="popup-success-error">
+					<div class="modal__body">
+						<div>
+							<h2>Произошла ошибка</h2>
+							<p>Попробуйте заполнить форму снова</p>
+						</div>
+						<button class="btn-reset btn-accent modal-close">
+							Ок
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./libs/inputmask.min.js"></script>
+	<script src="./libs/just-validate.production.min.js"></script>
+	<script src="./libs/swiper-bundle.min.js"></script>
+	<script src="./js/scripts.min.js"></script>
+</body>
+
+</html>

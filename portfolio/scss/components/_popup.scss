@@ -1,0 +1,73 @@
+.modal-overlay {
+   @include fixed-center;
+   background: rgba(37, 37, 37, 0.2);
+   @include flex-all-center;
+   height: 100vh;
+   width: 100%;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.2s ease-in;
+   z-index: 55;
+   &--visible {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.2s ease-in;
+      &:hover {
+         .modal-close span {
+            background-color: $gradient;
+         }
+      }
+   }
+}
+
+.modal {
+   width: 100%;
+   max-width: 396px;
+   height: auto;
+   padding: 40px 20px;
+   margin: auto;
+   @include flex-all-center;
+   display: none;
+   z-index: 60;
+   position: relative;
+   background: $color-white;
+   border-radius: $radius-30;
+   overflow: auto;
+   @include breakpoint(tablet) {
+      padding: 32px;
+      border-radius: $radius-30;
+   }
+   &__body {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 40px;
+      text-align: center;
+      @include breakpoint(mobileonly) {
+         row-gap: 32px 16px;
+      }
+   }
+
+   .icon-success {
+      display: block;
+      width: 92px;
+      height: 92px;
+   }
+
+   h2 {
+      margin-bottom: 20px;
+   }
+   p {
+      font-size: 16px;
+      @include breakpoint(mobileonly) {
+         font-size: 14px;
+      }
+   }
+}
+
+.modal--visible {
+   display: block;
+}

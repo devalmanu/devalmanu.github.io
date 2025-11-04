@@ -1,0 +1,111 @@
+.nav {
+   width: calc(100% - 140px);
+   display: flex;
+   align-items: center;
+   margin-right: auto;
+   column-gap: 20px;
+   margin-right: auto;
+
+   &__item {
+      position: relative;
+      @include breakpoint(tablet) {
+         width: 100%;
+         padding: 8px 0;
+      }
+
+      &:last-child {
+         a::after {
+            content: none;
+         }
+      }
+   }
+   &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 80px;
+      padding: 0 50px;
+      @media (max-width: 1140px) {
+         column-gap: 32px;
+         padding: 0 32px;
+      }
+      @include breakpoint(tablet) {
+         width: 100%;
+         align-items: flex-start;
+         flex-direction: column;
+         row-gap: 0;
+         text-align: center;
+      }
+   }
+   &__link {
+      display: block;
+      font-family: $Poppins-medium, $OpenSans;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1;
+      color: $color-dark-grey;
+      white-space: nowrap;
+      padding: 8px 0;
+      position: relative;
+      @include breakpoint(tablet) {
+         font-size: 24px;
+      }
+      &::after {
+         position: absolute;
+         content: "";
+         top: 8px;
+         right: -40px;
+         width: 1px;
+         height: 16px;
+         background-color: $color-white;
+         @include breakpoint(tablet) {
+            content: none;
+         }
+      }
+      &:hover {
+         color: $color-white;
+      }
+      &.active {
+         font-family: $Poppins-medium, $OpenSans;
+         font-weight: 500;
+         color: $color-white;
+      }
+   }
+
+   @include breakpoint(tablet) {
+      position: fixed;
+      top: 70px;
+      right: 0;
+      bottom: 0;
+      z-index: 30;
+      align-items: flex-start;
+      flex-direction: column;
+      row-gap: 46px;
+      overflow-y: auto;
+      padding: 40px 16px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 320px;
+      min-height: 100%;
+      height: 100%;
+      background-color: $color-dark;
+      border-radius: 0;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+   }
+
+   nav {
+      display: flex;
+      align-items: center;
+      column-gap: 36px;
+      @include breakpoint(tablet) {
+         column-gap: 24px;
+         flex-direction: column;
+         width: 100%;
+      }
+   }
+
+   &--visible {
+      transform: translateX(0);
+   }
+}

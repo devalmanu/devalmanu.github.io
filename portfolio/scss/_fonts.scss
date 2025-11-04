@@ -1,0 +1,13 @@
+@import "_mixins/font-face";
+@include font-face("Open Sans", "../fonts/OpenSans-italic");
+@include font-face("Open Sans", "../fonts/OpenSans-normal");
+
+@include font-face("Poppins-lightItalic", "../fonts/Poppins-lightItalic");
+@include font-face("Poppins-light", "../fonts/Poppins-light");
+@include font-face("Poppins-regular", "../fonts/Poppins-regular");
+@include font-face("Poppins-medium", "../fonts/Poppins-medium");
+@include font-face("Poppins-bold", "../fonts/Poppins-bold");
+
+// эти шрифты под вопросом
+// @include font-face("Inter-Medium", "../fonts/Inter-Medium");
+// @include font-face("Montserrat-Medium", "../fonts/Montserrat-Medium");

@@ -1,0 +1,39 @@
+.tabs {
+    .tabs__list {
+        min-width: 170px;
+    }
+    .tabs__btn {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.87;
+        color: $color-dark-grey;
+        padding: 7px 0 8px;
+        text-align: center;
+        background: transparent;
+        transition: color 0.3s ease-in-out;
+            
+        [lang="en"] {
+            font-family: $Poppins-light;
+        }
+        &:hover {
+            color: #fff;
+        }
+
+        &.tabs__btn--active {
+            color: $color-white;
+            transition: color 0.3s ease-in-out;
+            pointer-events: none;
+        }
+    }
+    .tabs__content {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+
+        .content {
+            width: 100%;
+        }
+    }
+}
