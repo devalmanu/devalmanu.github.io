@@ -38,9 +38,9 @@ body {
 body {
 	min-width: 320px;
 	position: relative;
-	font-family: $OpenSans, sans-serif;
-	font-size: 14px;
-	line-height: 1.2;
+	font-family: $OpenSans;
+	font-size: 16px;
+	line-height: 1.87;
 	overflow-x: hidden;
 	min-height: 100vh;
 	padding: 0;
@@ -129,6 +129,7 @@ ol {
 	flex: 0 0 auto;
 }
 .main {
+	position: relative;
 	flex: 1 0 auto;
 	margin-top: 172px;
 	min-height: 300px;
@@ -186,13 +187,19 @@ h6,
 .h6 {
 	margin: 0;
 	padding: 0;
-	font-family: $Poppins-light;
+	font-family: $OpenSans;
 	line-height: 1;
 	font-weight: 300;
 	font-style: normal;
 	color: $color-white;
 	span {
 		display: block;
+		line-height: 1.5;
+	}
+
+	&[lang="en"] {
+		font-family: $Poppins-light;
+		font-weight: 300;
 	}
 }
 
@@ -207,6 +214,14 @@ h6,
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+.font-gradient-02 {
+	background: linear-gradient(90deg, #fff 50%, rgba(255, 255, 255, 0.2) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 h1,
 .h1 {
 	font-size: 200px;
@@ -427,10 +442,8 @@ a.color-accent {
 		width: min-content;
 	}
 	@include breakpoint(mobileonly) {
-		// width: 100%;
 		font-size: 14px;
 		border-radius: $radius-6;
-		// max-width: 380px;
 	}
 
 	&:hover,
@@ -475,6 +488,7 @@ a.color-accent {
 	@include breakpoint(mobileonly) {
 		font-size: 14px;
 		padding: 8px 0;
+		column-gap: 6px;
 	}
 	&:hover,
 	&:active,
@@ -485,6 +499,7 @@ a.color-accent {
 	svg {
 		width: 37px;
 		height: 37px;
+		pointer-events: none;
 		@include breakpoint(mobileonly) {
 			width: 24px;
 			height: 24px;
@@ -493,6 +508,52 @@ a.color-accent {
 
 	&[lang="en"] {
 		font-family: $Poppins-regular;
+	}
+}
+.bg-ellipse-1,
+.bg-ellipse-2,
+.bg-ellipse-3,
+.bg-ellipse-4,
+.bg-ellipse-5 {
+	position: absolute;
+	z-index: -1;
+	img {
+		width: 100%;
+		height: 100%;
+		max-width: 1054px;
+		max-height: 1054px;
+		@include breakpoint(mobileonly) {
+		}
+	}
+}
+
+.bg-ellipse-2 {
+	top: 33%;
+	left: -8%;
+	img {
+	}
+}
+
+.bg-ellipse-3 {
+	top: 36%;
+	right: -8%;
+	img {
+		// width: 100%;
+		// height: 100%;
+		// max-width: 1054px;
+		// max-height: 1054px;
+	}
+}
+
+.bg-ellipse-5 {
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	img {
+		// width: 100%;
+		// height: 100%;
+		// max-width: 1054px;
+		// max-height: 1054px;
 	}
 }
 
@@ -509,7 +570,7 @@ a.color-accent {
 	text-decoration: none;
 	transition: all 0.2s linear;
 	position: relative;
-	text-align: center;
+	// text-align: center;
 	max-height: 51px;
 	z-index: 1;
 	@include breakpoint(tablet) {
@@ -606,28 +667,28 @@ main {
 	}
 	.swiper-button-next,
 	.swiper-button-prev {
-		width: 24px;
-		height: 24px;
+		width: 54px;
+		height: 54px;
 		margin-top: 0;
 		color: $color-white;
 		border-radius: $radius-50;
-		background-color: $color-white;
-		transition: background-color 0.3s ease 0.3s;
-		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+		background: $gradient;
+		transition: background 0.3s ease 0.3s;
+		box-shadow: none;
 		svg {
 			display: block;
-			width: 5px;
-			height: 10px;
-			fill: $color-dark;
+			width: 9px;
+			height: 16px;
+			fill: $color-white;
 		}
 
 		&.swiper-button-disabled {
-			opacity: 1;
-			color: $color-dark;
-			background: $color-white;
+			opacity: 0.8;
+			color: $color-white;
+			background: $gradient;
 			cursor: not-allowed;
 			svg {
-				opacity: 0.5;
+				opacity: 0.8;
 				fill: $color-dark;
 			}
 		}
@@ -638,7 +699,7 @@ main {
 	.swiper-button-next,
 	.swiper-button-prev {
 		&:hover {
-			background-color: $color-dark-grey;
+			background: $gradient;
 		}
 	}
 }
@@ -647,7 +708,7 @@ main {
 	.swiper-button-next,
 	.swiper-button-prev {
 		&:active {
-			background-color: $color-dark-grey;
+			background: $gradient-hover;
 		}
 	}
 }
@@ -717,5 +778,36 @@ main {
 @include breakpoint(desktop) {
 	.hidden-fixed-mob {
 		display: none !important;
+	}
+}
+
+.portfolio,
+.services {
+	.swiper_navigation {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		row-gap: 35px;
+		top: auto;
+		right: 1px;
+		bottom: 185px;
+		z-index: 4;
+		width: 54px;
+		height: 145px;
+		.swiper-button-prev,
+		.swiper-container-rtl .swiper-button-next,
+		.swiper-button-next,
+		.swiper-container-rtl .swiper-button-prev {
+			left: 0;
+			right: 0;
+		}
+		.swiper-button-next {
+			top: 0;
+			bottom: auto;
+		}
+		.swiper-button-prev {
+			top: auto;
+			bottom: 0;
+		}
 	}
 }

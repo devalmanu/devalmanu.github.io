@@ -1,4 +1,6 @@
 .footer {
+   position: relative;
+    z-index: 3;
    padding-top: 134px;
    border-top: 1px solid rgba(255, 255, 255, 0.15);
    padding-bottom: 123px;
@@ -10,13 +12,47 @@
       padding-top: 32px;
       padding-bottom: 64px;
    }
+
+   &__container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      column-gap: 70px;
+      row-gap: 32px;
+      padding-bottom: 107px;
+      @include breakpoint(desktop) {
+         padding-bottom: 80px;
+      }
+      @include breakpoint(laptop) {
+         flex-wrap: wrap;
+         justify-content: flex-start;
+      }
+      @include breakpoint(phablet) {
+         flex-direction: column;
+         align-items: flex-start;
+         padding-bottom: 30px;
+      }
+      @include breakpoint(mobileonly) {
+         padding-bottom: 32px;
+      }
+   }
+
+   &__subs {
+      width: calc(38.7% - 70px);
+      @include breakpoint(laptop) {
+         width: 67%;
+      }
+      @include breakpoint(phablet) {
+         width: 100%;
+         max-width: 400px;
+      }
+   }
+
    &__content {
       color: $color-white;
 
       &-block {
-         // padding-right: 10px;
          @include breakpoint(tablet) {
-            // padding-right: 0;
          }
          h3 {
             color: $color-white;
@@ -27,11 +63,18 @@
             &[lang="en"] {
                font-family: $Poppins-medium;
             }
+            @include breakpoint(phablet) {
+               margin-bottom: 16px;
+            }
          }
       }
 
       &-navigation {
-         min-width: 215px;
+         width: 7%;
+         min-width: 107px;
+         @include breakpoint(phablet) {
+            width: 100%;
+         }
       }
 
       &-nav {
@@ -74,19 +117,6 @@
       }
    }
 
-   &__container {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      column-gap: 68px;
-      row-gap: 32px;
-      @include breakpoint(phablet) {
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-      }
-   }
-
    &__logo {
       display: flex;
       align-items: center;
@@ -111,10 +141,13 @@
    &__info {
       display: flex;
       flex-direction: column;
-      max-width: 472px;
-
+      width: calc(45.33% - 70px);
+      padding-right: 12%;
+      @include breakpoint(laptop) {
+         width: 100%;
+      }
       @include breakpoint(phablet) {
-         // align-items: center;
+         padding-right: 0;
          justify-content: flex-start;
       }
       p {
@@ -123,20 +156,40 @@
          font-weight: 300;
          line-height: 1.87;
          opacity: 0.7;
+         letter-spacing: 0.01em;
          @include breakpoint(phablet) {
-            text-align: center;
+            font-size: 14px;
          }
          & + p {
             margin-top: 30px;
+            @include breakpoint(phablet) {
+               margin-top: 16px;
+            }
          }
          span {
+            &[lang="en"] {
+               font-family: $Poppins-light;
+            }
+         }
+         &[lang="en"] {
             font-family: $Poppins-light;
          }
       }
-      
+
       &-link {
          margin-top: 50px;
          font-size: 16px;
+         letter-spacing: 0.01em;
+         &[lang="en"] {
+            font-family: $Poppins-light;
+         }
+         @include breakpoint(phablet) {
+            color: #ff6f00;
+            margin-top: 30px;
+         }
+         @include breakpoint(mobileonly) {
+            margin-top: 4px;
+         }
       }
    }
 
@@ -160,44 +213,84 @@
       column-gap: 40px;
       row-gap: 16px;
       flex-wrap: wrap;
-      padding-top: 70px;
+      padding-top: 68px;
       border-top: 2px solid rgba(255, 255, 255, 0.15);
       margin-top: 34px;
-      @include breakpoint(phablet) {
+      padding-right: 20px;
+      @include breakpoint(tablet) {
          flex-direction: column;
-         justify-content: center;
-         padding-top: 14px;
-         row-gap: 13px;
-         margin-top: 30px;
+         align-items: flex-start;
+         padding-top: 48px;
+      }
+
+      @include breakpoint(mobileonly) {
+         padding-top: 32px;
+         row-gap: 32px;
+         margin-top: 32px;
       }
 
       &-links {
+         width: 61.4%;
          display: flex;
          align-items: center;
          justify-content: space-between;
-         column-gap: 20px;
-         row-gap: 16px;
+         column-gap: 40px;
+         row-gap: 32px;
+         @include breakpoint(desktop) {
+            width: 72%;
+         }
          @include breakpoint(phablet) {
             flex-direction: column;
-            justify-content: center;
-            row-gap: 13px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+         }
+         div {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            column-gap: 87px;
+            justify-content: space-between;
+            @include breakpoint(desktop) {
+               column-gap: 50px;
+            }
+            @include breakpoint(phablet) {
+               flex-wrap: wrap;
+               row-gap: 32px;
+            }
+         }
+      }
+      .icon {
+         width: 32px;
+         height: 32px;
+         @include breakpoint(mobileonly) {
+            width: 24px;
+            height: 24px;
          }
       }
    }
-   &__copyrigth,
+
    &__policy {
-      font-family: $Poppins-light;
-      font-size: 14px;
-      line-height: 1.45;
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      font-family: $OpenSans;
+      font-size: 16px;
+      line-height: 1.87;
       color: $color-dark-grey;
       text-decoration: none;
-   }
-   &__policy {
+      white-space: nowrap;
       &:hover,
       &:active {
          opacity: 1;
          color: $color-white;
          text-decoration: none;
+      }
+      &[lang="en"] {
+         font-family: $Poppins-light;
+      }
+
+      @include breakpoint(mobileonly) {
+         font-size: 14px;
       }
    }
    &__col {
@@ -215,7 +308,7 @@
             width: 54px;
             height: 54px;
             border-radius: 50%;
-            background: #101010;
+            background: rgba(255, 255, 255, 0.06);
             transition: background-color 0.3s ease;
             &:hover {
                background: $color-dark-grey;
@@ -227,6 +320,18 @@
 
 .subscribe-form-wrapper {
    padding-top: 10px;
+   .subscribe-form {
+      @include breakpoint(phablet) {
+         flex-direction: column;
+         row-gap: 16px;
+      }
+      .btn-accent {
+         @include breakpoint(phablet) {
+            width: 100%;
+            min-width: 100%;
+         }
+      }
+   }
    span {
       display: block;
       font-weight: 300;

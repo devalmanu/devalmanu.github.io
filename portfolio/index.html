@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="./css/main.min.css">
-
 </head>
 
 <body class="page_body front-page">
@@ -132,10 +131,13 @@
 			</section>
 			<section class="about section" id="about">
 				<div class="container">
-					<h2 class="text-center text-upp">
+					<h2 class="text-center text-upp font-gradient-02">
 						<span lang="en">MY STORY</span>
 						<span lang="ru">О художнике</span>
 					</h2>
+					<div class="bg-ellipse-1">
+						<img src="./img/svg/ellipse-bg-30.svg" alt="ellipse">
+					</div>
 					<div class="about__content">
 						<div class="about__content-description">
 							<h3 class="color-white text-upp" lang="ru">Кто я<span lang="en">?</span></h3>
@@ -175,7 +177,7 @@
 							</div>
 						</div>
 						<div class="philosophy__content-description">
-							<h2 class="text-upp" lang="ru">Философия бренда</h2>
+							<h2 class="text-upp font-gradient-02" lang="ru">Философия бренда</h2>
 							<div class="description__column">
 								<div class="description__column-text">
 									<ul class="list-reset">
@@ -252,12 +254,273 @@
 			</section>
 			<section class="portfolio section" id="portfolio">
 				<div class="container">
-
+					<div class="bg-ellipse-4">
+						<img src="./img/svg/ellipse-bg-30.svg" alt="ellipse">
+					</div>
 					<div class="portfolio__content">
-						
+						<div class="portfolio__top">
+							<h2 class="text-upp font-gradient-02">
+								<span lang="en" class="font-gradient">My gallery</span>
+								<span lang="ru" class="font-gradient">Портфолио</span>
+							</h2>
+							<div class="portfolio__top-tags">
+								<p><span lang="ru">#Портреты</span>, <span lang="ru">#Пейзажи</span>, 
+									<span lang="ru">#Абстракции</span>, <span lang="ru">#Мотивы</span>, <span lang="ru">#Доступные к покупке</span>, <span lang="ru">#В интерьере</span></p>
+							</div>
+						</div>
+						<div class="swiper-container">
+							<div class="swiper portfolio-swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="portfolio-item">
+											<div class="portfolio-item__image">
+												<img src="./img/@2x/portfolio-1.webp" alt="работа автора"
+													data-src="./img/@2x/portfolio-1.jpg" loading="lazy">
+											</div>
+											<div class="portfolio-item__image">
+												<img src="./img/@2x/portfolio-2.webp" alt="работа автора"
+													data-src="./img/@2x/portfolio-2.jpg" loading="lazy">
+											</div>
+											<div class="portfolio-item__content">
+												<div class="content-item">
+													<h3>
+														<span lang="en">Mermaid</span>
+														<span lang="ru">Русалка</span>
+													</h3>
+													<p class="content-item-text">Картина исследует тему внутренней
+														трансформации — момент, когда
+														мифическое существо находится на грани двух стихий, еще сохраняя
+														свою тайну.</p>
+													<span class="date" lang="en">2020</span>
+													<div class="content-item__desc">
+														<div class="info">
+															<div class="orange"></div>
+															<div class="info-text">
+																<span>Статус картины</span>
+																<p>Частная коллекция</p>
+															</div>
+														</div>
+														<span class="public" lang="en">January 27, 2025</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="portfolio-item">
+											<div class="portfolio-item__image">
+												<img src="./img/@2x/portfolio-1.webp" alt="работа автора"
+													data-src="./img/@2x/portfolio-1.jpg" loading="lazy">
+											</div>
+											<div class="portfolio-item__image">
+												<img src="./img/@2x/portfolio-2.webp" alt="работа автора"
+													data-src="./img/@2x/portfolio-2.jpg" loading="lazy">
+											</div>
+											<div class="portfolio-item__content">
+												<div class="content-item">
+													<h3>
+														<span lang="en">Mermaid</span>
+														<span lang="ru">Русалка</span>
+													</h3>
+													<p class="content-item-text">Когда
+														мифическое существо находится на грани двух стихий, еще сохраняя
+														свою тайну.</p>
+													<span class="date" lang="en">2020</span>
+													<div class="content-item__desc">
+														<div class="info">
+															<div class="orange"></div>
+															<div class="info-text">
+																<span>Статус картины</span>
+																<p>Частная коллекция</p>
+															</div>
+														</div>
+														<span class="public" lang="en">May 27, 2025</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper_navigation">
+								<div class="swiper-button-prev portfolio-prev-swipe">
+									<svg class="icon">
+										<use xlink:href="./img/sprite/sprite.svg#arrow-prev"></use>
+									</svg>
+								</div>
+								<div class="swiper-button-next portfolio-next-swipe">
+									<svg class="icon">
+										<use xlink:href="./img/sprite/sprite.svg#arrow-next"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
+			<section class="services section" id="services">
+				<div class="container">
+					<div class="services__content">
+						<div class="services__top">
+							<h2 class="text-upp font-gradient-02">
+								<span lang="en">art production</span>
+								<span lang="ru">услуги</span>
+							</h2>
+							<div class="services__top-tags">
+								<p><span lang="ru">Каждая картина — это не просто объект на стене, а живая эмоция, характер и история. Я создаю работы, которые resonate с вашим внутренним миром и пространством, будь то частный интерьер или корпоративная среда. </span></p>
+							</div>
+						</div>
+						<div class="services__content-slider">
+							<div class="swiper-container">
+							<div class="swiper services-swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="services-item">
+											<div class="show-more show-more--right">
+												<a class="btn-reset show-more__link">
+													<svg class="icon">
+														<use xlink:href="./img/sprite/sprite.svg#show-link">
+														</use>
+													</svg>
+												</a>
+											</div>
+											<div class="services-item__header">
+												<div class="services-item__header-logo">
+													<img src="./img/products/icon-slide-1.jpg" alt="Logo">
+												</div>
+												<div class="services-item__position">Картины на заказ</div>
+												<span>Превратите ваше пространство в галерею</span>
+											</div>
+											<div class="services-item__content">
+												<ul class="list-reset">
+													<li>
+														<p>Портреты с характером: передача души и истории через
+															фирменную текстуру и цвет.</p>
+													</li>
+													<li>
+														<p>Картины для интерьера: Подберу сюжет, палитру и размер,
+															которые идеально впишутся в дизайн вашей гостиной, спальни
+															или кабинета.</p>
+													</li>
+													<li>
+														<p>Арт-объекты с нуля</p>
+													</li>
+												</ul>
+											</div>
+											<div class="chat-more">
+												<a class="btn-reset chat-more__link">
+													<svg class="icon">
+														<use xlink:href="./img/sprite/sprite.svg#chat_bubble">
+														</use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="services-item">
+											<div class="show-more show-more--right">
+												<a class="btn-reset show-more__link">
+													<svg class="icon">
+														<use xlink:href="./img/sprite/sprite.svg#show-link">
+														</use>
+													</svg>
+												</a>
+											</div>
+											<div class="services-item__header">
+												<div class="services-item__header-logo">
+													<img src="./img/products/icon-slide-2.jpg" alt="Logo">
+												</div>
+												<div class="services-item__position">Корпоративное искусство и
+													арт-консалтинг</div>
+												<span>Искусство как отражение ценностей вашего бренда</span>
+											</div>
+											<div class="services-item__content">
+												<p>Готовое арт-решение, которое укрепляет бренд, повышает эстетику
+													пространства и инвестиционную привлекательность компании.</p>
+											</div>
+											<div class="chat-more">
+												<a class="btn-reset chat-more__link">
+													<svg class="icon">
+														<use xlink:href="./img/sprite/sprite.svg#chat_bubble">
+														</use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="services-item">
+											<div class="show-more show-more--right">
+												<a class="btn-reset show-more__link">
+													<svg class="icon">
+														<use xlink:href="./img/sprite/sprite.svg#show-link">
+														</use>
+													</svg>
+												</a>
+											</div>
+											<div class="services-item__header">
+												<div class="services-item__header-logo">
+													<img src="./img/products/icon-slide-2.jpg" alt="Logo">
+												</div>
+												<div class="services-item__position">Роспись</div>
+												<span>Превратите ваше пространство в галерею</span>
+											</div>
+											<div class="services-item__content">
+												<ul class="list-reset">
+													<li>
+														<p>Портреты с характером: передача души и истории через
+															фирменную текстуру и цвет.</p>
+													</li>
+													<li>
+														<p>Картины для интерьера: Подберу сюжет, палитру и размер,
+															которые идеально впишутся в дизайн вашей гостиной, спальни
+															или кабинета.</p>
+													</li>
+													<li>
+														<p>Арт-объекты с нуля</p>
+													</li>
+												</ul>
+											</div>
+											<div class="chat-more">
+												<a class="btn-reset chat-more__link">
+													<svg class="icon">
+														<use xlink:href="./img/sprite/sprite.svg#chat_bubble">
+														</use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+							<div class="swiper_navigation">
+								<div class="swiper-button-prev services-prev-swipe">
+									<svg class="icon">
+										<use xlink:href="./img/sprite/sprite.svg#arrow-prev"></use>
+									</svg>
+								</div>
+								<div class="swiper-button-next services-next-swipe">
+									<svg class="icon">
+										<use xlink:href="./img/sprite/sprite.svg#arrow-next"></use>
+									</svg>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="bg-ellipse-2">
+				<img src="./img/svg/ellipse-bg-30.svg" alt="ellipse">
+			</div>
+			<div class="bg-ellipse-3">
+				<img src="./img/svg/ellipse-bg-15.svg" alt="ellipse">
+			</div>
+			<div class="bg-ellipse-5">
+				<img src="./img/svg/ellipse-bg.svg" alt="ellipse">
+			</div>
 		</main>
 		<footer class="footer" id="footer">
 			<div class="container">
@@ -269,8 +532,8 @@
 								<span lang="en">Your Email</span>
 								<form onsubmit="return false;" class="subscribe-form">
 									<input placeholder="Enter Your Email" name="email" type="email" lang="en">
-									<button type="button"
-										class="subs-form__send btn-reset btn-accent j-submit" lang="en">Subscribe</button>
+									<button type="button" class="subs-form__send btn-reset btn-accent j-submit"
+										lang="en">Subscribe</button>
 								</form>
 							</div>
 							<div>
@@ -314,13 +577,13 @@
 										<a href="./">Home</a>
 									</li>
 									<li class="footer__nav-link">
-										<a href="#">О художнике</a>
+										<a href="#about" class="link-button">О художнике</a>
 									</li>
 									<li class="footer__nav-link">
-										<a href="#">Услуги</a>
+										<a href="#services" class="link-button">Услуги</a>
 									</li>
 									<li class="footer__nav-link">
-										<a href="#">Портфолио</a>
+										<a href="#portfolio" class="link-button">Портфолио</a>
 									</li>
 									<li class="footer__nav-link">
 										<a href="#">Blog</a>
@@ -340,15 +603,31 @@
 							</a>
 							<p>Официально:о том, как системный подход и любовь к текстуре рождают искусство. 💫</p>
 							<p>Неофициально:ваш личный арт-дневник и источник вдохновения без воды. ✨</p>
-							<a href="https://t.me/d_corbeau" class="btn-reset footer__info-link" lang="en">https://t.me/d_corbeau</a>
+							<a href="https://t.me/d_corbeau" class="btn-reset footer__info-link"
+								lang="en">https://t.me/d_corbeau</a>
 						</div>
 					</div>
 					<div class="footer__bottom">
-						<p class="footer__copyrigth">Darya Corbeau Site</p>
+						<p class="footer__copyrigth footer__policy" lang="en">Darya Corbeau Site</p>
+
 						<div class="footer__bottom-links">
-							<a href="#" class="footer__policy">Kemerovo</a>
-							<a href="mailto:contact@contact.com" class="footer__policy">contact@contact.com</a>
-							<a href="tel:+777777777777" class="footer__policy">+7 777 7777 7777</a>
+							<a href="#" class="footer__policy footer-map" lang="en">
+								<svg class="icon">
+									<use xlink:href="./img/sprite/sprite.svg#footer-map"></use>
+								</svg>
+								Kemerovo</a>
+							<div>
+								<a href="mailto:contact@contact.com" class="footer__policy" lang="en">
+									<svg class="icon">
+										<use xlink:href="./img/sprite/sprite.svg#footer-mail"></use>
+									</svg>
+									contact@contact.com</a>
+								<a href="tel:+777777777777" class="footer__policy" lang="en">
+									<svg class="icon">
+										<use xlink:href="./img/sprite/sprite.svg#footer-call"></use>
+									</svg>
+									+7 777 7777 7777</a>
+							</div>
 						</div>
 					</div>
 				</div>

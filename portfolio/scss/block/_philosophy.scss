@@ -1,7 +1,12 @@
 .philosophy {
+    position: relative;
+    z-index: 3;
+    h2 {
+        display: inline-block;
+    }
     &__content {
         display: flex;
-        column-gap: 102px;
+        column-gap: 80px;
         height: 100%;
         align-items: stretch;
         @include breakpoint(desktop) {
@@ -62,7 +67,7 @@
         }
 
         &-description {
-            width: calc(64% - 102px);
+            width: calc(64% - 80px);
             font-weight: 400;
             margin-bottom: 13px;
             @include breakpoint(desktop) {
@@ -74,14 +79,14 @@
             }
             .description__column {
                 display: flex;
-                column-gap: 36px;
+                column-gap: 60px;
                 align-items: flex-end;
                 @include breakpoint(mobileonly) {
                     flex-direction: column;
                     row-gap: 32px;
                 }
                 &-text {
-                    width: calc(65.5% - 36px);
+                    width: calc(65.5% - 60px);
                     @include breakpoint(mobileonly) {
                         width: 100%;
                     }
@@ -198,6 +203,7 @@
                     margin-top: 48px;
                 }
                 @include breakpoint(mobileonly) {
+                    width: 100%;
                     margin-left: 0;
                     margin-top: 16px;
                 }

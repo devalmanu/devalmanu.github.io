@@ -20,7 +20,7 @@ form {
 		color: $color-white;
 		padding: 15px 25px;
 		border-radius: $radius-8;
-		background: #101010;
+		background: rgba(255, 255, 255, 0.06);
 		border: none;
 		transition: border 0.2s ease;
 		@include breakpoint(mobileonly) {
@@ -42,7 +42,7 @@ form {
 		}
 	}
 
-	button {
+	.subs-form__send {
 		&:disabled {
 			opacity: 0.8;
 			cursor: not-allowed;
