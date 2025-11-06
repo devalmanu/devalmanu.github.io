@@ -58,6 +58,9 @@
             }
             h3 {
                 margin-bottom: 17px;
+                @include breakpoint(mobileonly) {
+                    margin-bottom: 24px;
+                }
                 span {
                     display: inline-block;
                 }
@@ -79,6 +82,9 @@
                 }
                 & + p {
                     margin-top: 30px;
+                    @include breakpoint(mobileonly) {
+                        margin-top: 21px;
+                    }
                 }
                 &.font-italic {
                     letter-spacing: 0.02em;

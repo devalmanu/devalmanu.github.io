@@ -18,6 +18,7 @@
             line-height: 1.35;
             @include breakpoint(mobileonly) {
                 text-align: center;
+                line-height: 1.5;
             }
         }
 
@@ -37,6 +38,9 @@
             align-items: flex-start;
             row-gap: 32px;
         }
+        @include breakpoint(mobileonly) {
+            padding-bottom: 32px;
+        }
         &-tags {
             max-width: 550px;
             margin-bottom: 60px;
@@ -45,12 +49,25 @@
                 max-width: 100%;
                 margin-bottom: 0;
             }
+            p {
+                @include breakpoint(mobileonly) {
+                    font-size: 12px;
+                    line-height: 1.5;
+                }
+            }
             span {
                 font-size: 20px;
                 font-weight: 400;
                 color: $color-dark-grey;
                 &[lang="en"] {
                     font-family: $Poppins-regular;
+                }
+                @include breakpoint(laptop) {
+                    font-size: 16px;
+                }
+                @include breakpoint(mobileonly) {
+                    font-size: 12px;
+                    line-height: 1.2;
                 }
             }
         }
@@ -72,8 +89,12 @@
             row-gap: 30px;
             flex-wrap: wrap;
         }
+        @include breakpoint(tablet) {
+            column-gap: 32px;
+        }
         @include breakpoint(mobileonly) {
             column-gap: 16px;
+            row-gap: 12px;
         }
         &__image {
             border-radius: $radius-30;
@@ -81,6 +102,12 @@
             width: calc(32.6% - 33px);
             @include breakpoint(laptop) {
                 width: calc(50% - 25px);
+            }
+            @include breakpoint(tablet) {
+                width: calc(50% - 16px);
+            }
+            @include breakpoint(mobileonly) {
+                width: calc(50% - 8px);
             }
             img {
                 @include all-size;
@@ -107,8 +134,16 @@
                     &[lang="en"] {
                         font-family: $Poppins-regular;
                     }
+                    @include breakpoint(mobileonly) {
+                        text-align: left;
+                        font-size: 20px;
+                        margin-bottom: -3px;
+                    }
                     span {
                         line-height: 1.68;
+                        @include breakpoint(mobileonly) {
+                            display: inline-block;
+                        }
                     }
                 }
                 &-text {
@@ -126,8 +161,14 @@
                     font-family: $OpenSans;
                     font-weight: 400;
                     font-size: 16px;
+                    @include breakpoint(phablet) {
+                        font-size: 14px;
+                    }
                     &[lang="en"] {
                         font-family: $Poppins-regular;
+                    }
+                    @include breakpoint(mobileonly) {
+                        margin-top: 4px;
                     }
                 }
                 &__desc {
@@ -141,11 +182,19 @@
                     @include breakpoint(laptop) {
                         flex-direction: column;
                         align-items: flex-start;
+                        row-gap: 9px;
+                        margin-bottom: -3px;
+                    }
+                    @include breakpoint(mobileonly) {
+                        padding-top: 14px;
                     }
                     .info {
                         display: flex;
                         align-items: center;
                         column-gap: 23px;
+                        @include breakpoint(mobileonly) {
+                            column-gap: 16px;
+                        }
                     }
                     .orange {
                         width: 74px;
@@ -156,8 +205,15 @@
                         border-radius: $radius-50;
                         background: #b27b23;
                         flex-shrink: 0;
+                        @include breakpoint(mobileonly) {
+                            width: 64px;
+                            height: 64px;
+                        }
                     }
                     .info-text {
+                        @include breakpoint(mobileonly) {
+                            margin-top: -2px;
+                        }
                         span {
                             color: $color-white;
                             font-family: $OpenSans;
@@ -167,16 +223,22 @@
                             &[lang="en"] {
                                 font-family: $Poppins-regular;
                             }
+                            @include breakpoint(mobileonly) {
+                                display: block;
+                                margin-top: -2px;
+                            }
                         }
                         p {
                             font-family: $OpenSans;
-                            font-size: 16px;
                             font-weight: 400;
                             margin-top: 9px;
                             margin-bottom: -2px;
                             line-height: 1.5;
                             &[lang="en"] {
                                 font-family: $Poppins-regular;
+                            }
+                            @include breakpoint(mobileonly) {
+                                margin-top: 3px;
                             }
                         }
                     }
@@ -188,6 +250,9 @@
                         line-height: 1.2;
                         &[lang="en"] {
                             font-family: $Poppins-regular;
+                        }
+                        @include breakpoint(mobileonly) {
+                            font-size: 14px;
                         }
                     }
                 }

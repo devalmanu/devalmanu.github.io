@@ -347,30 +347,6 @@
    }
 }
 
-.contacts-offer {
-   display: flex;
-   flex-direction: column;
-   row-gap: 26px;
-   @include breakpoint(phablet) {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      row-gap: 30px;
-   }
-
-   .contacts-link {
-      font-family: $Poppins-light;
-      font-size: 20px;
-      color: $color-white;
-      padding: 0;
-      text-decoration: none;
-   }
-   span {
-      display: block;
-      padding-top: 10px;
-   }
-}
-
 .subscribe-form-wrapper {
    padding-top: 10px;
    @include breakpoint(mobileonly) {

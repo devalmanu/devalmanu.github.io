@@ -3,6 +3,15 @@
     @include breakpoint(desktop) {
         padding-bottom: 0;
     }
+
+    h1 {
+        @include breakpoint(mobileonly) {
+            position: relative;
+            text-align: left;
+            line-height: 1;
+            z-index: 2;
+        }
+    }
     &__content {
         position: relative;
         display: flex;
@@ -19,7 +28,10 @@
             flex-direction: column;
         }
         @include breakpoint(mobileonly) {
+            margin-top: 65px;
+            row-gap: 48px;
         }
+
         &-block {
             width: calc(51.5% - 60px);
             max-width: 600px;
@@ -56,6 +68,7 @@
                 @include breakpoint(mobileonly) {
                     font-size: 20px;
                     margin-bottom: 8px;
+                    text-align: left;
                 }
             }
             p {
@@ -69,6 +82,7 @@
                 }
                 @include breakpoint(mobileonly) {
                     font-size: 14px;
+                    line-height: 1.5;
                 }
             }
         }
@@ -102,6 +116,12 @@
             z-index: 2;
             @include breakpoint(tablet) {
                 top: 0;
+                right: 0;
+                bottom: auto;
+            }
+            @include breakpoint(tablet) {
+                width: 100%;
+                top: -140px;
                 right: 0;
                 bottom: auto;
             }
@@ -226,7 +246,8 @@
         @include breakpoint(mobileonly) {
             width: 100%;
             max-width: 380px;
-            height: 185px;
+            height: 183px;
+            margin-top: -154px;
         }
         &__item {
             display: flex;
@@ -240,9 +261,10 @@
                 @include breakpoint(mobileonly) {
                     position: relative;
                     margin-left: auto;
-                    top: 0;
-                    right: 0;
+                    top: -10px;
+                    right: 7px;
                     left: auto;
+                    text-align: right;
                 }
                 p {
                     @include breakpoint(mobileonly) {
@@ -285,6 +307,7 @@
             margin-top: 11px;
             @include breakpoint(mobileonly) {
                 font-size: 14px;
+                line-height: 1.45;
             }
         }
 
@@ -297,9 +320,9 @@
                 position: relative;
                 margin-top: 20px;
                 margin-left: auto;
-                right: 10%;
-                bottom: 10px;
-                width: 60%;
+                right: 14%;
+                bottom: 20px;
+                width: 58%;
             }
         }
     }
@@ -321,6 +344,8 @@
         }
         @include breakpoint(mobileonly) {
             margin-top: 32px;
+            border-radius: 12px;
+            padding: 22px 24px 20px;
         }
         span {
             display: block;
@@ -339,8 +364,11 @@
         .btn-light {
             margin-top: 20px;
             font-weight: 400;
-            font-size: 16px;
+            // font-size: 16px;
             color: rgba(255, 255, 255, 0.63);
+            @include breakpoint(mobileonly) {
+                margin-top: 16px;
+            }
         }
     }
     .btn-accent {

@@ -147,6 +147,15 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: ".portfolio-prev-swipe",
             nextEl: ".portfolio-next-swipe"
          },
+         navigation: {
+            prevEl: ".portfolio-prev-swipe",
+            nextEl: ".portfolio-next-swipe"
+         },
+         pagination: {
+            el: '.swiper-pagination.custom-portfolio-pagination',
+            type: 'bullets',
+            clickable: true,
+         },
          breakpoints: {
             320: {
                spaceBetween: 16,
@@ -161,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
    }
 
-      const servicesSwiper = document.querySelector(".services-swiper");
+   const servicesSwiper = document.querySelector(".services-swiper");
    if (servicesSwiper) {
       const servicesSwiperList = new Swiper(servicesSwiper, {
          slidesPerView: 2,
@@ -173,6 +182,11 @@ document.addEventListener('DOMContentLoaded', () => {
          navigation: {
             prevEl: ".services-prev-swipe",
             nextEl: ".services-next-swipe"
+         },
+         pagination: {
+            el: '.swiper-pagination.custom-services-pagination',
+            type: 'bullets',
+            clickable: true,
          },
          breakpoints: {
             320: {

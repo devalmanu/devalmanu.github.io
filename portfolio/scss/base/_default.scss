@@ -204,10 +204,10 @@ h6,
 		font-weight: 300;
 	}
 
-	 @include breakpoint(mobileonly) {
-            width: 100%;
-            text-align: center;
-        }
+	@include breakpoint(mobileonly) {
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .font-gradient {
@@ -340,6 +340,10 @@ p {
 	color: $color-dark-grey;
 	& + p {
 		margin-top: 20px;
+	}
+	@include breakpoint(mobileonly) {
+		font-size: 14px;
+		line-height: 1.5;
 	}
 }
 
@@ -537,18 +541,16 @@ a.color-accent {
 .bg-ellipse-2 {
 	top: 33%;
 	left: -8%;
-	img {
+	@include breakpoint(tablet) {
+		display: none;
 	}
 }
 
 .bg-ellipse-3 {
 	top: 36%;
 	right: -8%;
-	img {
-		// width: 100%;
-		// height: 100%;
-		// max-width: 1054px;
-		// max-height: 1054px;
+	@include breakpoint(tablet) {
+		display: none;
 	}
 }
 
@@ -577,7 +579,6 @@ a.color-accent {
 	text-decoration: none;
 	transition: all 0.2s linear;
 	position: relative;
-	// text-align: center;
 	max-height: 51px;
 	z-index: 1;
 	@include breakpoint(tablet) {
@@ -608,6 +609,49 @@ a.color-accent {
 	}
 }
 
+.contacts-offer {
+	display: flex;
+	flex-direction: column;
+	row-gap: 26px;
+	@include breakpoint(phablet) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 30px;
+	}
+
+	.contacts-link {
+		font-family: $Poppins-light;
+		font-size: 20px;
+		color: $color-white;
+		padding: 0;
+		text-decoration: none;
+
+		.header & {
+			@include breakpoint(tablet) {
+				font-family: $Poppins-medium;
+				font-size: 24px;
+			}
+		}
+	}
+	span {
+		display: block;
+		padding-top: 10px;
+		.header & {
+			@include breakpoint(tablet) {
+				font-size: 14px;
+				color: rgba(255, 255, 255, 0.5);
+				padding-top: 0;
+			}
+		}
+	}
+	.header & {
+		@include breakpoint(tablet) {
+			width: 100%;
+		}
+	}
+}
+
 @media (max-width: 991.9px) {
 	.hidden-mobile {
 		display: none !important;
@@ -616,6 +660,12 @@ a.color-accent {
 
 @media (min-width: 992px) {
 	.hidden-desktop {
+		display: none !important;
+	}
+}
+
+@media (min-width: 1080px) {
+	.hidden-laptop {
 		display: none !important;
 	}
 }
@@ -639,33 +689,45 @@ a.color-accent {
 
 main {
 	.swiper-pagination {
-		position: relative;
+		position: absolute;
 		width: 100%;
-		max-width: 100%;
+		max-width: 100px;
 		margin: 0 auto;
 		bottom: 0;
 		text-align: center;
 		left: 0;
 		right: 0;
-		
+
 		.swiper-pagination-bullet {
-			width: 24px;
-			margin: 0 2px !important;
-			height: 4px;
+			width: 6px;
+			margin: 0 4px !important;
+			height: 6px;
 			border-radius: 6px;
 			position: relative;
 			overflow: hidden;
 			background: rgba(255, 255, 255, 0.25);
-			opacity: 0.05;
+			opacity: 1;
 			&-active {
-				background: $gradient;
+				background: $color-white;
 				opacity: 1;
 			}
 		}
 	}
 	.swiper-container-horizontal > .swiper-pagination-bullets {
 		bottom: 16px;
+		@include breakpoint(mobileonly) {
+			bottom: 4px;
+		}
 	}
+	.services__content {
+		.swiper-container-horizontal > .swiper-pagination-bullets {
+			bottom: 20px;
+			@include breakpoint(mobileonly) {
+				bottom: 8px;
+			}
+		}
+	}
+
 	.swiper-button-next,
 	.swiper-button-prev {
 		width: 54px;
@@ -677,9 +739,9 @@ main {
 		transition: background 0.3s ease 0.3s;
 		box-shadow: none;
 		@include breakpoint(mobileonly) {
-            width: 32px;
+			width: 32px;
 			height: 32px;
-        }
+		}
 		svg {
 			display: block;
 			width: 9px;
@@ -697,8 +759,6 @@ main {
 				fill: $color-dark;
 			}
 		}
-
-		
 	}
 }
 

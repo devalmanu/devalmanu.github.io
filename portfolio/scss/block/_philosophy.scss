@@ -31,12 +31,14 @@
                 top: auto;
                 bottom: -1px;
                 left: 0;
-                // width: 21.3%;
-                // height: 35.2%;
                 width: 117px;
                 height: 308px;
                 display: flex;
                 background: url("../img/@2x/badge-bg.png") no-repeat left bottom / cover;
+                @include breakpoint(mobileonly) {
+                    width: 60px;
+                    height: 175px;
+                }
                 &-text {
                     transform: rotate(180deg);
                     writing-mode: tb-rl;
@@ -52,6 +54,9 @@
                     &[lang="en"] {
                         font-family: $Poppins-medium;
                     }
+                    @include breakpoint(mobileonly) {
+                        font-size: 12px;
+                    }
                 }
             }
         }
@@ -63,6 +68,9 @@
                 @include image-fit;
                 border-radius: $radius-30;
                 overflow: hidden;
+                @include breakpoint(mobileonly) {
+                    border-radius: $radius-20;
+                }
             }
         }
 
@@ -83,7 +91,7 @@
                 align-items: flex-end;
                 @include breakpoint(mobileonly) {
                     flex-direction: column;
-                    row-gap: 32px;
+                    row-gap: 22px;
                 }
                 &-text {
                     width: calc(65.5% - 60px);
@@ -98,6 +106,14 @@
                     }
                     .content {
                         height: 290px;
+                        @include breakpoint(mobileonly) {
+                            height: 315px;
+                        }
+                    }
+                    .tabs__list {
+                        @include breakpoint(mobileonly) {
+                            overflow: auto;
+                        }
                     }
                     .image-descr {
                         display: flex;
@@ -107,11 +123,22 @@
                         @include breakpoint(tablet) {
                             margin-bottom: 20px;
                         }
+                        @include breakpoint(mobileonly) {
+                            flex-direction: row;
+                            column-gap: 65px;
+                            margin-bottom: 4px;
+                        }
                         .tabs__item {
+                            @include breakpoint(mobileonly) {
+                                position: relative;
+                            }
                             .tabs__btn {
                                 position: relative;
                                 min-width: 170px;
                                 caret-color: transparent;
+                                @include breakpoint(mobileonly) {
+                                    min-width: inherit;
+                                }
                                 &:after {
                                     content: "";
                                     position: absolute;
@@ -121,6 +148,9 @@
                                     width: 100%;
                                     height: 1.5px;
                                     background: url("../img/icon/tabs-line.svg") no-repeat left bottom/cover;
+                                    @include breakpoint(mobileonly) {
+                                        content: none;
+                                    }
                                 }
                             }
                             &:last-child {
@@ -128,6 +158,19 @@
                                     &:after {
                                         display: none;
                                     }
+                                }
+                            }
+                            &:after {
+                                @include breakpoint(mobileonly) {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    right: -32px;
+                                    bottom: 0;
+                                    left: auto;
+                                    width: 1.5px;
+                                    height: 100%;
+                                    background: url("../img/icon/tabs-line-vertical.svg") no-repeat left bottom/cover;
                                 }
                             }
                         }
@@ -156,6 +199,11 @@
             h2 {
                 margin-top: -30px;
                 line-height: 1.35;
+                @include breakpoint(mobileonly) {
+                    margin-top: 0;
+                    line-height: 1.5;
+                    margin-bottom: 20px;
+                }
             }
             p {
                 font-weight: 400;
@@ -181,6 +229,9 @@
                 li {
                     position: relative;
                     padding-left: 35px;
+                    @include breakpoint(mobileonly) {
+                        padding-left: 22px;
+                    }
                     &:before {
                         content: "";
                         position: absolute;
@@ -190,9 +241,18 @@
                         height: 7px;
                         border-radius: $radius-50;
                         background: $color-dark-grey;
+                        @include breakpoint(mobileonly) {
+                            top: 10px;
+                            left: 8px;
+                            width: 4px;
+                            height: 4px;
+                        }
                     }
                     &:not(:last-child) {
                         margin-bottom: 37px;
+                        @include breakpoint(mobileonly) {
+                            margin-bottom: 20px;
+                        }
                     }
                 }
             }
@@ -206,6 +266,7 @@
                     width: 100%;
                     margin-left: 0;
                     margin-top: 16px;
+                    height: 42px;
                 }
             }
         }
