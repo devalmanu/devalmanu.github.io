@@ -5,9 +5,10 @@
         top: 2%;
         left: 0;
         @include breakpoint(mobileonly) {
-                    top: -30%;
-    left: 0;
-            }
+            top: -30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
     h2 {
         display: inline-block;
@@ -106,6 +107,7 @@
             }
             @include breakpoint(mobileonly) {
                 width: calc(50% - 8px);
+                min-height: 170px;
             }
             img {
                 @include all-size;
@@ -118,10 +120,15 @@
             width: calc(34.8% - 33px);
             @include breakpoint(laptop) {
                 width: 100%;
+                margin-top: 0;
                 padding-bottom: 0;
             }
             .content-item {
+                display: flex;
                 flex-direction: column;
+                @include breakpoint(mobileonly) {
+                    min-height: 252px;
+                }
                 h3 {
                     color: $color-white;
                     font-family: $OpenSans;
@@ -185,6 +192,7 @@
                     }
                     @include breakpoint(mobileonly) {
                         padding-top: 14px;
+                        margin-top: auto;
                     }
                     .info {
                         display: flex;
