@@ -34,7 +34,7 @@
                 width: 117px;
                 height: 308px;
                 display: flex;
-                background: url("../img/@2x/badge-bg.png") no-repeat left bottom / cover;
+                // background: url("../img/@2x/badge-bg.png") no-repeat left bottom / cover;
                 @include breakpoint(mobileonly) {
                     width: 60px;
                     height: 175px;

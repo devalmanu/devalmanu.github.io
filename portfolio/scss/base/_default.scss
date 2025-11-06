@@ -533,36 +533,57 @@ a.color-accent {
 		height: 100%;
 		max-width: 1054px;
 		max-height: 1054px;
-		@include breakpoint(mobileonly) {
-		}
+		
 	}
 }
 
 .bg-ellipse-2 {
-	top: 33%;
-	left: -8%;
+	top: -40%;
+	left: -5%;
 	@include breakpoint(tablet) {
-		display: none;
+		top: -30%;
+		left: 20%;
+	}
+	img {
+		@include breakpoint(mobileonly) {
+			width: 492px;
+			height: 492px;
+		}
 	}
 }
 
 .bg-ellipse-3 {
-	top: 36%;
-	right: -8%;
+	top: -6%;
+	right: -5%;
 	@include breakpoint(tablet) {
-		display: none;
+		top: 40%;
+		right: 8%;
+	}
+	img {
+
 	}
 }
 
+.bg-ellipse-4 {
+	img {
+		@include breakpoint(mobileonly) {
+			width: 815px;
+			height: 815px;
+		}
+	}
+}
 .bg-ellipse-5 {
 	bottom: 0;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	@include breakpoint(mobileonly) {
+			bottom: 5%;
+		}
 	img {
-		// width: 100%;
-		// height: 100%;
-		// max-width: 1054px;
-		// max-height: 1054px;
+		@include breakpoint(mobileonly) {
+			width: 815px;
+			height: 815px;
+		}
 	}
 }
 
