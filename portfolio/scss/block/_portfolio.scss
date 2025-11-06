@@ -16,6 +16,14 @@
         margin-bottom: 0;
         span {
             line-height: 1.35;
+            @include breakpoint(mobileonly) {
+                text-align: center;
+            }
+        }
+
+        @include breakpoint(mobileonly) {
+            width: 100%;
+            text-align: center;
         }
     }
     &__top {
@@ -24,9 +32,19 @@
         justify-content: space-between;
         align-items: flex-end;
         column-gap: 50px;
+        @include breakpoint(laptop) {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 32px;
+        }
         &-tags {
             max-width: 550px;
             margin-bottom: 60px;
+            @include breakpoint(laptop) {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 0;
+            }
             span {
                 font-size: 20px;
                 font-weight: 400;
@@ -43,19 +61,40 @@
     .swiper-container {
         position: relative;
         padding-right: 28px;
+        @include breakpoint(laptop) {
+            padding-right: 0;
+        }
     }
     .portfolio-item {
         display: flex;
         column-gap: 50px;
+        @include breakpoint(laptop) {
+            row-gap: 30px;
+            flex-wrap: wrap;
+        }
+        @include breakpoint(mobileonly) {
+            column-gap: 16px;
+        }
         &__image {
             border-radius: $radius-30;
             overflow: hidden;
-            max-width: calc(32.6% - 33px);
+            width: calc(32.6% - 33px);
+            @include breakpoint(laptop) {
+                width: calc(50% - 25px);
+            }
+            img {
+                @include all-size;
+                object-fit: cover;
+            }
         }
         &__content {
             margin-top: auto;
             padding-bottom: 33px;
             width: calc(34.8% - 33px);
+            @include breakpoint(laptop) {
+                width: 100%;
+                padding-bottom: 0;
+            }
             .content-item {
                 flex-direction: column;
                 h3 {
@@ -68,15 +107,21 @@
                     &[lang="en"] {
                         font-family: $Poppins-regular;
                     }
+                    span {
+                        line-height: 1.68;
+                    }
                 }
                 &-text {
                     color: $color-dark-grey;
                     padding-right: 25%;
                     font-weight: 400;
+                    @include breakpoint(phablet) {
+                        padding-right: 0;
+                    }
                 }
                 .date {
                     display: block;
-                    margin-top: 20px;
+                    margin-top: 16px;
                     color: $color-white;
                     font-family: $OpenSans;
                     font-weight: 400;
@@ -86,11 +131,17 @@
                     }
                 }
                 &__desc {
-                    padding-top: 63px;
+                    padding-top: 58px;
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-end;
-                    column-gap: 23px;
+                    column-gap: 20px;
+                    row-gap: 8px;
+                    flex-wrap: wrap;
+                    @include breakpoint(laptop) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
                     .info {
                         display: flex;
                         align-items: center;
@@ -104,6 +155,7 @@
                         align-items: center;
                         border-radius: $radius-50;
                         background: #b27b23;
+                        flex-shrink: 0;
                     }
                     .info-text {
                         span {
@@ -111,6 +163,7 @@
                             font-family: $OpenSans;
                             font-size: 20px;
                             font-weight: 400;
+                            line-height: 1.5;
                             &[lang="en"] {
                                 font-family: $Poppins-regular;
                             }
@@ -120,7 +173,8 @@
                             font-size: 16px;
                             font-weight: 400;
                             margin-top: 9px;
-                            margin-bottom: -7px;
+                            margin-bottom: -2px;
+                            line-height: 1.5;
                             &[lang="en"] {
                                 font-family: $Poppins-regular;
                             }
@@ -131,6 +185,7 @@
                         font-size: 16px;
                         font-weight: 400;
                         padding-bottom: 6px;
+                        line-height: 1.2;
                         &[lang="en"] {
                             font-family: $Poppins-regular;
                         }

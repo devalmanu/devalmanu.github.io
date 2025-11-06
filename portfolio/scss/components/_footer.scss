@@ -1,6 +1,6 @@
 .footer {
    position: relative;
-    z-index: 3;
+   z-index: 3;
    padding-top: 134px;
    border-top: 1px solid rgba(255, 255, 255, 0.15);
    padding-bottom: 123px;
@@ -9,7 +9,7 @@
       padding-bottom: 90px;
    }
    @include breakpoint(mobileonly) {
-      padding-top: 32px;
+      padding-top: 37px;
       padding-bottom: 64px;
    }
 
@@ -33,7 +33,7 @@
          padding-bottom: 30px;
       }
       @include breakpoint(mobileonly) {
-         padding-bottom: 32px;
+         padding-bottom: 16px;
       }
    }
 
@@ -44,7 +44,7 @@
       }
       @include breakpoint(phablet) {
          width: 100%;
-         max-width: 400px;
+         max-width: 100%;
       }
    }
 
@@ -65,6 +65,10 @@
             }
             @include breakpoint(phablet) {
                margin-bottom: 16px;
+            }
+            @include breakpoint(mobileonly) {
+               text-align: left;
+               // margin-bottom: 32px;
             }
          }
       }
@@ -89,12 +93,18 @@
             padding-left: 0;
          }
          .footer__nav {
+            @include breakpoint(mobileonly) {
+               padding-top: 6px;
+            }
             &-link {
                &:not(:last-child) {
                   display: block;
                   margin-bottom: 10px;
                   @include breakpoint(phablet) {
                      margin-bottom: 6px;
+                  }
+                  @include breakpoint(mobileonly) {
+                     margin-bottom: 0;
                   }
                }
                a {
@@ -107,6 +117,10 @@
                   text-decoration: none;
                   padding: 7px 0;
                   min-width: 140px;
+                  @include breakpoint(mobileonly) {
+                     font-size: 14px;
+                     padding: 4px 0;
+                  }
                   &:hover {
                      color: $color-white;
                      text-decoration: none;
@@ -131,7 +145,7 @@
       font-size: 20px;
       line-height: 1;
       @include breakpoint(phablet) {
-         margin-bottom: 16px;
+         margin-bottom: 19px;
       }
       &[lang="en"] {
          font-family: $Poppins-medium;
@@ -159,11 +173,12 @@
          letter-spacing: 0.01em;
          @include breakpoint(phablet) {
             font-size: 14px;
+            line-height: 1.5;
          }
          & + p {
             margin-top: 30px;
             @include breakpoint(phablet) {
-               margin-top: 16px;
+               margin-top: 22px;
             }
          }
          span {
@@ -188,7 +203,12 @@
             margin-top: 30px;
          }
          @include breakpoint(mobileonly) {
-            margin-top: 4px;
+            margin-top: 0px;
+            font-size: 14px;
+            letter-spacing: 0.03em;
+         }
+         &:hover {
+            color: $color-dark-grey;
          }
       }
    }
@@ -224,9 +244,9 @@
       }
 
       @include breakpoint(mobileonly) {
-         padding-top: 32px;
-         row-gap: 32px;
-         margin-top: 32px;
+         padding-top: 28px;
+         row-gap: 28px;
+         margin-top: 13px;
       }
 
       &-links {
@@ -244,6 +264,9 @@
             flex-wrap: wrap;
             align-items: flex-start;
          }
+         @include breakpoint(mobileonly) {
+            row-gap: 29px;
+         }
          div {
             margin-left: auto;
             display: flex;
@@ -256,6 +279,7 @@
             @include breakpoint(phablet) {
                flex-wrap: wrap;
                row-gap: 32px;
+               margin-left: 0;
             }
          }
       }
@@ -279,11 +303,13 @@
       color: $color-dark-grey;
       text-decoration: none;
       white-space: nowrap;
-      &:hover,
-      &:active {
-         opacity: 1;
-         color: $color-white;
-         text-decoration: none;
+      &:not(.footer__copyrigth) {
+         &:hover,
+         &:active {
+            opacity: 1;
+            color: $color-white;
+            text-decoration: none;
+         }
       }
       &[lang="en"] {
          font-family: $Poppins-light;
@@ -293,14 +319,17 @@
          font-size: 14px;
       }
    }
+
    &__col {
       margin-top: 35px;
+      display: flex;
+      column-gap: 17px;
+      @include breakpoint(mobileonly) {
+         margin-top: 32px;
+         justify-content: space-between;
+         margin-bottom: 4px;
+      }
       &-item--social {
-         display: inline-flex;
-         &:not(:last-child) {
-            margin-right: 17px;
-         }
-
          a {
             display: flex;
             align-items: center;
@@ -318,8 +347,35 @@
    }
 }
 
+.contacts-offer {
+   display: flex;
+   flex-direction: column;
+   row-gap: 26px;
+   @include breakpoint(phablet) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 30px;
+   }
+
+   .contacts-link {
+      font-family: $Poppins-light;
+      font-size: 20px;
+      color: $color-white;
+      padding: 0;
+      text-decoration: none;
+   }
+   span {
+      display: block;
+      padding-top: 10px;
+   }
+}
+
 .subscribe-form-wrapper {
    padding-top: 10px;
+   @include breakpoint(mobileonly) {
+      padding-top: 19px;
+   }
    .subscribe-form {
       @include breakpoint(phablet) {
          flex-direction: column;
@@ -341,6 +397,10 @@
       margin-bottom: 30px;
       &[lang="en"] {
          font-family: $Poppins-light;
+      }
+      @include breakpoint(mobileonly) {
+         font-size: 12px;
+         margin-bottom: 7px;
       }
    }
 }

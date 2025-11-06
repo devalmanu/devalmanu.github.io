@@ -4,6 +4,7 @@
 	font-style: italic;
 	font-weight: 300 800;
 	font-stretch: 75% 100%;
+	font-display: swap;
 	src: url("../fonts/OpenSans-italic.woff2") format("woff2");
 	unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
@@ -13,6 +14,7 @@
 	font-style: normal;
 	font-weight: 300 800;
 	font-stretch: 75% 100%;
+	font-display: swap;
 	src: url("../fonts/OpenSans-normal.woff2") format("woff2");
 	unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
@@ -201,6 +203,11 @@ h6,
 		font-family: $Poppins-light;
 		font-weight: 300;
 	}
+
+	 @include breakpoint(mobileonly) {
+            width: 100%;
+            text-align: center;
+        }
 }
 
 .font-gradient {
@@ -601,6 +608,24 @@ a.color-accent {
 	}
 }
 
+@media (max-width: 991.9px) {
+	.hidden-mobile {
+		display: none !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.hidden-desktop {
+		display: none !important;
+	}
+}
+
+@include breakpoint(desktop) {
+	.hidden-fixed-mob {
+		display: none !important;
+	}
+}
+
 .stop-scroll {
 	overflow: hidden;
 }
@@ -622,31 +647,7 @@ main {
 		text-align: center;
 		left: 0;
 		right: 0;
-		&.swiper-pagination-progressbar {
-			max-width: 24px;
-			background: #f6f5f5;
-			opacity: 1;
-			border-radius: 6px;
-			top: auto;
-			.swiper-pagination-progressbar-fill {
-				display: block;
-				position: relative;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 3px;
-				background: $gradient;
-				border-radius: 6px;
-				overflow: hidden;
-				-webkit-transform: scale(0);
-				-ms-transform: scale(0);
-				transform: scale(0);
-				-webkit-transform-origin: left top;
-				-ms-transform-origin: left top;
-				transform-origin: left top;
-			}
-		}
-
+		
 		.swiper-pagination-bullet {
 			width: 24px;
 			margin: 0 2px !important;
@@ -654,7 +655,7 @@ main {
 			border-radius: 6px;
 			position: relative;
 			overflow: hidden;
-			background: #252525;
+			background: rgba(255, 255, 255, 0.25);
 			opacity: 0.05;
 			&-active {
 				background: $gradient;
@@ -675,6 +676,10 @@ main {
 		background: $gradient;
 		transition: background 0.3s ease 0.3s;
 		box-shadow: none;
+		@include breakpoint(mobileonly) {
+            width: 32px;
+			height: 32px;
+        }
 		svg {
 			display: block;
 			width: 9px;
@@ -692,6 +697,8 @@ main {
 				fill: $color-dark;
 			}
 		}
+
+		
 	}
 }
 
@@ -713,74 +720,6 @@ main {
 	}
 }
 
-.contacts-offer {
-	display: flex;
-	flex-direction: column;
-	row-gap: 26px;
-	@include breakpoint(phablet) {
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		row-gap: 30px;
-	}
-
-	.header & {
-		@include breakpoint(tablet) {
-			row-gap: 32px;
-			margin: 0 auto;
-		}
-	}
-
-	.contacts-link {
-		font-family: $Poppins-light;
-		font-size: 20px;
-		// color: $color-dark;
-		padding: 0;
-		text-decoration: none;
-
-		.footer & {
-			color: $color-white;
-		}
-
-		.header & {
-			@include breakpoint(tablet) {
-				font-size: 24px;
-				text-align: center;
-			}
-		}
-	}
-	span {
-		display: block;
-		padding-top: 10px;
-		.header & {
-			@include breakpoint(tablet) {
-				color: $color-dark-grey;
-				font-size: 12px;
-				padding-top: 8px;
-				text-align: center;
-			}
-		}
-	}
-}
-
-@media (max-width: 991.9px) {
-	.hidden-mobile {
-		display: none !important;
-	}
-}
-
-@media (min-width: 992px) {
-	.hidden-desktop {
-		display: none !important;
-	}
-}
-
-@include breakpoint(desktop) {
-	.hidden-fixed-mob {
-		display: none !important;
-	}
-}
-
 .portfolio,
 .services {
 	.swiper_navigation {
@@ -790,7 +729,7 @@ main {
 		row-gap: 35px;
 		top: auto;
 		right: 1px;
-		bottom: 185px;
+		bottom: 184px;
 		z-index: 4;
 		width: 54px;
 		height: 145px;
@@ -801,13 +740,40 @@ main {
 			left: 0;
 			right: 0;
 		}
-		.swiper-button-next {
+		.swiper-button-next,
+		.swiper-container-rtl .swiper-button-prev {
 			top: 0;
 			bottom: auto;
+			@include breakpoint(laptop) {
+				left: auto;
+				right: 0;
+			}
 		}
-		.swiper-button-prev {
+		.swiper-button-prev,
+		.swiper-container-rtl .swiper-button-next {
 			top: auto;
 			bottom: 0;
+			@include breakpoint(laptop) {
+				left: 0;
+				right: auto;
+			}
+		}
+
+		@include breakpoint(laptop) {
+			position: relative;
+			flex-direction: row;
+			bottom: 0;
+			width: 100%;
+			max-width: 500px;
+			margin-right: auto;
+			margin-left: auto;
+			height: 54px;
+			margin-top: 60px;
+		}
+		@include breakpoint(mobileonly) {
+			max-width: 176px;
+			height: 32px;
+			margin-top: 16px;
 		}
 	}
 }

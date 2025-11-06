@@ -3,25 +3,24 @@
     z-index: 3;
     &__top {
         margin-bottom: 50px;
-    }
-    h2 {
-        line-height: 1.35;
-        display: inline-block;
-        margin-bottom: 0;
-        span {
-            line-height: 1.35;
-        }
-    }
-    &__top {
         padding-bottom: 10px;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         column-gap: 40px;
+        @include breakpoint(laptop) {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 32px;
+        }
         &-tags {
             margin-top: auto;
             width: calc(42% - 40px);
             margin-bottom: 20px;
+            @include breakpoint(laptop) {
+                width: 100%;
+                margin-bottom: 0;
+            }
             span {
                 font-size: 20px;
                 font-weight: 400;
@@ -32,9 +31,21 @@
             }
         }
     }
+    h2 {
+        line-height: 1.35;
+        display: inline-block;
+        margin-bottom: 0;
+        span {
+            line-height: 1.35;
+        }
+    }
+
     &__content-slider {
         position: relative;
         padding-right: 110px;
+        @include breakpoint(laptop) {
+            padding-right: 0;
+        }
     }
 
     .swiper {
@@ -57,6 +68,9 @@
         padding: 57px 35px 38px;
         background: rgba(255, 255, 255, 0.05);
         height: -webkit-fill-available;
+        @include breakpoint(tablet) {
+            padding: 24px;
+        }
         &__header {
             display: flex;
             flex-direction: column;
@@ -78,6 +92,7 @@
                 font-weight: 300;
                 font-size: 16px;
                 line-height: 1.2;
+                text-align: center;
                 &[lang="en"] {
                     font-family: $Poppins-light;
                 }
@@ -88,7 +103,9 @@
             font-weight: 500;
             font-size: 24px;
             line-height: 30px;
+            color: $color-white;
             margin-bottom: 15px;
+            text-align: center;
             &[lang="en"] {
                 font-family: $Poppins-medium;
             }
@@ -100,6 +117,9 @@
             display: flex;
             align-items: center;
             margin-bottom: 10px;
+            @include breakpoint(tablet) {
+                padding: 0;
+            }
             p {
                 letter-spacing: 0.01em;
                 text-align: center;
@@ -138,6 +158,10 @@
             right: 56px;
             display: flex;
             justify-content: flex-end;
+            @include breakpoint(tablet) {
+                top: 24px;
+                right: 24px;
+            }
             &__link {
                 display: flex;
                 align-items: center;
@@ -146,6 +170,10 @@
                 width: 44px;
                 border-radius: $radius-50;
                 background: $gradient;
+                @include breakpoint(mobileonly) {
+                    height: 32px;
+                    width: 32px;
+                }
                 &:hover {
                     background: $gradient;
                     svg {

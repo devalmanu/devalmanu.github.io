@@ -99,7 +99,6 @@
   &__buttons {
     display: flex;
     column-gap: 20px;
-    margin-right: 7px;
     @include breakpoint(tablet) {
       width: 100%;
       flex-direction: column;
@@ -107,7 +106,6 @@
       justify-content: center;
       margin-top: 16px;
       row-gap: 16px;
-      margin-right: 0;
     }
   }
 

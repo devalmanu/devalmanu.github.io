@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
    const inputs = document.querySelectorAll('input');
    const headerHeight = header.offsetHeight;
 
-   const btnsPopup = document.querySelectorAll('.btn-popup');
-   const modalOverlay = document.querySelector('.modal-overlay');
-   const modalCloseAll = document.querySelectorAll('.modal-close');
-   const modalsWindows = document.querySelectorAll('.modal-wind');
+   // const btnsPopup = document.querySelectorAll('.btn-popup');
+   // const modalOverlay = document.querySelector('.modal-overlay');
+   // const modalCloseAll = document.querySelectorAll('.modal-close');
+   // const modalsWindows = document.querySelectorAll('.modal-wind');
 
    document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
 
@@ -60,43 +60,43 @@ document.addEventListener('DOMContentLoaded', () => {
       });
    });
 
-   function openPopup(path) {
-      modalsWindows.forEach((el) => {
-         el.classList.remove('modal--visible');
-      });
-      document.querySelector(`[data-target=${path}]`).classList.add('modal--visible');
-      body.classList.add('stop-scroll')
-      modalOverlay.classList.add('modal-overlay--visible');
-   }
+   // function openPopup(path) {
+   //    modalsWindows.forEach((el) => {
+   //       el.classList.remove('modal--visible');
+   //    });
+   //    document.querySelector(`[data-target=${path}]`).classList.add('modal--visible');
+   //    body.classList.add('stop-scroll')
+   //    modalOverlay.classList.add('modal-overlay--visible');
+   // }
 
-   btnsPopup.forEach((el) => {
-      el.addEventListener('click', (e) => {
-         let path = e.currentTarget.getAttribute('data-path');
-         openPopup(path)
-      });
-   });
+   // btnsPopup.forEach((el) => {
+   //    el.addEventListener('click', (e) => {
+   //       let path = e.currentTarget.getAttribute('data-path');
+   //       openPopup(path)
+   //    });
+   // });
 
-   modalOverlay.addEventListener('click', (e) => {
-      if (e.target == modalOverlay) {
-         modalOverlay.classList.remove('modal-overlay--visible');
-         modalsWindows.forEach((el) => {
-            el.classList.remove('modal--visible');
-         });
-         body.classList.remove('stop-scroll')
-      }
-   });
+   // modalOverlay.addEventListener('click', (e) => {
+   //    if (e.target == modalOverlay) {
+   //       modalOverlay.classList.remove('modal-overlay--visible');
+   //       modalsWindows.forEach((el) => {
+   //          el.classList.remove('modal--visible');
+   //       });
+   //       body.classList.remove('stop-scroll')
+   //    }
+   // });
 
-   modalCloseAll.forEach((modalClose) => {
-      modalClose.addEventListener('click', (e) => {
-         if (e.target == modalClose) {
-            modalOverlay.classList.remove('modal-overlay--visible');
-            modalsWindows.forEach((el) => {
-               el.classList.remove('modal--visible');
-            });
-            body.classList.remove('stop-scroll')
-         }
-      });
-   })
+   // modalCloseAll.forEach((modalClose) => {
+   //    modalClose.addEventListener('click', (e) => {
+   //       if (e.target == modalClose) {
+   //          modalOverlay.classList.remove('modal-overlay--visible');
+   //          modalsWindows.forEach((el) => {
+   //             el.classList.remove('modal--visible');
+   //          });
+   //          body.classList.remove('stop-scroll')
+   //       }
+   //    });
+   // })
 
    if (inputs) {
       inputs.forEach(input => {
@@ -134,40 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
    };
 
-   const servicesSwiper = document.querySelector(".services-swiper");
-   if (servicesSwiper) {
-      const servicesSwiperList = new Swiper(servicesSwiper, {
-         slidesPerView: 2,
-         spaceBetween: 84,
-         freeMode: true,
-         watchOverflow: true,
-         watchSlidesVisibility: true,
-         watchSlidesProgress: true,
-         navigation: {
-            prevEl: ".services-prev-swipe",
-            nextEl: ".services-next-swipe"
-         },
-         breakpoints: {
-            320: {
-               slidesPerView: 1,
-               spaceBetween: 16,
-            },
-            578: {
-               slidesPerView: 1.5,
-               spaceBetween: 32,
-            },
-            768: {
-               slidesPerView: 2,
-               spaceBetween: 46,
-            },
-            1080: {
-               spaceBetween: 84,
-            },
-         },
-
-      });
-   }
-
    const portfolioSwiper = document.querySelector(".portfolio-swiper");
    if (portfolioSwiper) {
       const portfolioSwiperList = new Swiper(portfolioSwiper, {
@@ -194,16 +160,40 @@ document.addEventListener('DOMContentLoaded', () => {
          },
       });
    }
+
+      const servicesSwiper = document.querySelector(".services-swiper");
+   if (servicesSwiper) {
+      const servicesSwiperList = new Swiper(servicesSwiper, {
+         slidesPerView: 2,
+         spaceBetween: 84,
+         freeMode: true,
+         watchOverflow: true,
+         watchSlidesVisibility: true,
+         watchSlidesProgress: true,
+         navigation: {
+            prevEl: ".services-prev-swipe",
+            nextEl: ".services-next-swipe"
+         },
+         breakpoints: {
+            320: {
+               slidesPerView: 1,
+               spaceBetween: 16,
+            },
+            578: {
+               slidesPerView: 1.5,
+            },
+            768: {
+               slidesPerView: 2,
+               spaceBetween: 32,
+            },
+            992: {
+               spaceBetween: 60,
+            },
+            1280: {
+               spaceBetween: 84,
+            },
+         },
+
+      });
+   }
 });
-
-function initSlider(slider, options) {
-   if (!slider.classList.contains('swiper-container-initialized') && !slider.classList.contains('swiper-initialized')) {
-      new Swiper(slider, options)
-   }
-}
-
-function destroySlider(slider) {
-   if (slider.classList.contains('swiper-container-initialized') || slider.classList.contains('swiper-initialized')) {
-      slider.swiper.destroy()
-   }
-}

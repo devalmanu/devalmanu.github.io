@@ -20,21 +20,22 @@ form {
 		color: $color-white;
 		padding: 15px 25px;
 		border-radius: $radius-8;
-		background: rgba(255, 255, 255, 0.06);
+		background-color: rgba(255, 255, 255, 0.06);
 		border: none;
-		transition: border 0.2s ease;
+		transition: background-color 0.2s ease;
 		@include breakpoint(mobileonly) {
-			padding: 16px;
+			padding: 12px 24px;
+			height: 42px;
 			font-size: 12px;
 		}
 		&:disabled,
 		&[disabled] {
-			background: $color-dark-grey;
+			background-color: $color-dark-grey;
 		}
 
 		&.filled {
 			border: none;
-			background: $color-dark-grey;
+			background-color: rgba(255, 255, 255, 0.16);
 		}
 
 		&[lang="en"] {
@@ -49,6 +50,7 @@ form {
 		}
 		@include breakpoint(mobileonly) {
 			min-width: 100%;
+			height: 42px;
 		}
 	}
 
