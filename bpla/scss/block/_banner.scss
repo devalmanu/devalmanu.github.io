@@ -16,7 +16,7 @@
             border-radius: $radius-32;
         }
         &-block {
-            max-width: 555px;
+            max-width: 575px;
             position: relative;
             z-index: 5;
             @include flex-h-column;
@@ -39,6 +39,7 @@
                 @include breakpoint(mobileonly) {
                     font-size: 20px;
                     margin-bottom: 8px;
+                    line-height: 1.2;
                 }
             }
         }

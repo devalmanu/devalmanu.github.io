@@ -206,12 +206,23 @@ document.addEventListener('DOMContentLoaded', () => {
             slideToClickedSlide: true,
             direction: 'vertical',
             slideThumbActiveClass: 'thumb-is-active',
+            navigation: {
+               nextEl: detailSwiper.querySelector('.thumb-images-next'),
+               prevEl: detailSwiper.querySelector('.thumb-images-prev'),
+            },
             breakpoints: {
                992: {
                   spaceBetween: 10,
                   slidesPerView: 5.22,
                }
-            }
+            },
+            on: {
+               init: function (swiper) {
+                  if (detailSwiper.querySelectorAll(".thumb-slide").length < 6) {
+                     document.querySelector('.thumb-images-next').style.display = 'none';
+                  }
+               },
+            },
          });
          const detailImagesMain = new Swiper(".detail-images__swiper", {
             spaceBetween: 0,
@@ -348,7 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
             xhr.send(formData);
             event.target.reset();
 
-             event.preventDefault();
+            event.preventDefault();
 
             // const form = event.target;
             // const submitButton = form.querySelector('button[type="submit"]');

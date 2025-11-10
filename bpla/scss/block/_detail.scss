@@ -38,6 +38,39 @@
                 margin-bottom: 4px;
             }
         }
+        .btn-more {
+            display: block;
+            font-family: $TTNorms-Bold;
+            font-size: 16px;
+            line-height: 1.2;
+            margin-top: 4px;
+            @include breakpoint(mobileonly) {
+                letter-spacing: -0.06em;
+                margin-top: 0;
+            }
+        }
+        .product-card-top {
+            &__specs-item {
+                display: flex;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 1.5;
+                @include breakpoint(mobileonly) {
+                    font-size: 14px;
+                }
+            }
+            &__specs-item-title {
+                color: $color-light-gray;
+                min-width: fit-content;
+            }
+            &__specs-item-content {
+                margin-left: 5px;
+                overflow: hidden;
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
     }
     &__content {
         display: flex;
@@ -61,19 +94,9 @@
         &-info {
             display: flex;
             flex-direction: column;
-            .btn-more {
-                display: block;
-                font-family: $TTNorms-Bold;
-                font-size: 16px;
-                line-height: 1.2;
-                margin-top: 4px;
-                @include breakpoint(mobileonly) {
-                    letter-spacing: -0.06em;
-                    margin-top: 0;
-                }
-            }
+
             .btn-pay {
-                margin-top: 40px;
+                // margin-top: 40px;
                 @include breakpoint(tablet) {
                     margin-top: 24px;
                 }
@@ -117,6 +140,7 @@
                 }
             }
         }
+
         &-exposition {
             p {
                 font-size: 16px;
@@ -128,9 +152,16 @@
             }
         }
         &-price {
-            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            margin-top: 37px;
+            margin-bottom: 30px;
+            column-gap: 40px;
             @include breakpoint(tablet) {
+                align-items: flex-start;
+                flex-direction: column;
                 margin-top: 24px;
+                margin-bottom: 10px;
             }
             @include breakpoint(mobileonly) {
                 margin-top: 16px;
@@ -139,7 +170,7 @@
                 font-size: 16px;
                 line-height: 1;
                 color: $color-dark-gray;
-                margin-bottom: 14px;
+                margin-bottom: 7px;
                 @include breakpoint(mobileonly) {
                     font-size: 12px;
                     margin-bottom: 7px;
@@ -198,6 +229,9 @@
                 width: 100%;
             }
         }
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
     &-images {
         position: relative;
@@ -247,6 +281,30 @@
         .swiper-button-next,
         .swiper-button-prev {
             top: 43%;
+            &.thumb-images-next {
+                top: calc(100% - 24px);
+                width: 100%;
+                border-radius: 0;
+                svg {
+                    display: block;
+                    width: 80px;
+                    height: 32px;
+                    fill: #252525;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: -14px;
+                    left: 0;
+                    width: 100%;
+                    height: 15px;
+                    background: linear-gradient(180deg, transparent, #ffffff 100%);
+                    z-index: 5;
+                }
+                &.swiper-button-disabled {
+                    display: none;
+                }
+            }
         }
         .swiper-slide {
             cursor: pointer;
@@ -304,16 +362,6 @@
                     }
                 }
             }
-            &:after {
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: -1px;
-                width: 100%;
-                height: 15px;
-                background: linear-gradient(180deg, transparent, #ffffff 100%);
-                z-index: 5;
-            }
         }
     }
 }
@@ -334,7 +382,7 @@
             align-items: baseline;
             font-size: 14px;
             line-height: 1.1;
-            color: $color-dark;
+            color: $color-light-gray;
             @include breakpoint(phablet) {
                 justify-content: space-between;
                 padding: 12px 0 8px;

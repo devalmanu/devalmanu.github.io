@@ -40,11 +40,14 @@
 									<ul class="nav__list">
 										<li class="nav__item"><a href="./" class="nav__link active">Главная</a>
 										</li>
-										<li class="nav__item"><a href="./#adventures" class="nav__link link-button">Преимущества</a>
+										<li class="nav__item"><a href="./#adventures"
+												class="nav__link link-button">Преимущества</a>
 										</li>
-										<li class="nav__item"><a href="./#our-products" class="nav__link link-button">Наша
+										<li class="nav__item"><a href="./#our-products"
+												class="nav__link link-button">Наша
 												продукция</a></li>
-										<li class="nav__item"><a href="./#feedback-contacts" class="nav__link link-button">Контакты</a></li>
+										<li class="nav__item"><a href="./#feedback-contacts"
+												class="nav__link link-button">Контакты</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -101,24 +104,34 @@
 								<div class="detail-images">
 									<div class="swiper detail-images__thumb hidden-mobile">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide">
+											<div class="swiper-slide thumb-slide">
 												<img src="./img/@1x/thumb-1.jpg" alt="detail 1" loading="lazy">
 											</div>
-											<div class="swiper-slide">
+											<div class="swiper-slide thumb-slide">
 												<img src="./img/@1x/thumb-1.jpg" alt="detail 1" loading="lazy">
 											</div>
-											<div class="swiper-slide">
+											<div class="swiper-slide thumb-slide">
 												<img src="./img/@1x/thumb-1.jpg" alt="detail 1" loading="lazy">
 											</div>
-											<div class="swiper-slide">
+											<div class="swiper-slide thumb-slide">
 												<img src="./img/@1x/thumb-1.jpg" alt="detail 1" loading="lazy">
 											</div>
-											<div class="swiper-slide">
+											<div class="swiper-slide thumb-slide">
 												<img src="./img/@1x/thumb-2.jpg" alt="detail 1" loading="lazy">
 											</div>
-											<div class="swiper-slide">
+											<div class="swiper-slide thumb-slide">
 												<img src="./img/@1x/thumb-2.jpg" alt="detail 1" loading="lazy">
 											</div>
+										</div>
+										<div class="swiper-button-prev thumb-images-prev is-vishidden">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#arrow-down"></use>
+											</svg>
+										</div>
+										<div class="swiper-button-next thumb-images-next hidden-mobile">
+											<svg class="icon">
+												<use xlink:href="./img/sprite/sprite.svg#arrow-down"></use>
+											</svg>
 										</div>
 									</div>
 									<div class="swiper detail-images__swiper">
@@ -153,12 +166,12 @@
 													<img src="./img/@2x/detail-2.jpg" alt="detail 1" loading="lazy">
 												</picture>
 											</div>
-											<div class="swiper-slide">
+											<!-- <div class="swiper-slide">
 												<picture>
 													<source srcset="./img/@2x/detail-2.webp" type="image/webp">
 													<img src="./img/@2x/detail-2.jpg" alt="detail 1" loading="lazy">
 												</picture>
-											</div>
+											</div> -->
 										</div>
 										<div class="swiper-pagination banner-swiper-pagination hidden-desktop"></div>
 									</div>
@@ -177,7 +190,52 @@
 							<div class="detail__content-right">
 								<h1 class="detail__title">БПЛА Тёща</h1>
 								<div class="detail__content-info">
-									<div class="detail__content-description">
+									<div class="product-card-top__specs">
+										<div class="product-card-top__specs-item">
+											<div class="product-card-top__specs-item-title">Пластина корпуса:</div>
+											<div class="product-card-top__specs-item-content" title="2 шт">2 шт</div>
+										</div>
+										<div class="product-card-top__specs-item">
+											<div class="product-card-top__specs-item-title">Ноги:</div>
+											<div class="product-card-top__specs-item-content" title="4 шт">4 шт</div>
+										</div>
+										<div class="product-card-top__specs-item">
+											<div class="product-card-top__specs-item-title">
+												Планка корпуса дистанционная:
+											</div>
+											<div class="product-card-top__specs-item-content" title="8 шт">
+												8 шт</div>
+										</div>
+										<div class="product-card-top__specs-item">
+											<div class="product-card-top__specs-item-title">
+												Болт М6х60 мм:
+											</div>
+											<div class="product-card-top__specs-item-content" title="4 шт">
+												4 шт</div>
+										</div>
+										<div class="product-card-top__specs-item">
+											<div class="product-card-top__specs-item-title">
+												Гайка М6:
+											</div>
+											<div class="product-card-top__specs-item-content" title="4 шт">
+												4 шт</div>
+										</div>
+										<div class="product-card-top__specs-item">
+											<div class="product-card-top__specs-item-title">
+												Шайба увеличенная М6:
+											</div>
+											<div class="product-card-top__specs-item-content" title="8 шт">
+												8 шт</div>
+										</div>
+										<div class="product-card-top__specs-item">
+											<div class="product-card-top__specs-item-title">
+												Саморез 25 мм:
+											</div>
+											<div class="product-card-top__specs-item-content" title="16 шт">
+												16 шт</div>
+										</div>
+									</div>
+									<!-- <div class="detail__content-description">
 										<p class="text" >БПЛА «ТЁЩА» — это многофункциональный
 											беспилотный комплекс, разработанный для выполнения разведывательных,
 											корректировочных и ударных задач в условиях активного радиоэлектронного
@@ -194,12 +252,14 @@
 											высокую устойчивость к помехам, стабильную связь и точное выполнение миссий
 											на дальних дистанциях</p>
 									</div>
-									<a href="#" class="btn-reset color-accent btn-more">Подробнее</a>
+									<a href="#" class="btn-reset color-accent btn-more">Подробнее</a> -->
 									<div class="detail__content-price">
-										<p>Цена</p>
 										<!-- если нужно показывать цену до скидки -->
 										<!-- <div class="old-price">782 120 ₽</div> -->
-										<div class="new-price detail__total-price"><span>752 120</span> ₽</div>
+										<div class="new-price detail__total-price">
+											<p>Цена</p>
+											<span>752 120</span> ₽
+										</div>
 										<a href="#" class="btn-reset btn-accent btn-pay">
 											Заказать
 										</a>
@@ -212,71 +272,180 @@
 							<div class="complect__list">
 								<div class="checkBlock">
 									<input type="checkbox" value="1" name="complect-1" class="custom-control-input"
-										id="complect-1" data-price="2120">
+										id="complect-1" data-price="100">
 									<label class="custom-control-label" for="complect-1">
-										<img class="complect-icon" src="./img/icon/complect-1.png" alt="icon" loading="lazy">
+										<img class="complect-icon" src="./img/icon/cabel-12.png" alt="icon"
+											loading="lazy">
 										<span>
-											<span class="complect__title">Комплект крепежа (метизы)</span>
-											<span class="complect__price">+2120 ₽</span>
+											<span class="complect__title">Кабель 12 AVG</span>
+											<span class="complect__price">+100 ₽</span>
 										</span>
 									</label>
 								</div>
 								<div class="checkBlock">
 									<input type="checkbox" value="2" name="complect-2" class="custom-control-input"
-										id="complect-2" data-price="2120">
+										id="complect-2" data-price="300">
 									<label class="custom-control-label" for="complect-2">
-										<img class="complect-icon" src="./img/icon/complect-2.png" alt="icon" loading="lazy">
+										<img class="complect-icon" src="./img/icon/preobrazovatel.png" alt="icon"
+											loading="lazy">
 										<span>
-											<span class="complect__title">Окраска</span>
-											<span class="complect__price">+2120 ₽</span>
+											<span class="complect__title">Понижающий преобразователь</span>
+											<span class="complect__price">+300 ₽</span>
 										</span>
 									</label>
 								</div>
 								<div class="checkBlock">
 									<input type="checkbox" value="3" name="complect-3" class="custom-control-input"
-										id="complect-3" data-price="2120">
+										id="complect-3" data-price="250">
 									<label class="custom-control-label" for="complect-3">
-										<img class="complect-icon" src="./img/icon/complect-3.png" alt="icon" loading="lazy">
+										<img class="complect-icon" src="./img/icon/tonirivanie.png" alt="icon"
+											loading="lazy">
 										<span>
-											<span class="complect__title">Сервоприводы сброса и одна камера</span>
-											<span class="complect__price">+2120 ₽</span>
+											<span class="complect__title">Окраска рамы (тонирование)</span>
+											<span class="complect__price">+250 ₽</span>
 										</span>
 									</label>
 								</div>
 								<div class="checkBlock">
 									<input type="checkbox" value="4" name="complect-4" class="custom-control-input"
-										id="complect-4" data-price="2120">
+										id="complect-4" data-price="300">
 									<label class="custom-control-label" for="complect-4">
-										<img class="complect-icon" src="./img/icon/complect-4.png" alt="icon" loading="lazy">
+										<img class="complect-icon" src="./img/icon/rotate.png" alt="icon"
+											loading="lazy">
 										<span>
-											<span class="complect__title">Коннектор SH 1.0 4&nbsp;шт</span>
-											<span class="complect__price">+2120 ₽</span>
+											<span class="complect__title">Система поворота камеры</span>
+											<span class="complect__price">+300 ₽</span>
 										</span>
 									</label>
 								</div>
 								<div class="checkBlock">
 									<input type="checkbox" value="5" name="complect-5" class="custom-control-input"
-										id="complect-5" data-price="2000">
+										id="complect-5" data-price="200">
 									<label class="custom-control-label" for="complect-5">
-										<img class="complect-icon" src="./img/icon/complect-5.png" alt="icon" loading="lazy">
+										<img class="complect-icon" src="./img/icon/servoprivod.png" alt="icon"
+											loading="lazy">
 										<span>
-											<span class="complect__title">Плата распределения 2&nbsp;шт</span>
-											<span class="complect__price">+2000 ₽</span>
+											<span class="complect__title">Сервопривод для камеры</span>
+											<span class="complect__price">+200 ₽</span>
 										</span>
 									</label>
 								</div>
 								<div class="checkBlock">
 									<input type="checkbox" value="6" name="complect-6" class="custom-control-input"
-										id="complect-6" data-price="1000">
+										id="complect-6" data-price="250">
 									<label class="custom-control-label" for="complect-6">
-										<img class="complect-icon" src="./img/icon/complect-6.png" alt="icon" loading="lazy">
+										<img class="complect-icon" src="./img/icon/reset.png" alt="icon" loading="lazy">
 										<span>
-											<span class="complect__title">Индивидуальная упаковка (гофра&nbsp;картон)</span>
-											<span class="complect__price">+1000 ₽</span>
+											<span class="complect__title">Система сброса</span>
+											<span class="complect__price">+250 ₽</span>
+										</span>
+									</label>
+								</div>
+								<div class="checkBlock">
+									<input type="checkbox" value="7" name="complect-7" class="custom-control-input"
+										id="complect-7" data-price="130">
+									<label class="custom-control-label" for="complect-7">
+										<img class="complect-icon" src="./img/icon/servoprivod-2.png" alt="icon"
+											loading="lazy">
+										<span>
+											<span class="complect__title">Сервопривод для сброса</span>
+											<span class="complect__price">+130 ₽</span>
+										</span>
+									</label>
+								</div>
+								<!-- <div class="checkBlock">
+									<input type="checkbox" value="8" name="complect-8" class="custom-control-input"
+										id="complect-8" data-price="2120">
+									<label class="custom-control-label" for="complect-8">
+										<img class="complect-icon" src="./img/icon/8-pin.png" alt="icon" loading="lazy">
+										<span>
+											<span class="complect__title">Комплект SH 1.0 8 pin</span>
+											<span class="complect__price">+2120 ₽</span>
+										</span>
+									</label>
+								</div> -->
+								<div class="checkBlock">
+									<input type="checkbox" value="9" name="complect-9" class="custom-control-input"
+										id="complect-9" data-price="300">
+									<label class="custom-control-label" for="complect-9">
+										<img class="complect-icon" src="./img/icon/individ.png" alt="icon"
+											loading="lazy">
+										<span>
+											<span class="complect__title">Индивидуальная упаковка</span>
+											<span class="complect__price">+300 ₽</span>
+										</span>
+									</label>
+								</div>
+								<!-- <div class="checkBlock">
+									<input type="checkbox" value="10" name="complect-10" class="custom-control-input"
+										id="complect-10" data-price="2120">
+									<label class="custom-control-label" for="complect-10">
+										<img class="complect-icon" src="./img/icon/vlaga-icon.png" alt="icon"
+											loading="lazy">
+										<span>
+											<span class="complect__title">Обработка (влагостойкость)</span>
+											<span class="complect__price">+2120 ₽</span>
+										</span>
+									</label>
+								</div> -->
+							</div>
+							<h2 class="h2">Дополнительно</h2>
+							<div class="complect__list">
+								<div class="checkBlock">
+									<input type="checkbox" value="1" name="dop-1" class="custom-control-input"
+										id="dop-1" data-price="2120">
+									<label class="custom-control-label" for="dop-1">
+										<img class="complect-icon" src="./img/icon/dop-1.png" alt="icon" loading="lazy">
+										<span>
+											<span class="complect__title">Аккамулятор 10000 mah</span>
+											<span class="complect__price">+2120 ₽</span>
+										</span>
+									</label>
+								</div>
+								<div class="checkBlock">
+									<input type="checkbox" value="2" name="dop-2" class="custom-control-input"
+										id="dop-2" data-price="2120">
+									<label class="custom-control-label" for="dop-2">
+										<img class="complect-icon" src="./img/icon/dop-2.png" alt="icon" loading="lazy">
+										<span>
+											<span class="complect__title">Аккамулятор 13000 mah</span>
+											<span class="complect__price">+2120 ₽</span>
+										</span>
+									</label>
+								</div>
+								<div class="checkBlock">
+									<input type="checkbox" value="3" name="dop-3" class="custom-control-input"
+										id="dop-3" data-price="2120">
+									<label class="custom-control-label" for="dop-3">
+										<img class="complect-icon" src="./img/icon/dop-3.png" alt="icon" loading="lazy">
+										<span>
+											<span class="complect__title">Аккамулятор 16000 mah</span>
+											<span class="complect__price">+2120 ₽</span>
 										</span>
 									</label>
 								</div>
 							</div>
+						</div>
+						<div class="detail__content-delineation">
+							<h2 class="h2">Описание</h2>
+							<div class="detail__content-description">
+								<p class="text">БПЛА «ТЁЩА» — это многофункциональный
+									беспилотный комплекс, разработанный для выполнения разведывательных,
+									корректировочных и ударных задач в условиях активного радиоэлектронного
+									противодействия. Конструкция дрона обеспечивает высокую устойчивость к
+									помехам, стабильную связь и точное выполнение миссий на дальних дистанциях.
+									БПЛА «ТЁЩА» — это многофункциональный беспилотный комплекс, разработанный
+									для выполнения разведывательных, корректировочныхи ударных задач в условиях
+									активного радиоэлектронного противодействия. Конструкция дрона обеспечивает
+									высокую устойчивость к помехам, стабильную связь и точное выполнение миссий
+									на дальних дистанциях
+									БПЛА «ТЁЩА» — это многофункциональный беспилотный комплекс, разработанный
+									для выполнения разведывательных, корректировочныхи ударных задач в условиях
+									активного радиоэлектронного противодействия. Конструкция дрона обеспечивает
+									высокую устойчивость к помехам, стабильную связь и точное выполнение миссий
+									на дальних дистанциях</p>
+							</div>
+							<a href="#" class="btn-reset color-accent btn-more">Подробнее</a>
 						</div>
 						<div class="detail__content-characteristics">
 							<h2 class="h2">Характеристики</h2>
@@ -387,11 +556,13 @@
 						</div>
 						<div class="footer__content-block contacts-offer">
 							<div>
-								<a href="tel:88002222222" class="btn-reset contacts-link" target="_blank">8 (800) 222-22-22</a>
+								<a href="tel:88002222222" class="btn-reset contacts-link" target="_blank">8 (800)
+									222-22-22</a>
 								<span>Многоконтактный телефон</span>
 							</div>
 							<div>
-								<a href="mailto:info@bpla.ru" class="btn-reset contacts-link" target="_blank">info@bpla.ru</a>
+								<a href="mailto:info@bpla.ru" class="btn-reset contacts-link"
+									target="_blank">info@bpla.ru</a>
 								<span>Электронная почта</span>
 							</div>
 						</div>
