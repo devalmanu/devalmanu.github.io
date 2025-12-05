@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <!-- <link rel="icon" type="image/svg+xml" href="" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bamper-addImage</title>
+  <title>Bamper-openModal-error</title>
   <script type="module" crossorigin src="./assets/main-mvYmWG_F.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/main-DA290JEl.css">
 </head>
@@ -57,7 +57,8 @@
                               d="M29.3334 15.3333V19.4667C29.3334 22.4536 29.3334 23.9471 28.7521 25.088C28.2408 26.0915 27.4249 26.9074 26.4214 27.4187C25.2805 28 23.787 28 20.8001 28H11.2001C8.21313 28 6.71966 28 5.5788 27.4187C4.57527 26.9074 3.75937 26.0915 3.24805 25.088C2.66675 23.9471 2.66675 22.4536 2.66675 19.4667V12.5333C2.66675 9.54639 2.66675 8.05292 3.24805 6.91206C3.75937 5.90852 4.57527 5.09263 5.5788 4.5813C6.71966 4.00001 8.21313 4.00001 11.2001 4.00001H16.6667M25.3334 10.6667V2.66667M21.3334 6.66667H29.3334M21.3334 16C21.3334 18.9455 18.9456 21.3333 16.0001 21.3333C13.0546 21.3333 10.6667 18.9455 10.6667 16C10.6667 13.0545 13.0546 10.6667 16.0001 10.6667C18.9456 10.6667 21.3334 13.0545 21.3334 16Z"
                               stroke="#A1A1A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
-                          <p class="subtext-load text-sm/6 font-regular text-neutral-400 mb-2">Форматы JPEG, JPG или PNG до 10 МБ
+                          <p class="subtext-load text-sm/6 font-regular text-neutral-400 mb-2">Форматы JPEG, JPG или PNG
+                            до 10 МБ
                             каждая</p>
                           <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
                           <button type="button" onclick="document.getElementById('fileInput').click()"
@@ -450,7 +451,7 @@
                     </label>
                     <label class="flex items-center justify-start flex-wrap gap-x-1 radioBlock mt-4">
                       <input type="radio" name="radio-1"
-                        class="radio radio-custom shadow-none h-4 w-4 mr-2 border-1 border-neutral-200 checked:bg-green-500 checked:border-green-500"/>
+                        class="radio radio-custom shadow-none h-4 w-4 mr-2 border-1 border-neutral-200 checked:bg-green-500 checked:border-green-500" />
                       <span class="radioBlock__text select-none cursor-pointer ml-1">
                         Другое
                       </span>
@@ -484,7 +485,7 @@
                             </a>
                           </div>
                         </div>
-            
+
                       </div>
                     </label>
                   </div>
@@ -544,7 +545,7 @@
     </main>
     <footer class="footer"></footer>
     <!-- добавлние конфигурации -->
-    <dialog id="add_combination" class="modal">
+    <dialog id="add_combination" class="modal" open>
       <div class="modal-box w-full max-w-[960px] mt-auto md:m-auto p-4 md:p-6 bg-white rounded-b-none md:rounded-xl">
         <p class="text-lg font-semibold text-black">Добавление комбинации</p>
         <form method="dialog">
@@ -552,11 +553,11 @@
             <div class="custom-select-wrapper">
               <label for="add-select-brand" class="block text-sm/6 font-medium text-black mb-1">Марка *</label>
               <select id="add-select-brand"
-                class="select custom-select transition-all w-full block border-neutral-200 rounded-sm focus:outline-none focus:border focus:border-green-500 hover:border-green-300">
+                class="select custom-select transition-all w-full block border-red-500 rounded-sm focus:outline-none focus:border focus:border-green-500 hover:border-green-300">
                 <option disabled selected value="" style="display:none;"></option>
                 <option value="1">Toyota</option>
                 <option value="2">BMV</option>
-                <option value="3">Audi</option>
+                <option value="3" selected>Audi</option>
                 <option value="4">Mazda</option>
                 <option value="5">Ford</option>
               </select>
@@ -565,35 +566,36 @@
             <div class="custom-select-wrapper">
               <label for="add-select-model" class="block text-sm/6 font-medium text-black mb-1">Модель *</label>
               <select id="add-select-model"
-                class="select custom-select transition-all w-full block border-neutral-200 rounded-sm focus:outline-none focus:border focus:border-green-500 hover:border-green-300">
+                class="select custom-select transition-all w-full block border-red-500 rounded-sm focus:outline-none focus:border focus:border-green-500 hover:border-green-300">
                 <option disabled selected value="" style="display:none;"></option>
                 <option value="X3">X3</option>
                 <option value="Octavia">Octavia</option>
                 <option value="Camry">Camry</option>
                 <option value="RAV4">RAV4</option>
-                <option value="A5">A5</option>
+                <option value="A5" selected>A5</option>
               </select>
               <span class="clear-icon"></span>
             </div>
             <div class="custom-select-wrapper">
               <label for="add-select-year" class="block text-sm/6 font-medium text-black mb-1">Год выпуска *</label>
               <select id="add-select-year"
-                class="select custom-select transition-all w-full block border-neutral-200 rounded-sm focus:outline-none focus:border focus:border-green-500 hover:border-green-300">
-                <option disabled selected value="" style="display:none;"></option>
+                class="select custom-select transition-all w-full block border-red-500 rounded-sm focus:outline-none focus:border focus:border-green-500 hover:border-green-300">
+                <option disabled value="" style="display:none;"></option>
                 <option value="1998">1998</option>
                 <option value="1999">1999</option>
                 <option value="2000">2000</option>
                 <option value="2001">2001</option>
                 <option value="2002">2002</option>
-                <option value="2023">2023</option>
+                <option value="2023" selected>2023</option>
               </select>
               <span class="clear-icon"></span>
             </div>
             <div>
-              <label for="add-modification" class="block text-sm/6 font-medium text-black mb-1" tabindex="-1">Модификация</label>
+              <label for="add-modification" class="block text-sm/6 font-medium text-black mb-1"
+                tabindex="-1">Модификация</label>
               <div class="mt-1">
                 <input id="add-modification" type="text" name="modification" value=""
-                  class="block w-full rounded-sm border-neutral-200 bg-white px-3 py-2.5 text-black outline-1 -outline-offset-1 outline-neutral-200 placeholder:text-neutral-400 hover:outline-1 hover:-outline-offset-1 hover:outline-green-200 focus:outline-1 focus:-outline-offset-1 focus:outline-green-500" />
+                  class="block w-full rounded-sm border-neutral-200 bg-white px-3 py-2.5 text-black outline-1 -outline-offset-1 outline-neutral-200 placeholder:text-neutral-400 hover:outline-1 hover:-outline-offset-1 hover:outline-green-200 focus:outline-1 focus:-outline-offset-1 focus:outline-green-500 error:outline-red-500" />
               </div>
               <div class="flex items-center justify-end mt-1">
                 <p class="text-neutral-400">0</p>
@@ -602,13 +604,18 @@
               </div>
             </div>
           </div>
+          <!-- сообщение об ошибке -->
+          <p class="error-text-red text-red-500 text-sm/6 mb-2" style="margin-top: -8px;">Такая комбинация параметров
+            “марка-модель-год” уже использована. Измените параметры</p>
+
           <div class="w-full md:w-min ml-0 md:ml-auto flex items-center justify-items-end gap-x-3 mt-2 md:mt-4">
             <button type="reset" onclick="add_combination.close()"
               class="btn-secondary-neutral w-full md:w-min flex items-center justify-center gap-x-2 text-sm/6 font-medium text-black border border-solid border-neutral-300 bg-transparent px-5 py-2.5 text-center rounded-lg hover:border-neutral-300 hover:bg-neutral-100 focus:outline-2 focus:outline-offset-1 focus:outline-green-300 active:text-black active:border-neutral-400 active:bg-neutral-200 disabled:text-neutral-400 active:border-neutral-400 disabled:bg-transparent">
               Отмена
             </button>
             <button type="button"
-              class="btn-primary-accent w-full md:w-min flex items-center justify-center gap-x-2 text-sm/6 font-medium text-white border border-solid border-green-500 bg-green-500 px-5 py-2.5 text-center rounded-lg hover:border-green-600 hover:bg-green-600 focus:outline-2 focus:outline-offset-1 focus:outline-green-500 active:text-white active:border-green-700 active:bg-green-700 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200">
+              class="btn-primary-accent w-full md:w-min flex items-center justify-center gap-x-2 text-sm/6 font-medium text-white border border-solid border-green-500 bg-green-500 px-5 py-2.5 text-center rounded-lg hover:border-green-600 hover:bg-green-600 focus:outline-2 focus:outline-offset-1 focus:outline-green-500 active:text-white active:border-green-700 active:bg-green-700 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200"
+              disabled>
               Добавить
             </button>
           </div>

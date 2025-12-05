@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <!-- <link rel="icon" type="image/svg+xml" href="" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bamper-addImage</title>
+  <title>Bamper-Подача объявления</title>
   <script type="module" crossorigin src="./assets/main-mvYmWG_F.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/main-DA290JEl.css">
 </head>
@@ -23,28 +23,13 @@
       <section class="main-page">
         <div class="container px-4 lg:px-6">
           <h1 class="text-2xl font-extrabold text-left text-neutral-500">Подать объявление</h1>
-          <div class="block-btn-reset">
-            <button type="reset" form="add-advt"
-              class="btn-text-danger btn-text-danger__reset border-none flex items-center p-0 mx-0 my-0 text-sm/6 font-medium gap-2 text-red-500 cursor-pointer">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.6667 4.00001V3.46668C10.6667 2.71994 10.6667 2.34657 10.5213 2.06136C10.3935 1.81047 10.1895 1.6065 9.93865 1.47867C9.65344 1.33334 9.28007 1.33334 8.53333 1.33334H7.46667C6.71993 1.33334 6.34656 1.33334 6.06135 1.47867C5.81046 1.6065 5.60649 1.81047 5.47866 2.06136C5.33333 2.34657 5.33333 2.71994 5.33333 3.46668V4.00001M6.66667 7.66668V11M9.33333 7.66668V11M2 4.00001H14M12.6667 4.00001V11.4667C12.6667 12.5868 12.6667 13.1468 12.4487 13.5747C12.2569 13.951 11.951 14.2569 11.5746 14.4487C11.1468 14.6667 10.5868 14.6667 9.46667 14.6667H6.53333C5.41323 14.6667 4.85318 14.6667 4.42535 14.4487C4.04903 14.2569 3.74307 13.951 3.55132 13.5747C3.33333 13.1468 3.33333 12.5868 3.33333 11.4667V4.00001"
-                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              Очистить все поля
-            </button>
-          </div>
           <div class="flex w-full gap-x-6">
             <div class="w-full flex-1">
               <form action="#" method="POST" class="w-full flex flex-col gap-y-4" id="add-advt">
                 <div class="w-full border border-solid border-neutral-200 p-4 md:p-6 bg-white rounded-xl select-none">
                   <div>
                     <p class="block text-sm/6 font-medium text-black">Фото</p>
-                    <p class="block text-sm/6 font-regular mt-1 mb-2 text-neutral-400">загружено 14 из 15</p>
-                    <div class="flex items-center gap-2 rounded-sm p-4 mb-4 bg-blue-50 border-1 border-blue-200">
-                      <img src="./images/info-icon.svg" alt="icon" class="block w-4 h-4">
-                      <p class="text-sm/6 font-regular">Перетягивайте фотографии в нужном порядке</p>
-                    </div>
+                    <p class="block text-sm/6 font-regular mt-1 mb-2 text-neutral-400">не более 15</p>
                     <div class="flex flex-wrap block-adaptive-upload gap-2 md:gap-4">
                       <div class="flex flex-wrap preview-container justify-start gap-2 md:gap-4" id="previewContainer">
                       </div>
@@ -60,7 +45,7 @@
                           <p class="subtext-load text-sm/6 font-regular text-neutral-400 mb-2">Форматы JPEG, JPG или PNG до 10 МБ
                             каждая</p>
                           <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
-                          <button type="button" onclick="document.getElementById('fileInput').click()"
+                          <button type="button"
                             class="upload-btn flex py-2.5 px-5 mx-auto cursor-pointer rounded-lg text-sm/6 font-medium text-black border border-solid border-neutral-100 bg-neutral-100 px-3.5 py-2.5 text-center rounded-md hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-green-300 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 transition-all">Выбрать
                             фотографии
                           </button>
@@ -85,7 +70,7 @@
                     <div class="custom-select-wrapper">
                       <label for="select-brand" class="block text-sm/6 font-medium text-black mb-1">Марка *</label>
                       <select id="select-brand"
-                        class="select custom-select transition-all w-full block border-neutral-200 rounded-sm focus:outline-none focus:border focus:border-green-500 hover:border-green-200">
+                        class="select custom-select transition-all w-full block border-neutral-200 rounded-sm focus:outline-none focus:border focus:border-green-500 hover:border-green-200 disabled:border-neutral-200 disabled:bg-neutral-100">
                         <option disabled selected value="" style="display:none;"></option>
                         <option value="1">Toyota</option>
                         <option value="2">BMV</option>
@@ -107,7 +92,6 @@
                         <option value="RAV4">RAV4</option>
                         <option value="A5">A5</option>
                       </select>
-                      <!-- Иконка удаления выбранного значения -->
                       <span class="clear-icon"></span>
                     </div>
                     <div class="custom-select-wrapper">
@@ -138,8 +122,9 @@
                     </div>
                   </div>
                   <div class="mt-4">
-                    <button type="button" onclick="add_combination.showModal()"
-                      class="btn-secondary-neutral w-full flex items-center justify-center gap-x-2 text-sm/6 font-medium text-black border border-solid border-neutral-100 bg-neutral-100 px-3.5 py-2.5 text-center rounded-lg hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-green-300 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 transition-all">
+                    <button type="button"
+                      class="btn-secondary-neutral w-full flex items-center justify-center gap-x-2 text-sm/6 font-medium text-black border border-solid border-neutral-100 bg-neutral-100 px-3.5 py-2.5 text-center rounded-lg hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-green-300 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 transition-all"
+                      disabled>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.99992 3.33331V12.6666M3.33325 7.99998H12.6666" stroke-width="1.5"
                           stroke-linecap="round" stroke-linejoin="round" />
@@ -587,12 +572,11 @@
                 <option value="2002">2002</option>
                 <option value="2023">2023</option>
               </select>
-              <span class="clear-icon"></span>
             </div>
             <div>
               <label for="add-modification" class="block text-sm/6 font-medium text-black mb-1" tabindex="-1">Модификация</label>
               <div class="mt-1">
-                <input id="add-modification" type="text" name="modification" value=""
+                <input id="add-modification" type="text" name="modification"  value=""
                   class="block w-full rounded-sm border-neutral-200 bg-white px-3 py-2.5 text-black outline-1 -outline-offset-1 outline-neutral-200 placeholder:text-neutral-400 hover:outline-1 hover:-outline-offset-1 hover:outline-green-200 focus:outline-1 focus:-outline-offset-1 focus:outline-green-500" />
               </div>
               <div class="flex items-center justify-end mt-1">
@@ -619,7 +603,6 @@
       </div>
     </dialog>
   </div>
-
 </body>
 
 </html>
