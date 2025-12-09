@@ -6,8 +6,8 @@
   <!-- <link rel="icon" type="image/svg+xml" href="" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bamper-openModal</title>
-  <script type="module" crossorigin src="./assets/main-mvYmWG_F.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-DA290JEl.css">
+  <script type="module" crossorigin src="./assets/main-BpZbgWGZ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-DiBFyRZz.css">
 </head>
 
 <body>
@@ -59,11 +59,9 @@
                           </svg>
                           <p class="subtext-load text-sm/6 font-regular text-neutral-400 mb-2">Форматы JPEG, JPG или PNG до 10 МБ
                             каждая</p>
-                          <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
-                          <button type="button" onclick="document.getElementById('fileInput').click()"
-                            class="upload-btn flex py-2.5 px-5 mx-auto cursor-pointer rounded-lg text-sm/6 font-medium text-black border border-solid border-neutral-100 bg-neutral-100 px-3.5 py-2.5 text-center rounded-md hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-green-300 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 transition-all">Выбрать
-                            фотографии
-                          </button>
+                          <label for="fileInput" class="custom-file-label upload-btn flex py-2.5 px-5 mx-auto cursor-pointer rounded-lg text-sm/6 font-medium text-black border border-solid border-neutral-100 bg-neutral-100 px-3.5 py-2.5 text-center rounded-md hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-green-300 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 transition-all">
+                            Выберите фотографии</label>
+                          <input type="file" id="fileInput" value="Выбрать фотографии" style="display: none;" multiple accept="image/*" class="custom-file-input"/>
                         </div>
                       </div>
                     </div>
