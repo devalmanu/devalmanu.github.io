@@ -6,23 +6,88 @@
   <!-- <link rel="icon" type="image/svg+xml" href="" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bamper-category</title>
-  <script type="module" crossorigin src="./assets/main-BpZbgWGZ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-DiBFyRZz.css">
+  <script type="module" crossorigin src="./assets/main-DkjdtNud.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-qcCslcGM.css">
 </head>
 
-<body>
-  <div id="app" class="site-container font-commissioner">
-    <header class="header bg-neutral-100 py-4" id="header">
-      <div class="container">
-        <div class="header__container flex items-center">
-          <img src="./images/bamper-logo.svg" alt="Bamper логотип" class="w-35 h-6 shrink-0">
+<body
+  class="lk-page min-w-[320px] h-full box-border relative overflow-x-hidden min-h-screen font-[commissioner] font-regular text-sm scroll-smooth appearance-none">
+  <div id="app" class="relative flex flex-col min-h-full font-[commissioner]">
+    <header class="header w-full flex items-center h-[72px] grow-0 shrink-0 basis-auto bg-neutral-100 py-4" id="header">
+      <div class="w-full m-auto max-w-7xl px-4 lg:px-6">
+        <div class="header__container flex items-center justify-between">
+          <div class="header__container-left flex items-center gap-4 text-bamper-500">
+            <button type="button" data-collapse-toggle="mega-menu-full"
+              class="header__catalog flex items-center w-6 h-6 text-bamper-500 cursor-pointer j-catalog-btn"
+              aria-expanded="false" aria-controls="menuCatalog">
+              <svg class="block w-5 h-3.5 shrink-0 stroke-current" alt="burger icon">
+                <use href="./sprite.svg#burger-icon"></use>
+              </svg>
+            </button>
+            <div class="menuCatalog hidden" id="menuCatalog" >
+              <div class="menu-column__list-subcategory">
+                <ul class="menu-product__list grid col-4">
+                </ul>
+              </div>
+            </div>
+            <a href="./" class="logo_icon items-center text-bamper-500">
+              <svg class="block w-35 h-6 shrink-0 fill-current" alt="Bamper logo">
+                <use href="./sprite.svg#bamper-logo"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__container-right">
+            <div class="header__content flex items-center gap-4">
+              <!-- избранное -->
+              <a href="#" class="favorite__icon flex items-center justify-center text-black" id="favorite_link">
+                <svg class="block w-5.5 h-5 shrink-0 stroke-current" alt="user icon">
+                  <use href="./sprite.svg#favorite"></use>
+                </svg>
+                <div class="badge" style="display:none">0</div>
+              </a>
+              <!-- поиск -->
+              <div class="header__search">
+                <div id="smart-title-search" class="">
+                  <form action="#">
+                    <div class="input-group">
+                      <!-- <input id="smart-title-search-input text-black" placeholder="" type="text" name="q" value=""
+                        autocomplete="off" class="form-control"> -->
+                      <span class="input-group-btn text-black">
+                        <span class="searchtitle-preloader view" id="smart-title-search_preloader_item"></span>
+                        <button class="flex items-center" type="submit" name="s">
+                          <svg class="block w-5.5 h-5.5 shrink-0 stroke-current" alt="search icon">
+                            <use href="./sprite.svg#search"></use>
+                          </svg>
+                        </button>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <a href="#"
+                class="btn-outline-neutral mr-2 ml-2 w-full flex items-center justify-center gap-x-2 text-sm font-medium text-black border border-solid border-neutral-300 bg-neutral-100 px-4.5 py-2.5 text-center rounded-lg cursor-pointer hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250">
+                <svg width="16" height="16" class="block stroke-current hover:stroke-current" viewBox="0 0 16 16"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.99992 3.33331V12.6666M3.33325 7.99998H12.6666" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                Подать объявление
+              </a>
+              <!-- личный кабинет -->
+              <a href="#" class="user_icon flex items-cente justify-center text-black">
+                <svg class="block w-10 h-10 shrink-0 stroke-current" alt="user icon">
+                  <use href="./sprite.svg#user_header"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
-    <main class="main bg-neutral-100 pt-0 pb-6">
+    <main class="main grow-1 shrink-0 basis-auto min-h-[90vh] bg-neutral-100 pt-0 pb-6">
       <section class="main-page">
-        <div class="container px-4 lg:px-6">
-          <h1 class="text-2xl font-extrabold text-left text-neutral-500">Подать объявление</h1>
+        <div class="w-full m-auto max-w-7xl px-4 lg:px-6">
+          <h1 class="text-2xl font-extrabold text-left m-0 mb-4 text-neutral-500">Подать объявление</h1>
           <div class="flex w-full gap-x-6">
             <div class="w-full flex-1">
               <div class="adt-category__list grid grid-cols-1 md:grid-cols-3 sm:grid-cols-3 gap-x-4 gap-y-4">
@@ -62,7 +127,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer grow-0 shrink-0 basis-auto"></footer>
   </div>
 </body>
 

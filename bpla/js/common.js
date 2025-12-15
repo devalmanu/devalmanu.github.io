@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+   const frontPage = document.querySelector('.front-page');
    const burger = document.querySelector('[data-burger]');
    const nav = document.querySelector('[data-nav]');
    const navItems = nav.querySelectorAll('a');
@@ -11,11 +12,32 @@ document.addEventListener('DOMContentLoaded', () => {
    const modalOverlay = document.querySelector('.modal-overlay');
    const modalCloseAll = document.querySelectorAll('.modal-close');
    const modalsWindows = document.querySelectorAll('.modal-wind');
-
    document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
 
    window.addEventListener("scroll", function () {
       fixedHeader();
+
+      if (frontPage) {
+         let blocks = [];
+         nav.querySelectorAll('a.link-button[href^="#"').forEach(el => {
+            let id = el.getAttribute('href').substring(1);
+            blocks.push({ block: document.getElementById(id) });
+         })
+         blocks.forEach(item => {
+            if (window.scrollY >= item.block.offsetTop - (header.offsetHeight + 40)) {
+               navItems.forEach((el) => {
+                  el.classList.remove('active');
+               });
+               nav.querySelector(`[href="#${item.block.id}"]`).classList.add('active');
+            }
+            else if (window.scrollY < (blocks[0].block.offsetTop - (header.offsetHeight + 40))) {
+            navItems.forEach((el) => {
+               el.classList.remove('active');
+            });
+            nav.querySelector(`[href="./"]`).classList.add('active');
+         }
+         });
+      }
    });
 
    fixedHeader();
