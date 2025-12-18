@@ -6,44 +6,403 @@
   <!-- <link rel="icon" type="image/svg+xml" href="" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bamper-category</title>
-  <script type="module" crossorigin src="./assets/main-DkjdtNud.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-qcCslcGM.css">
+  <script type="module" crossorigin src="./assets/main-XFdEkeeQ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-q5EX36hZ.css">
 </head>
 
 <body
   class="lk-page min-w-[320px] h-full box-border relative overflow-x-hidden min-h-screen font-[commissioner] font-regular text-sm scroll-smooth appearance-none">
   <div id="app" class="relative flex flex-col min-h-full font-[commissioner]">
-    <header class="header w-full flex items-center h-[72px] grow-0 shrink-0 basis-auto bg-neutral-100 py-4" id="header">
+    <header
+      class="header w-full flex items-center h-[72px] grow-0 shrink-0 basis-auto py-4 [body.main-page_&]:bg-bamper-500  [body.lk-page_&]:bg-neutral-100"
+      id="header">
       <div class="w-full m-auto max-w-7xl px-4 lg:px-6">
-        <div class="header__container flex items-center justify-between">
-          <div class="header__container-left flex items-center gap-4 text-bamper-500">
-            <button type="button" data-collapse-toggle="mega-menu-full"
-              class="header__catalog flex items-center w-6 h-6 text-bamper-500 cursor-pointer j-catalog-btn"
-              aria-expanded="false" aria-controls="menuCatalog">
+        <nav class="flex items-center">
+          <!-- desktop menu dropdown -->
+          <div class="dropdown hidden md:block mr-4 cursor-pointer">
+            <div tabindex="0" role="button"
+              class="flex items-center w-6 h-6 [body.main-page_&]:text-white [body.lk-page_&]:text-bamper-500 border-none focus:outline-0 focus-visible:outline-0"
+              aria-expanded="false" aria-controls="group">
               <svg class="block w-5 h-3.5 shrink-0 stroke-current" alt="burger icon">
                 <use href="./sprite.svg#burger-icon"></use>
               </svg>
-            </button>
-            <div class="menuCatalog hidden" id="menuCatalog" >
-              <div class="menu-column__list-subcategory">
-                <ul class="menu-product__list grid col-4">
-                </ul>
+            </div>
+            <!-- burger -->
+            <div tabindex="-1"
+              class="dropdown-content top-full left-0 mt-1.5 w-screen max-w-184 bg-white p-5 pb-4 rounded-lg shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] duration-250 z-10">
+              <div class="grid grid-cols-3 gap-y-11 gap-x-10">
+                <!-- Раздел 1 -->
+                <div class="text-sm">
+                  <h3 class="font-semibold text-base mb-3 text-black border-none cursor-default">Объявления</h3>
+                  <ul class="flex flex-col">
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Автозапчасти</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Мотозапчасти</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Диски</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Шины</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        BAZAR</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Машинокомплекты</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Раздел 2 -->
+                <div class="text-sm">
+                  <h3 class="font-semibold text-base mb-3 text-black border-none cursor-default">Медиа</h3>
+                  <ul class="flex flex-col">
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Автодайджест</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Автооопыт</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Выбираем сравнивая</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Законы и ПДД</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Полезности</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Сам себе мастер</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Видео</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Раздел 3 -->
+                <div class="text-sm">
+                  <h3 class="font-semibold text-base mb-3 text-black border-none cursor-default">Заявки на поиск з/ч
+                  </h3>
+                  <ul class="flex flex-col">
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Показать заявки</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Написать заявку</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Раздел 4 -->
+                <div class="text-sm">
+                  <h3 class="font-semibold text-base mb-3 text-black border-none cursor-default">Каталоги</h3>
+                  <ul class="flex flex-col">
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Каталоги з/ч</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Каталоги дисков</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Каталоги шин</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Раздел 5 -->
+                <div class="text-sm">
+                  <h3 class="font-semibold text-base mb-3 text-black border-none cursor-default">Продавцы</h3>
+                  <ul class="flex flex-col">
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Рейтинг продавцов</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Карта продавцов</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Все отзывы</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Раздел 6 -->
+                <div class="text-sm">
+                  <h3 class="font-semibold text-base mb-3 text-black border-none cursor-default">Прочее</h3>
+                  <ul class="flex flex-col">
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        О проекте</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Правила сайта</a>
+                    </li>
+                    <li><a href="#"
+                        class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black transition-all">
+                        Часто задаваемые вопросы</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <a href="./" class="logo_icon items-center text-bamper-500">
+          </div>
+          <!-- modile menu -->
+          <div class="drawer block md:hidden mr-4 w-6">
+            <input id="drawer-mobile-menu" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content w-6">
+              <label for="drawer-mobile-menu" aria-label="close sidebar"
+                class="drawer-button flex items-center w-6 h-6 text-bamper-500 border-none cursor-pointer focus:outline-0 focus-visible:outline-0">
+                <svg class="block w-5 h-3.5 shrink-0 stroke-current" alt="burger icon">
+                  <use href="./sprite.svg#burger-icon"></use>
+                </svg>
+              </label>
+            </div>
+            <div class="drawer-side">
+              <label for="drawer-mobile-menu" aria-label="close sidebar" class="drawer-overlay bg-black/30"></label>
+              <div
+                class="fixed p-4 top-0 bottom-0 left-0 shadow-[4px_0_4px_0_rgba(0,0,0,0.25)] bg-white w-screen max-w-75 max-h-full overflow-y-auto">
+                <div class="mb-4">
+                  <a href="#"
+                    class="btn-primary-accent w-full md:w-min flex items-center justify-center text-sm font-medium text-white h-10 border border-solid border-bamper-500 bg-bamper-500 px-5 py-2.5 text-center rounded-lg cursor-pointer hover:border-bamper-600 hover:bg-bamper-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-500 active:text-white active:border-bamper-700 active:bg-bamper-700 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed duration-250">
+                    <span>Личный кабинет</span>
+                    <!-- если не авторизован текст кнопки "Войти" -->
+                    <!-- <span>Войти</span> -->
+                  </a>
+                </div>
+                <!-- Раздел 1 (Collapsible) -->
+                <div class="collapse group [--collapse-arrow-icon:none] text-base mt-2">
+                  <input type="checkbox" class="peer pt-2 pb-2" />
+                  <div class="collapse-title relative font-semibold text-black pt-2 pb-2 pl-0">
+                    <div class="flex items-center justify-between">
+                      <span>Объявления</span>
+                      <svg
+                        class="block w-6 h-6 shrink-0 stroke-current absolute right-0 transition-transform duration-250 ease-in-out rotate-0 group-has-checked:rotate-180"
+                        alt="burger icon">
+                        <use href="./sprite.svg#shevron"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="collapse-content pb-0">
+                    <ul class="flex flex-col gap-2 pb-1">
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">Автозапчасти</a>
+                      </li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">Мотозапчасти</a>
+                      </li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">Диски</a>
+                      </li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">Шины</a>
+                      </li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">BAZAR</a>
+                      </li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">Машинокомплекты</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Раздел 2 (Collapsible) -->
+                <div class="collapse group [--collapse-arrow-icon:none] text-base mt-2">
+                  <input type="checkbox" class="peer pt-2 pb-2" />
+                  <div class="collapse-title relative font-semibold text-black pt-2 pb-2 pl-0">
+                    <div class="flex items-center justify-between">
+                      <span>Медиа</span>
+                      <svg
+                        class="block w-6 h-6 shrink-0 stroke-current absolute right-0 transition-transform duration-250 ease-in-out rotate-0 group-has-checked:rotate-180"
+                        alt="burger icon">
+                        <use href="./sprite.svg#shevron"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="collapse-content pb-0">
+                    <ul class="flex flex-col gap-2 pb-1">
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">
+                          Автодайджест</a>
+                      </li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">
+                          Автооопыт</a>
+                      </li>
+                      <li class="mb-0">
+                        <a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">
+                          Выбираем сравнивая</a>
+                      </li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">
+                          Законы и ПДД</a>
+                      </li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">
+                          Полезности</a>
+                      </li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">
+                          Сам себе мастер</a>
+                      </li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">
+                          Видео</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Раздел 3 (Collapsible) -->
+                <div class="collapse group [--collapse-arrow-icon:none] text-base mt-2">
+                  <input type="checkbox" class="peer pt-2 pb-2" />
+                  <div class="collapse-title relative font-semibold text-black pt-2 pb-2 pl-0">
+                    <div class="flex items-center justify-between">
+                      <span>Заявки на поиск з/ч</span>
+                      <svg
+                        class="block w-6 h-6 shrink-0 stroke-current absolute right-0 transition-transform duration-250 ease-in-out rotate-0 group-has-checked:rotate-180"
+                        alt="burger icon">
+                        <use href="./sprite.svg#shevron"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="collapse-content pb-0">
+                    <ul class="flex flex-col gap-2 pb-1">
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black">Показать
+                          заявки</a></li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 hover:text-black focus:outline-bamper-300 active:text-black">Написать
+                          заявку</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Раздел 4 (Collapsible) -->
+                <div class="collapse group [--collapse-arrow-icon:none] text-base mt-2">
+                  <input type="checkbox" class="peer pt-2 pb-2" />
+                  <div class="collapse-title relative font-semibold text-black pt-2 pb-2 pl-0">
+                    <div class="flex items-center justify-between">
+                      <span>Каталоги</span>
+                      <svg
+                        class="block w-6 h-6 shrink-0 stroke-current absolute right-0 transition-transform duration-250 ease-in-out rotate-0 group-has-checked:rotate-180"
+                        alt="burger icon">
+                        <use href="./sprite.svg#shevron"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="collapse-content pb-0">
+                    <ul class="flex flex-col gap-2 pb-1">
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 focus:outline-bamper-300 active:text-black">Каталоги
+                          з/ч</a></li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 focus:outline-bamper-300 active:text-black">Каталоги
+                          дисков</a></li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 focus:outline-bamper-300 active:text-black">Каталоги
+                          шин</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Раздел 5 (Collapsible) -->
+                <div class="collapse group [--collapse-arrow-icon:none] text-base mt-2">
+                  <input type="checkbox" class="peer pt-2 pb-2" />
+                  <div class="collapse-title relative font-semibold text-black pt-2 pb-2 pl-0">
+                    <div class="flex items-center justify-between">
+                      <span>Продавцы</span>
+                      <svg
+                        class="block w-6 h-6 shrink-0 stroke-current absolute right-0 transition-transform duration-250 ease-in-out rotate-0 group-has-checked:rotate-180"
+                        alt="burger icon">
+                        <use href="./sprite.svg#shevron"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="collapse-content pb-0">
+                    <ul class="flex flex-col gap-2 pb-1">
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 focus:outline-bamper-300 active:text-black">Рейтинг
+                          продавцов</a></li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 focus:outline-bamper-300 active:text-black">Карта
+                          продавцов</a></li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 focus:outline-bamper-300 active:text-black">Все
+                          отзывы</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Раздел 6 (Collapsible) -->
+                <div class="collapse group [--collapse-arrow-icon:none] text-base mt-2">
+                  <input type="checkbox" class="peer pt-2 pb-2" />
+                  <div class="collapse-title relative font-semibold text-black pt-2 pb-2 pl-0">
+                    <div class="flex items-center justify-between">
+                      <span>Прочее</span>
+                      <svg
+                        class="block w-6 h-6 shrink-0 stroke-current absolute right-0 transition-transform duration-250 ease-in-out rotate-0 group-has-checked:rotate-180"
+                        alt="burger icon">
+                        <use href="./sprite.svg#shevron"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="collapse-content pb-0">
+                    <ul class="flex flex-col gap-2 pb-1">
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">О
+                          проекте</a></li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">Правила
+                          сайта</a></li>
+                      <li class="mb-0"><a href="#"
+                          class="text-neutral-500 bg-transparent block py-1 px-0 transition-all hover:text-black focus:outline-bamper-300 active:text-black">Часто
+                          задаваемые вопросы</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative flex items-center gap-4 text-bamper-500">
+            <a href="./" class="logo_icon items-center [body.main-page_&]:text-white [body.lk-page_&]:text-bamper-500">
               <svg class="block w-35 h-6 shrink-0 fill-current" alt="Bamper logo">
                 <use href="./sprite.svg#bamper-logo"></use>
               </svg>
             </a>
           </div>
-          <div class="header__container-right">
-            <div class="header__content flex items-center gap-4">
+          <div class="ml-auto">
+            <div class="flex items-center gap-4">
               <!-- избранное -->
-              <a href="#" class="favorite__icon flex items-center justify-center text-black" id="favorite_link">
-                <svg class="block w-5.5 h-5 shrink-0 stroke-current" alt="user icon">
+              <a href="#"
+                class="favorite__icon flex items-center justify-center [body.main-page_&]:text-white [body.lk-page_&]:text-black"
+                id="favorite_link">
+                <svg class="block w-6 h-6 shrink-0 stroke-current" alt="user icon">
                   <use href="./sprite.svg#favorite"></use>
                 </svg>
-                <div class="badge" style="display:none">0</div>
+                <!-- <div class="badge" style="display:none">0</div> -->
               </a>
               <!-- поиск -->
               <div class="header__search">
@@ -52,10 +411,10 @@
                     <div class="input-group">
                       <!-- <input id="smart-title-search-input text-black" placeholder="" type="text" name="q" value=""
                         autocomplete="off" class="form-control"> -->
-                      <span class="input-group-btn text-black">
+                      <span class="input-group-btn [body.main-page_&]:text-white [body.lk-page_&]:text-black">
                         <span class="searchtitle-preloader view" id="smart-title-search_preloader_item"></span>
                         <button class="flex items-center" type="submit" name="s">
-                          <svg class="block w-5.5 h-5.5 shrink-0 stroke-current" alt="search icon">
+                          <svg class="block w-6 h-6 shrink-0 stroke-current" alt="search icon">
                             <use href="./sprite.svg#search"></use>
                           </svg>
                         </button>
@@ -65,67 +424,187 @@
                 </div>
               </div>
               <a href="#"
-                class="btn-outline-neutral mr-2 ml-2 w-full flex items-center justify-center gap-x-2 text-sm font-medium text-black border border-solid border-neutral-300 bg-neutral-100 px-4.5 py-2.5 text-center rounded-lg cursor-pointer hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250">
-                <svg width="16" height="16" class="block stroke-current hover:stroke-current" viewBox="0 0 16 16"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.99992 3.33331V12.6666M3.33325 7.99998H12.6666" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
+                class="m-0 md:mr-2 md:ml-2 w-full flex items-center justify-center gap-x-2 text-sm font-medium [body.lk-page_&]:text-black [body.main-page_&]:text-bamper-500 h-10 border border-solid [body.lk-page_&]:border-neutral-300 [body.main-page_&]:border-bamper-500 [body.lk-page_&]:bg-neutral-100 [body.main-page_&]:bg-white px-2.5 py-2.5 md:px-4.5 text-center rounded-lg cursor-pointer 
+                [body.lk-page_&]:hover:border-neutral-200 [body.lk-page_&]:hover:bg-neutral-200  [body.lk-page_&]:active:text-black [body.lk-page_&]:active:border-neutral-300 [body.lk-page_&]:active:bg-neutral-300 
+                [body.main-page_&]:hover:border-bamper-500 [body.main-page_&]:hover:bg-bamper-50 [body.main-page_&]:active:text-bamper-700 [body.main-page_&]:active:border-bamper-700 [body.main-page_&]:active:bg-bamper-100 disabled:text-neutral-400 disabled:border-neutral-400 disabled:bg-white disabled:cursor-not-allowed focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 transition-all duration-250">
+                <svg class="block w-5 h-5 shrink-0 stroke-current" alt="добавить">
+                  <use href="./sprite.svg#plus-btn"></use>
                 </svg>
-                Подать объявление
+                <span class="hidden md:block">Подать объявление</span>
               </a>
               <!-- личный кабинет -->
-              <a href="#" class="user_icon flex items-cente justify-center text-black">
-                <svg class="block w-10 h-10 shrink-0 stroke-current" alt="user icon">
-                  <use href="./sprite.svg#user_header"></use>
-                </svg>
+              <div class="dropdown dropdown-end hidden md:block">
+                <div tabindex="0" role="button" class="avatar">
+                  <a href="#"
+                    class="user_icon hidden md:flex items-cente justify-center bg-transparent [body.main-page_&]:text-white [body.lk-page_&]:text-black hover:bg-transparent">
+                    <svg class="block w-10 h-10 shrink-0 stroke-current" alt="аватар">
+                      <use href="./sprite.svg#user_header"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div tabindex="-1"
+                  class="dropdown-content menu menu-sm bg-white rounded-md z-10 mt-1.5 w-70 p-2 shadow">
+                  <ul class="flex flex-col gap-2">
+                    <li>
+                      <a href="#"
+                        class="group flex items-center gap-2 p-2 text-base text-black bg-transparent transition-all hover:text-bamper-600 focus:outline-bamper-300 active:text-bamper-700 duration-250">
+                        <svg class="block w-6 h-6 shrink-0 stroke-bamper-500 group-hover:stroke-bamper-600"
+                          alt="объявления">
+                          <use href="./sprite.svg#advertisements"></use>
+                        </svg>
+                        <span>Мои объявления</span>
+                        <span
+                          class="flex items-center gap-0.5 text-base ml-auto text-neutral-500 group-hover:text-black">
+                          123456
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="group flex items-center gap-2 p-2 text-base text-black bg-transparent transition-al hover:text-bamper-600 focus:outline-bamper-300 active:text-bamper-700 duration-250">
+                        <svg class="block w-6 h-6 shrink-0 stroke-bamper-500 group-hover:stroke-bamper-600" alt="тариф">
+                          <use href="./sprite.svg#tarif"></use>
+                        </svg>
+                        <span>Мой тариф</span>
+                        <span
+                          class="flex items-center gap-0.5 text-base ml-auto text-neutral-500 group-hover:text-black">
+                          99
+                          <svg class="block w-6 h-6 shrink-0 stroke-current" alt="тариф">
+                            <use href="./sprite.svg#tarif-money"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="group flex items-center gap-2 p-2 text-base text-black bg-transparent transition-all hover:text-bamper-600 focus:outline-bamper-300 active:text-bamper-700 duration-250">
+                        <svg class="block w-6 h-6 shrink-0 stroke-bamper-500 group-hover:stroke-bamper-600"
+                          alt="избранное">
+                          <use href="./sprite.svg#favorite"></use>
+                        </svg>
+                        Избранное</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="group flex items-center gap-2 p-2 text-base text-black bg-transparent transition-all hover:text-bamper-600 focus:outline-bamper-300 active:text-bamper-700 duration-250">
+                        <svg class="block w-6 h-6 shrink-0 stroke-bamper-500 group-hover:stroke-bamper-600"
+                          alt="сообщения">
+                          <use href="./sprite.svg#message"></use>
+                        </svg>
+                        <span>Сообщения</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="group flex items-center gap-2 p-2 text-base text-black bg-transparent transition-all hover:text-bamper-600 focus:outline-bamper-300 active:text-bamper-700 duration-250">
+                        <svg class="block w-6 h-6 shrink-0 stroke-bamper-500 group-hover:stroke-bamper-600"
+                          alt="статистика">
+                          <use href="./sprite.svg#statistic"></use>
+                        </svg>
+                        Статистика</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="group flex items-center gap-2 p-2 text-base text-black bg-transparent transition-all hover:text-bamper-600 focus:outline-bamper-300 active:text-bamper-700 duration-250">
+                        <svg class="block w-6 h-6 shrink-0 stroke-bamper-500 group-hover:stroke-bamper-600"
+                          alt="настройки">
+                          <use href="./sprite.svg#settings"></use>
+                        </svg>
+                        <span>Настройки</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="group flex items-center gap-2 p-2 text-base text-black bg-transparent transition-all hover:text-bamper-600 focus:outline-bamper-300 active:text-bamper-700 duration-250">
+                        <svg class="block w-6 h-6 shrink-0 stroke-bamper-500 group-hover:stroke-bamper-600"
+                          alt="помощь">
+                          <use href="./sprite.svg#help"></use>
+                        </svg>
+                        <span>Помощь</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="group flex items-center gap-2 p-2 text-base text-black bg-transparent transition-all hover:text-bamper-600 focus:outline-bamper-300 active:text-bamper-700 duration-250">
+                        <svg class="block w-6 h-6 shrink-0 stroke-bamper-500 group-hover:stroke-bamper-600"
+                          alt="Правила">
+                          <use href="./sprite.svg#rules"></use>
+                        </svg>
+                        <span>Правила</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="group flex items-center gap-2 p-2 text-base text-black bg-transparent transition-all hover:text-bamper-600 focus:outline-bamper-300 active:text-bamper-700 duration-250">
+                        <svg class="block w-6 h-6 shrink-0 stroke-bamper-500 group-hover:stroke-bamper-600"
+                          alt="Оставнока рекламы">
+                          <use href="./sprite.svg#pause"></use>
+                        </svg>
+                        <span>Приостановить рекламу</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="border-b border-neutral-200 pt-2 mb-2"></div>
+                  <button type="button"
+                    class="group flex items-center gap-2 p-2 text-base text-red-500 bg-transparent border-none rounded-sm disabled:text-neutral-400 hover:text-red-600 hover:border-none active:text-red-700 transition-all duration-250 ease-in-outfocus:outline-bamper-300 cursor-pointer">
+                    <svg class="block w-6 h-6 shrink-0 stroke-red-500 group-hover:stroke-red-600" alt="Выход">
+                      <use href="./sprite.svg#exit"></use>
+                    </svg>
+                    <span>Выйти</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main grow shrink-0 basis-auto min-h-[90vh] bg-neutral-100 pt-0 pb-6">
+      <div class="w-full m-auto max-w-7xl px-4 lg:px-6">
+        <h1 class="text-2xl font-extrabold text-left m-0 mb-4 text-neutral-500">Подать объявление</h1>
+        <div class="flex w-full gap-x-6">
+          <div class="w-full flex-1">
+            <div class="adt-category__list grid grid-cols-1 md:grid-cols-3 sm:grid-cols-3 gap-x-4 gap-y-4">
+              <a href="#"
+                class="adt-category__item block bg-white min-h-32 py-6 px-3 rounded-sm border border-neutral-200">
+                <img src="./images/car-01.svg" alt="автозапчасти" class="block mx-auto w-12 h-12 mb-1">
+                <h2 class="text-lg font-semibold text-black text-center">Автозапчасти</h2>
               </a>
+              <a href="#"
+                class="adt-category__item block bg-white min-h-32 py-6 px-3 rounded-sm border border-neutral-200">
+                <img src="./images/moto-01.svg" alt="Мотозапчасти" class="block mx-auto w-12 h-12 mb-1">
+                <h2 class="text-lg font-semibold text-black text-center">Мотозапчасти</h2>
+              </a>
+              <a href="#"
+                class="adt-category__item block bg-white min-h-32 py-6 px-3 rounded-sm border border-neutral-200">
+                <img src="./images/disk-01.svg" alt="Диски" class="block mx-auto w-12 h-12 mb-1">
+                <h2 class="text-lg font-semibold text-black text-center">Диски</h2>
+              </a>
+              <a href="#"
+                class="adt-category__item block bg-white min-h-32 py-6 px-3 rounded-sm border border-neutral-200">
+                <img src="./images/wheel-01.svg" alt="Шины" class="block mx-auto w-12 h-12 mb-1">
+                <h2 class="text-lg font-semibold text-black text-center">Шины</h2>
+              </a>
+              <a href="#"
+                class="adt-category__item block bg-white min-h-32 py-6 px-3 rounded-sm border border-neutral-200">
+                <img src="./images/shopping-01.svg" alt="BAZAR" class="block mx-auto w-12 h-12 mb-1">
+                <h2 class="text-lg font-semibold text-black text-center">BAZAR</h2>
+              </a>
+              <a href="#"
+                class="adt-category__item block bg-white min-h-32 py-6 px-3 rounded-sm border border-neutral-200">
+                <img src="./images/tool-01.svg" alt="Машинокомплекты" class="block mx-auto w-12 h-12 mb-1">
+                <h2 class="text-lg font-semibold text-black text-center">Машинокомплекты</h2>
+              </a>
+            </div>
+          </div>
+          <div class="hidden md:block w-min grid-cols-1 md:w-60 lg:w-75">
+            <div
+              class="flex items-center justify-center max-w p-6 h-150 bg-blue rounded-lg border border-dashed border-blue-500 bg-blue-100">
+              <button class="text-blue-500 cursor-pointer p-2 h-10 mx-auto my-auto">Replace me</button>
             </div>
           </div>
         </div>
       </div>
-    </header>
-    <main class="main grow-1 shrink-0 basis-auto min-h-[90vh] bg-neutral-100 pt-0 pb-6">
-      <section class="main-page">
-        <div class="w-full m-auto max-w-7xl px-4 lg:px-6">
-          <h1 class="text-2xl font-extrabold text-left m-0 mb-4 text-neutral-500">Подать объявление</h1>
-          <div class="flex w-full gap-x-6">
-            <div class="w-full flex-1">
-              <div class="adt-category__list grid grid-cols-1 md:grid-cols-3 sm:grid-cols-3 gap-x-4 gap-y-4">
-                <a href="#" class="adt-category__item block bg-white min-h-32 py-6 px-3 rounded-sm border-1 border-neutral-200">
-                  <img src="./images/car-01.svg" alt="автозапчасти" class="block mx-auto w-12 h-12 mb-1">
-                  <h2 class="text-lg font-semibold text-black text-center">Автозапчасти</h2>
-                </a>
-                <a href="#" class="adt-category__item block bg-white min-h-32 py-6 px-3 rounded-sm border-1 border-neutral-200">
-                  <img src="./images/moto-01.svg" alt="Мотозапчасти" class="block mx-auto w-12 h-12 mb-1">
-                  <h2 class="text-lg font-semibold text-black text-center">Мотозапчасти</h2>
-                </a>
-                <a href="#" class="adt-category__item block bg-white min-h-32 py-6 px-3 rounded-sm border-1 border-neutral-200">
-                  <img src="./images/disk-01.svg" alt="Диски" class="block mx-auto w-12 h-12 mb-1">
-                  <h2 class="text-lg font-semibold text-black text-center">Диски</h2>
-                </a>
-                <a href="#" class="adt-category__item block bg-white min-h-32 py-6 px-3 rounded-sm border-1 border-neutral-200">
-                  <img src="./images/wheel-01.svg" alt="Шины" class="block mx-auto w-12 h-12 mb-1">
-                  <h2 class="text-lg font-semibold text-black text-center">Шины</h2>
-                </a>
-                <a href="#" class="adt-category__item block bg-white min-h-32 py-6 px-3 rounded-sm border-1 border-neutral-200">
-                  <img src="./images/shopping-01.svg" alt="BAZAR" class="block mx-auto w-12 h-12 mb-1">
-                  <h2 class="text-lg font-semibold text-black text-center">BAZAR</h2>
-                </a>
-                <a href="#" class="adt-category__item block bg-white min-h-32 py-6 px-3 rounded-sm border-1 border-neutral-200">
-                  <img src="./images/tool-01.svg" alt="Машинокомплекты" class="block mx-auto w-12 h-12 mb-1">
-                  <h2 class="text-lg font-semibold text-black text-center">Машинокомплекты</h2>
-                </a>
-              </div>
-            </div>
-            <div class="hidden md:block w-min grid-cols-1 md:w-60 lg:w-75">
-              <div
-                class="flex items-center justify-center max-w p-6 h-150 bg-blue rounded-lg border border-dashed border-blue-500 bg-blue-100">
-                <button class="text-blue-500 cursor-pointer p-2 h-10 mx-auto my-auto">Replace me</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <footer class="footer grow-0 shrink-0 basis-auto"></footer>
   </div>
