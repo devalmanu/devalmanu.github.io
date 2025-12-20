@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind CSS Styleguide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Bamper | Styleguide</title>
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <script type="module" crossorigin src="./assets/main-OeYvDyvi.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-BXhWxOH8.css">
+  <script type="module" crossorigin src="./assets/main-DESOjTCZ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-BTkce45B.css">
 </head>
 
 <body
@@ -31,7 +31,7 @@
             </div>
             <!-- burger -->
             <div tabindex="-1"
-              class="dropdown-content top-full left-0 mt-1.5 w-screen max-w-184 bg-white p-5 pb-4 rounded-lg shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] duration-250 z-10">
+              class="dropdown-content top-full left-0 mt-2 w-screen max-w-184 bg-white p-5 pb-4 rounded-lg shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] duration-250 z-10">
               <div class="grid grid-cols-3 gap-y-11 gap-x-10">
                 <!-- Раздел 1 -->
                 <div class="text-sm">
@@ -399,32 +399,19 @@
             <div class="flex items-center gap-4">
               <!-- избранное -->
               <a href="#"
-                class="favorite__icon flex items-center justify-center [body.main-page_&]:text-white [body.lk-page_&]:text-black"
-                id="favorite_link">
+                class="flex items-center justify-center [body.main-page_&]:text-white [body.lk-page_&]:text-black cursor-pointer">
                 <svg class="block w-6 h-6 shrink-0 stroke-current" alt="user icon">
                   <use href="./sprite.svg#favorite"></use>
                 </svg>
                 <!-- <div class="badge" style="display:none">0</div> -->
               </a>
               <!-- поиск -->
-              <div class="header__search">
-                <div id="smart-title-search" class="">
-                  <form action="#">
-                    <div class="input-group">
-                      <!-- <input id="smart-title-search-input text-black" placeholder="" type="text" name="q" value=""
-                        autocomplete="off" class="form-control"> -->
-                      <span class="input-group-btn [body.main-page_&]:text-white [body.lk-page_&]:text-black">
-                        <span class="searchtitle-preloader view" id="smart-title-search_preloader_item"></span>
-                        <button class="flex items-center" type="submit" name="s">
-                          <svg class="block w-6 h-6 shrink-0 stroke-current" alt="search icon">
-                            <use href="./sprite.svg#search"></use>
-                          </svg>
-                        </button>
-                      </span>
-                    </div>
-                  </form>
-                </div>
-              </div>
+              <a
+                class="flex items-center justify-center [body.main-page_&]:text-white [body.lk-page_&]:text-black cursor-pointer">
+                <svg class="block w-6 h-6 shrink-0 stroke-current" alt="search icon">
+                  <use href="./sprite.svg#search"></use>
+                </svg>
+              </a>
               <a href="#"
                 class="m-0 md:mr-2 md:ml-2 w-full flex items-center justify-center gap-x-2 text-sm font-medium [body.lk-page_&]:text-black [body.main-page_&]:text-bamper-500 h-10 border border-solid [body.lk-page_&]:border-neutral-300 [body.main-page_&]:border-bamper-500 [body.lk-page_&]:bg-neutral-100 [body.main-page_&]:bg-white px-2.5 py-2.5 md:px-4.5 text-center rounded-lg cursor-pointer 
                 [body.lk-page_&]:hover:border-neutral-200 [body.lk-page_&]:hover:bg-neutral-200  [body.lk-page_&]:active:text-black [body.lk-page_&]:active:border-neutral-300 [body.lk-page_&]:active:bg-neutral-300 
@@ -444,8 +431,7 @@
                     </svg>
                   </a>
                 </div>
-                <div tabindex="-1"
-                  class="dropdown-content menu menu-sm bg-white rounded-md z-10 mt-1.5 w-70 p-2 shadow">
+                <div tabindex="-1" class="dropdown-content menu menu-sm bg-white rounded-md z-10 mt-2 w-70 p-2 shadow">
                   <ul class="flex flex-col gap-2">
                     <li>
                       <a href="#"
@@ -548,7 +534,7 @@
                   </ul>
                   <div class="border-b border-neutral-200 pt-2 mb-2"></div>
                   <button type="button"
-                    class="group flex items-center gap-2 p-2 text-base text-red-500 bg-transparent border-none shadow-none disabled:text-neutral-400 hover:text-red-600 hover:border-none active:text-red-700 transition-all duration-250 ease-in-outfocus:outline-bamper-300 cursor-pointer">
+                    class="group flex items-center gap-2 p-2 text-base text-red-500 bg-transparent border-none shadow-none disabled:text-neutral-400 hover:text-red-600 hover:border-none active:text-red-700 transition-all duration-250 ease-in-out focus:outline-bamper-300 cursor-pointer">
                     <svg class="block w-6 h-6 shrink-0 stroke-red-500 group-hover:stroke-red-600" alt="Выход">
                       <use href="./sprite.svg#exit"></use>
                     </svg>
@@ -636,21 +622,21 @@
                   </div>
                   <div class="flex flex-col gap-4">
                     <button type="button"
-                      class="btn-primary-accent flex items-center justify-center gap-x-2 text-sm font-medium py-2 px-3 text-center text-white cursor-pointer border border-solid border-bamper-500 bg-bamper-500 rounded-lg hover:text-white hover:border-bamper-600 hover:bg-bamper-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-500 focus:bg-bamper-500 active:text-white active:border-bamper-700 active:bg-bamper-700 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250">
+                      class="btn-primary-accent flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-white cursor-pointer border border-solid border-bamper-500 bg-bamper-500 rounded-lg hover:text-white hover:border-bamper-600 hover:bg-bamper-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-500 focus:bg-bamper-500 active:text-white active:border-bamper-700 active:bg-bamper-700 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250">
                       Primary accent
                     </button>
                     <button type="button"
-                      class="btn-secondary-neutral flex items-center justify-center gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-neutral-100 bg-neutral-100 hover:text-black hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 focus:bg-neutral-200 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250">
+                      class="btn-secondary-neutral flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-neutral-100 bg-neutral-100 hover:text-black hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 focus:bg-neutral-200 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250">
                       Secondary neutral</button>
                     <button type="button"
-                      class="btn-outline-accent flex items-center justify-center gap-x-2 text-sm font-medium py-2 px-3 text-center text-bamper-500 border border-solid border-bamper-500 bg-white rounded-lg cursor-pointer hover:text-bamper-500 hover:border-bamper-500 hover:bg-bamper-50 focus:border-bamper-500 focus:text-bamper-500 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-bamper-700 active:border-bamper-700 active:bg-bamper-100 disabled:text-neutral-400 disabled:border-neutral-400 disabled:bg-white disabled:cursor-not-allowed transition-all duration-250">
+                      class="btn-outline-accent flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-bamper-500 border border-solid border-bamper-500 bg-white rounded-lg cursor-pointer hover:text-bamper-500 hover:border-bamper-500 hover:bg-bamper-50 focus:border-bamper-500 focus:text-bamper-500 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-bamper-700 active:border-bamper-700 active:bg-bamper-100 disabled:text-neutral-400 disabled:border-neutral-400 disabled:bg-white disabled:cursor-not-allowed transition-all duration-250">
                       Outline accent</button>
                     <button type="button"
-                      class="btn-outline-neutral flex items-center justify-center gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-neutral-300 bg-transparent rounded-lg cursor-pointer hover:text-black hover:border-neutral-300 hover:bg-neutral-100 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-400 active:bg-neutral-200 disabled:text-neutral-400 disabled:bg-transparent disabled:border-neutral-400 disabled:cursor-not-allowed transition-all duration-250">
+                      class="btn-outline-neutral flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-neutral-300 bg-transparent rounded-lg cursor-pointer hover:text-black hover:border-neutral-300 hover:bg-neutral-100 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-400 active:bg-neutral-200 disabled:text-neutral-400 disabled:bg-transparent disabled:border-neutral-400 disabled:cursor-not-allowed transition-all duration-250">
                       Outline neutral
                     </button>
                     <button type="button"
-                      class="btn-ghost-neutral flex items-center justify-center gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-transparent bg-transparent rounded-lg cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 focus:border-white focus:text-black focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-200 active:bg-neutral-200 disabled:text-black disabled:border-white disabled:bg-white disabled:cursor-not-allowed transition-all duration-250">
+                      class="btn-ghost-neutral flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-transparent bg-transparent rounded-lg cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 focus:border-white focus:text-black focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-200 active:bg-neutral-200 disabled:text-black disabled:border-white disabled:bg-white disabled:cursor-not-allowed transition-all duration-250">
                       Ghost neutral</button>
                   </div>
                 </div>
@@ -697,7 +683,7 @@
                       </ul>
                       <div class="border-b border-neutral-200 pt-2 mb-2"></div>
                       <button type="button"
-                        class="group flex items-center gap-2 p-2 text-sm text-red-500 bg-transparent border-none shadow-none rounded-sm disabled:text-neutral-400 hover:text-red-600 hover:border-none active:text-red-700 transition-all duration-250 ease-in-outfocus:outline-bamper-300 cursor-pointer">
+                        class="group flex items-center gap-2 p-2 text-sm text-red-500 bg-transparent border-none rounded-lg shadow-none rounded-sm disabled:text-neutral-400 hover:text-red-600 hover:border-none active:text-red-700 transition-all duration-250 ease-in-outfocus:outline-bamper-300 cursor-pointer">
                         <svg class="block w-6 h-6 shrink-0 stroke-red-500 group-hover:stroke-red-600" alt="Выход">
                           <use href="./sprite.svg#exit"></use>
                         </svg>
@@ -760,7 +746,21 @@
                       <label for="number-spare" class="block text-sm font-medium text-black mb-1">Обычное поле</label>
                       <div>
                         <input id="number-spare" type="text" name="number-spare"
-                          class="block w-full rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 invalid:border-red-500 [&.error]:border-red-500 invalid:hover:border-red-500 [&.error]:hover:border-red-500" />
+                          class="block w-full h-10 rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 invalid:border-red-500 [&.error]:border-red-500 invalid:hover:border-red-500 [&.error]:hover:border-red-500" />
+                      </div>
+                    </div>
+                    <div>
+                      <label for="add-modification-3" class="block text-sm font-medium text-black mb-1">Поле со
+                        счетчиком количества символов</label>
+                      <div class="mt-1">
+                        <input id="add-modification-3" type="text" name="modification" value="" maxlength="30"
+                          oninput="document.querySelector('#char-counter-3').textContent = this.value.length"
+                          class="block w-full rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500" />
+                      </div>
+                      <div class="flex items-center justify-end mt-1">
+                        <p class="text-neutral-400" id="char-counter-3">0</p>
+                        <span class="text-neutral-400">/</span>
+                        <p class="text-neutral-400">30</p>
                       </div>
                     </div>
                     <div>
@@ -768,7 +768,7 @@
                         ошибкой</label>
                       <div class="mt-1">
                         <input id="add-modification" type="text" name="modification" value=""
-                          class="error block w-full rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 invalid:border-red-500 [&.error]:border-red-500 invalid:hover:border-red-500 [&.error]:hover:border-red-500" />
+                          class="error block w-full h-10 rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 invalid:border-red-500 [&.error]:border-red-500 invalid:hover:border-red-500 [&.error]:hover:border-red-500" />
                       </div>
                       <p class="mt-1 text-sm text-red-500">Это поле обязательно для заполнения</p>
                     </div>
@@ -888,8 +888,7 @@
                         <p class="block py-2 text-sm text-regular text-neutral-600">Текст с удалением
                           информации</p>
                         <div class="hidden items-center justify-start ml-auto gap-x-3 group-hover:flex">
-                          <button type="button" title="Редактировать"
-                            class="w-5 h-5 border-none flex items-center justify-center p-0 mx-0 my-0 text-sm gap-2 text-neutral-400 cursor-pointer transition-all duration-250 
+                          <button type="button" title="Редактировать" class="w-5 h-5 border-none flex items-center justify-center p-0 mx-0 my-0 text-sm gap-2 text-neutral-400 cursor-pointer transition-all duration-250 
                           hover:text-black focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 
                           disabled:text-neutral-400 disabled:cursor-not-allowed">
                             <svg class="block w-5 h-5 shrink-0 stroke-current hover:stroke-current">
@@ -1049,9 +1048,9 @@
                       <div
                         class="w-full radioBlock__text radioBlock__text--info ml-0 transition-all duration-300 max-h-0 overflow-hidden invisible peer-checked:max-h-max peer-checked:visible peer-checked:pt-2">
                         <div class="flex items-center justify-start flex-wrap gap-x-1">
-                          <a href="tel:+375257004162" class="block py-2 text-sm text-regular text-neutral-600">+375
+                          <p class="block py-2 text-sm text-regular text-neutral-600">+375
                             (25)
-                            700-41-62</a>
+                            700-41-62</p>
                           <div class="flex items-center justify-start flex-wrap gap-x-1 ml-1">
                             <a href="#" class="inline-block w-5 h-5">
                               <img src="./images/telegram-logo.svg" alt="telegram">
@@ -1065,9 +1064,9 @@
                           </div>
                         </div>
                         <div class="flex items-center justify-start flex-wrap gap-x-1">
-                          <a href="tel:+375297004162" class="block py-2 text-sm text-regular text-neutral-600">+375
+                          <p class="block py-2 text-sm text-regular text-neutral-600">+375
                             (29)
-                            700-41-62</a>
+                            700-41-62</p>
                           <div class="flex items-center justify-start flex-wrap gap-x-1 ml-1">
                             <a href="#" class="inline-block w-5 h-5">
                               <img src="./images/telegram-logo.svg" alt="telegram">
@@ -1078,9 +1077,9 @@
                           </div>
                         </div>
                         <div class="flex items-center justify-start flex-wrap gap-x-1">
-                          <a href="tel:+375337004162" class="block py-2 text-sm text-regular text-neutral-600">+375
+                          <p class="block py-2 text-sm text-regular text-neutral-600">+375
                             (33)
-                            700-41-62</a>
+                            700-41-62</p>
                           <div class="flex items-center justify-start flex-wrap gap-x-1 ml-1">
                             <a href="#" class="inline-block w-5 h-5">
                               <img src="./images/whatsApp-logo.svg" alt="whatsapp">
@@ -1122,9 +1121,9 @@
                       <div
                         class="w-full radioBlock__text radioBlock__text--info ml-0 transition-all duration-300 max-h-0 overflow-hidden invisible peer-checked:max-h-max peer-checked:visible peer-checked:pt-2">
                         <div class="flex items-center justify-start flex-wrap gap-x-1">
-                          <a href="tel:+375257004162" class="block py-2 text-sm text-regular text-neutral-600">+375
+                          <p class="block py-2 text-sm text-regular text-neutral-600">+375
                             (25)
-                            700-41-62</a>
+                            700-41-62</p>
                           <div class="flex items-center justify-start flex-wrap gap-x-1 ml-1">
                             <a href="#" class="inline-block w-5 h-5">
                               <img src="./images/telegram-logo.svg" alt="telegram">
@@ -1138,9 +1137,9 @@
                           </div>
                         </div>
                         <div class="flex items-center justify-start flex-wrap gap-x-1">
-                          <a href="tel:+375297004162" class="block py-2 text-sm text-regular text-neutral-600">+375
+                          <p class="block py-2 text-sm text-regular text-neutral-600">+375
                             (29)
-                            700-41-62</a>
+                            700-41-62</p>
                           <div class="flex items-center justify-start flex-wrap gap-x-1 ml-1">
                             <a href="#" class="inline-block w-5 h-5">
                               <img src="./images/telegram-logo.svg" alt="telegram">
@@ -1150,7 +1149,6 @@
                             </a>
                           </div>
                         </div>
-
                       </div>
                     </label>
                   </div>
@@ -1220,10 +1218,8 @@
                       </div>
                       <div
                         class="group flex items-center gap-2 px-1 text-base text-neutral-400 hover:text-bamper-500 bg-transparent border-none focus:outline-none shadow-none transition-all duration-250 cursor-pointer">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M7.41667 10.0833V7.41667M7.41667 4.75H7.42333M14.0833 7.41667C14.0833 11.0986 11.0986 14.0833 7.41667 14.0833C3.73477 14.0833 0.75 11.0986 0.75 7.41667C0.75 3.73477 3.73477 0.75 7.41667 0.75C11.0986 0.75 14.0833 3.73477 14.0833 7.41667Z"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <svg width="15" height="15" class="block shrink-0 stroke-current hover:stroke-current">
+                          <use href="./sprite.svg#tip-info"></use>
                         </svg>
                       </div>
                     </div>
