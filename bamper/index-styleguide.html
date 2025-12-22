@@ -8,8 +8,8 @@
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <script type="module" crossorigin src="./assets/main-DESOjTCZ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-BTkce45B.css">
+  <script type="module" crossorigin src="./assets/main-BDvIqgQi.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-saLBDVOD.css">
 </head>
 
 <body
@@ -638,6 +638,13 @@
                     <button type="button"
                       class="btn-ghost-neutral flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-transparent bg-transparent rounded-lg cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 focus:border-white focus:text-black focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-200 active:bg-neutral-200 disabled:text-black disabled:border-white disabled:bg-white disabled:cursor-not-allowed transition-all duration-250">
                       Ghost neutral</button>
+                    <button type="button" onclick="add_combination.showModal()"
+                      class="btn-secondary-neutral w-full h-10 flex items-center justify-center gap-x-2 text-sm font-medium text-black border border-solid border-neutral-100 bg-neutral-100 px-3.5 py-2.5 text-center rounded-lg cursor-pointer hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250">
+                      <svg class="block w-4 h-4 stroke-current hover:stroke-current">
+                        <use href="./sprite.svg#add"></use>
+                      </svg>
+                      Модальное окно
+                    </button>
                   </div>
                 </div>
               </div>
@@ -710,7 +717,7 @@
                       class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-8 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer">
                     </span>
                   </div>
-                  <div class="mt-4">
+                  <!-- <div class="mt-4">
                     <label class="block text-sm font-medium text-gray-700 mb-2">Множественный
                       выбор</label>
                     <select id="select-allbrand"
@@ -724,7 +731,7 @@
                       <option value="4" selected>Опция 4 (выбрана)</option>
                       <option value="5">Опция 5</option>
                     </select>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </section>
@@ -1240,7 +1247,140 @@
         </div>
       </div>
     </footer>
+    <dialog id="add_combination" class="modal bg-black/30">
+      <div
+        class="modal-box w-full max-w-[960px] mt-auto md:m-auto p-4 md:p-6 bg-white rounded-b-none md:rounded-xl shadow-[0_2px_2px_0_rgba(0,0,0,0.05)]">
+        <p class="text-lg font-semibold text-black">Добавление комбинации</p>
+        <form method="dialog" class="">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 mt-6 mb-6">
+            <div class="custom-select-wrapper relative inline-block">
+              <label for="add-select-brand" class="block text-sm font-medium text-black mb-1">Марка *</label>
+              <select id="add-select-brand" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
+                  outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
+                  [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
+                  [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
+                <option disabled selected value="" style="display:none;"></option>
+                <option value="1">Toyota</option>
+                <option value="2">BMV</option>
+                <option value="3">Audi</option>
+                <option value="4">Mazda</option>
+                <option value="5">Ford</option>
+              </select>
+              <span
+                class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-8 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer">
+              </span>
+            </div>
+            <div class="custom-select-wrapper relative inline-block">
+              <label for="add-select-model" class="block text-sm font-medium text-black mb-1">Модель *</label>
+              <select id="add-select-model" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
+                  outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
+                  [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none
+                  [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
+                <option disabled selected value="" style="display:none;"></option>
+                <option value="X3">X3</option>
+                <option value="Octavia">Octavia</option>
+                <option value="Camry">Camry</option>
+                <option value="RAV4">RAV4</option>
+                <option value="A5">A5</option>
+              </select>
+              <span
+                class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-8 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer">
+              </span>
+            </div>
+            <div class="custom-select-wrapper relative inline-block">
+              <label for="add-select-year" class="block text-sm font-medium text-black mb-1">Год выпуска *</label>
+              <select id="add-select-year" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
+                          outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
+                          [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none
+                          [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
+                <option disabled selected value="" style="display:none;"></option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2023">2023</option>
+              </select>
+              <span
+                class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-8 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer">
+              </span>
+            </div>
+            <div>
+              <label for="add-modification-1" class="block text-sm font-medium text-black mb-1"
+                tabindex="-1">Модификация</label>
+              <div class="mt-1">
+                <input id="add-modification-1" type="text" name="modification" value="" maxlength="30"
+                  oninput="document.querySelector('#char-counter-2').textContent = this.value.length"
+                  class="block w-full h-10 rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500" />
+              </div>
+              <div class="flex items-center justify-end mt-1">
+                <p class="text-neutral-400" id="char-counter-2">0</p>
+                <span class="text-neutral-400">/</span>
+                <p class="text-neutral-400">30</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-min ml-0 md:ml-auto flex items-center justify-items-end gap-x-3 mt-2 md:mt-4">
+            <button type="reset" onclick="add_combination.close()"
+              class="btn-outline-neutral h-10 w-full md:w-min flex items-center justify-center gap-x-2 text-sm font-medium text-black border border-solid border-neutral-300 bg-transparent px-5 py-2.5 text-center rounded-lg cursor-pointer hover:border-neutral-300 hover:bg-neutral-100 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-400 active:bg-neutral-200 disabled:text-neutral-400 disabled:bg-transparent duration-250">
+              Отмена
+            </button>
+            <button type="button" disabled
+              class="btn-primary-accent h-10 w-full md:w-min flex items-center justify-center gap-x-2 text-sm font-medium text-white border border-solid border-bamper-500 bg-bamper-500 px-5 py-2.5 text-center rounded-lg cursor-pointer hover:border-bamper-600 hover:bg-bamper-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-500 active:text-white active:border-bamper-700 active:bg-bamper-700 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed duration-250">
+              Добавить
+            </button>
+          </div>
+          <button type="button"
+            class="flex items-center justify-center shadow-none w-8 h-8 p-2 absolute right-4 top-4 text-black border rounded-lg border-transparent bg-transparent cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 disabled:text-neutral-400 disabled:bg-transparent disabled:border-transparent focus:text-black focus:bg-transparent focus:border-transparent focus:outline-bamper-300 active:text-black active:bg-neutral-200 active:border-neutral-200 duration-250"
+            onclick="add_combination.close()">
+            <svg width="12" height="12" class="block stroke-current hover:stroke-current" viewBox="0 0 12 12"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.75 0.75L0.75 10.75M0.75 0.75L10.75 10.75" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </dialog>
   </div>
+  <script>
+    // для удаления значения выбранного значения в select
+    const selectElementWrapper = document.querySelectorAll('.custom-select-wrapper');
+    selectElementWrapper.forEach(selectWrapper => {
+      const selectElement = selectWrapper.querySelector('.custom-select');
+      const clearIcon = selectWrapper.querySelector('.clear-icon');
+      function clearSelection(e) {
+        selectElement.value = "";
+        clearIcon.style.display = 'none';
+        // Опционально: предотвращаем всплытие события, если это необходимо в сложном UI
+        if (e) {
+          e.stopPropagation();
+        }
+        // Опционально: инициируем событие 'change', если другой код на него подписан
+        const eventChange = new Event('change');
+        selectElement.dispatchEvent(eventChange);
+      }
+      function handleSelectChange() {
+        if (selectElement.value === "") {
+          clearIcon.style.display = 'none';
+        } else {
+          clearIcon.style.display = 'block';
+        }
+      }
+      clearIcon?.addEventListener('click', clearSelection);
+
+      selectElement.addEventListener('change', handleSelectChange);
+      // handleSelectChange();
+
+    });
+    function clearForm() {
+      // Очистка полей формы
+      const clearIcons = document.querySelectorAll('.clear-icon');
+      clearIcons.forEach(clearIcon => {
+        clearIcon.style.display = 'none';
+      });
+    }
+  </script>
 </body>
 
 </html>
