@@ -8,15 +8,15 @@
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <script type="module" crossorigin src="./assets/main-BDvIqgQi.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-saLBDVOD.css">
+  <script type="module" crossorigin src="./assets/main-SK5RxYdQ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-DGnbPWy_.css">
 </head>
 
 <body
   class="main-page min-w-[320px] h-full box-border relative overflow-x-hidden min-h-screen font-[commissioner] font-regular text-sm scroll-smooth appearance-none">
   <div id="app" class="relative flex flex-col min-h-full font-[commissioner]">
     <header
-      class="header w-full flex items-center h-[72px] grow-0 shrink-0 basis-auto py-4 [body.main-page_&]:bg-bamper-500 [body.lk-page_&]:bg-neutral-100"
+      class="header w-full flex items-center h-[72px] grow-0 shrink-0 basis-auto py-4 [body.main-page_&]:bg-bamper-500 [body.lk-page_&]:bg-neutral-100 [body.lk-page_&]:shadow-md z-2"
       id="header">
       <div class="w-full m-auto max-w-7xl px-4 lg:px-6">
         <nav class="flex items-center">
@@ -534,7 +534,7 @@
                   </ul>
                   <div class="border-b border-neutral-200 pt-2 mb-2"></div>
                   <button type="button"
-                    class="group flex items-center gap-2 p-2 text-base text-red-500 bg-transparent border-none shadow-none disabled:text-neutral-400 hover:text-red-600 hover:border-none active:text-red-700 transition-all duration-250 ease-in-out focus:outline-bamper-300 cursor-pointer">
+                    class="group flex items-center gap-2 p-2 text-base text-red-500 bg-transparent border-none shadow-none hover:text-red-600 hover:border-none active:text-red-700 focus:outline-bamper-300 disabled:text-neutral-400 cursor-pointer disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
                     <svg class="block w-6 h-6 shrink-0 stroke-red-500 group-hover:stroke-red-600" alt="Выход">
                       <use href="./sprite.svg#exit"></use>
                     </svg>
@@ -620,26 +620,50 @@
                   <div class="flex justify-between items-start mb-4">
                     <h3 class="font-semibold text-base text-black">Основные кнопки</h3>
                   </div>
-                  <div class="flex flex-col gap-4">
+                  <div class="flex flex-wrap gap-4">
                     <button type="button"
-                      class="btn-primary-accent flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-white cursor-pointer border border-solid border-bamper-500 bg-bamper-500 rounded-lg hover:text-white hover:border-bamper-600 hover:bg-bamper-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-500 focus:bg-bamper-500 active:text-white active:border-bamper-700 active:bg-bamper-700 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250">
+                      class="btn-primary-accent w-min flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-white border border-solid border-bamper-500 bg-bamper-500 rounded-lg cursor-pointer hover:text-white hover:border-bamper-600 hover:bg-bamper-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-500 focus:bg-bamper-500 active:text-white active:border-bamper-700 active:bg-bamper-700 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
                       Primary accent
                     </button>
                     <button type="button"
-                      class="btn-secondary-neutral flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-neutral-100 bg-neutral-100 hover:text-black hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 focus:bg-neutral-200 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250">
+                      class="btn-primary-accent w-min flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-white border border-solid border-bamper-500 bg-bamper-500 rounded-lg cursor-pointer hover:text-white hover:border-bamper-600 hover:bg-bamper-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-500 focus:bg-bamper-500 active:text-white active:border-bamper-700 active:bg-bamper-700 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
+                      <svg class="block w-4 h-4 shrink-0 stroke-current" alt="arrow">
+                        <use href="./sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Кнопка с иконками</span>
+                      <svg class="block w-4 h-4 shrink-0 stroke-current" alt="arrow">
+                        <use href="./sprite.svg#right-arrow"></use>
+                      </svg>
+                    </button>
+                    <button type="button"
+                      class="btn-secondary-neutral w-min flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-neutral-100 bg-neutral-100 rounded-lg cursor-pointer hover:text-black hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 focus:bg-neutral-200 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
                       Secondary neutral</button>
                     <button type="button"
-                      class="btn-outline-accent flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-bamper-500 border border-solid border-bamper-500 bg-white rounded-lg cursor-pointer hover:text-bamper-500 hover:border-bamper-500 hover:bg-bamper-50 focus:border-bamper-500 focus:text-bamper-500 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-bamper-700 active:border-bamper-700 active:bg-bamper-100 disabled:text-neutral-400 disabled:border-neutral-400 disabled:bg-white disabled:cursor-not-allowed transition-all duration-250">
+                      class="btn-outline-accent w-min flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-bamper-500 border border-solid border-bamper-500 bg-white rounded-lg cursor-pointer hover:text-bamper-500 hover:border-bamper-500 hover:bg-bamper-50 focus:border-bamper-500 focus:text-bamper-500 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-bamper-700 active:border-bamper-700 active:bg-bamper-100 disabled:text-neutral-400 disabled:border-neutral-400 disabled:bg-white disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
                       Outline accent</button>
                     <button type="button"
-                      class="btn-outline-neutral flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-neutral-300 bg-transparent rounded-lg cursor-pointer hover:text-black hover:border-neutral-300 hover:bg-neutral-100 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-400 active:bg-neutral-200 disabled:text-neutral-400 disabled:bg-transparent disabled:border-neutral-400 disabled:cursor-not-allowed transition-all duration-250">
+                      class="btn-outline-neutral w-min flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-neutral-300 bg-transparent rounded-lg cursor-pointer hover:text-black hover:border-neutral-300 hover:bg-neutral-100 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-400 active:bg-neutral-200 disabled:text-neutral-400 disabled:bg-transparent disabled:border-neutral-400 disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
                       Outline neutral
                     </button>
                     <button type="button"
-                      class="btn-ghost-neutral flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-transparent bg-transparent rounded-lg cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 focus:border-white focus:text-black focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-200 active:bg-neutral-200 disabled:text-black disabled:border-white disabled:bg-white disabled:cursor-not-allowed transition-all duration-250">
+                      class="btn-ghost-neutral w-min flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-black border border-solid border-transparent bg-transparent rounded-lg cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 focus:border-white focus:text-black focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-200 active:bg-neutral-200 disabled:text-black disabled:border-white disabled:bg-white disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
                       Ghost neutral</button>
+                    <button type="button"
+                      class="btn-text-danger w-min flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-white border border-solid border-red-500 bg-red-500 rounded-lg cursor-pointer hover:text-white hover:border-red-600 hover:bg-red-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:border-red-700 active:bg-red-700 disabled:text-neutral-400 disabled:bg-neutral-200 disabled:border-neutral-200 disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
+                      <svg class="block w-4 h-4 shrink-0 stroke-current" alt="arrow">
+                        <use href="./sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Danger</span>
+                      <svg class="block w-4 h-4 shrink-0 stroke-current" alt="arrow">
+                        <use href="./sprite.svg#right-arrow"></use>
+                      </svg>
+                    </button>
+                    <button type="button"
+                      class="btn-text-danger w-min flex items-center justify-center gap-x-2 text-sm font-medium text-red-500 bg-transparent border-none shadow-none hover:text-red-600 hover:border-none active:text-red-700 focus:outline-bamper-300 disabled:text-neutral-400 cursor-pointer disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
+                      <span>Text danger</span>
+                    </button>
                     <button type="button" onclick="add_combination.showModal()"
-                      class="btn-secondary-neutral w-full h-10 flex items-center justify-center gap-x-2 text-sm font-medium text-black border border-solid border-neutral-100 bg-neutral-100 px-3.5 py-2.5 text-center rounded-lg cursor-pointer hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250">
+                      class="btn-secondary-neutral w-full h-10 flex items-center justify-center gap-x-2 text-sm font-medium text-black border border-solid border-neutral-100 bg-neutral-100 px-3.5 py-2.5 text-center rounded-lg cursor-pointer hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
                       <svg class="block w-4 h-4 stroke-current hover:stroke-current">
                         <use href="./sprite.svg#add"></use>
                       </svg>
@@ -657,7 +681,7 @@
                 </div>
                 <h2 class="text-xl font-semibold text-black">Выпадающие списки</h2>
               </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="component-card bg-white rounded-xl shadow-md p-6">
                   <div class="flex justify-between items-start mb-4">
                     <h3 class="font-semibold text-base text-black">Простой dropdown</h3>
@@ -690,7 +714,7 @@
                       </ul>
                       <div class="border-b border-neutral-200 pt-2 mb-2"></div>
                       <button type="button"
-                        class="group flex items-center gap-2 p-2 text-sm text-red-500 bg-transparent border-none rounded-lg shadow-none rounded-sm disabled:text-neutral-400 hover:text-red-600 hover:border-none active:text-red-700 transition-all duration-250 ease-in-outfocus:outline-bamper-300 cursor-pointer">
+                        class="group flex items-center gap-2 p-2 text-sm text-red-500 bg-transparent border-none shadow-none rounded-sm hover:text-red-600 hover:border-none active:text-red-700 focus:outline-bamper-300 disabled:text-neutral-400 cursor-pointer disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
                         <svg class="block w-6 h-6 shrink-0 stroke-red-500 group-hover:stroke-red-600" alt="Выход">
                           <use href="./sprite.svg#exit"></use>
                         </svg>
@@ -717,21 +741,30 @@
                       class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-8 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer">
                     </span>
                   </div>
-                  <!-- <div class="mt-4">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Множественный
-                      выбор</label>
-                    <select id="select-allbrand"
-                      class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
-                        outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
-                        [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none"
-                      multiple>
-                      <option value="1">Опция 1</option>
-                      <option value="2" selected>Опция 2 (выбрана)</option>
-                      <option value="3">Опция 3</option>
-                      <option value="4" selected>Опция 4 (выбрана)</option>
-                      <option value="5">Опция 5</option>
-                    </select>
-                  </div> -->
+                  <div class="mb-4 pt-4">
+                    Список с видом топлива (моб)
+                    <input type="text" id="modal-input-1" readonly
+                      class="block w-full h-10 rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 invalid:border-red-500 [&.error]:border-red-500 invalid:hover:border-red-500 [&.error]:hover:border-red-500"
+                      onclick="modal_select_1.showModal()">
+                  </div>
+                  <div class="mb-4 pt-4">
+                    Список с типом коробки (моб)
+                    <input type="text" id="modal-input-2" readonly
+                      class="block w-full h-10 rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 invalid:border-red-500 [&.error]:border-red-500 invalid:hover:border-red-500 [&.error]:hover:border-red-500"
+                      onclick="modal_select_2.showModal()">
+                  </div>
+                  <div class="mb-4 pt-4">
+                    Список с запчастями и полем поиска (моб)
+                    <input type="text" id="modal-input-3" readonly
+                      class="block w-full h-10 rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 invalid:border-red-500 [&.error]:border-red-500 invalid:hover:border-red-500 [&.error]:hover:border-red-500"
+                      onclick="modal_select_3.showModal()">
+                  </div>
+                  <div class="mb-4 pt-4">
+                    Список с названием города и полем поиска (моб)
+                    <input type="text" id="modal-input-4" readonly
+                      class="block w-full h-10 rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 invalid:border-red-500 [&.error]:border-red-500 invalid:hover:border-red-500 [&.error]:hover:border-red-500"
+                      onclick="modal_select_4.showModal()">
+                  </div>
                 </div>
               </div>
             </section>
@@ -798,7 +831,7 @@
                 </div>
                 <h2 class="text-xl font-semibold text-black">Чекбоксы</h2>
               </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="component-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
                   <div class="flex justify-between items-start mb-4">
                     <h3 class="font-semibold text-base text-black">Базовые чекбоксы</h3>
@@ -806,18 +839,16 @@
                   <div class="space-y-1">
                     <div class="flex items-center">
                       <!-- Скрытый нативный чекбокс -->
-                      <input type="checkbox" id="checkbox-zd" class="hidden peer" />
+                      <input type="checkbox" id="checkbox-zd" class="hidden peer" checked />
                       <!-- Кастомный чекбокс -->
                       <label for="checkbox-zd"
-                        class="relative w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out  not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 mr-2">
+                        class="relative shrink-0 w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 peer-checked:hover:bg-bamper-600 peer-checked:hover:border-bamper-600 mr-2">
                         <svg
-                          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none"
-                          fill="none" viewBox="0 0 10 8">
-                          <path d="M8.83325 0.833252L3.33325 6.33325L0.833252 3.83325" stroke="white"
-                            stroke-width="1.6666" stroke-linecap="round" stroke-linejoin="round" />
+                          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none">
+                          <use href="./sprite.svg#checked-icon"></use>
                         </svg>
                       </label>
-                      <label for="checkbox-zd" class="flex items-center gap-x-1 cursor-pointer">
+                      <label for="checkbox-zd" class="flex items-center gap-x-1 cursor-pointer caret-transparent">
                         <p class="block py-2 text-sm text-regular text-neutral-600">+375
                           (25)
                           700-41-62</p>
@@ -839,15 +870,13 @@
                       <input type="checkbox" id="checkbox-za" class="hidden peer" />
                       <!-- Кастомный чекбокс -->
                       <label for="checkbox-za"
-                        class="relative w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out  not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 mr-2">
+                        class="relative shrink-0 w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 peer-checked:hover:bg-bamper-600 peer-checked:hover:border-bamper-600 mr-2">
                         <svg
-                          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none"
-                          fill="none" viewBox="0 0 10 8">
-                          <path d="M8.83325 0.833252L3.33325 6.33325L0.833252 3.83325" stroke="white"
-                            stroke-width="1.6666" stroke-linecap="round" stroke-linejoin="round" />
+                          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none">
+                          <use href="./sprite.svg#checked-icon"></use>
                         </svg>
                       </label>
-                      <label for="checkbox-za" class="flex items-center gap-x-1 cursor-pointer">
+                      <label for="checkbox-za" class="flex items-center gap-x-1 cursor-pointer caret-transparent">
                         <p class="block py-2 text-sm text-regular text-neutral-600">+375
                           (29)
                           700-41-62</p>
@@ -866,15 +895,13 @@
                       <input type="checkbox" id="checkbox-zs" class="hidden peer" />
                       <!-- Кастомный чекбокс -->
                       <label for="checkbox-zs"
-                        class="relative w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out  not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 mr-2">
+                        class="relative shrink-0 w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 peer-checked:hover:bg-bamper-600 peer-checked:hover:border-bamper-600 mr-2">
                         <svg
-                          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none"
-                          fill="none" viewBox="0 0 10 8">
-                          <path d="M8.83325 0.833252L3.33325 6.33325L0.833252 3.83325" stroke="white"
-                            stroke-width="1.6666" stroke-linecap="round" stroke-linejoin="round" />
+                          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none">
+                          <use href="./sprite.svg#checked-icon"></use>
                         </svg>
                       </label>
-                      <label for="checkbox-zs" class="flex items-center gap-x-1 cursor-pointer">
+                      <label for="checkbox-zs" class="flex items-center gap-x-1 cursor-pointer caret-transparent">
                         <p class="block py-2 text-sm text-regular text-neutral-600">Информационный текст</p>
                       </label>
                     </div>
@@ -883,18 +910,17 @@
                       <input type="checkbox" id="checkbox-zf" class="hidden peer" />
                       <!-- Кастомный чекбокс -->
                       <label for="checkbox-zf"
-                        class="relative w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out  not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 mr-2">
+                        class="relative shrink-0 w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 peer-checked:hover:bg-bamper-600 peer-checked:hover:border-bamper-600 mr-2">
                         <svg
-                          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none"
-                          fill="none" viewBox="0 0 10 8">
-                          <path d="M8.83325 0.833252L3.33325 6.33325L0.833252 3.83325" stroke="white"
-                            stroke-width="1.6666" stroke-linecap="round" stroke-linejoin="round" />
+                          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none">
+                          <use href="./sprite.svg#checked-icon"></use>
                         </svg>
                       </label>
-                      <label for="checkbox-zf" class="group w-full flex items-center gap-x-1 cursor-pointer">
+                      <label for="checkbox-zf"
+                        class="w-full flex items-center gap-x-1 cursor-pointer caret-transparent">
                         <p class="block py-2 text-sm text-regular text-neutral-600">Текст с удалением
                           информации</p>
-                        <div class="hidden items-center justify-start ml-auto gap-x-3 group-hover:flex">
+                        <div class="flex items-center justify-start ml-auto gap-x-3">
                           <button type="button" title="Редактировать" class="w-5 h-5 border-none flex items-center justify-center p-0 mx-0 my-0 text-sm gap-2 text-neutral-400 cursor-pointer transition-all duration-250 
                           hover:text-black focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 
                           disabled:text-neutral-400 disabled:cursor-not-allowed">
@@ -902,7 +928,7 @@
                               <use href="./sprite.svg#rewrite-icon"></use>
                             </svg>
                           </button>
-                          <button type="button" title="Удалить" class="w-5 h-5 border-none flex items-center justify-center p-0 mx-0 
+                          <button type="button" title="Удалить" onclick="remove_combination.showModal()" class="w-5 h-5 border-none flex items-center justify-center p-0 mx-0 
                           my-0 text-sm font-medium gap-2 text-red-500 cursor-pointer transition-all duration-250 
                           hover:text-red-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 
                           disabled:text-neutral-400 disabled:cursor-not-allowed active:text-red-700">
@@ -946,7 +972,7 @@
                 </div>
                 <h2 class="text-xl font-semibold text-black">Радиокнопки</h2>
               </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="component-card bg-white rounded-xl shadow-md p-6">
                   <div class="flex justify-between items-start mb-4">
                     <h3 class="font-semibold text-base text-black">Базовые радиокнопки</h3>
@@ -1055,7 +1081,7 @@
                       <div
                         class="w-full radioBlock__text radioBlock__text--info ml-0 transition-all duration-300 max-h-0 overflow-hidden invisible peer-checked:max-h-max peer-checked:visible peer-checked:pt-2">
                         <div class="flex items-center justify-start flex-wrap gap-x-1">
-                          <p class="block py-2 text-sm text-regular text-neutral-600">+375
+                          <p class="block py-2 text-sm text-regular text-neutral-600 caret-transparent">+375
                             (25)
                             700-41-62</p>
                           <div class="flex items-center justify-start flex-wrap gap-x-1 ml-1">
@@ -1071,7 +1097,7 @@
                           </div>
                         </div>
                         <div class="flex items-center justify-start flex-wrap gap-x-1">
-                          <p class="block py-2 text-sm text-regular text-neutral-600">+375
+                          <p class="block py-2 text-sm text-regular text-neutral-600 caret-transparent">+375
                             (29)
                             700-41-62</p>
                           <div class="flex items-center justify-start flex-wrap gap-x-1 ml-1">
@@ -1084,7 +1110,7 @@
                           </div>
                         </div>
                         <div class="flex items-center justify-start flex-wrap gap-x-1">
-                          <p class="block py-2 text-sm text-regular text-neutral-600">+375
+                          <p class="block py-2 text-sm text-regular text-neutral-600 caret-transparent">+375
                             (33)
                             700-41-62</p>
                           <div class="flex items-center justify-start flex-wrap gap-x-1 ml-1">
@@ -1127,7 +1153,7 @@
                       </span>
                       <div
                         class="w-full radioBlock__text radioBlock__text--info ml-0 transition-all duration-300 max-h-0 overflow-hidden invisible peer-checked:max-h-max peer-checked:visible peer-checked:pt-2">
-                        <div class="flex items-center justify-start flex-wrap gap-x-1">
+                        <div class="flex items-center justify-start flex-wrap gap-x-1 caret-transparent">
                           <p class="block py-2 text-sm text-regular text-neutral-600">+375
                             (25)
                             700-41-62</p>
@@ -1144,7 +1170,7 @@
                           </div>
                         </div>
                         <div class="flex items-center justify-start flex-wrap gap-x-1">
-                          <p class="block py-2 text-sm text-regular text-neutral-600">+375
+                          <p class="block py-2 text-sm text-regular text-neutral-600 caret-transparent">+375
                             (29)
                             700-41-62</p>
                           <div class="flex items-center justify-start flex-wrap gap-x-1 ml-1">
@@ -1213,7 +1239,7 @@
                 <h2 class="text-xl font-semibold text-black">Информация при наведении</h2>
               </div>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="component-card bg-white rounded-xl shadow-md p-6">
                   <div class="flex items-center gap-x-1">
                     <p class="block text-sm font-medium text-black">Телефоны *</p>
@@ -1252,7 +1278,7 @@
         class="modal-box w-full max-w-[960px] mt-auto md:m-auto p-4 md:p-6 bg-white rounded-b-none md:rounded-xl shadow-[0_2px_2px_0_rgba(0,0,0,0.05)]">
         <p class="text-lg font-semibold text-black">Добавление комбинации</p>
         <form method="dialog" class="">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 mt-6 mb-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-4 mt-6 mb-6">
             <div class="custom-select-wrapper relative inline-block">
               <label for="add-select-brand" class="block text-sm font-medium text-black mb-1">Марка *</label>
               <select id="add-select-brand" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
@@ -1321,7 +1347,7 @@
             </div>
           </div>
           <div class="w-full md:w-min ml-0 md:ml-auto flex items-center justify-items-end gap-x-3 mt-2 md:mt-4">
-            <button type="reset" onclick="add_combination.close()"
+            <button type="reset" onclick="add_combination.close();clearForm();"
               class="btn-outline-neutral h-10 w-full md:w-min flex items-center justify-center gap-x-2 text-sm font-medium text-black border border-solid border-neutral-300 bg-transparent px-5 py-2.5 text-center rounded-lg cursor-pointer hover:border-neutral-300 hover:bg-neutral-100 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-400 active:bg-neutral-200 disabled:text-neutral-400 disabled:bg-transparent duration-250">
               Отмена
             </button>
@@ -1331,15 +1357,312 @@
             </button>
           </div>
           <button type="button"
-            class="flex items-center justify-center shadow-none w-8 h-8 p-2 absolute right-4 top-4 text-black border rounded-lg border-transparent bg-transparent cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 disabled:text-neutral-400 disabled:bg-transparent disabled:border-transparent focus:text-black focus:bg-transparent focus:border-transparent focus:outline-bamper-300 active:text-black active:bg-neutral-200 active:border-neutral-200 duration-250"
-            onclick="add_combination.close()">
-            <svg width="12" height="12" class="block stroke-current hover:stroke-current" viewBox="0 0 12 12"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.75 0.75L0.75 10.75M0.75 0.75L10.75 10.75" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
+            class="flex items-center justify-center shadow-none w-6 h-6 lg:w-8 lg:h-8 p-2 absolute right-4 top-4 text-black border rounded-lg border-transparent bg-transparent cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 disabled:text-neutral-400 disabled:bg-transparent disabled:border-transparent focus:text-black focus:bg-transparent focus:border-transparent focus:outline-bamper-300 active:text-black active:bg-neutral-200 active:border-neutral-200 duration-250"
+            onclick="add_combination.close();clearForm();">
+            <svg class="block w-3 h-3 shrink-0 stroke-current hover:stroke-current" alt="Закрыть">
+              <use href="./sprite.svg#close-modal"></use>
             </svg>
           </button>
         </form>
+      </div>
+    </dialog>
+    <dialog id="remove_combination" class="modal bg-black/30">
+      <div
+        class="modal-box w-full max-w-80 mt-auto md:m-auto p-4 md:p-6 bg-white rounded-b-none md:rounded-xl shadow-[0_2px_2px_0_rgba(0,0,0,0.05)]">
+        <p class="text-lg font-semibold text-black">Удаление комбинации</p>
+        <div class="mt-4 mb-6">
+          <p>Вы действительно хотите удалить данную комбинацию <span class="font-medium">Audi</span> <span
+              class="font-medium">A5</span>, <span class="font-medium">2025</span>?</p>
+        </div>
+        <div class="w-full ml-0 md:ml-auto flex items-center justify-items-end gap-x-3 mt-2 md:mt-4">
+          <button type="reset" onclick="remove_combination.close();clearForm();" tabindex="0"
+            class="btn-outline-neutral w-full h-10 flex items-center justify-center gap-x-2 text-sm font-medium text-black border border-solid border-neutral-300 bg-transparent px-5 py-2.5 text-center rounded-lg cursor-pointer hover:border-neutral-300 hover:bg-neutral-100 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-400 active:bg-neutral-200 disabled:text-neutral-400 disabled:bg-transparent duration-250 text-nowrap">
+            Отмена
+          </button>
+          <button type="button" tabindex="0"
+            class="btn-text-danger w-full h-10 flex items-center justify-center gap-x-2 text-sm font-medium py-2 px-3 text-center text-white border border-solid border-red-500 bg-red-500 rounded-lg cursor-pointer hover:text-white hover:border-red-600 hover:bg-red-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:border-red-700 active:bg-red-700 disabled:text-neutral-400 disabled:bg-neutral-200 disabled:border-neutral-200 disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
+            Удалить
+          </button>
+        </div>
+        <button type="button"
+          class="flex items-center justify-center shadow-none w-6 h-6 p-2 absolute right-4 top-4 text-black border rounded-lg border-transparent bg-transparent cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 disabled:text-neutral-400 disabled:bg-transparent disabled:border-transparent focus:text-black focus:bg-transparent focus:border-transparent focus:outline-bamper-300 active:text-black active:bg-neutral-200 active:border-neutral-200 duration-250 z-11"
+          onclick="remove_combination.close();clearForm();">
+          <svg class="block w-3 h-3 shrink-0 stroke-current hover:stroke-current" alt="Закрыть">
+            <use href="./sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+      </div>
+    </dialog>
+    <dialog id="modal_select_1" class="modal bg-black/30">
+      <div
+        class="modal-box w-full mt-auto p-4 h-[calc(100vh-32px)] bg-white rounded-b-none shadow-[0_2px_2px_0_rgba(0,0,0,0.05)]">
+        <div class="relative h-full flex flex-col">
+          <div class="sticky top-0 z-10">
+            <p class="block text-lg font-semibold text-black mb-6">Тип топлива</p>
+          </div>
+          <div class="flex-1 overflow-y-auto">
+            <div class="selected flex items-center gap-x-2 py-2.5">
+              <svg class="block w-5 h-5 shrink-0 stroke-transparent in-[.selected]:stroke-bamper-500" alt="выбор">
+                <use href="./sprite.svg#selected"></use>
+              </svg>
+              <p class="in-[.selected]:text-bamper-500 caret-transparent">Дизель</p>
+            </div>
+            <div class="flex items-center gap-x-2 py-2.5">
+              <svg class="block w-5 h-5 shrink-0 stroke-transparent in-[.selected]:stroke-bamper-500" alt="выбор">
+                <use href="./sprite.svg#selected"></use>
+              </svg>
+              <p class="in-[.selected]:text-bamper-500 caret-transparent">Бензин</p>
+            </div>
+          </div>
+        </div>
+        <button type="button"
+          class="flex items-center justify-center shadow-none w-6 h-6 p-2 absolute right-4 top-4 text-black border rounded-lg border-transparent bg-transparent cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 disabled:text-neutral-400 disabled:bg-transparent disabled:border-transparent focus:text-black focus:bg-transparent focus:border-transparent focus:outline-bamper-300 active:text-black active:bg-neutral-200 active:border-neutral-200 duration-250 z-11"
+          onclick="modal_select_1.close();">
+          <svg class="block w-3 h-3 shrink-0 stroke-current hover:stroke-current" alt="Закрыть">
+            <use href="./sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+      </div>
+    </dialog>
+    <dialog id="modal_select_2" class="modal bg-black/30">
+      <div
+        class="modal-box w-full mt-auto p-4 h-[calc(100vh-32px)] bg-white rounded-b-none shadow-[0_2px_2px_0_rgba(0,0,0,0.05)]">
+        <div class="relative h-full flex flex-col">
+          <div class="sticky top-0 z-10">
+            <p class="block text-lg font-semibold text-black mb-6">Тип коробки</p>
+          </div>
+          <div class="flex-1 overflow-y-auto">
+            <div class="flex items-center py-2.5">
+              <input type="checkbox" id="checkbox-99" class="hidden peer" checked />
+              <label for="checkbox-99"
+                class="relative shrink-0 w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 peer-checked:hover:bg-bamper-600 peer-checked:hover:border-bamper-600 mr-2">
+                <svg
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none">
+                  <use href="./sprite.svg#checked-icon"></use>
+                </svg>
+              </label>
+              <label for="checkbox-99"
+                class="w-full flex items-center gap-x-1 cursor-pointer peer-checked:text-bamper-500 peer-checked:hover:text-bamper-600 duration-250 caret-transparent">
+                АКПП
+              </label>
+            </div>
+            <div class="flex items-center py-2.5">
+              <input type="checkbox" id="checkbox-98" class="hidden peer" />
+              <label for="checkbox-98"
+                class="relative shrink-0 w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 peer-checked:hover:bg-bamper-600 peer-checked:hover:border-bamper-600 mr-2">
+                <svg
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none">
+                  <use href="./sprite.svg#checked-icon"></use>
+                </svg>
+              </label>
+              <label for="checkbox-98"
+                class="w-full flex items-center gap-x-1 cursor-pointer peer-checked:text-bamper-500 peer-checked:hover:text-bamper-600 duration-250 caret-transparent">
+                МКПП
+              </label>
+            </div>
+            <div class="flex items-center py-2.5">
+              <input type="checkbox" id="checkbox-97" class="hidden peer" checked />
+              <label for="checkbox-97"
+                class="relative shrink-0 w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 peer-checked:hover:bg-bamper-600 peer-checked:hover:border-bamper-600 mr-2">
+                <svg
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none">
+                  <use href="./sprite.svg#checked-icon"></use>
+                </svg>
+              </label>
+              <label for="checkbox-97"
+                class="w-full flex items-center gap-x-1 cursor-pointer peer-checked:text-bamper-500 peer-checked:hover:text-bamper-600 duration-250 caret-transparent">
+                Робот
+              </label>
+            </div>
+            <div class="flex items-center py-2.5">
+              <input type="checkbox" id="checkbox-96" class="hidden peer" />
+              <label for="checkbox-96"
+                class="relative shrink-0 w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 peer-checked:hover:bg-bamper-600 peer-checked:hover:border-bamper-600 mr-2">
+                <svg
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none">
+                  <use href="./sprite.svg#checked-icon"></use>
+                </svg>
+              </label>
+              <label for="checkbox-96"
+                class="w-full flex items-center gap-x-1 cursor-pointer peer-checked:text-bamper-500 peer-checked:hover:text-bamper-600 duration-250 caret-transparent">
+                Вариатор
+              </label>
+            </div>
+          </div>
+        </div>
+        <button type="button"
+          class="flex items-center justify-center shadow-none w-6 h-6 p-2 absolute right-4 top-4 text-black border rounded-lg border-transparent bg-transparent cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 disabled:text-neutral-400 disabled:bg-transparent disabled:border-transparent focus:text-black focus:bg-transparent focus:border-transparent focus:outline-bamper-300 active:text-black active:bg-neutral-200 active:border-neutral-200 duration-250 z-11"
+          onclick="modal_select_2.close();">
+          <svg class="block w-3 h-3 shrink-0 stroke-current hover:stroke-current" alt="Закрыть">
+            <use href="./sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+      </div>
+    </dialog>
+    <dialog id="modal_select_3" class="modal bg-black/30">
+      <div
+        class="modal-box w-full mt-auto p-4 h-[calc(100vh-32px)] bg-white rounded-b-none shadow-[0_2px_2px_0_rgba(0,0,0,0.05)]">
+        <div class="relative h-full flex flex-col">
+          <div class="sticky top-0 z-10">
+            <p class="block text-lg font-semibold text-black mb-6">Запчасть</p>
+          </div>
+          <div class="relative w-full mb-2">
+            <div class="relative">
+              <!-- Иконка поиска слева -->
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center text-neutral-400 pointer-events-none">
+                <svg class="block h-5 w-5 shrink-0 stroke-current">
+                  <use href="./sprite.svg#search-input"></use>
+                </svg>
+              </div>
+              <!-- Поле ввода -->
+              <input type="search" placeholder="Поиск" name="search-zap"
+                class="block w-full h-10 rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 pl-10 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 duration-250
+                  [&::-webkit-search-cancel-button]:hidden
+                [&::-webkit-search-decoration]:hidden
+                [&::-moz-search-cancel-button]:hidden
+                [&::-ms-clear]:hidden" />
+              <!-- Кнопка очистки справа (появляется при вводе) -->
+              <!-- <button
+                class="absolute w-8 h-8 p-2 right-1 top-1 flex items-center text-black border rounded-lg border-transparent bg-transparent cursor-pointer">
+                <svg class="block w-3 h-3 shrink-0 stroke-current hover:stroke-current" alt="Закрыть">
+                  <use href="/sprite.svg#close-modal"></use>
+                </svg>
+              </button> -->
+            </div>
+          </div>
+          <div class="flex-1 overflow-y-auto">
+            <div class="flex items-center gap-x-2 py-2.5">
+              <svg class="block w-5 h-5 shrink-0 stroke-transparent in-[.selected]:stroke-bamper-500" alt="выбор">
+                <use href="./sprite.svg#selected"></use>
+              </svg>
+              <p class="in-[.selected]:text-bamper-500 caret-transparent">CD-чейнджер</p>
+            </div>
+            <div class="flex items-center gap-x-2 py-2.5">
+              <svg class="block w-5 h-5 shrink-0 stroke-transparent in-[.selected]:stroke-bamper-500" alt="выбор">
+                <use href="./sprite.svg#selected"></use>
+              </svg>
+              <p class="in-[.selected]:text-bamper-500 caret-transparent">DVD</p>
+            </div>
+            <div class="flex items-center gap-x-2 py-2.5">
+              <svg class="block w-5 h-5 shrink-0 stroke-transparent in-[.selected]:stroke-bamper-500" alt="выбор">
+                <use href="./sprite.svg#selected"></use>
+              </svg>
+              <p class="in-[.selected]:text-bamper-500 caret-transparent">DVD-чейнджер</p>
+            </div>
+            <div class="selected flex items-center gap-x-2 py-2.5">
+              <svg class="block w-5 h-5 shrink-0 stroke-transparent in-[.selected]:stroke-bamper-500" alt="выбор">
+                <use href="./sprite.svg#selected"></use>
+              </svg>
+              <p class="in-[.selected]:text-bamper-500 caret-transparent">GPS трекер</p>
+            </div>
+          </div>
+        </div>
+        <button type="button"
+          class="flex items-center justify-center shadow-none w-6 h-6 p-2 absolute right-4 top-4 text-black border rounded-lg border-transparent bg-transparent cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 disabled:text-neutral-400 disabled:bg-transparent disabled:border-transparent focus:text-black focus:bg-transparent focus:border-transparent focus:outline-bamper-300 active:text-black active:bg-neutral-200 active:border-neutral-200 duration-250 z-11"
+          onclick="modal_select_3.close();">
+          <svg class="block w-3 h-3 shrink-0 stroke-current hover:stroke-current" alt="Закрыть">
+            <use href="./sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+      </div>
+    </dialog>
+    <dialog id="modal_select_4" class="modal bg-black/30">
+      <div
+        class="modal-box w-full mt-auto p-4 h-[calc(100vh-32px)] bg-white rounded-b-none shadow-[0_2px_2px_0_rgba(0,0,0,0.05)]">
+        <div class="relative h-full flex flex-col">
+          <div class="sticky top-0 z-10">
+            <p class="block text-lg font-semibold text-black mb-6">Город</p>
+          </div>
+          <div class="relative w-full mb-2">
+            <div class="relative">
+              <!-- Иконка поиска слева -->
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center text-neutral-400 pointer-events-none">
+                <svg class="block h-5 w-5 shrink-0 stroke-current">
+                  <use href="./sprite.svg#search-input"></use>
+                </svg>
+              </div>
+              <!-- Поле ввода -->
+              <input type="search" placeholder="Поиск" name="search"
+                class="block w-full h-10 rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 pl-10 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 duration-250
+                  [&::-webkit-search-cancel-button]:hidden
+                [&::-webkit-search-decoration]:hidden
+                [&::-moz-search-cancel-button]:hidden
+                [&::-ms-clear]:hidden" />
+              <!-- Кнопка очистки справа (появляется при вводе) -->
+              <!-- <button
+                class="absolute w-8 h-8 p-2 right-1 top-1 flex items-center text-black border rounded-lg border-transparent bg-transparent cursor-pointer">
+                <svg class="block w-3 h-3 shrink-0 stroke-current hover:stroke-current" alt="Закрыть">
+                  <use href="/sprite.svg#close-modal"></use>
+                </svg>
+              </button> -->
+            </div>
+          </div>
+          <div class="flex-1 overflow-y-auto">
+            <div class="flex items-center py-2.5">
+              <input type="checkbox" id="checkbox-100" class="hidden peer" checked />
+              <label for="checkbox-100"
+                class="relative shrink-0 w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 peer-checked:hover:bg-bamper-600 peer-checked:hover:border-bamper-600 mr-2">
+                <svg
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none">
+                  <use href="./sprite.svg#checked-icon"></use>
+                </svg>
+              </label>
+              <label for="checkbox-100"
+                class="w-full flex items-center gap-x-1 cursor-pointer peer-checked:text-bamper-500 peer-checked:hover:text-bamper-600 duration-250 caret-transparent">
+                Астана
+              </label>
+            </div>
+            <div class="flex items-center py-2.5">
+              <input type="checkbox" id="checkbox-102" class="hidden peer" />
+              <label for="checkbox-102"
+                class="relative shrink-0 w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 peer-checked:hover:bg-bamper-600 peer-checked:hover:border-bamper-600 mr-2">
+                <svg
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none">
+                  <use href="./sprite.svg#checked-icon"></use>
+                </svg>
+              </label>
+              <label for="checkbox-102"
+                class="w-full flex items-center gap-x-1 cursor-pointer peer-checked:text-bamper-500 peer-checked:hover:text-bamper-600 duration-250 caret-transparent">
+                Барановичи
+              </label>
+            </div>
+            <div class="flex items-center py-2.5">
+              <input type="checkbox" id="checkbox-103" class="hidden peer" checked />
+              <label for="checkbox-103"
+                class="relative shrink-0 w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 peer-checked:hover:bg-bamper-600 peer-checked:hover:border-bamper-600 mr-2">
+                <svg
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none">
+                  <use href="./sprite.svg#checked-icon"></use>
+                </svg>
+              </label>
+              <label for="checkbox-103"
+                class="w-full flex items-center gap-x-1 cursor-pointer peer-checked:text-bamper-500 peer-checked:hover:text-bamper-600 duration-250 caret-transparent">
+                Белоозерск
+              </label>
+            </div>
+            <div class="flex items-center py-2.5">
+              <input type="checkbox" id="checkbox-104" class="hidden peer" />
+              <label for="checkbox-104"
+                class="relative shrink-0 w-4 h-4 border border-neutral-200 rounded-sm cursor-pointer transition-all duration-250 ease-in-out not-checked:hover:border-bamper-200 disabled:bg-neutral-200 disabled:border-neutral-200 peer-checked:bg-bamper-500 peer-checked:border-bamper-500 peer-checked:hover:bg-bamper-600 peer-checked:hover:border-bamper-600 mr-2">
+                <svg
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2 text-white transition-all duration-250 pointer-events-none">
+                  <use href="./sprite.svg#checked-icon"></use>
+                </svg>
+              </label>
+              <label for="checkbox-104"
+                class="w-full flex items-center gap-x-1 cursor-pointer peer-checked:text-bamper-500 peer-checked:hover:text-bamper-600 duration-250 caret-transparent">
+                Витебск
+              </label>
+            </div>
+          </div>
+        </div>
+        <button type="button"
+          class="flex items-center justify-center shadow-none w-6 h-6 p-2 absolute right-4 top-4 text-black border rounded-lg border-transparent bg-transparent cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 disabled:text-neutral-400 disabled:bg-transparent disabled:border-transparent focus:text-black focus:bg-transparent focus:border-transparent focus:outline-bamper-300 active:text-black active:bg-neutral-200 active:border-neutral-200 duration-250 z-11"
+          onclick="modal_select_4.close();">
+          <svg class="block w-3 h-3 shrink-0 stroke-current hover:stroke-current" alt="Закрыть">
+            <use href="./sprite.svg#close-modal"></use>
+          </svg>
+        </button>
       </div>
     </dialog>
   </div>

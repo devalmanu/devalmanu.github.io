@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <!-- <link rel="icon" type="image/svg+xml" href="" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Bamper | Модальное окно (поля с ошибкой)</title>
+  <title>Bamper | Выбранная модель</title>
   <script type="module" crossorigin src="./assets/main-SK5RxYdQ.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/main-DGnbPWy_.css">
 </head>
@@ -533,7 +533,8 @@
                   <div class="border-b border-neutral-200 pt-2 mb-2"></div>
                   <button type="button"
                     class="group flex items-center gap-2 p-2 text-base text-red-500 bg-transparent border-none shadow-none hover:text-red-600 hover:border-none active:text-red-700 focus:outline-bamper-300 disabled:text-neutral-400 cursor-pointer disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
-                    <use href="./sprite.svg#exit"></use>
+                    <svg class="block w-6 h-6 shrink-0 stroke-red-500 group-hover:stroke-red-600" alt="Выход">
+                      <use href="./sprite.svg#exit"></use>
                     </svg>
                     <span>Выйти</span>
                   </button>
@@ -604,71 +605,47 @@
                 </div>
               </div>
               <div class="w-full border border-solid border-neutral-200 p-4 md:p-6 bg-white rounded-xl">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4">
-                  <div class="custom-select-wrapper relative inline-block">
-                    <label for="select-brand" class="block text-sm font-medium text-black mb-1">Марка *</label>
-                    <select id="select-brand"
-                      class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
-                        outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
-                        [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none">
-                      <option disabled selected value="" style="display:none;"></option>
-                      <option value="1">Toyota</option>
-                      <option value="2">BMV</option>
-                      <option value="3">Audi</option>
-                      <option value="4">Mazda</option>
-                      <option value="5">Ford</option>
-                    </select>
-                    <!-- Иконка удаления выбранного значения -->
-                    <span
-                      class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-8 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer">
-                    </span>
-                  </div>
-                  <div class="custom-select-wrapper relative inline-block">
-                    <label for="select-model" class="block text-sm font-medium text-black mb-1">Модель *</label>
-                    <select id="select-model"
-                      class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
-                        outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
-                        [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none">
-                      <option disabled selected value="" style="display:none;"></option>
-                      <option value="X3">X3</option>
-                      <option value="Octavia" disabled>Octavia</option>
-                      <option value="Camry">Camry</option>
-                      <option value="RAV4">RAV4</option>
-                      <option value="A5">A5</option>
-                    </select>
-                    <span
-                      class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-8 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer">
-                    </span>
-                  </div>
-                  <div class="custom-select-wrapper relative inline-block">
-                    <label for="select-year" class="block text-sm font-medium text-black mb-1">Год выпуска *</label>
-                    <select id="select-year"
-                      class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
-                        outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
-                        [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none">
-                      <option disabled selected value="" style="display:none;"></option>
-                      <option value="1998">1998</option>
-                      <option value="1999">1999</option>
-                      <option value="2000" disabled>2000</option>
-                      <option value="2001">2001</option>
-                      <option value="2002">2002</option>
-                      <option value="2023">2023</option>
-                    </select>
-                    <span
-                      class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-8 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer">
-                    </span>
-                  </div>
-                  <div>
-                    <label for="modification" class="block text-sm font-medium text-black mb-1">Модификация</label>
-                    <div class="mt-1">
-                      <input id="modification" type="text" name="modification" value="" maxlength="30"
-                        oninput="document.querySelector('#char-counter-1').textContent = this.value.length"
-                        class="block w-full h-10 rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500" />
+                <div class="grid grid-cols-1 gap-x-4 gap-y-4">
+                  <div
+                    class="flex items-center justify-between py-4.25 px-3 rounded-sm border border-neutral-200 bg-neutral-50">
+                    <p><span>Audi</span> <span>A5</span>, <span>2025</span></p>
+                    <div class="flex items-center justify-start ml-auto gap-x-3">
+                      <button type="button" title="Редактировать" class="w-5 h-5 border-none flex items-center justify-center p-0 mx-0 my-0 text-sm gap-2 text-neutral-400 cursor-pointer transition-all duration-250 
+                          hover:text-black focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 
+                          disabled:text-neutral-400 disabled:cursor-not-allowed">
+                        <svg class="block w-5 h-5 shrink-0 stroke-current hover:stroke-current">
+                          <use href="./sprite.svg#rewrite-icon"></use>
+                        </svg>
+                      </button>
+                      <button type="button" onclick="remove_combination.showModal()" title="Удалить" class="w-5 h-5 border-none flex items-center justify-center p-0 mx-0 
+                          my-0 text-sm font-medium gap-2 text-red-500 cursor-pointer transition-all duration-250 
+                          hover:text-red-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 
+                          disabled:text-neutral-400 disabled:cursor-not-allowed active:text-red-700">
+                        <svg class="block w-5 h-5 shrink-0 stroke-current hover:stroke-current">
+                          <use href="./sprite.svg#delete-icon"></use>
+                        </svg>
+                      </button>
                     </div>
-                    <div class="flex items-center justify-end mt-1">
-                      <p class="text-neutral-400" id="char-counter-1">0</p>
-                      <span class="text-neutral-400">/</span>
-                      <p class="text-neutral-400">30</p>
+                  </div>
+                  <div
+                    class="flex items-center justify-between py-4.25 px-3 rounded-sm border border-neutral-200 bg-neutral-50">
+                    <p class="text-black"><span>Volkswagen</span> <span>Touran</span>, <span>2022</span></p>
+                    <div class="flex items-center justify-start ml-auto gap-x-3">
+                      <button type="button" title="Редактировать" class="w-5 h-5 border-none flex items-center justify-center p-0 mx-0 my-0 text-sm gap-2 text-neutral-400 cursor-pointer transition-all duration-250 
+                          hover:text-black focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 
+                          disabled:text-neutral-400 disabled:cursor-not-allowed">
+                        <svg class="block w-5 h-5 shrink-0 stroke-current hover:stroke-current">
+                          <use href="./sprite.svg#rewrite-icon"></use>
+                        </svg>
+                      </button>
+                      <button type="button" title="Удалить" onclick="remove_combination.showModal()" class="w-5 h-5 border-none flex items-center justify-center p-0 mx-0 
+                          my-0 text-sm font-medium gap-2 text-red-500 cursor-pointer transition-all duration-250 
+                          hover:text-red-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 
+                          disabled:text-neutral-400 disabled:cursor-not-allowed active:text-red-700">
+                        <svg class="block w-5 h-5 shrink-0 stroke-current hover:stroke-current">
+                          <use href="./sprite.svg#delete-icon"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -833,7 +810,7 @@
                 <div class="grid grid-cols-1 gap-x-4 gap-y-4">
                   <div>
                     <p class="block text-sm font-medium text-black mb-1">Цена</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-4">
                       <div>
                         <input id="price" type="text" name="price"
                           class="block w-full h-10 rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500" />
@@ -1287,10 +1264,10 @@
                   объявление и добавить еще</button>
               </div>
               <button type="submit"
-                class="btn-outline-accent block w-full h-10 text-sm font-medium text-bamper-500 border border-solid border-bamper-500 bg-white px-3.5 py-2.5 text-center rounded-lg cursor-pointer hover:text-bamper-500 hover:border-bamper-500 hover:bg-bamper-50 focus:border-bamper-500 focus:text-bamper-500 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-bamper-700 active:border-bamper-700 active:bg-bamper-100 disabled:text-neutral-400 disabled:border-neutral-400 disabled:bg-white duration-250">Сохранить
+                class="btn-outline-accent block h-10 w-full text-sm font-medium text-bamper-500 border border-solid border-bamper-500 bg-white px-3.5 py-2.5 text-center rounded-lg cursor-pointer hover:text-bamper-500 hover:border-bamper-500 hover:bg-bamper-50 focus:border-bamper-500 focus:text-bamper-500 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-bamper-700 active:border-bamper-700 active:bg-bamper-100 disabled:text-neutral-400 disabled:border-neutral-400 disabled:bg-white duration-250">Сохранить
                 объявление</button>
               <a href="#" onclick=""
-                class="btn-ghost-neutral block w-full h-10 text-sm font-medium text-black border border-solid border-transparent bg-transparent px-3.5 py-2.5 text-center rounded-lg cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 focus:border-white focus:text-black focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-200 active:bg-neutral-200 disabled:text-black disabled:border-white disabled:bg-white duration-250">Выйти
+                class="btn-ghost-neutral block h-10 w-full text-sm font-medium text-black border border-solid border-transparent bg-transparent px-3.5 py-2.5 text-center rounded-lg cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 focus:border-white focus:text-black focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-200 active:bg-neutral-200 disabled:text-black disabled:border-white disabled:bg-white duration-250">Выйти
                 без сохранения</a>
             </form>
           </div>
@@ -1305,19 +1282,18 @@
       </div>
     </main>
     <footer class="footer grow-0 shrink-0 basis-auto"></footer>
-    <dialog id="add_combination" class="modal bg-black/30" open>
+    <dialog id="add_combination" class="modal bg-black/30">
       <div
         class="modal-box w-full max-w-[960px] mt-auto md:m-auto p-4 md:p-6 bg-white rounded-b-none md:rounded-xl shadow-[0_2px_2px_0_rgba(0,0,0,0.05)]">
         <p class="text-lg font-semibold text-black">Добавление комбинации</p>
         <form method="dialog" class="">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 mt-6 mb-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-4 mt-6 mb-6">
             <div class="custom-select-wrapper relative inline-block">
               <label for="add-select-brand" class="block text-sm font-medium text-black mb-1">Марка *</label>
-              <select id="add-select-brand"
-                class="error select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
+              <select id="add-select-brand" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                   outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                   [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
-                  [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600 invalid:border-red-500 [&.error]:border-red-500 invalid:hover:border-red-500 [&.error]::hover:border-red-500 error:border-red-500">
+                  [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
                 <option disabled selected value="" style="display:none;"></option>
                 <option value="1">Toyota</option>
                 <option value="2">BMV</option>
@@ -1331,11 +1307,10 @@
             </div>
             <div class="custom-select-wrapper relative inline-block">
               <label for="add-select-model" class="block text-sm font-medium text-black mb-1">Модель *</label>
-              <select id="add-select-model"
-                class="error select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
+              <select id="add-select-model" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                   outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                   [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none
-                  [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600 invalid:border-red-500 [&.error]:border-red-500 invalid:hover:border-red-500 [&.error]::hover:border-red-500 error:border-red-500">
+                  [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
                 <option disabled selected value="" style="display:none;"></option>
                 <option value="X3">X3</option>
                 <option value="Octavia">Octavia</option>
@@ -1349,11 +1324,10 @@
             </div>
             <div class="custom-select-wrapper relative inline-block">
               <label for="add-select-year" class="block text-sm font-medium text-black mb-1">Год выпуска *</label>
-              <select id="add-select-year"
-                class="error select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
+              <select id="add-select-year" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                           outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                           [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none
-                          [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600 invalid:border-red-500 [&.error]:border-red-500 invalid:hover:border-red-500 [&.error]::hover:border-red-500 error:border-red-500">
+                          [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
                 <option disabled selected value="" style="display:none;"></option>
                 <option value="1998">1998</option>
                 <option value="1999">1999</option>
@@ -1381,17 +1355,13 @@
               </div>
             </div>
           </div>
-          <!-- сообщение об ошибке -->
-          <p class="error-text-red text-red-500 text-sm mb-2" style="margin-top: -8px;">Такая комбинация параметров
-            “марка-модель-год” уже использована. Измените параметры</p>
-
           <div class="w-full md:w-min ml-0 md:ml-auto flex items-center justify-items-end gap-x-3 mt-2 md:mt-4">
             <button type="reset" onclick="add_combination.close();clearForm();"
-              class="btn-outline-neutral w-full h-10 md:w-min flex items-center justify-center gap-x-2 text-sm font-medium text-black border border-solid border-neutral-300 bg-transparent px-5 py-2.5 text-center rounded-lg cursor-pointer hover:border-neutral-300 hover:bg-neutral-100 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-400 active:bg-neutral-200 disabled:text-neutral-400 disabled:bg-transparent duration-250">
+              class="btn-outline-neutral h-10 w-full md:w-min flex items-center justify-center gap-x-2 text-sm font-medium text-black border border-solid border-neutral-300 bg-transparent px-5 py-2.5 text-center rounded-lg cursor-pointer hover:border-neutral-300 hover:bg-neutral-100 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-400 active:bg-neutral-200 disabled:text-neutral-400 disabled:bg-transparent duration-250">
               Отмена
             </button>
             <button type="button" disabled
-              class="btn-primary-accent w-full h-10 md:w-min flex items-center justify-center gap-x-2 text-sm font-medium text-white border border-solid border-bamper-500 bg-bamper-500 px-5 py-2.5 text-center rounded-lg cursor-pointer hover:border-bamper-600 hover:bg-bamper-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-500 active:text-white active:border-bamper-700 active:bg-bamper-700 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed duration-250">
+              class="btn-primary-accent h-10 w-full md:w-min flex items-center justify-center gap-x-2 text-sm font-medium text-white border border-solid border-bamper-500 bg-bamper-500 px-5 py-2.5 text-center rounded-lg cursor-pointer hover:border-bamper-600 hover:bg-bamper-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-500 active:text-white active:border-bamper-700 active:bg-bamper-700 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed duration-250">
               Добавить
             </button>
           </div>
@@ -1432,7 +1402,6 @@
       </div>
     </dialog>
   </div>
-
   <script>
     // для удаления значения выбранного значения в select
     const selectElementWrapper = document.querySelectorAll('.custom-select-wrapper');

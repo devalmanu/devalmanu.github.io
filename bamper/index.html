@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Bamper</title>
-  <script type="module" crossorigin src="./assets/main-BDvIqgQi.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-saLBDVOD.css">
+  <title>Bamper | Список страниц</title>
+  <script type="module" crossorigin src="./assets/main-SK5RxYdQ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-DGnbPWy_.css">
 </head>
 
 <body
   class="lk-page min-w-[320px] h-full box-border relative overflow-x-hidden min-h-screen font-[commissioner] font-regular text-sm scroll-smooth appearance-none">
   <div id="app" class="relative flex flex-col min-h-full font-[commissioner]">
     <header
-      class="header w-full flex items-center h-[72px] grow-0 shrink-0 basis-auto py-4 [body.main-page_&]:bg-bamper-500 [body.lk-page_&]:bg-neutral-100"
+      class="header w-full flex items-center h-[72px] grow-0 shrink-0 basis-auto py-4 [body.main-page_&]:bg-bamper-500 [body.lk-page_&]:bg-neutral-100 [body.lk-page_&]:shadow-md z-2"
       id="header">
       <div class="w-full m-auto max-w-7xl px-4 lg:px-6">
         <nav class="flex items-center">
@@ -403,11 +403,12 @@
                 <!-- <div class="badge" style="display:none">0</div> -->
               </a>
               <!-- поиск -->
-              <a class="flex items-center justify-center [body.main-page_&]:text-white [body.lk-page_&]:text-black cursor-pointer">
-                  <svg class="block w-6 h-6 shrink-0 stroke-current" alt="search icon">
-                    <use href="./sprite.svg#search"></use>
-                  </svg>
-                </a>
+              <a
+                class="flex items-center justify-center [body.main-page_&]:text-white [body.lk-page_&]:text-black cursor-pointer">
+                <svg class="block w-6 h-6 shrink-0 stroke-current" alt="search icon">
+                  <use href="./sprite.svg#search"></use>
+                </svg>
+              </a>
               <a href="#"
                 class="m-0 md:mr-2 md:ml-2 w-full flex items-center justify-center gap-x-2 text-sm font-medium [body.lk-page_&]:text-black [body.main-page_&]:text-bamper-500 h-10 border border-solid [body.lk-page_&]:border-neutral-300 [body.main-page_&]:border-bamper-500 [body.lk-page_&]:bg-neutral-100 [body.main-page_&]:bg-white px-2.5 py-2.5 md:px-4.5 text-center rounded-lg cursor-pointer 
                 [body.lk-page_&]:hover:border-neutral-200 [body.lk-page_&]:hover:bg-neutral-200  [body.lk-page_&]:active:text-black [body.lk-page_&]:active:border-neutral-300 [body.lk-page_&]:active:bg-neutral-300 
@@ -427,8 +428,7 @@
                     </svg>
                   </a>
                 </div>
-                <div tabindex="-1"
-                  class="dropdown-content menu menu-sm bg-white rounded-md z-10 mt-2 w-70 p-2 shadow">
+                <div tabindex="-1" class="dropdown-content menu menu-sm bg-white rounded-md z-10 mt-2 w-70 p-2 shadow">
                   <ul class="flex flex-col gap-2">
                     <li>
                       <a href="#"
@@ -531,7 +531,7 @@
                   </ul>
                   <div class="border-b border-neutral-200 pt-2 mb-2"></div>
                   <button type="button"
-                    class="group flex items-center gap-2 p-2 text-base text-red-500 bg-transparent border-none shadow-none disabled:text-neutral-400 hover:text-red-600 hover:border-none active:text-red-700 transition-all duration-250 ease-in-out focus:outline-bamper-300 cursor-pointer">
+                    class="group flex items-center gap-2 p-2 text-base text-red-500 bg-transparent border-none shadow-none hover:text-red-600 hover:border-none active:text-red-700 focus:outline-bamper-300 disabled:text-neutral-400 cursor-pointer disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
                     <svg class="block w-6 h-6 shrink-0 stroke-red-500 group-hover:stroke-red-600" alt="Выход">
                       <use href="./sprite.svg#exit"></use>
                     </svg>
@@ -573,6 +573,9 @@
               <a href="./index-modalOpen-error.html"><span>Модальное окно с неактивной кнопкой при вводе ошибочных
                   значений
                   в полях</span></a>
+            </li>
+            <li>
+              <a href="./index-selectedModel.html"><span>Вариант выбранных марки-модели</span></a>
             </li>
           </ul>
         </div>
@@ -665,13 +668,37 @@
           <button type="button"
             class="flex items-center justify-center shadow-none w-8 h-8 p-2 absolute right-4 top-4 text-black border rounded-lg border-transparent bg-transparent cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 disabled:text-neutral-400 disabled:bg-transparent disabled:border-transparent focus:text-black focus:bg-transparent focus:border-transparent focus:outline-bamper-300 active:text-black active:bg-neutral-200 active:border-neutral-200 duration-250"
             onclick="add_combination.close()">
-            <svg width="12" height="12" class="block stroke-current hover:stroke-current" viewBox="0 0 12 12"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.75 0.75L0.75 10.75M0.75 0.75L10.75 10.75" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
+            <svg class="block w-3 h-3 shrink-0 stroke-current hover:stroke-current" alt="Закрыть">
+              <use href="./sprite.svg#close-modal"></use>
             </svg>
           </button>
         </form>
+      </div>
+    </dialog>
+    <dialog id="remove_combination" class="modal bg-black/30">
+      <div
+        class="modal-box w-full max-w-80 mt-auto md:m-auto p-4 md:p-6 bg-white rounded-b-none md:rounded-xl shadow-[0_2px_2px_0_rgba(0,0,0,0.05)]">
+        <p class="text-lg font-semibold text-black">Удаление комбинации</p>
+        <div class="mt-4 mb-6">
+          <p>Вы действительно хотите удалить данную комбинацию <span class="font-medium">Audi</span> <span class="font-medium">A5</span>, <span class="font-medium">2025</span>?</p>
+        </div>
+        <div class="w-full ml-0 md:ml-auto flex items-center justify-items-end gap-x-3 mt-2 md:mt-4">
+          <button type="reset" onclick="remove_combination.close();clearForm();" tabindex="0"
+            class="btn-outline-neutral w-full h-10 flex items-center justify-center gap-x-2 text-sm font-medium text-black border border-solid border-neutral-300 bg-transparent px-5 py-2.5 text-center rounded-lg cursor-pointer hover:border-neutral-300 hover:bg-neutral-100 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-400 active:bg-neutral-200 disabled:text-neutral-400 disabled:bg-transparent duration-250 text-nowrap">
+            Отмена
+          </button>
+          <button type="button" tabindex="0"
+            class="btn-text-danger w-full h-10 flex items-center justify-center gap-x-2 text-sm font-medium py-2 px-3 text-center text-white border border-solid border-red-500 bg-red-500 rounded-lg cursor-pointer hover:text-white hover:border-red-600 hover:bg-red-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:border-red-700 active:bg-red-700 disabled:text-neutral-400 disabled:bg-neutral-200 disabled:border-neutral-200 disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
+            Удалить
+          </button>
+        </div>
+        <button type="button"
+          class="flex items-center justify-center shadow-none w-8 h-8 p-2 absolute right-4 top-4 text-black border rounded-lg border-transparent bg-transparent cursor-pointer hover:text-black hover:border-neutral-100 hover:bg-neutral-100 disabled:text-neutral-400 disabled:bg-transparent disabled:border-transparent focus:text-black focus:bg-transparent focus:border-transparent focus:outline-bamper-300 active:text-black active:bg-neutral-200 active:border-neutral-200 duration-250"
+          onclick="remove_combination.close();clearForm();">
+          <svg class="block w-3 h-3 shrink-0 stroke-current hover:stroke-current" alt="Закрыть">
+            <use href="./sprite.svg#close-modal"></use>
+          </svg>
+        </button>
       </div>
     </dialog>
   </div>
