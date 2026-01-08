@@ -6,8 +6,8 @@
   <!-- <link rel="icon" type="image/svg+xml" href="" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Bamper | Добавить изображение</title>
-  <script type="module" crossorigin src="./assets/main-CFPVaQPQ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-D1C-Ef8G.css">
+  <script type="module" crossorigin src="./assets/main-BIUn7cMq.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-CdMYvxR1.css">
 </head>
 
 <body
@@ -420,6 +420,10 @@
                 <span class="hidden md:block">Подать объявление</span>
               </a>
               <!-- личный кабинет -->
+              <!-- кнопка для входа в личный кабинет -->
+              <!-- <div class="hidden md:block">
+                <a href="#" class="flex items-center justify-center text-sm font-medium [body.main-page_&]:text-white [body.lk-page_&]:text-black h-10 py-2.5 px-4 bg-transparent rounded-lg border border-solid [body.main-page_&]:border-white [body.lk-page_&]:border-neutral-400 shadow-none [body.main-page_&]:hover:bg-bamper-600 [body.lk-page_&]:hover:bg-neutral-200 transition-all duration-250">Войти</a>
+              </div> -->
               <div class="dropdown dropdown-end hidden md:block">
                 <div tabindex="0" role="button" class="avatar">
                   <a href="#"
@@ -440,7 +444,8 @@
                           <use href="./sprite.svg#advertisements"></use>
                         </svg>
                         <span>Мои объявления</span>
-                        <span class="flex items-center gap-0.5 text-base ml-auto text-neutral-500">
+                        <span
+                          class="flex items-center gap-0.5 text-base ml-auto text-neutral-500 group-hover:text-black transition-all duration-250">
                           123456
                         </span>
                       </a>
@@ -454,7 +459,8 @@
                           <use href="./sprite.svg#tarif"></use>
                         </svg>
                         <span>Мой тариф</span>
-                        <span class="flex items-center gap-0.5 text-base ml-auto text-neutral-500">
+                        <span
+                          class="flex items-center gap-0.5 text-base ml-auto text-neutral-500 group-hover:text-black transition-all duration-250">
                           99
                           <svg class="block w-6 h-6 shrink-0 stroke-current" alt="тариф">
                             <use href="./sprite.svg#tarif-money"></use>
@@ -541,7 +547,8 @@
                   <div class="border-b border-neutral-200 pt-2 mb-2"></div>
                   <button type="button"
                     class="group flex items-center gap-2 p-2 text-base text-red-500 bg-transparent border-none shadow-none hover:text-red-600 hover:border-none active:text-red-700 focus:outline-bamper-300 disabled:text-neutral-400 cursor-pointer disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
-                    <use href="./sprite.svg#exit"></use>
+                    <svg class="block w-6 h-6 shrink-0 stroke-red-500 group-hover:stroke-red-600" alt="Выход">
+                      <use href="./sprite.svg#exit"></use>
                     </svg>
                     <span>Выйти</span>
                   </button>
@@ -698,7 +705,7 @@
                     <select id="select-spare" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                         outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                         [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
-                        [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
+                        [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
                       <option disabled selected value="" style="display:none;"></option>
                       <option value="10">Двигатель</option>
                       <option value="11">Фильтр</option>
@@ -741,7 +748,7 @@
                       <select id="engine-capacity" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                           outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                           [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
-                          [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
+                          [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
                         <option option disabled selected value="" class="text-neutral-400" style="display:none;">
                         </option>
                         <option value="1.7">1.7</option>
@@ -758,7 +765,7 @@
                       <select id="fuel-type" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                           outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                           [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
-                          [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
+                          [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
                         <option disabled selected value="" class="text-neutral-400" style="display:none;"></option>
                         <option value="dizel">Дизель</option>
                         <option value="benzin">Бензин</option>
@@ -773,7 +780,7 @@
                       <select id="engine-type" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                           outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                           [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
-                          [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
+                          [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
                         <option disabled selected value="" class="text-neutral-400" style="display:none;"></option>
                         <option value="CDI">CDI</option>
                         <option value="21">test 1</option>
@@ -790,7 +797,7 @@
                     <select id="body-type" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                         outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                         [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
-                        [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
+                        [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
                       <option disabled selected value="" class="text-neutral-400" style="display:none;"></option>
                       <option value="16">Седан</option>
                       <option value="17">Хэтчбек</option>
@@ -808,7 +815,7 @@
                     <select id="transmission" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                         outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                         [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
-                        [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
+                        [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
                       <option disabled selected value="" class="text-neutral-400" style="display:none;"></option>
                       <option value="26">МКПП</option>
                       <option value="27">АКПП</option>
@@ -1330,7 +1337,7 @@
               <select id="add-select-brand" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                   outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                   [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
-                  [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
+                  [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
                 <option disabled selected value="" style="display:none;"></option>
                 <option value="1">Toyota</option>
                 <option value="2">BMV</option>
@@ -1347,7 +1354,7 @@
               <select id="add-select-model" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                   outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                   [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none
-                  [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
+                  [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
                 <option disabled selected value="" style="display:none;"></option>
                 <option value="X3">X3</option>
                 <option value="Octavia">Octavia</option>
@@ -1364,7 +1371,7 @@
               <select id="add-select-year" class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                           outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                           [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none
-                          [&_option[selected]]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
+                          [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
                 <option disabled selected value="" style="display:none;"></option>
                 <option value="1998">1998</option>
                 <option value="1999">1999</option>
