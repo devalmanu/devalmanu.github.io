@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Bamper | Поиск</title>
+  <title>Bamper | Поиск открытый</title>
   <script type="module" crossorigin src="./assets/main-CBdJ6bWe.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/main-BsZzGhGl.css">
 </head>
@@ -559,7 +559,7 @@
         </nav>
       </div>
     </header>
-    <main class="main grow shrink-0 basis-auto min-h-[90vh] bg-white pt-4 lg:pt-6 pb-6">
+    <main class="main grow shrink-0 basis-auto min-h-[90vh] bg-neutral-100 pt-4 lg:pt-6 pb-6">
       <div class="w-full m-auto min-h-33 bg-bamper-500 -mt-4 lg:-mt-6 pt-">
         <div class="w-full m-auto max-w-7xl px-4 lg:px-6">
           <div class="pt-6 text-white space-y-2 pb-4">
@@ -637,22 +637,49 @@
           <div class="bg-white p-4 rounded-xl shadow-[0_2px_12px_0_rgba(0,0,0,0.1)]">
             <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
               <div class="grid w-full md:col-span-2">
-                <div class="custom-select-wrapper relative inline-block">
-                  <select id="select-brand" required
-                    class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
-                  outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
-                  [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
-                  [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600 invalid:text-neutral-400">
-                    <option disabled selected value="" hidden class="text-neutral-400">Марка</option>
-                    <option value="1" class="text-black">Toyota</option>
-                    <option value="2" class="text-black">BMV</option>
-                    <option value="3" class="text-black">Audi</option>
-                    <option value="4" class="text-black">Mazda</option>
-                    <option value="5" class="text-black">Ford</option>
+                <!-- Пример 1 -->
+                <div class="custom-select-wrapper w-full select-search relative inline-block">
+                  <select class="hidden-select hidden" name="car-brand-1" required>
+                    <option value="" selected disabled></option>
                   </select>
+
+                  <div class="relative">
+                    <button type="button"
+                      class="select-trigger w-full text-left px-3 py-2.5 text-sm font-regular placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 transition-all outline-none shadow-none flex items-center justify-between">
+                      <span class="text-neutral-400">Марка</span>
+                      <svg class="w-4 h-4 text-neutral-400 transition-transform" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </button>
+
+                    <div
+                      class="select-dropdown absolute hidden w-full mt-1 p-2 bg-white border border-neutral-200 rounded-sm shadow-lg z-50">
+                      <div class="pb-2">
+                        <div class="relative caret-transparent">
+                          <svg class="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-neutral-400"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                          </svg>
+                          <input type="text"
+                            class="select-search w-full pl-8 pr-2 py-1.5 text-sm border border-neutral-200 rounded focus:outline-none focus:border-bamper-500"
+                            placeholder="Поиск" autocomplete="off">
+                        </div>
+                      </div>
+
+                      <div class="select-options max-h-60 overflow-y-auto custom-select-options">
+                        <!-- Опции будут сгенерированы через JS -->
+                      </div>
+
+                      <div class="no-results hidden p-3 text-center text-sm text-neutral-500">
+                        Ничего не найдено
+                      </div>
+                    </div>
+                  </div>
+
                   <span
-                    class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-2 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer">
-                  </span>
+                    class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-2 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer caret-transparent"></span>
                 </div>
               </div>
               <div class="grid w-full md:col-span-2">
@@ -711,22 +738,49 @@
                 </div>
               </div>
               <div class="grid w-full md:col-span-2">
-                <div class="custom-select-wrapper relative inline-block">
-                  <select id="select-detal" required
-                    class="select custom-select w-full block px-3 py-2.5 text-sm font-regular placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
-                  outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
-                  [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
-                  [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600 invalid:text-neutral-400">
-                    <option disabled selected value="" hidden class="text-neutral-400">Запчасть</option>
-                    <option value="1" class="text-black">Toyota</option>
-                    <option value="2" class="text-black">BMV</option>
-                    <option value="3" class="text-black">Audi</option>
-                    <option value="4" class="text-black">Mazda</option>
-                    <option value="5" class="text-black">Ford</option>
+                <!-- Пример 2 -->
+                <div class="custom-select-wrapper w-full select-search relative inline-block">
+                  <select class="hidden-select hidden" name="car-brand-2" required>
+                    <option value="" selected disabled></option>
                   </select>
+
+                  <div class="relative">
+                    <button type="button"
+                      class="select-trigger w-full text-left px-3 py-2.5 text-sm font-regular placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 transition-all outline-none shadow-none flex items-center justify-between">
+                      <span class="text-neutral-400">Запчасть</span>
+                      <svg class="w-4 h-4 text-neutral-400 transition-transform" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </button>
+
+                    <div
+                      class="select-dropdown absolute hidden w-full mt-1 p-2 bg-white border border-neutral-200 rounded-sm shadow-lg z-50">
+                      <div class="pb-2">
+                        <div class="relative caret-transparent">
+                          <svg class="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-neutral-400"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                          </svg>
+                          <input type="text"
+                            class="select-search w-full pl-8 pr-2 py-1.5 text-sm border border-neutral-200 rounded focus:outline-none focus:border-bamper-500"
+                            placeholder="Поиск" autocomplete="off">
+                        </div>
+                      </div>
+
+                      <div class="select-options max-h-60 overflow-y-auto custom-select-options">
+                        <!-- Опции будут сгенерированы через JS -->
+                      </div>
+
+                      <div class="no-results hidden p-3 text-center text-sm text-neutral-500">
+                        Ничего не найдено
+                      </div>
+                    </div>
+                  </div>
+
                   <span
-                    class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-2 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer">
-                  </span>
+                    class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-2 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer caret-transparent"></span>
                 </div>
               </div>
               <div class="grid w-full md:col-span-2">
@@ -739,7 +793,6 @@
                   class="block w-full h-10 rounded-sm text-sm font-regular text-black bg-white border border-neutral-200 px-3 py-2.5 placeholder:text-neutral-400 hover:border-bamper-200 focus:outline-none focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 invalid:border-red-500 [&.error]:border-red-500 invalid:hover:border-red-500 [&.error]:hover:border-red-500"
                   placeholder="Артикул" />
               </div>
-
             </div>
             <div class="grid w-full col-span-6 gap-4 grid-cols-6 mt-6">
               <div class="flex md:justify-start items-center md:col-span-4 md:gap-x-8">
@@ -751,19 +804,19 @@
                       <use href="./sprite.svg#search-parametres"></use>
                     </svg>
                   </button>
-                  <!-- <div
+                  <div
                     class="flex items-center justify-center w-6 h-6 text-sm font-medium text-white text-center bg-red-500 rounded-full shrink-0">
-                    18</div> -->
+                    18</div>
                 </div>
-                <!-- <div class="flex flex-row justify-end items-center cursor-pointer">
+                <div class="flex flex-row justify-end items-center cursor-pointer">
                   <button type="button"
                     class="flex items-center gap-x-1 text-red-500 bg-transparent border-none shadow-none hover:text-red-600 hover:border-none active:text-red-700 focus:outline-bamper-300 disabled:text-neutral-400 cursor-pointer disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
                     Сбросить
                     <svg class="block w-4 h-4 shrink-0 stroke-current mt-0.5" alt="arrow">
-                      <use href="/sprite.svg#search-reset"></use>
+                      <use href="./sprite.svg#search-reset"></use>
                     </svg>
                   </button>
-                </div> -->
+                </div>
               </div>
               <button type="button"
                 class="w-full col-span-2 flex items-center justify-center h-10 gap-x-2 text-sm font-medium py-2 px-3 text-center text-white border border-solid border-bamper-500 bg-bamper-500 rounded-lg cursor-pointer hover:text-white hover:border-bamper-600 hover:bg-bamper-600 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-500 focus:bg-bamper-500 active:text-white active:border-bamper-700 active:bg-bamper-700 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250 text-nowrap">Показать
@@ -1167,40 +1220,278 @@
     </dialog>
   </div>
   <script>
-    // для удаления значения выбранного значения в select
-    const selectElementWrapper = document.querySelectorAll('.custom-select-wrapper');
-    selectElementWrapper.forEach(selectWrapper => {
-      const selectElement = selectWrapper.querySelector('.custom-select');
-      const clearIcon = selectWrapper.querySelector('.clear-icon');
-      function clearSelection(e) {
-        selectElement[0].selected = true;
-        clearIcon.style.display = 'none';
-        if (e) {
-          e.stopPropagation();
-        }
-        const eventChange = new Event('change');
-        selectElement.dispatchEvent(eventChange);
-      }
-      function handleSelectChange() {
-        if (selectElement.value === "" || selectElement.value === "default") {
-          clearIcon.style.display = 'none';
-        } else {
-          clearIcon.style.display = 'block';
-        }
-      }
-      clearIcon?.addEventListener('click', clearSelection);
+    // Данные опций для всех селектов
+    const optionsData = [
+      { value: '1', label: 'Toyota Camry' },
+      { value: '2', label: 'BMW X5' },
+      { value: '3', label: 'Audi A4' },
+      { value: '4', label: 'Mazda CX-5' },
+      { value: '5', label: 'Ford Focus' },
+      { value: '6', label: 'Mercedes C-Class' },
+      { value: '7', label: 'Honda Civic' },
+      { value: '8', label: 'Nissan Qashqai' },
+      { value: '9', label: 'Volkswagen Golf' },
+      { value: '10', label: 'Hyundai Solaris' }
+    ];
 
-      selectElement.addEventListener('change', handleSelectChange);
-      // handleSelectChange();
+    // Инициализация всех кастомных селектов
+    function initCustomSelects() {
+      const selectWrappers = document.querySelectorAll('.select-search');
 
-    });
-    function clearForm() {
-      // Очистка полей формы
-      const clearIcons = document.querySelectorAll('.clear-icon');
-      clearIcons.forEach(clearIcon => {
-        clearIcon.style.display = 'none';
+      selectWrappers.forEach((wrapper, index) => {
+        // Элементы внутри конкретного wrapper
+        const trigger = wrapper.querySelector('.select-trigger');
+        const triggerText = wrapper.querySelector('.select-trigger span');
+        const triggerIcon = wrapper.querySelector('.select-trigger svg');
+        const dropdown = wrapper.querySelector('.select-dropdown');
+        const searchInput = wrapper.querySelector('.select-search');
+        const optionsContainer = wrapper.querySelector('.select-options');
+        const noResults = wrapper.querySelector('.no-results');
+        const hiddenSelect = wrapper.querySelector('.hidden-select');
+        const clearIcon = wrapper.querySelector('.clear-icon');
+
+        // Проверяем, что все необходимые элементы существуют
+        if (!trigger || !triggerText || !dropdown || !searchInput || !optionsContainer || !hiddenSelect) {
+          console.warn('Не все необходимые элементы найдены в селекте', wrapper);
+          return; // Пропускаем этот селект если нет всех элементов
+        }
+
+        // Уникальный ID для wrapper
+        const wrapperId = `select-wrapper-${index}`;
+        wrapper.id = wrapperId;
+
+        // Инициализация опций
+        function initOptions() {
+          optionsContainer.innerHTML = '';
+          optionsData.forEach(option => {
+            const optionElement = document.createElement('div');
+            optionElement.className = 'px-3 py-2.5 text-sm text-black rounded-sm hover:bg-bamper-50 hover:text-bamper-600 cursor-pointer transition-colors';
+            optionElement.dataset.value = option.value;
+            optionElement.textContent = option.label;
+
+            optionElement.addEventListener('click', () => {
+              selectOption(option);
+              closeDropdown();
+            });
+
+            optionsContainer.appendChild(optionElement);
+
+            // Добавляем опцию в скрытый select
+            const hiddenOption = document.createElement('option');
+            hiddenOption.value = option.value;
+            hiddenOption.textContent = option.label;
+            hiddenSelect.appendChild(hiddenOption);
+          });
+        }
+
+        // Фильтрация опций
+        function filterOptions(searchTerm) {
+          const filteredOptions = optionsData.filter(option =>
+            option.label.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+
+          if (filteredOptions.length === 0) {
+            optionsContainer.classList.add('hidden');
+            if (noResults) noResults.classList.remove('hidden');
+          } else {
+            optionsContainer.classList.remove('hidden');
+            if (noResults) noResults.classList.add('hidden');
+
+            const allOptions = optionsContainer.querySelectorAll('div');
+            allOptions.forEach(optionElement => {
+              const optionValue = optionElement.dataset.value;
+              const option = optionsData.find(o => o.value === optionValue);
+              if (option && option.label.toLowerCase().includes(searchTerm.toLowerCase())) {
+                optionElement.classList.remove('hidden');
+              } else {
+                optionElement.classList.add('hidden');
+              }
+            });
+          }
+        }
+
+        // Выбор опции
+        function selectOption(option) {
+          triggerText.textContent = option.label;
+          triggerText.classList.remove('text-neutral-400');
+          triggerText.classList.add('text-black');
+
+          // Устанавливаем значение в скрытый select
+          hiddenSelect.value = option.value;
+
+          // Показываем иконку очистки если она существует
+          if (clearIcon) {
+            clearIcon.style.display = 'block';
+          }
+
+          // Добавляем выбранный класс к option
+          const allOptions = optionsContainer.querySelectorAll('div');
+          allOptions.forEach(opt => {
+            opt.classList.remove('bg-bamper-50', 'text-bamper-600');
+            if (opt.dataset.value === option.value) {
+              opt.classList.add('bg-bamper-50', 'text-bamper-600');
+            }
+          });
+        }
+
+        // Очистка выбранного значения
+        function clearSelection(e) {
+          if (e) {
+            e.stopPropagation();
+          }
+
+          // Сбрасываем текст триггера
+          const placeholder = triggerText.dataset.placeholder || 'Запчасть';
+          triggerText.textContent = placeholder;
+          triggerText.classList.remove('text-black');
+          triggerText.classList.add('text-neutral-400');
+
+          // Сбрасываем скрытый select
+          hiddenSelect.value = '';
+
+          // Скрываем иконку очистки если она существует
+          if (clearIcon) {
+            clearIcon.style.display = 'none';
+          }
+
+          // Сбрасываем выделение в опциях
+          const allOptions = optionsContainer.querySelectorAll('div');
+          allOptions.forEach(opt => {
+            opt.classList.remove('bg-bamper-50', 'text-bamper-600');
+          });
+
+          // Генерируем событие change
+          const eventChange = new Event('change', { bubbles: true });
+          hiddenSelect.dispatchEvent(eventChange);
+        }
+
+        // Открытие/закрытие dropdown
+        function toggleDropdown() {
+          const isOpen = !dropdown.classList.contains('hidden');
+
+          if (isOpen) {
+            closeDropdown();
+          } else {
+            openDropdown();
+          }
+        }
+
+        function openDropdown() {
+          // Закрываем другие открытые dropdown
+          closeAllDropdownsExcept(wrapperId);
+
+          dropdown.classList.remove('hidden');
+          if (triggerIcon) {
+            triggerIcon.style.transform = 'rotate(180deg)';
+          }
+          searchInput.value = '';
+          filterOptions('');
+          setTimeout(() => searchInput.focus(), 10);
+        }
+
+        function closeDropdown() {
+          dropdown.classList.add('hidden');
+          if (triggerIcon) {
+            triggerIcon.style.transform = 'rotate(0deg)';
+          }
+        }
+
+        // Закрытие всех dropdown кроме указанного
+        function closeAllDropdownsExcept(exceptId) {
+          selectWrappers.forEach(otherWrapper => {
+            if (otherWrapper.id !== exceptId) {
+              const otherDropdown = otherWrapper.querySelector('.select-dropdown');
+              const otherIcon = otherWrapper.querySelector('.select-trigger svg');
+              if (otherDropdown && !otherDropdown.classList.contains('hidden')) {
+                otherDropdown.classList.add('hidden');
+                if (otherIcon) {
+                  otherIcon.style.transform = 'rotate(0deg)';
+                }
+              }
+            }
+          });
+        }
+
+        // Сохраняем оригинальный placeholder с проверкой
+        if (triggerText) {
+          triggerText.dataset.placeholder = triggerText.textContent;
+        }
+
+        // Инициализация
+        initOptions();
+
+        // Обработчики событий с проверками
+        trigger.addEventListener('click', toggleDropdown);
+
+        searchInput.addEventListener('input', (e) => {
+          filterOptions(e.target.value);
+        });
+
+        if (clearIcon) {
+          clearIcon.addEventListener('click', clearSelection);
+        }
+
+        // Закрытие при клике вне элемента
+        document.addEventListener('click', (e) => {
+          if (!wrapper.contains(e.target)) {
+            closeDropdown();
+          }
+        });
+
+        // Навигация с клавиатуры
+        trigger.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleDropdown();
+          }
+        });
+
+        dropdown.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            closeDropdown();
+            trigger.focus();
+          }
+        });
+
+        // Для формы
+        hiddenSelect.addEventListener('change', function () {
+          if (clearIcon) {
+            if (this.value === "") {
+              clearIcon.style.display = 'none';
+            } else {
+              clearIcon.style.display = 'block';
+            }
+          }
+        });
       });
     }
+
+    // Функция для очистки всех форм
+    function clearAllForms() {
+      const selectWrappers = document.querySelectorAll('.custom-select-wrapper');
+      selectWrappers.forEach(wrapper => {
+        const triggerText = wrapper.querySelector('.select-trigger span');
+        const hiddenSelect = wrapper.querySelector('.hidden-select');
+        const clearIcon = wrapper.querySelector('.clear-icon');
+
+        if (triggerText && triggerText.dataset.placeholder) {
+          triggerText.textContent = triggerText.dataset.placeholder;
+          triggerText.classList.remove('text-black');
+          triggerText.classList.add('text-neutral-400');
+        }
+
+        if (hiddenSelect) {
+          hiddenSelect.value = '';
+        }
+
+        if (clearIcon) {
+          clearIcon.style.display = 'none';
+        }
+      });
+    }
+
+    // Инициализация при загрузке страницы
+    document.addEventListener('DOMContentLoaded', initCustomSelects);
   </script>
 </body>
 

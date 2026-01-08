@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Bamper | Список страниц</title>
-  <script type="module" crossorigin src="./assets/main-BIUn7cMq.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-CdMYvxR1.css">
+  <script type="module" crossorigin src="./assets/main-CBdJ6bWe.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-BsZzGhGl.css">
 </head>
 
 <body
@@ -614,7 +614,7 @@
                   outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                   [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
                   [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
-                <option disabled selected value="" style="display:none;"></option>
+                <option disabled selected value="" hidden></option>
                 <option value="1">Toyota</option>
                 <option value="2">BMV</option>
                 <option value="3">Audi</option>
@@ -631,7 +631,7 @@
                   outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                   [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none
                   [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
-                <option disabled selected value="" style="display:none;"></option>
+                <option disabled selected value="" hidden></option>
                 <option value="X3">X3</option>
                 <option value="Octavia">Octavia</option>
                 <option value="Camry">Camry</option>
@@ -648,7 +648,7 @@
                           outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                           [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none
                           [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
-                <option disabled selected value="" style="display:none;"></option>
+                <option disabled selected value="" hidden></option>
                 <option value="1998">1998</option>
                 <option value="1999">1999</option>
                 <option value="2000">2000</option>
@@ -725,31 +725,36 @@
   <script>
     // для удаления значения выбранного значения в select
     const selectElementWrapper = document.querySelectorAll('.custom-select-wrapper');
-    if (selectElementWrapper.length > 0) {
-      selectElementWrapper.forEach(selectWrapper => {
-        const selectElement = selectWrapper.querySelector('.custom-select');
-        const clearIcon = selectWrapper.querySelector('.clear-icon');
-        function clearSelection(e) {
-          selectElement.value = "";
+    selectElementWrapper.forEach(selectWrapper => {
+      const selectElement = selectWrapper.querySelector('.custom-select');
+      const clearIcon = selectWrapper.querySelector('.clear-icon');
+      function clearSelection(e) {
+        selectElement[0].selected = true;
+        clearIcon.style.display = 'none';
+        if (e) {
+          e.stopPropagation();
+        }
+        const eventChange = new Event('change');
+        selectElement.dispatchEvent(eventChange);
+      }
+      function handleSelectChange() {
+        if (selectElement.value === "" || selectElement.value === "default" ) {
           clearIcon.style.display = 'none';
-          // Опционально: предотвращаем всплытие события, если это необходимо в сложном UI
-          if (e) {
-            e.stopPropagation();
-          }
-          // Опционально: инициируем событие 'change', если другой код на него подписан
-          const eventChange = new Event('change');
-          selectElement.dispatchEvent(eventChange);
+        } else {
+          clearIcon.style.display = 'block';
         }
-        function handleSelectChange() {
-          if (selectElement.value === "") {
-            clearIcon.style.display = 'none';
-          } else {
-            clearIcon.style.display = 'block';
-          }
-        }
-        clearIcon?.addEventListener('click', clearSelection);
-        selectElement.addEventListener('change', handleSelectChange);
-        // handleSelectChange();
+      }
+      clearIcon?.addEventListener('click', clearSelection);
+
+      selectElement.addEventListener('change', handleSelectChange);
+      // handleSelectChange();
+
+    });
+    function clearForm() {
+      // Очистка полей формы
+      const clearIcons = document.querySelectorAll('.clear-icon');
+      clearIcons.forEach(clearIcon => {
+        clearIcon.style.display = 'none';
       });
     }
   </script>

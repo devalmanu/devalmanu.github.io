@@ -5,11 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Bamper | Styleguide</title>
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <script type="module" crossorigin src="./assets/main-BIUn7cMq.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-CdMYvxR1.css">
+  <script type="module" crossorigin src="./assets/main-CBdJ6bWe.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-BsZzGhGl.css">
 </head>
 
 <body
@@ -673,9 +671,15 @@
                       </svg>
                     </button>
                     <button type="button"
-                      class="btn-text-danger w-min flex items-center justify-center gap-x-2 text-sm font-medium text-red-500 bg-transparent border-none shadow-none hover:text-red-600 hover:border-none active:text-red-700 focus:outline-bamper-300 disabled:text-neutral-400 cursor-pointer disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
+                      class="w-min flex items-center justify-center gap-x-2 text-sm font-medium text-bamper-500 bg-transparent border-none shadow-none hover:text-bamper-600 hover:border-none active:text-bamper-700 focus:outline-bamper-300 disabled:text-neutral-400 cursor-pointer disabled:cursor-not-allowed transition-all duration-250 text-nowrap">Все
+                      параметры
+                      <span>Text accent</span>
+                    </button>
+                    <button type="button"
+                      class="btn-text-danger w-min flex items-center justify-center gap-x-2  text-red-500 bg-transparent border-none shadow-none hover:text-red-600 hover:border-none active:text-red-700 focus:outline-bamper-300 disabled:text-neutral-400 cursor-pointer disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
                       <span>Text danger</span>
                     </button>
+
                     <button type="button" onclick="add_combination.showModal()"
                       class="btn-secondary-neutral w-full h-10 flex items-center justify-center gap-x-2 text-sm font-medium text-black border border-solid border-neutral-100 bg-neutral-100 px-3.5 py-2.5 text-center rounded-lg cursor-pointer hover:border-neutral-200 hover:bg-neutral-200 focus:outline-2 focus:outline-offset-1 focus:outline-bamper-300 active:text-black active:border-neutral-300 active:bg-neutral-300 disabled:text-neutral-400 disabled:border-neutral-200 disabled:bg-neutral-200 disabled:cursor-not-allowed transition-all duration-250 text-nowrap">
                       <svg class="block w-4 h-4 stroke-current hover:stroke-current">
@@ -758,20 +762,38 @@
                 </div>
                 <div class="component-card bg-white rounded-xl shadow-md p-6">
                   <div class="custom-select-wrapper w-full relative inline-block">
-                    <label for="select-brand" class="block text-sm font-medium text-black mb-1">Список Select</label>
+                    <label for="select-brand" class="block text-sm font-medium text-black mb-1">Select без плейсхолдера</label>
                     <select id="select-brand"
-                      class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
+                      class="select custom-select w-full block px-3 py-2.5 text-sm font-regular placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
                         outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                         [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none">
-                      <option disabled selected value="" style="display:none;"></option>
-                      <option value="1">Toyota</option>
-                      <option value="2">BMV</option>
-                      <option value="3">Audi</option>
-                      <option value="4">Mazda</option>
-                      <option value="5">Ford</option>
+                      <option disabled selected value="" hidden class="text-neutral-400"></option>
+                      <option value="1" class="text-black">Toyota</option>
+                      <option value="2" class="text-black">BMV</option>
+                      <option value="3" class="text-black">Audi</option>
+                      <option value="4" class="text-black">Mazda</option>
+                      <option value="5" class="text-black">Ford</option>
                     </select>
                     <span
                       class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-8 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer">
+                    </span>
+                  </div>
+                  <p class="block text-sm font-medium text-black mt-4 mb-1">Select с подсказкой</p>
+                  <div class="custom-select-wrapper w-full relative inline-block">
+                    <select id="select-modeling" required
+                      class="select custom-select w-full block px-3 py-2.5 text-sm font-regular text-black placeholder:text-neutral-400 border border-neutral-200 rounded-sm bg-white hover:border-bamper-200 focus:border-bamper-500 disabled:bg-neutral-100 disabled:border-neutral-200 error:border-red-500 transition-all
+                  outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
+                  [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
+                  [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600 invalid:text-neutral-400">
+                      <option disabled selected value="" hidden class="text-neutral-400">Марка</option>
+                      <option value="1" class="text-black">Toyota</option>
+                      <option value="2" class="text-black">BMV</option>
+                      <option value="3" class="text-black">Audi</option>
+                      <option value="4" class="text-black">Mazda</option>
+                      <option value="5" class="text-black">Ford</option>
+                    </select>
+                    <span
+                      class="clear-icon hover:text-neutral-400 absolute content-[''] w-6 h-6 p-1 top-2 right-2 bg-white bg-no-repeat bg-center text-sm font-medium text-neutral-400 bg-size-[inherit] z-3 cursor-pointer">
                     </span>
                   </div>
                   <div class="mb-4 pt-4">
@@ -1322,7 +1344,7 @@
                   outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                   [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none 
                   [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
-                <option disabled selected value="" style="display:none;"></option>
+                <option disabled selected value="" hidden></option>
                 <option value="1">Toyota</option>
                 <option value="2">BMV</option>
                 <option value="3">Audi</option>
@@ -1339,7 +1361,7 @@
                   outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                   [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none
                   [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
-                <option disabled selected value="" style="display:none;"></option>
+                <option disabled selected value="" hidden></option>
                 <option value="X3">X3</option>
                 <option value="Octavia">Octavia</option>
                 <option value="Camry">Camry</option>
@@ -1356,7 +1378,7 @@
                           outline-none shadow-none active:outline-none active:shadow-none focus:outline-none focus-within:outline-none focus:outline-offset-0 focus-within:outline-offset-0 focus:isolate focus-within:isolate focus:shadow-none focus-within:shadow-none focus:z-1 focus-within:z-1
                           [&_option:not(:disabled):checked]:text-bamper-500 [&_option:not(:disabled):checked]:bg-color-white [&_option:not(:disabled):hover]:text-bamper-600 [&_option:not(:disabled):hover]:bg-bamper-50 [&_option:not(:disabled):focus-visible]:text-bamper-600 [&_option:not(:disabled):focus-visible]:bg-bamper-50 [&_option:not(:disabled):active]:shadow-none
                           [&_option[selected]:text-bamper-500] [&_option[selected]]:hover:text-bamper-600">
-                <option disabled selected value="" style="display:none;"></option>
+                <option disabled selected value="" hidden></option>
                 <option value="1998">1998</option>
                 <option value="1999">1999</option>
                 <option value="2000">2000</option>
@@ -1708,18 +1730,16 @@
       const selectElement = selectWrapper.querySelector('.custom-select');
       const clearIcon = selectWrapper.querySelector('.clear-icon');
       function clearSelection(e) {
-        selectElement.value = "";
+        selectElement[0].selected = true;
         clearIcon.style.display = 'none';
-        // Опционально: предотвращаем всплытие события, если это необходимо в сложном UI
         if (e) {
           e.stopPropagation();
         }
-        // Опционально: инициируем событие 'change', если другой код на него подписан
         const eventChange = new Event('change');
         selectElement.dispatchEvent(eventChange);
       }
       function handleSelectChange() {
-        if (selectElement.value === "") {
+        if (selectElement.value === "" || selectElement.value === "default") {
           clearIcon.style.display = 'none';
         } else {
           clearIcon.style.display = 'block';
