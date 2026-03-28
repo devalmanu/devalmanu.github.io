@@ -247,10 +247,10 @@ h6,
 	scroll-margin-top: 120px;
 	margin-bottom: 85px;
 	@include breakpoint(tablet) {
-		margin-bottom: 70px;
+		margin-bottom: 75px;
 	}
 	@include breakpoint(mobileonly) {
-		margin-bottom: 60px;
+		margin-bottom: 65px;
 	}
 }
 p {
@@ -387,10 +387,10 @@ a.color-accent {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 4px 36px;
+	padding: 5px 40px;
 	font-family: $Roboto-400;
 	color: $color-white;
-	font-size: 16px;
+	font-size: 17px;
 	line-height: 1.2;
 	white-space: nowrap;
 	letter-spacing: 0.06em;
@@ -408,7 +408,6 @@ a.color-accent {
 	}
 	@include breakpoint(mobileonly) {
 		width: 100%;
-		font-size: 14px;
 		max-width: 380px;
 	}
 
