@@ -1,0 +1,160 @@
+.footer {
+   background: $color-dark-gray;
+   &__container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      column-gap: 30px;
+      row-gap: 36px;
+      @include breakpoint(laptop) {
+         display: -ms-grid;
+         display: grid;
+         -ms-grid-columns: 1fr 1fr;
+         grid-template-columns: 1fr 1fr;
+      }
+      @include breakpoint(mobileonly) {
+         -ms-grid-columns: 1fr;
+         grid-template-columns: 1fr;
+         text-align: center;
+         row-gap: 28px;
+      }
+   }
+
+   &__content {
+      padding: 30px 0 40px;
+      &-block {
+         @include breakpoint(mobileonly) {
+            text-align: center;
+         }
+         h3 {
+            color: $color-dark;
+            font-family: $Nunito-Semibold;
+            font-size: 22px;
+            margin-bottom: 6px;
+            text-align: left;
+            @include breakpoint(mobileonly) {
+               font-size: 20px;
+               text-align: center;
+            }
+         }
+         .contacts-link {
+            color: $color-dark;
+            font-family: $Nunito-Semibold;
+            font-size: 18px;
+            white-space: nowrap;
+            align-items: center;
+            padding: 4px 0;
+            @include breakpoint(mobileonly) {
+               font-size: 16px;
+               justify-content: center;
+               text-align: center;
+            }
+            &:hover,
+            &:active {
+               opacity: 0.8;
+               color: $color-dark;
+               text-decoration: none;
+            }
+            img {
+               display: inline-block;
+               width: 20px;
+               height: 20px;
+               flex-shrink: 0;
+               margin-right: 6px;
+            }
+         }
+      }
+
+      &-navigation {
+         min-width: 300px;
+         @include breakpoint(mobileonly) {
+            min-width: 100%;
+         }
+      }
+
+      &-nav {
+         .footer__nav {
+            margin-left: 16px;
+            @include breakpoint(mobileonly) {
+               margin-left: 0;
+            }
+            &-link {
+               color: $color-black;
+               list-style-type: disc;
+               text-align: left;
+               @include breakpoint(mobileonly) {
+                  list-style-type: none;
+                  text-align: center;
+               }
+
+               a {
+                  display: inline-block;
+                  font-family: $Roboto-300;
+                  font-weight: 300;
+                  font-size: 18px;
+                  line-height: 1.15;
+                  color: $color-black;
+                  text-decoration: none;
+                  padding: 4px 0;
+                  min-width: 140px;
+                  text-align: left;
+                  @include breakpoint(mobileonly) {
+                     font-size: 16px;
+                     text-align: center;
+                  }
+                  &:hover {
+                     opacity: 0.8;
+                     text-decoration: none;
+                  }
+               }
+            }
+         }
+      }
+      &-info {
+         display: flex;
+         flex-direction: column;
+         row-gap: 10px;
+      }
+   }
+
+   &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      padding: 0;
+      border-radius: 0;
+      background-color: transparent;
+      @include breakpoint(mobileonly) {
+         width: 140px;
+         margin: 0 auto;
+      }
+   }
+
+   &__copyrigth,
+   &__policy {
+      display: block;
+      font-family: $Nunito-Semibold;
+      color: $color-dark;
+      text-decoration: none;
+      &:hover,
+      &:active {
+         opacity: 0.8;
+         color: $color-dark;
+         text-decoration: none;
+      }
+   }
+   &__copyrigth {
+      font-size: 22px;
+      line-height: 1.1;
+      @include breakpoint(mobileonly) {
+         font-size: 18px;
+      }
+   }
+   &__policy {
+      font-size: 18px;
+      @include breakpoint(mobileonly) {
+         font-size: 16px;
+      }
+   }
+}

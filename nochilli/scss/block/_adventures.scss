@@ -1,0 +1,49 @@
+.adventures {
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 30px;
+        padding-top: 20px;
+    }
+    &__item {
+        width: calc(33.33% - 14px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 12px;
+        text-align: center;
+        @include breakpoint(phablet) {
+            width: calc(50% - 12px);
+        }
+        @include breakpoint(mobileonly) {
+            width: 100%;
+            max-width: 380px;
+        }
+
+        &:nth-child(4),
+        &:nth-child(5) {
+            width: calc(38% - 14px);
+            @include breakpoint(phablet) {
+                width: calc(50% - 12px);
+                @include breakpoint(mobileonly) {
+                    width: 100%;
+                }
+            }
+        }
+        span,
+        h3 {
+            font-family: $Roboto-400;
+            font-size: 18px;
+            @include breakpoint(mobileonly) {
+                    font-size: 16px;
+                }
+        }
+
+        img {
+            max-height: 85px;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.relax {
+    &-title {
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+        max-width: 700px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        @include breakpoint(mobileonly) {
+                flex-direction: column;
+                row-gap: 18px;
+            }
+    }
+    &-img {
+        width: 120px;
+            @include breakpoint(mobileonly) {
+                width: 105px;
+            }
+    }
+    &__review {
+        .relax-text {
+            margin: 0;
+        }
+    }
+    &__desc {
+        max-width: 900px;
+        margin: 0 auto;
+        .section-text {
+            color: $color-dark;
+            font-size: 22px;
+            text-align: center;
+            @include breakpoint(mobileonly) {
+                font-size: 18px;
+            }
+        }
+    }
+}

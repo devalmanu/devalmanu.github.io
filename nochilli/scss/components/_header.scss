@@ -1,0 +1,215 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  transition:
+    position 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  background-color: $color-light;
+  box-shadow: 0;
+  &.scrolled {
+    position: fixed;
+    // background-color: $color-ultra-light;
+    border-radius: 0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    &.header-open {
+      border-radius: 0;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0);
+    }
+    .header-top__container {
+      padding-top: 16px;
+      @include breakpoint(tablet) {
+        padding-top: 10px;
+      }
+    }
+    .nav {
+      @include breakpoint(tablet) {
+        padding-top: 34px;
+      }
+    }
+  }
+  &.header-open {
+    background-color: $color-white;
+  }
+
+  &-top {
+    &__container {
+      padding: 16px 0;
+      column-gap: 24px;
+      transition: padding-top 0.3s ease-in-out;
+      @include breakpoint(tablet) {
+        padding: 10px 0;
+        column-gap: 0;
+      }
+    }
+    &__nav {
+      .nav__link {
+        color: $color-black;
+        white-space: nowrap;
+        &:hover,
+        &:active,
+        &:focus {
+          color: $color-dark;
+        }
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint(tablet) {
+      justify-content: space-between;
+      gap: 16px;
+    }
+  }
+
+  .contacts-offer {
+    margin-left: auto;
+    text-align: center;
+    font-size: 20px;
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+
+    .contacts-link {
+      color: $color-dark;
+      font-family: $Nunito-Semibold;
+      font-size: 16px;
+      white-space: nowrap;
+      align-items: center;
+      padding: 4px 0;
+      @include breakpoint(tablet) {
+        font-size: 18px;
+        justify-content: center;
+        text-align: center;
+      }
+      &:hover,
+      &:active {
+        opacity: 0.8;
+        color: $color-dark;
+        text-decoration: none;
+      }
+      img {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+    }
+
+    .call-us {
+      @include breakpoint(tablet) {
+        font-size: 20px;
+        font-family: $Roboto-400;
+        margin-bottom: 12px;
+      }
+    }
+
+    .social-gap {
+      @include breakpoint(tablet) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  @include none;
+  border: none;
+  padding: 8px;
+  border-radius: $radius-8;
+  background-color: $color-white;
+  transition:
+    transform 0.45s ease,
+    position 0.35s ease;
+  cursor: pointer;
+
+  &__line {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $color-dark;
+    transform: translateY(-50%);
+    transition: opacity 0.2s ease-in-out;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $color-dark;
+    transition:
+      transform 0.2s ease-in-out,
+      top 0.2s ease-in-out,
+      bottom 0.2s ease-in-out;
+  }
+  &::before {
+    top: 14px;
+  }
+  &::after {
+    bottom: 14px;
+  }
+  &--active {
+    transform: rotate(0deg);
+    margin-left: 0;
+
+    .burger__line {
+      display: none;
+    }
+    &::before {
+      width: 22px;
+      transition:
+        position 1s ease-in-out,
+        top 0.6s ease-in-out,
+        right 0.6s ease-in-out;
+      transform: rotate(45deg);
+      top: 21px;
+      left: 14px;
+      opacity: 1;
+    }
+    &::after {
+      width: 22px;
+      transition:
+        position 1s ease-in-out,
+        top 0.6s ease-in-out,
+        bottom 0.6s ease-in-out;
+      transform: rotate(-45deg);
+      bottom: 21px;
+      left: 14px;
+      opacity: 1;
+    }
+  }
+  @include breakpoint(tablet) {
+    @include block;
+    z-index: 30;
+  }
+}

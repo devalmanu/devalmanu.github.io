@@ -1,0 +1,46 @@
+.reservation {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        // display: grid;
+        //     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        //     gap: 40px;
+        //     padding-top: 12px;
+    }
+    &__item {
+        width: 100%;
+        display: flex;
+        column-gap: 36px;
+        margin-bottom: 20px;
+        @include breakpoint(tablet) {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+    .product-container {
+        // width: 66%;
+    }
+
+    &__into {
+        ul {
+            row-gap: 12px;
+            li {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                img {
+                    width: 43px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        .btn-accent {
+            max-width: max-content;
+            margin: 30px auto 0;
+        }
+    }
+}

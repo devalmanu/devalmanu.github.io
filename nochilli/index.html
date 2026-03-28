@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Ночилли</title>
+	<meta name="description" content="Ночилли">
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self';"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg">
+	<link rel="shortcut icon" href="./img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="Ночилли">
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./css/fancybox.css">
+	<link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body class="page_body front-page">
+	<div class="site-container">
+		<header class="header" id="header">
+			<div class="header-top">
+				<div class="container">
+					<div class="header__container header-top__container">
+						<a href="./" class="header__logo hidden-desktop" aria-label="Название компании">
+							<img src="./img/@1x/logo-mobile@2x.png" alt="Ночилли">
+						</a>
+						<button class="burger" data-burger aria-label="open-menu" aria-expanded="false">
+							<span class="burger__line"></span>
+						</button>
+						<div class="nav" data-nav>
+							<div class="header-top__nav">
+								<nav>
+									<ul class="nav__list">
+										<!-- <li class="nav__item"><a href="./" class="nav__link active">Главная</a>
+										</li> -->
+										<li class="nav__item"><a href="#reservation"
+												class="nav__link link-button">Забронировать квартиру</a>
+										</li>
+										<li class="nav__item"><a href="#adventures" class="nav__link link-button">Наши
+												преимущества</a></li>
+										<li class="nav__item"><a href="#our-products"
+												class="nav__link link-button">Услуги</a></li>
+										<li class="nav__item"><a href="#relax" class="nav__link link-button">О нас</a>
+										</li>
+										<li class="nav__item"><a href="#location" class="nav__link link-button">Квартиры
+												на карте</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="contacts-offer hidden-mobile">
+								<div class="call-us">
+									<p class="text-center f-bold">Связаться <br>с нами</p>
+								</div>
+							</div>
+							<div class="header__buttons">
+								<div class="call-us text-center hidden-desktop">
+									Связаться с нами
+								</div>
+								<a href="tel:+79034190059" class="btn-reset contacts-link d-flex align-center col-gap-6"
+									target="_blank">
+									<img class="shrink-0 icon" src="./img/icon/phone.svg" alt="Телефон">
+									+7(903)419-00-59</a>
+								<div class="d-flex col-gap-12 social-gap">
+									<a href="https://t.me/+79034190059" class="btn-reset contacts-link d-flex"
+										target="_blank">Telegram</a>
+									<a href="https://wa.me/79034190059" class="btn-reset contacts-link d-flex"
+										target="_blank">WhatsApp</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main site-main" id="main">
+			<section class="banner section">
+				<div class="container">
+					<div class="banner__content-top">
+						<div class="banner__title">
+							<h1>Посуточная аренда квартир <br>в Пятигорске без посредников</h1>
+						</div>
+					</div>
+					<div class="banner__content">
+						<div class="banner__picture">
+							<div class="banner__picture-logo">
+								<div class="logo-bg">
+									<img src="./img/@1x/logo-big@2x.png" alt="Ночилли">
+									<div class="element-1"></div>
+									<div class="element-2"></div>
+								</div>
+							</div>
+							<img src="./img/@2x/main-banner@2x.webp" alt="О компании"
+								data-src="./img/@2x/main-banner@2x.jpg" loading="lazy">
+						</div>
+						<div class="banner__content-block">
+							<div class="banner__content-subtitle">
+								<ul>
+									<li>
+										<p><span>ДЕШЕВЛЕ</span>без посредников</p>
+									</li>
+									<li>
+										<p><span>ОТЛИЧНЫЕ</span>локации</p>
+									</li>
+									<li>
+										<p><span>50+ ОТЗЫВОВ</span></p>
+										<div class="d-flex align-center justify-center col-gap-6">
+											<p>5/5</p>
+											<div class="starlist">
+												<span><img src="./img/icon/star.png" alt="звезда"></span>
+												<span><img src="./img/icon/star.png" alt="звезда"></span>
+												<span><img src="./img/icon/star.png" alt="звезда"></span>
+												<span><img src="./img/icon/star.png" alt="звезда"></span>
+												<span><img src="./img/icon/star.png" alt="звезда"></span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<p>Заезд 24/7 «умный» замок</p>
+									</li>
+									<li>
+										<p>Wi – Fi &<br>cплит система</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="reservation section" id="reservation">
+				<div class="container">
+					<h2>Забронируйте квартиру в Пятигорске напрямую
+					</h2>
+					<div class="reservation__list">
+						<div class="reservation__item">
+							<div class="product-slider" id="slider-1">
+
+								<!-- MAIN -->
+								<div class="swiper main-swiper">
+									<div class="swiper-wrapper">
+
+										<div class="swiper-slide">
+											<a data-fancybox="gallery-1" href="./img/@1x/granatovaja/1.jpg">
+												<img src="./img/@1x/granatovaja/1.jpg" />
+											</a>
+										</div>
+										<!-- <div class="swiper-slide">
+											<a data-fancybox="gallery-1" href="video.mp4" data-type="video">
+												<video muted playsinline preload="metadata">
+													<source src="video.mp4" type="video/mp4" />
+												</video>
+											</a>
+										</div> -->
+										<div class="swiper-slide">
+											<a data-fancybox="gallery-1" href="./img/@1x/granatovaja/2.jpg">
+												<img src="./img/@1x/granatovaja/2.jpg" />
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a data-fancybox="gallery-1" href="./img/@1x/granatovaja/3.jpg">
+												<img src="./img/@1x/granatovaja/3.jpg" />
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a data-fancybox="gallery-1" href="./img/@1x/granatovaja/4.jpg">
+												<img src="./img/@1x/granatovaja/4.jpg" />
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a data-fancybox="gallery-1" href="./img/@1x/granatovaja/5.jpg">
+												<img src="./img/@1x/granatovaja/5.jpg" />
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a data-fancybox="gallery-1" href="./img/@1x/granatovaja/6.jpg">
+												<img src="./img/@1x/granatovaja/6.jpg" />
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a data-fancybox="gallery-1" href="./img/@1x/granatovaja/7.jpg">
+												<img src="./img/@1x/granatovaja/7.jpg" />
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a data-fancybox="gallery-1" href="./img/@1x/granatovaja/8.jpg">
+												<img src="./img/@1x/granatovaja/8.jpg" />
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<!-- THUMBS -->
+								<div class="swiper thumbs-swiper">
+									<div class="swiper-wrapper">
+
+										<div class="swiper-slide">
+											<img src="./img/@1x/granatovaja/1.jpg" />
+										</div>
+
+										<!-- <div class="swiper-slide">
+											<video muted>
+												<source src="video.mp4" type="video/mp4" />
+											</video>
+										</div> -->
+										<div class="swiper-slide">
+											<img src="./img/@1x/granatovaja/2.jpg" />
+										</div>
+										<div class="swiper-slide">
+											<img src="./img/@1x/granatovaja/3.jpg" />
+										</div>
+										<div class="swiper-slide">
+											<img src="./img/@1x/granatovaja/4.jpg" />
+										</div>
+										<div class="swiper-slide">
+											<img src="./img/@1x/granatovaja/5.jpg" />
+										</div>
+										<div class="swiper-slide">
+											<img src="./img/@1x/granatovaja/6.jpg" />
+										</div>
+										<div class="swiper-slide">
+											<img src="./img/@1x/granatovaja/7.jpg" />
+										</div>
+										<div class="swiper-slide">
+											<img src="./img/@1x/granatovaja/8.jpg" />
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="reservation__into">
+								<ul class="d-flex flex-col">
+									<li>
+										<img src="./img/icon/res-1.png" alt="1">
+										<p>- вместимость до 2х чел.</p>
+									</li>
+									<li>
+										<img src="./img/icon/res-2.png" alt="1">
+										<p>- площадь 19 м2</p>
+									</li>
+									<li>
+										<img src="./img/icon/res-3.png" alt="2">
+										<p>- эргономичный диван </p>
+									</li>
+									<li>
+										<img src="./img/icon/res-4.png" alt="3">
+										<p>- совм. с/у (ванна, фен)</p>
+									</li>
+									<li>
+										<img src="./img/icon/res-5.png" alt="4">
+										<p>- ТВ и др.</p>
+									</li>
+									<li>
+										<img src="./img/icon/res-6.png" alt="5">
+										<p>- кухонная зона со всем необходимым</p>
+									</li>
+									<li>
+										<img src="./img/icon/res-7.png" alt="6">
+										<p>- белье, предметы гигиены</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+					<div class="reservation__btn">
+						<a href="#" class="btn-reset btn-accent">Забронировать <span>от 2200 ₽ / сутки</span></a>
+					</div>
+				</div>
+			</section>
+			<section class="adventures section" id="adventures">
+				<div class="container">
+					<h2>Когда квартира становится частью отдыха</h2>
+					<ul class="adventures__list">
+						<li class="adventures__item">
+							<img src="./img/icon/adv-1.png" alt="Локации">
+							<span>Локации, которые превращают планы в реальность</span>
+							<p>Всё рядом: парк, кафе, магазин, туристические маршруты.</p>
+						</li>
+						<li class="adventures__item">
+							<img src="./img/icon/adv-2.png" alt="Стиль и комфорт">
+							<span>Стиль и комфорт</span>
+							<p>Идеальная чистота и&nbsp;атмосфера, в&nbsp;которую приятно возвращаться.</p>
+						</li>
+						<li class="adventures__item">
+							<img src="./img/icon/adv-3.png" alt="Форматы проживания">
+							<span>Разные форматы проживания</span>
+							<p>Студия или более просторные квартиры&nbsp;&mdash; выбирайте район и&nbsp;бюджет под свои
+								планы.</p>
+						</li>
+						<li class="adventures__item">
+							<img src="./img/icon/adv-4.png" alt="Передвижение">
+							<span>Свобода передвижения</span>
+							<p>Отличная транспортная доступность.</p>
+						</li>
+						<li class="adventures__item">
+							<img src="./img/icon/adv-5.png" alt="Поддержка">
+							<span>Забота и поддержка.</span>
+							<p>Мы&nbsp;на&nbsp;связи и&nbsp;поможем Вам на&nbsp;каждом этапе, чтобы отдых прошёл легко
+								и&nbsp;предсказуемо.</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="product__list section" id="our-products">
+				<div class="container">
+					<h2>Услуги</h2>
+					<div class="product__content">
+						<div class="d-flex product__wish">
+							<div class="section-description">
+								<h3>Базовые (входят в стоимость)</h3>
+								<ul>
+									<li>
+										<p>Бесконтактное заселение</p>
+									</li>
+									<li>
+										<p>Высокоскоростной Wi-Fi</p>
+									</li>
+									<li>
+										<p>Онлайн-договор аренды </p>
+									</li>
+									<li>
+										<p>Чистое бельё</p>
+									</li>
+									<li>
+										<p>Финальная уборка</p>
+									</li>
+									<li>
+										<p>Предоставление платежных документов (по запросу)</p>
+									</li>
+								</ul>
+							</div>
+							<div class="product__wish-img">
+								<img class="product-img shrink-0" src="./img/icon/services-cat.png" alt="Услуги">
+							</div>
+						</div>
+						<div class="section-description">
+							<h3>Дополнительные (платные)</h3>
+							<ul>
+								<li>
+									<p>Дополнительная уборка во время вашего отдыха</p>
+								</li>
+								<li>
+									<p>Детские опции (стульчик, кровать)</p>
+								</li>
+								<li>
+									<p>Ранний заезд / поздний выезд (по согласованию)</p>
+								</li>
+							</ul>
+						</div>
+						<p class="f-regular f-24 text-center product__list-desc">Организуете отдых для близких? Поможем
+							с&nbsp;комфортным
+							размещением и&nbsp;сделаем их&nbsp;заезд максимально удобным.</p>
+					</div>
+				</div>
+			</section>
+			<section class="relax section" id="relax">
+				<div class="container">
+					<div class="d-flex relax-title">
+						<img class="relax-img shrink-0" src="./img/icon/work-cat.png" alt="Отдых">
+						<h2 class="mb-0">Кто стоит за вашим идеальным отдыхом?</h2>
+					</div>
+					<div class="section-description mb-0">
+						<p class="text-justify">Мы верим, что отдых это не только квартира, а ощущение заботы с первого
+							клика и до момента,
+							когда ты, уезжая, уже планируешь вернуться.</p>
+						<p class="text-justify">Ночилли это небольшая слаженная команда. Мы всегда на связи, следим за
+							идеальным порядком и
+							чистотой, обеспечиваем чтобы все работало безупречно.</p>
+						<p class="text-justify">У нас всего три квартиры и это осознанный выбор. Мы не гонимся за
+							количеством, потому что
+							выбираем качество сервиса, личное внимание и комфорт без лишних забот для каждого гостя.</p>
+						<p class="text-justify">Наше отношение к делу ценят гости, и мы очень гордимся отзывами, которые
+							они оставили на
+							площадках.</p>
+						<p class="section-text f-20">Цифры, которые говорят лучше слов:</p>
+					</div>
+					<div class="relax__review">
+						<p class="f-regular relax-text f-24">Всего отзывов – 50+</p>
+						<div class="d-flex align-center col-gap-6">
+							<div class="starlist">
+								<span><img src="./img/icon/star.png" alt="звезда"></span>
+								<span><img src="./img/icon/star.png" alt="звезда"></span>
+								<span><img src="./img/icon/star.png" alt="звезда"></span>
+								<span><img src="./img/icon/star.png" alt="звезда"></span>
+								<span><img src="./img/icon/star.png" alt="звезда"></span>
+							</div>
+							<p class="f-regular relax-text mt-0">5,0 / 5,0</p>
+						</div>
+					</div>
+					<div class="swiper partners-swiper" id="reviews">
+						<div class="swiper-wrapper partners-swiper-wrapper">
+							<div class="partners__item swiper-slide">
+								<div class="partners__item-top d-flex align-center col-gap-12">
+									<img class="icon" src="./img/icon/avito.png" alt="Авито">
+									<div class="partners__item-name">
+										<p class="f-regular">Авито</p>
+										<p class="f-regular"><span>27</span> отзывов</p>
+										<div class="d-flex align-center col-gap-6">
+											<div class="starlist">
+												<span><img src="./img/icon/star.png" alt="звезда"></span>
+											</div>
+											<p class="section-text mt-0">5,0 / 5,0</p>
+										</div>
+									</div>
+								</div>
+								<div class="partners__item-img">
+									<img src="./img/@1x/review-1.jpg" alt="отзыв" loading="lazy">
+								</div>
+							</div>
+							<div class="partners__item swiper-slide">
+								<div class="partners__item-top d-flex align-center col-gap-12">
+									<img class="icon" src="./img/icon/ostrovok.webp" alt="Островок">
+									<div class="partners__item-name">
+										<p class="f-regular">Островок!</p>
+										<p class="f-regular"><span>15</span> отзывов</p>
+										<div class="d-flex align-center col-gap-6">
+											<div class="starlist">
+												<span><img src="./img/icon/star.png" alt="звезда"></span>
+											</div>
+											<p class="section-text mt-0">10,0 / 10,0</p>
+										</div>
+									</div>
+								</div>
+								<div class="partners__item-img">
+									<img src="./img/@1x/review-2.jpg" alt="отзыв" loading="lazy">
+								</div>
+							</div>
+							<div class="partners__item swiper-slide">
+								<div class="partners__item-top d-flex align-center col-gap-12">
+									<img class="icon" src="./img/icon/yandex-travel-icon-logo.svg"
+										alt="Яндекс путешествия">
+									<div class="partners__item-name">
+										<p class="f-regular">Авито</p>
+										<p class="f-regular"><span>27</span> отзывов</p>
+										<div class="d-flex align-center col-gap-6">
+											<div class="starlist">
+												<span><img src="./img/icon/star.png" alt="звезда"></span>
+											</div>
+											<p class="section-text mt-0">5,0 / 5,0</p>
+										</div>
+									</div>
+								</div>
+								<div class="partners__item-img">
+									<img src="./img/@1x/review-3.jpg" alt="отзыв" loading="lazy">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="relax__desc">
+						<p class="section-text">Для нас Ночилли больше, чем бизнес. Это наше кавказское гостеприимство,
+							воплощенное в каждой
+							детали. Будем рады видеть вас!</p>
+					</div>
+				</div>
+			</section>
+			<section class="partners section" id="location">
+				<div class="container">
+					<h2>Забронируйте квартиру по локации</h2>
+				</div>
+			</section>
+		</main>
+		<footer class="footer" id="footer">
+			<div class="container">
+				<div class="footer__content">
+					<div class="footer__container">
+						<div class="footer__content-block footer__info">
+							<a href="./" class="footer__logo" aria-label="Название компании">
+								<img src="./img/@1x/logo-footer@2x.png" alt="Ночилли">
+							</a>
+						</div>
+						<div class="footer__content-block footer__content-navigation">
+							<h3>Краткая карта сайта</h3>
+							<div class="footer__content-nav">
+								<ul class="footer__nav">
+									<li class="footer__nav-link">
+										<a href="#reservation" class="link-button">Аренда квартиры в Пятигорске</a>
+									</li>
+									<li class="footer__nav-link">
+										<a href="#our-products" class="link-button">Услуги</a>
+									</li>
+									<li class="footer__nav-link">
+										<a href="#reviews" class="link-button">Отзывы о нас</a>
+									</li>
+									<li class="footer__nav-link">
+										<a href="#locations" class="link-button">Квартиры на карте</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__content-block footer__content-info">
+							<a href="#" class="footer__copyrigth">Правила проживания</a>
+							<a href="#" class="footer__policy">Согласие на обработку персональных&nbsp;данных</a>
+						</div>
+						<div class="footer__content-block contacts-offer">
+							<h3>Связаться с нами</h3>
+							<a href="tel:+79034190059" class="btn-reset contacts-link d-flex" target="_blank">
+								<img src="./img/icon/phone.svg" alt="Телефон">
+								+7(903)419-00-59</a>
+							<a href="https://t.me/+79034190059" class="btn-reset contacts-link d-flex"
+								target="_blank">Telegram</a>
+							<a href="https://wa.me/79034190059" class="btn-reset contacts-link d-flex"
+								target="_blank">WhatsApp</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="./libs/swiper-bundle.min.js"></script>
+	<script src="./libs/fancybox.umd.js"></script>
+	<script src="./js/scripts.min.js"></script>
+</body>
+
+</html>
