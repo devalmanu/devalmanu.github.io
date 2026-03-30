@@ -291,6 +291,7 @@
     @include breakpoint(mobileonly) {
         border-radius: $radius-12;
     }
+        aspect-ratio: 16 / 9;
 }
 
 /* THUMBS */
@@ -334,4 +335,5 @@
 .thumbs-swiper video {
     width: 100%;
     cursor: pointer;
+        aspect-ratio: 16 / 9;
 }

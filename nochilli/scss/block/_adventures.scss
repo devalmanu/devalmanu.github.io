@@ -6,9 +6,9 @@
         flex-wrap: wrap;
         column-gap: 20px;
         row-gap: 30px;
-        padding-top: 20px;
+        padding: 20px 0 15px;
         @include breakpoint(mobileonly) {
-            padding-top: 6px;
+            padding: 6px 0 10px;
         }
     }
     &__item {

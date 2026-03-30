@@ -1,12 +1,10 @@
 .reservation {
     &__list {
+        padding-top: 20px;
         display: flex;
         flex-direction: column;
         row-gap: 40px;
-        // display: grid;
-        //     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-        //     gap: 40px;
-        //     padding-top: 12px;
+
     }
     &__item {
         width: 100%;
@@ -44,6 +42,26 @@
             @include breakpoint(tablet) {
                 margin-top: 10px;
             }
+        }
+    }
+    &__widget {
+        &-img {
+            width: 155px;
+            @include breakpoint(mobileonly) {
+                width: 125px;
+            }
+        }
+    }
+
+    &__value {
+        position: relative;
+        span {
+            position: absolute;
+            top: 6px;
+            left: 18px;
+            font-family: $Roboto-400;
+            font-weight: 400;
+            font-size: 14px;
         }
     }
 }

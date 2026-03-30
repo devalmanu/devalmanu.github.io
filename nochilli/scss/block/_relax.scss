@@ -18,17 +18,17 @@
             }
     }
     &__review {
+        margin-bottom: 26px;
         .relax-text {
             margin: 0;
         }
     }
     &__desc {
-        max-width: 900px;
+        max-width: 880px;
         margin: 0 auto;
         .section-text {
             color: $color-dark;
             font-size: 22px;
-            text-align: center;
             @include breakpoint(mobileonly) {
                 font-size: 18px;
             }
