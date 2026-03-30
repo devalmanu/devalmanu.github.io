@@ -167,28 +167,27 @@ document.addEventListener('DOMContentLoaded', () => {
    Fancybox.bind("[data-fancybox]", {
       on: {
          reveal: (fancybox, slide) => {
-            // авто play видео
-            const video = slide.$el.querySelector("video");
-            if (video) video.play();
-         },
+      if (!slide.el) return;
 
-         change: (fancybox) => {
-            // стоп всех видео при смене слайда
-            document.querySelectorAll(".fancybox__container video").forEach(v => {
-               v.pause();
-               v.currentTime = 0;
-            });
-            console.log('fancy')
-         },
+      const video = slide.el.querySelector("video");
+      if (video) {
+        video.play().catch(() => {});
+      }
+    },
+
+    change: () => {
+      document.querySelectorAll(".fancybox__container video").forEach(v => {
+        v.pause();
+        v.currentTime = 0;
+      });
+    },
 
          close: () => {
-            // стоп при закрытии
-            document.querySelectorAll("video")?.forEach(v => {
+            document.querySelectorAll("video").forEach(v => {
                v.pause();
             });
          }
-      }
-
+      },
    });
 
    const partnersSwiper = document.querySelector(".partners-swiper");

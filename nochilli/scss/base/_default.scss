@@ -50,6 +50,9 @@ body {
 				z-index: 5 !important;
 			}
 		}
+		p {
+			margin-top: 10px;
+		}
 	}
 }
 input,
@@ -262,7 +265,7 @@ h6,
 }
 .section {
 	scroll-margin-top: 120px;
-	margin-bottom: 85px;
+	margin-bottom: 90px;
 	@include breakpoint(tablet) {
 		margin-bottom: 75px;
 	}
@@ -290,6 +293,9 @@ p {
 		font-family: $Roboto-700;
 		font-weight: 700;
 	}
+}
+.w-100 {
+	width: 100%;
 }
 .section-text {
 	color: $color-black;
@@ -344,6 +350,9 @@ p {
 	img {
 		width: 22px;
 		height: 22px;
+	}
+	img.starlist__img {
+		width: 100%;
 	}
 }
 .icon {

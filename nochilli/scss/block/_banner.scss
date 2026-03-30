@@ -109,6 +109,7 @@
                 position: relative;
                 padding: 0px 11.5% 20px;
                 background: $color-ultra-light;
+                border-radius: 0 0 20px 0;
                 @include breakpoint(phablet) {
                     padding: 20px;
                 }
