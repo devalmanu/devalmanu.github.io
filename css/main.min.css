@@ -8009,7 +8009,6 @@ body {
 }
 
 body.ishome .site-header {
-  position: relative;
   min-height: 600px;
   height: 100vh;
   background-color: #2a303a;
@@ -8020,15 +8019,15 @@ body.ishome .site-header .top-line {
   padding: 15px 0 12px;
   background: #2d2d2d;
   position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   width: 100%;
   z-index: 10;
 }
 
 body.ishome .site-header .top-line.scrolled {
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
   background: #2d2d2d;
   border-radius: 0;
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .1);
