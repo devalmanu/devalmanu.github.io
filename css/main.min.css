@@ -6905,8 +6905,8 @@ body.modal-open .mm-slideout {
 .fotorama__nav__shaft {
   display: inline-block;
   vertical-align: middle;
-  *display: inline;
-  *zoom: 1;
+  display: inline;
+  zoom: 1;
 }
 
 .fotorama__nav__frame,
@@ -7358,7 +7358,7 @@ body.modal-open .mm-slideout {
 .fotorama__arr--disabled {
   pointer-events: none;
   cursor: default;
-  *display: none;
+  display: none;
   opacity: .1;
 }
 
@@ -7764,7 +7764,7 @@ body.modal-open .mm-slideout {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 
 .selectize-control.multi .selectize-input>div {
