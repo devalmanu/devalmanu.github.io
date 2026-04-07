@@ -8,15 +8,15 @@ const TOKEN = `8612631410:AAFRV1PXbgLbSHd--QLGluUkNSN3Wwiko88`;
 const CHAT_ID = '493566464';
 
 app.post('/api/send', async (req,res)=>{
-  const {name,email,service,message} = req.body;
+  const {name,phone,service,message} = req.body;
 
   const text = `
-📩 Новая заявка
+    📩 Новая заявка
 
-👤 Имя: ${name}
-📧 Email: ${email}
-🛠 Услуга: ${service}
-💬 Сообщение: ${message}
+    👤 Имя: ${name}
+    📱 Телефон: ${phone}
+    🛠 Услуга: ${service}
+    💬 Сообщение: ${message}
   `;
 
   await axios.post(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
