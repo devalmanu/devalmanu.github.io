@@ -2,16 +2,12 @@
 <html lang="ru">
 
 <head>
-
 	<meta charset="utf-8">
-	<!-- <base href="/"> -->
-
 	<title>DevManu Portfolio</title>
 	<meta name="description" content="создание сайтов, разработка сайтов, DevMANU">
 	<meta name="Keywords" content="создание сайтов, разработка сайтов, DevMANU">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 	<!-- Favicon -->
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
@@ -22,27 +18,12 @@
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
 	<!-- Template Basic Images End -->
-
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#181818">
 	<meta name="msapplication-navbutton-color" content="#181818">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#181818">
 	<!-- Custom Browsers Color End -->
-
 	<link rel="stylesheet" href="css/main.min.css">
-	<!-- <style>
-		body {
-			opacity: 0;
-			overflow-x: hidden;
-		}
-
-		html {
-			background-color: #181818;
-		}
-	</style> -->
-
-
-
 </head>
 
 <body class="ishome">
@@ -50,10 +31,9 @@
 		<div class="pulse"></div>
 	</div>
 	<div id="my-page">
-
-		<div id="my-header">
+		<header id="my-header">
 			<header class="site-header" style="background-image: url(img/bg.jpg);">
-				<div class="top-line">
+				<div class="top-line header__top-line" id="header-stick">
 					<a href="#" class="logo"><img src="img/logo/logo-white.svg" alt="website development"></a>
 					<div class="phone-numb d-none d-sm-block">
 						<i class="fa fa-mobile" aria-hidden="true"></i>
@@ -67,24 +47,22 @@
 					<nav id="my-menu">
 						<ul>
 							<li>
-								<a href="#our-services">Услуги</a>
+								<a href="#our-services" class="link-button">Услуги</a>
 							</li>
-							<li class="Selected">
+							<li class="Selected link-button">
 								<a href="#">Портфолио</a>
 							</li>
 							<li>
-								<a href="#call-form">Сотрудничество</a>
+								<a href="#call-about" class="link-button">Сотрудничество</a>
 							</li>
 							<li>
-								<a href="#">Контакты</a>
+								<a href="#my-footer" class="link-button">Контакты</a>
 							</li>
 						</ul>
-
 					</nav>
 				</div>
 				<div class="header-flex">
 					<div class="flex-center">
-
 						<div class="container">
 							<div class="row">
 								<div class="col-md-7 col-10">
@@ -95,136 +73,191 @@
 											<h1 class="h1">Разработка сайтов</h1>
 										</div>
 										<div class="header__subtitle">
-											<p class="header__text">Разработаем современный сайт любой сложности для решения
+											<p class="header__text">Разработаем современный сайт любой сложности для
+												решения
 												задач вашего бизнеса.</p>
-											<a href="#" class="button">Начать проект</a>
+											<a href="#" class="button">Обсудить проект</a>
 										</div>
-
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
 				<div class="header-social">
 					<nav class="social">
 						<ul>
 							<li>
-								<a href="tg://resolve?domain=valiamanu"><i class="fa fa-telegram" aria-hidden=" true"></i></a>
+								<a href="https://t.me/valiamanu"><i class="fa fa-telegram" aria-hidden=" true"></i></a>
 							</li>
 							<li>
+								<a href="https://wa.me/375256264923"><i class="fa fa-whatsapp"
+										aria-hidden="true"></i></a>
+							</li>
+							<!-- <li>
 								<a href="skype:live:manuilova-1986_2?chat"><i class="fa fa-skype" aria-hidden="true"></i></a>
-							</li>
+							</li> -->
 							<li>
-								<a href="https://github.com/devalmanu"><i class="fa fa-github" aria-hidden="true"></i></a>
+								<a href="https://github.com/devalmanu"><i class="fa fa-github"
+										aria-hidden="true"></i></a>
 							</li>
-
 						</ul>
 					</nav>
 				</div>
-
 			</header>
-		</div>
-
-
-
-		<div id="my-content">
-
+		</header>
+		<main id="my-content">
 			<section class="s-services" id="our-services">
 				<div class="owl-carousel carousel-services">
-
-					<div class="carousel-services-item">
-						<div class="carousel-services-content">
-							<div class="carousel-services-composition">
-								<div class="carousel-logo"><img src="img/logo/DevMANU-black.svg" alt="DevMANU"></div>
-								<h3 class="h3">Дизайн сайта</h3>
-								<ul class="carousel-services-list">
-									<li>Разработка макета</li>
-									<li>Разработка дизайна сайта</li>
-									<li>Разработка логотипа</li>
-								</ul>
-								<a href="#" class="button button-white">все услуги</a>
-							</div>
-						</div>
-						<div class="carousel-services-image"
-							style="background-image: url(img/photos/services/4-services.jpg);">
-						</div>
-					</div>
-
 					<div class="carousel-services-item">
 						<div class="carousel-services-content">
 							<div class="carousel-services-composition">
 								<div class="carousel-logo"><img src="img/logo/DevMANU-black.svg" alt="DevMANU"></div>
 								<h3 class="h3">Верстка сайта</h3>
 								<ul class="carousel-services-list">
-									<li>Верстка по макетам</li>
-									<li>Адаптивная верстка</li>
-									<li>Мобильная версия сайта</li>
+									<li>Адаптивная и резиновая верстка под все разрешения</li>
+									<li>Кроссбраузерная совместимость</li>
+									<li>Pixel Perfect соответствие макету</li>
+									<li>Семантический HTML5 и CSS3</li>
+									<li>Оптимизация изображений</li>
 								</ul>
-								<a href="#" class="button button-white">все услуги</a>
+								<a href="#callback-form" class="button button-white link-button">Оставить заявку</a>
+							</div>
+						</div>
+						<div class="carousel-services-image"
+							style="background-image: url(img/photos/services/4-services.jpg);">
+						</div>
+					</div>
+					<div class="carousel-services-item">
+						<div class="carousel-services-content">
+							<div class="carousel-services-composition">
+								<div class="carousel-logo"><img src="img/logo/DevMANU-black.svg" alt="DevMANU"></div>
+								<h3 class="h3">Интерактивная верстка с анимациями</h3>
+								<ul class="carousel-services-list">
+									<li>Анимации на чистом CSS</li>
+									<li>Сложные анимации на GSAP</li>
+									<li>Анимация появления элементов при скролле</li>
+									<li>Интерактивные элементы: слайдеры, табы, аккордеоны, модальные окна</li>
+									<li>Кастомные формы с валидацией и анимированными состояниями</li>
+								</ul>
+								<a href="#callback-form" class="button button-white link-button">Оставить заявку</a>
 							</div>
 						</div>
 						<div class="carousel-services-image"
 							style="background-image: url(img/photos/services/1-services.jpg);">
 						</div>
 					</div>
-
 					<div class="carousel-services-item">
 						<div class="carousel-services-content">
 							<div class="carousel-services-composition">
 								<div class="carousel-logo"><img src="img/logo/DevMANU-black.svg" alt="DevMANU"></div>
-								<h3 class="h3">Верстка писем</h3>
+								<h3 class="h3">Верстка интернет-магазинов</h3>
 								<ul class="carousel-services-list">
-									<li>Дизайн письма</li>
-									<li>Адаптивная html-верстка</li>
-									<li>Рассылка средствами сервисов</li>
+									<li>Верстка каталога с фильтрацией и сортировкой</li>
+									<li>Карточка товара с галереей изображений и выбором характеристик</li>
+									<li>Корзина и оформление заказа</li>
+									<li>Микроразметка Schema.org для SEO</li>
+									<li>Интеграция с CMS</li>
 								</ul>
-								<a href="#" class="button button-white">все услуги</a>
+								<a href="#callback-form" class="button button-white link-button">Оставить заявку</a>
 							</div>
 						</div>
 						<div class="carousel-services-image"
 							style="background-image: url(img/photos/services/2-services.jpg);">
 						</div>
 					</div>
-
 					<div class="carousel-services-item">
 						<div class="carousel-services-content">
 							<div class="carousel-services-composition">
 								<div class="carousel-logo"><img src="img/logo/DevMANU-black.svg" alt="DevMANU"></div>
-								<h3 class="h3">Дизайн сайта</h3>
+								<h3 class="h3">Верстка email-писем</h3>
 								<ul class="carousel-services-list">
-									<li>Ключевая услуга 1</li>
-									<li>Ключевая услуга 1</li>
-									<li>Ключевая услуга 1</li>
+									<li>Адаптивная верстка писем под десктоп и мобильные устройства</li>
+									<li>Поддержка всех популярных почтовых клиентов</li>
+									<li>Использование табличной верстки (table-based)</li>
+									<li>Инлайн-стили для максимальной совместимости</li>
+									<li>Тестирование в сервисах и реальных клиентах</li>
 								</ul>
-								<a href="#" class="button button-white">все услуги</a>
+								<a href="#callback-form" class="button button-white link-button">Оставить заявку</a>
+							</div>
+						</div>
+						<div class="carousel-services-image"
+							style="background-image: url(img/photos/services/2-services.jpg);">
+						</div>
+					</div>
+					<div class="carousel-services-item">
+						<div class="carousel-services-content">
+							<div class="carousel-services-composition">
+								<div class="carousel-logo"><img src="img/logo/DevMANU-black.svg" alt="DevMANU"></div>
+								<h3 class="h3">Верстка компонентов для React</h3>
+								<ul class="carousel-services-list">
+									<li>Создание React-компонентов</li>
+									<li>Стилизация через CSS Modules, Styled Components или Tailwind</li>
+									<li>Типизация пропсов (PropTypes или TypeScript)</li>
+									<li>Адаптив и состояния компонентов</li>
+									<li>Подготовка компонентов для интеграции с бэкендом и API</li>
+								</ul>
+								<a href="#callback-form" class="button button-white link-button">Оставить заявку</a>
 							</div>
 						</div>
 						<div class="carousel-services-image"
 							style="background-image: url(img/photos/services/3-services.jpg);">
 						</div>
 					</div>
-
-
-
+					<div class="carousel-services-item">
+						<div class="carousel-services-content">
+							<div class="carousel-services-composition">
+								<div class="carousel-logo"><img src="img/logo/DevMANU-black.svg" alt="DevMANU"></div>
+								<h3 class="h3">Верстка компонентов для Vue</h3>
+								<ul class="carousel-services-list">
+									<li>Single File Components</li>
+									<li>Использование Composition API или Options API</li>
+									<li>Scoped стили и CSS-переменные</li>
+									<li>Реактивные пропсы, слоты, события</li>
+									<li>Интеграция с Pinia/Vuex</li>
+								</ul>
+								<a href="#callback-form" class="button button-white link-button">Оставить заявку</a>
+							</div>
+						</div>
+						<div class="carousel-services-image"
+							style="background-image: url(img/photos/services/3-services.jpg);">
+						</div>
+					</div>
+					<div class="carousel-services-item">
+						<div class="carousel-services-content">
+							<div class="carousel-services-composition">
+								<div class="carousel-logo"><img src="img/logo/DevMANU-black.svg" alt="DevMANU"></div>
+								<h3 class="h3">Оптимизация производительности</h3>
+								<ul class="carousel-services-list">
+									<li>Оптимизация критического CSS</li>
+									<li>Ленивая загрузка изображений и компонентов</li>
+									<li>Минификация и сжатие HTML, CSS, JS</li>
+									<li>Оптимизация шрифтов</li>
+									<li>Достижение 90+ баллов в Lighthouse</li>
+								</ul>
+								<a href="#callback-form" class="button button-white link-button">Оставить заявку</a>
+							</div>
+						</div>
+						<div class="carousel-services-image"
+							style="background-image: url(img/photos/services/3-services.jpg);">
+						</div>
+					</div>
 				</div>
 			</section>
-
-			<section class="s-about inverse section-overlay" style="background-image: url(img/photo-form.jpg);">
+			<section class="s-about inverse section-overlay" id="call-about" style="background-image: url(img/photo-form.jpg);">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-5 s-about_title">
-							<h2 class="h2">Наша задача</h2>
+							<h2 class="h2">Основная задача</h2>
 							<p>Предлагаем услуги создания сайтов, онлайн магазинов, которые увеличат узнаваемость вашего
-								бизнеса в сети: дизайн и разработка уникальных решений.</p>
-							<p>Ваш сайт будет обладать высокой производительностью и безопасностью в зависимости от конкретных
-								требований бизнеса и отрасли.</p>
+								бизнеса в сети - разработка уникальных решений.</p>
+							<p>Ваш сайт будет обладать высокой производительностью и безопасностью в зависимости от
+								конкретных требований бизнеса и отрасли.</p>
 						</div>
 						<div class="col-md-7">
-							<div class="section-gallery fotorama" data-nav="thumbs" data-minwidth="320" data-width="100%"
-								data-thumbwidth="112" data-thumbheight="63" data-thumbborder="4" data-thumbmargin="15"
-								data-transition="crossfade">
+							<div class="section-gallery fotorama" data-nav="thumbs" data-minwidth="320"
+								data-width="100%" data-thumbwidth="112" data-thumbheight="63" data-thumbborder="4"
+								data-thumbmargin="15" data-transition="crossfade">
 								<a href="img/photos/7-gallery.jpg"><img src="img/photos/small/7-small.jpg"
 										alt="Разработка сайтов"></a>
 								<a href="img/photos/2-gallery.jpg"><img src="img/photos/small/2-small.jpg"
@@ -244,12 +277,10 @@
 					</div>
 				</div>
 			</section>
-
-			<section class="s-call inverse" id="call-form" style="background-image: url(img/form.jpg);">
+			<section class="s-call inverse" id="callback-form" style="background-image: url(img/form.jpg);">
 				<div class="container">
 					<div class="row justify-content-end">
 						<div class="col-md-5 col-sm-7">
-
 							<form class="callback">
 								<div class="success"><span>Спасибо за заявку!</span></div>
 								<!-- hidden required feilds -->
@@ -258,33 +289,32 @@
 								<input type="hidden" name="form_subject" value="Form subject">
 								<!-- END hidden required feilds -->
 								<input type="hidden" name="Страница" value="">
-								<div class="callback-logo"><img src="img/logo/DevMANU-black.svg" alt="Разработка сайтов">
+								<div class="callback-logo"><img src="img/logo/DevMANU-black.svg"
+										alt="Разработка сайтов">
 								</div>
 								<div class="formhead h2">Оставить заявку</div>
-								<p>Заполните форму и мы перезвоним Вам в течение 15 минут</p>
+								<p>Заполните форму и мы перезвоним Вам в течение 20 минут</p>
 								<input type="text" name="text" placeholder="Ваше имя" required>
 								<input type="email" name="email" placeholder="Ваш email" required>
 								<select name="Услуга">
 									<option>Выберите услугу ...</option>
-									<option>Дизайн сайта</option>
+									<!-- <option>Дизайн сайта</option> -->
 									<option>Верстка макета</option>
 									<option>Одностраничный сайт</option>
 									<option>Интернет-магазин</option>
 									<option>Сотрудничество</option>
 								</select>
-								<button class="button">Отправить</button>
-
+								<button class="button">Отправить заявку</button>
 							</form>
 						</div>
 					</div>
 				</div>
 			</section>
-
 			<section class="s-review inverse section-overlay" style="background-image: url(img/bg-review.jpg);">
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-sm-12">
-							<h2 class="h2 text-center h-first">Отзывы наших клиентов</h2>
+							<h2 class="h2 text-center h-first">Отзывы клиентов</h2>
 						</div>
 						<div class="col-sm-8">
 							<div class="quotes"></div>
@@ -292,7 +322,7 @@
 
 								<div class="review">
 									<div class="review-header">Антон</div>
-									<div class="review-date">20.08.2019</div>
+									<div class="review-date">20.02.2023</div>
 									<div class="review-stars">
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -300,101 +330,209 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
 									</div>
-									<div class="review-text">Нашёл для себя оптимального исполнителя. Помогли сформировать четкое
-										ТЗ, так как даже не имел сам представления о этапах работы. Работают до результата.
-										Рекомендую всем, кому нужны надёжные люди для реализации задачи!
+									<div class="review-text">Нашёл для себя оптимального исполнителя. Помогли
+										сформировать четкое
+										ТЗ, так как даже не имел сам представления о этапах работы, которая в итоге
+										доведена до
+										результата.
+										Рекомендую всем, кому нужны надёжный человек для реализации задачи!
 									</div>
 								</div>
 
 								<div class="review">
 									<div class="review-header">Павел</div>
-									<div class="review-date">23.01.2020</div>
+									<div class="review-date">24.05.2023</div>
 									<div class="review-stars">
 										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
 											class="fa fa-star"></i><i class="fa fa-star"></i>
 									</div>
 									<div class="review-text">Проект оказался сложней чем казался изначально, но это не
-										помешалоего выполнить в полном обьеме. Совместно решали вопросы, принимали правильные
-										решения. Будем дальше сотрудничать.
+										помешалоего выполнить в полном обьеме. Совместно решали вопросы, принимали
+										правильные решения. Будем дальше сотрудничать.
 									</div>
 								</div>
-
 								<div class="review">
 									<div class="review-header">Александр</div>
-									<div class="review-date">17.05.2020</div>
+									<div class="review-date">07.09.2023</div>
 									<div class="review-stars">
 										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
 											class="fa fa-star"></i><i class="fa fa-star"></i>
 									</div>
-									<div class="review-text">Верстка была выполнена на высоком уровне, все вопросы по ходу
+									<div class="review-text">Верстка была выполнена на высоком уровне, все вопросы по
+										ходу
 										разработки решались оперативно. В течение всего сотрудничества был виден самый
 										ответственный подход, всегда была адекватная обратная связь
 									</div>
 								</div>
-
+								<div class="review">
+									<div class="review-header">Евгений</div>
+									<div class="review-date">17.11.2023</div>
+									<div class="review-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+											class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="review-text">Как дизайнер, я очень трепетно отношусь к деталям. Когда
+										отдал макет в верстку, боялся,
+										что придется долго править отступы и тени.
+										Но результат меня шокировал — Pixel Perfect на 100%! Наложил макет поверх
+										готового сайта — всё совпало до пикселя.
+										А анимации на GSAP — это просто космос.
+									</div>
+								</div>
+								<div class="review">
+									<div class="review-header">Михаил</div>
+									<div class="review-date">08.05.2024</div>
+									<div class="review-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+											class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="review-text">Я обычно сам верстаю, но тут проект был сложный по
+										анимациям — решил отдать на аутсорс.
+										Получил идеальный Pixel Perfect: проверил через PerfectPixel — ни одного
+										расхождения.
+										Код чистый, анимации не ломают верстку. Буду рекомендовать всем, кому нужен сайт
+										с душой.
+									</div>
+								</div>
+								<div class="review">
+									<div class="review-header">Никита</div>
+									<div class="review-date">23.10.2024</div>
+									<div class="review-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+											class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="review-text">Нашел верстальщика, который понимает фронтенд-фреймворки.
+										Была предоставлена чистая компонентная верстка, которую я сам без проблем
+										импортировал и на React, и на Vue.
+										Отдельный плюс — продуманная система CSS-переменных для темизации и готовые
+										миксины для адаптива.
+									</div>
+								</div>
+								<div class="review">
+									<div class="review-header">Сергей</div>
+									<div class="review-date">18.02.2025</div>
+									<div class="review-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+											class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="review-text">Заказал верстку под React-проект.
+										Получил не просто HTML/CSS, а готовые компоненты с продуманными пропсами и
+										состояниями.
+										Отдельное спасибо за обработку loading/error состояний и кастомные хуки для
+										работы с формами.
+										Проект залетел в продакшен без доработок.
+									</div>
+								</div>
+								<div class="review">
+									<div class="review-header">Артур</div>
+									<div class="review-date">04.06.2025</div>
+									<div class="review-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+											class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="review-text">Нужна была верстка компонентов для Vue 3.
+										Разработчик не просто сверстал — он сразу использовал Composition API.
+										Добавлены директивы для ленивой загрузки и transition-анимации, хотя в ТЗ этого
+										не было.
+										Переданы готовые .vue файлы с scoped стилями.
+										Я просто вставил бизнес-логику — и всё завелось. Мечта!
+									</div>
+								</div>
+								<div class="review">
+									<div class="review-header">Александр</div>
+									<div class="review-date">21.09.2025</div>
+									<div class="review-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+											class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="review-text">Лучший верстальщик, с которым работал. Сделано все четко, в
+										срок, с запасом по качеству.
+										Учтены такие мелочи, как доступность для скринридеров (aria-атрибуты) — я этого
+										не просил, но пользователям будет удобно.
+										Спасибо за профессионализм и неравнодушие. 10 из 10.
+									</div>
+								</div>
+								<div class="review">
+									<div class="review-header">Владимир</div>
+									<div class="review-date">15.12.2025</div>
+									<div class="review-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+											class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="review-text">Исполнитель не просто перенес дизайн в код — он провел
+										ревизию всех состояний элементов (хэверы, фокусы, адаптив),
+										чего не было в ТЗ.
+										Отдельное спасибо за продуманную структуру БЭМ и файлов — передали проект в
+										поддержку без головной боли.
+									</div>
+								</div>
+								<div class="review">
+									<div class="review-header">Вадим</div>
+									<div class="review-date">22.03.2026</div>
+									<div class="review-stars">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="review-text">Я искренне благодарен Вам!!! Еще раз спасибо!!!
+										Результат превзошел ожидания — сверстано идеально, Pixel Perfect на уровне.
+										Но главное, что подкупило: разработчик сам исправил несколько моих косяков в
+										макете и оптимизировал анимации так,
+										что сайт летает даже на мобилках. Я об этом даже не просил! Работа выполнена на
+										совесть.
+									</div>
+								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
 			</section>
-
-		</div>
-
-		<div id="my-footer">
+		</main>
+		<footer id="my-footer">
 			<div class="main-footer">
 				<div class="container">
 					<div class="row">
-
 						<div class="col-lg-3 col-sm-6">
 							<div class="footer-column">
 								<img src="img/logo/logo-footer.svg" alt="Разработка сайтов" class="logo-footer">
 								<p>Разработка сайтов</p>
 							</div>
 						</div>
-
 						<div class="col-lg-3 col-sm-6">
 							<div class="footer-column">
 								<nav class="footer-menu">
 									<ul>
 										<li class="active">
-											<a href="#">Услуги</a>
+											<a href="#our-services" class="link-button">Услуги</a>
 										</li>
 										<li>
-											<a href="#">Портфолио</a>
+											<a href="#" class="link-button">Портфолио</a>
 										</li>
 										<li>
-											<a href="#">Сотрудничество</a>
+											<a href="#call-about" class="link-button">Сотрудничество</a>
 										</li>
 									</ul>
 								</nav>
 							</div>
 						</div>
-
-						<div class="col-lg-3 col-sm-6">
-							<div class="footer-column">
-								<nav class="footer-contact">
-									<li><i class="fa fa-envelope-o" aria-hidden="true"></i>
-										<a href="mailto: manuilova-1986@mail.ru">devmanu@inbox.ru</a></li>
-									<li><i class="fa fa-mobile" aria-hidden="true"></i>
-										<a class="number" href="tel:+375256264923">+375 (25) 626-49-23</a></li>
-								</nav>
-							</div>
-						</div>
-
 						<div class="col-lg-3 col-sm-6">
 							<div class="footer-column">
 								<div class="footer-social">
 									<nav class="social">
 										<ul>
 											<li>
-												<a href="tg://resolve?domain=valiamanu"><i class="fa fa-telegram"
-														aria-hidden="true"></i></a>
+												<a href="https://t.me/valiamanu"><i class="fa fa-telegram"
+														aria-hidden=" true"></i></a>
 											</li>
 											<li>
-												<a href="skype:live:manuilova-1986_2?chat"><i class="fa fa-skype"
+												<a href="https://wa.me/375256264923"><i class="fa fa-whatsapp"
 														aria-hidden="true"></i></a>
 											</li>
+											<!-- <li>
+												<a href="skype:live:manuilova-1986_2?chat"><i class="fa fa-skype" aria-hidden="true"></i></a>
+											</li> -->
 											<li>
 												<a href="https://github.com/devalmanu"><i class="fa fa-github"
 														aria-hidden="true"></i></a>
@@ -404,19 +542,36 @@
 								</div>
 							</div>
 						</div>
+						<div class="col-lg-3 col-sm-6">
+							<div class="footer-column">
+								<nav class="footer-contact">
+									<li><i class="fa fa-envelope-o" aria-hidden="true"></i>
+										<a href="mailto: manuilova-1986@mail.ru">devmanu@inbox.ru</a>
+									</li>
+									<li><i class="fa fa-mobile" aria-hidden="true"></i>
+										<a class="number" href="tel:+375256264923">+375 (25) 626-49-23</a>
+									</li>
+								</nav>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			<div class="footer-copy">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 text-center">2020-2026</div>
+							<div class="col-lg-12 text-center">Андреева В.Л. УНП AB8843470</div>
+							<div class="col-lg-12 text-center"><span>Разработка веб-сайтов, тестирование</span></div>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</div>
-
 	<div class="top"><i class="fa fa-angle-double-up" aria-hidden="true"></i>
 	</div>
-
-
 	<script src=" js/scripts.min.js">
 	</script>
-
 </body>
 
 </html>
