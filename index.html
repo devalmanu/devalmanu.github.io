@@ -23,6 +23,9 @@
 	<meta name="msapplication-navbutton-color" content="#181818">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#181818">
 	<!-- Custom Browsers Color End -->
+	<script async src="js/gsap.min.js"></script>
+	<script async src="js/ScrollTrigger.min.js"></script>
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -70,12 +73,13 @@
 										<div class="header__title">
 											<p><span>Поможем вашему бизнесу</span>
 											</p>
-											<h1 class="h1">Разработка сайтов</h1>
+											<h1 class="h1" id="hero-title">Разработка сайтов</h1>
 										</div>
 										<div class="header__subtitle">
-											<p class="header__text">Разработаем современный сайт любой сложности для
-												решения
-												задач вашего бизнеса.</p>
+											<p class="header__text" id="hero-text">Разработка современных сайтов любой
+												сложности для
+												решения задач вашего бизнеса.<br>
+											Минимализм. Скорость. Эстетика.</p>
 											<a href="#callback-form" class="button link-button">Обсудить проект</a>
 										</div>
 									</div>
@@ -94,9 +98,6 @@
 								<a href="https://wa.me/375256264923"><i class="fa fa-whatsapp"
 										aria-hidden="true"></i></a>
 							</li>
-							<!-- <li>
-								<a href="skype:live:manuilova-1986_2?chat"><i class="fa fa-skype" aria-hidden="true"></i></a>
-							</li> -->
 							<li>
 								<a href="https://github.com/devalmanu"><i class="fa fa-github"
 										aria-hidden="true"></i></a>
@@ -249,11 +250,13 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-5 s-about_title">
-							<h2 class="h2">Основная задача</h2>
-							<p>Предлагаем услуги создания сайтов, онлайн магазинов, которые увеличат узнаваемость вашего
+							<h2 class="h2 anim-block">Основная задача</h2>
+							<p class="anim-block">Предлагаю услуги создания сайтов, онлайн магазинов, которые увеличат
+								узнаваемость вашего
 								бизнеса в сети - разработка уникальных решений.</p>
-							<p>Ваш сайт будет обладать высокой производительностью и безопасностью в зависимости от
-								конкретных требований бизнеса и отрасли.</p>
+							<p class="anim-block">Создаю премиальные веб-интерфейсы с акцентом на производительность и
+								пользовательский
+								опыт.</p>
 						</div>
 						<div class="col-md-7">
 							<div class="about__img">
@@ -263,47 +266,11 @@
 					</div>
 				</div>
 			</section>
-			<section class="s-call inverse" id="callback-form" style="background-image: url(img/form.jpg);">
-				<div class="container">
-					<div class="row justify-content-end">
-						<div class="col-md-5 col-sm-12">
-							<form class="callback">
-								<div class="success"><span>Спасибо за заявку!</span></div>
-								<!-- hidden required feilds -->
-								<input type="hidden" name="project_name" value="DevManu">
-								<input type="hidden" name="admin_email" value="manuilova-1986@mail.ru">
-								<input type="hidden" name="form_subject" value="Form subject">
-								<!-- END hidden required feilds -->
-								<input type="hidden" name="Страница" value="">
-								<div class="callback-logo"><img src="img/logo/DevMANU-black.svg"
-										alt="Разработка сайтов">
-								</div>
-								<div class="formhead h2">Оставить заявку</div>
-								<p>Заполните форму и мы перезвоним Вам в течение 20 минут</p>
-								<input type="text" name="text" placeholder="Ваше имя" required>
-								<input type="email" name="email" placeholder="Ваш email" required>
-								<select name="Услуга">
-									<option>Выберите услугу ...</option>
-									<option>Верстка сайта</option>
-									<option>Интерактивная верстка с анимациями</option>
-									<option>Верстка интернет-магазинов</option>
-									<option>Верстка email-писем</option>
-									<option>Верстка компонентов для React</option>
-									<option>Верстка компонентов для Vue</option>
-									<option>Оптимизация производительности</option>
-									<option>Сотрудничество</option>
-								</select>
-								<button class="button">Отправить заявку</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</section>
 			<section class="s-review inverse section-overlay" style="background-image: url(img/bg-review.jpg);">
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-sm-12">
-							<h2 class="h2 text-center h-first">Отзывы клиентов</h2>
+							<h2 class="h2 text-center h-first anim-block">Отзывы клиентов</h2>
 						</div>
 						<div class="col-sm-8">
 							<div class="quotes"></div>
@@ -476,6 +443,43 @@
 					</div>
 				</div>
 			</section>
+			<section class="s-call inverse" id="callback-form" style="background-image: url(img/form.jpg);">
+				<div class="container">
+					<div class="row justify-content-end">
+						<div class="col-md-5 col-sm-12">
+							<form class="callback anim-block" id="callback">
+								<div class="success"><span>Спасибо за заявку!</span></div>
+								<!-- hidden required feilds -->
+								<input type="hidden" name="project_name" value="DevManu">
+								<input type="hidden" name="admin_email" value="manuilova-1986@mail.ru">
+								<input type="hidden" name="form_subject" value="Form subject">
+								<!-- END hidden required feilds -->
+								<input type="hidden" name="Страница" value="">
+								<div class="callback-logo"><img src="img/logo/DevMANU-black.svg"
+										alt="Разработка сайтов">
+								</div>
+								<div class="formhead h2">Оставить заявку</div>
+								<p>Заполните форму и мы перезвоним Вам в течение 20 минут</p>
+								<input type="text" name="name" placeholder="Ваше имя" required>
+								<input type="email" name="email" placeholder="Email" required>
+								<select name="Услуга">
+									<option>Выберите услугу ...</option>
+									<option>Верстка сайта</option>
+									<option>Интерактивная верстка с анимациями</option>
+									<option>Верстка интернет-магазинов</option>
+									<option>Верстка email-писем</option>
+									<option>Верстка компонентов для React</option>
+									<option>Верстка компонентов для Vue</option>
+									<option>Оптимизация производительности</option>
+									<option>Сотрудничество</option>
+								</select>
+								<textarea name="message" placeholder="Сообщение"></textarea>
+								<button class="button">Отправить заявку</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer id="my-footer">
 			<div class="main-footer">
@@ -495,10 +499,10 @@
 											<a href="#our-services" class="link-button">Услуги</a>
 										</li>
 										<li>
-											<a href="#" class="link-button">Портфолио</a>
+											<a href="#portfolio" class="link-button">Портфолио</a>
 										</li>
 										<li>
-											<a href="#call-about" class="link-button">Сотрудничество</a>
+											<a href="#callback-form" class="link-button">Сотрудничество</a>
 										</li>
 									</ul>
 								</nav>
@@ -517,9 +521,6 @@
 												<a href="https://wa.me/375256264923"><i class="fa fa-whatsapp"
 														aria-hidden="true"></i></a>
 											</li>
-											<!-- <li>
-												<a href="skype:live:manuilova-1986_2?chat"><i class="fa fa-skype" aria-hidden="true"></i></a>
-											</li> -->
 											<li>
 												<a href="https://github.com/devalmanu"><i class="fa fa-github"
 														aria-hidden="true"></i></a>
@@ -547,7 +548,7 @@
 			<div class="footer-copy">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-12 text-center">2020-2026</div>
+						<div class="col-lg-12 text-center">© 2026 DevMANU</div>
 						<div class="col-lg-12 text-center">Андреева В.Л. УНП AB8843470</div>
 						<div class="col-lg-12 text-center"><span>Разработка веб-сайтов, тестирование</span></div>
 					</div>
@@ -557,8 +558,45 @@
 	</div>
 	<div class="top"><i class="fa fa-angle-double-up" aria-hidden="true"></i>
 	</div>
-	<script src=" js/scripts.min.js">
+	<script>
+		gsap.registerPlugin(ScrollTrigger);
+		gsap.to("#hero-title", { opacity: 1, y: -20, duration: 1 });
+		gsap.to("#hero-text", { opacity: 1, y: -10, delay: 0.3 });
+
+		gsap.utils.toArray(".anim-block").forEach(sec => {
+			gsap.fromTo(sec,
+				{ opacity: 0, y: 50 },
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.8,
+					ease: "power2.out",
+					scrollTrigger: {
+						trigger: sec,
+						start: "top 85%",
+						once: true
+					}
+				}
+			);
+		});
+
+		document.getElementById('callback').addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const data = Object.fromEntries(new FormData(e.target));
+
+			await fetch('/api/send', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(data)
+			});
+			alert('Заявка отправлена');
+		});
 	</script>
+	<script src="js/swiper-bundle.min.js">
+	</script>
+	<script src="js/scripts.min.js">
+	</script>
+
 </body>
 
 </html>
