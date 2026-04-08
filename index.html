@@ -33,82 +33,88 @@
 	<div class="preloader">
 		<div class="pulse"></div>
 	</div>
-	<div id="my-page">
-		<header id="my-header">
-			<header class="site-header" style="background-image: url(img/bg.jpg);">
-				<div class="top-line header__top-line" id="header-stick">
+	<div class="site-container" id="my-page">
+		<header id="my-header" class="header">
+			<div class="top-line header__top" id="header-stick">
+				<div class="container d-flex header__top-container">
 					<a href="#" class="logo"><img src="img/logo/logo-white.svg" alt="website development"></a>
+					<div class="nav" data-nav>
+						<div class="header-top__nav">
+							<nav id="my-menu">
+								<ul class="nav__list">
+									<li class="nav__item">
+										<a href="#our-services" class="nav__link link-button">Услуги</a>
+									</li>
+									<li class="selected nav__item">
+										<a href="#" class="nav__link link-button">Портфолио</a>
+									</li>
+									<li class="nav__item">
+										<a href="#call-about" class="nav__link link-button">Сотрудничество</a>
+									</li>
+									<li class="nav__item">
+										<a href="#my-footer" class="nav__link link-button">Контакты</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
 					<div class="phone-numb d-none d-sm-block">
 						<i class="fa fa-mobile" aria-hidden="true"></i>
 						<a class="number" href="tel:+375256264923">+375 (25) 626-49-23</a>
 					</div>
-					<a href="#my-menu" class="mburger mburger--collapse">
-						<b></b>
-						<b></b>
-						<b></b>
-					</a>
-					<nav id="my-menu">
-						<ul>
-							<li>
-								<a href="#our-services" class="link-button">Услуги</a>
-							</li>
-							<li class="Selected link-button">
-								<a href="#">Портфолио</a>
-							</li>
-							<li>
-								<a href="#call-about" class="link-button">Сотрудничество</a>
-							</li>
-							<li>
-								<a href="#my-footer" class="link-button">Контакты</a>
-							</li>
-						</ul>
-					</nav>
+					<button class="burger" data-burger aria-label="open-menu" aria-expanded="false">
+						<span class="burger__line"></span>
+					</button>
 				</div>
-				<div class="header-flex">
-					<div class="flex-center">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-7 col-10">
-									<div class="header__offer">
-										<div class="header__title">
-											<p><span class="anim-block">Поможем вашему бизнесу</span>
-											</p>
-											<h1 class="h1 anim-block" id="hero-title">Разработка сайтов</h1>
-										</div>
-										<div class="header__subtitle anim-block">
-											<p class="header__text" id="hero-text">Разработка современных сайтов любой
-												сложности для
-												решения задач вашего бизнеса.<br>
-												Минимализм. Скорость. Эстетика.</p>
-											<a href="#callback-form" class="button m-auto link-button">Обсудить
-												проект</a>
-										</div>
+			</div>
+		</header>
+		<main id="my-content">
+			<section class="s-banner" id="banner" style="background-image: url(img/bg.jpg);">
+				<div class="container s-banner__container">
+					<div class="header-flex">
+
+						<div class="row">
+							<div class="col-md-7 col-10">
+								<div class="header__offer">
+									<div class="header__title">
+										<p><span class="anim-block">Поможем вашему бизнесу</span>
+										</p>
+										<h1 class="h1 anim-block" id="hero-title">Разработка сайтов</h1>
+									</div>
+									<div class="header__subtitle anim-block">
+										<p class="header__text" id="hero-text">Разработка современных сайтов
+											любой
+											сложности для
+											решения задач вашего бизнеса.<br>
+											Минимализм. Скорость. Эстетика.</p>
+										<a href="#callback-form" class="button m-auto link-button">Обсудить
+											проект</a>
 									</div>
 								</div>
 							</div>
 						</div>
+
+					</div>
+					<div class="header-social">
+						<nav class="social anim-block">
+							<ul>
+								<li>
+									<a href="https://t.me/valiamanu"><i class="fa fa-telegram"
+											aria-hidden=" true"></i></a>
+								</li>
+								<li>
+									<a href="https://wa.me/375256264923"><i class="fa fa-whatsapp"
+											aria-hidden="true"></i></a>
+								</li>
+								<li>
+									<a href="https://github.com/devalmanu"><i class="fa fa-github"
+											aria-hidden="true"></i></a>
+								</li>
+							</ul>
+						</nav>
 					</div>
 				</div>
-				<div class="header-social">
-					<nav class="social anim-block">
-						<ul>
-							<li>
-								<a href="https://t.me/valiamanu"><i class="fa fa-telegram" aria-hidden=" true"></i></a>
-							</li>
-							<li>
-								<a href="https://wa.me/375256264923"><i class="fa fa-whatsapp"
-										aria-hidden="true"></i></a>
-							</li>
-							<li>
-								<a href="https://github.com/devalmanu"><i class="fa fa-github"
-										aria-hidden="true"></i></a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</header>
-		</header>
-		<main id="my-content">
+			</section>
 			<section class="s-services" id="our-services">
 				<div class="container">
 					<div class="swiper owl-carousel carousel-services">
@@ -655,11 +661,12 @@
 				</div>
 			</div>
 		</footer>
+		<div class="overlay"></div>
 	</div>
 	<div class="top"><i class="fa fa-angle-double-up" aria-hidden="true"></i>
 	</div>
 	<script>
-	
+
 		document.getElementById('callback').addEventListener('submit', async (e) => {
 			e.preventDefault();
 			const data = Object.fromEntries(new FormData(e.target));
