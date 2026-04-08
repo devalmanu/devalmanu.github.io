@@ -1077,6 +1077,10 @@ button:-moz-focusring,
   content: "\f10b";
 }
 
+.fa-envelope-o:before {
+    content: "\f003";
+}
+
 body.ishome .header {
   padding: 10px 0;
   background: #2a303a;
@@ -1765,8 +1769,8 @@ select::before {
   filter: blur(10px);
 }
 
-.callback {
-  padding: 15% 0 20%;
+.callback-logo {
+  padding: 15% 0 0;
   position: relative;
 }
 
@@ -1776,20 +1780,25 @@ select::before {
   margin-bottom: 10px;
 }
 
-.callback .formhead {
+.callback {
+  padding: 0 0 20%;
+  position: relative;
+}
+
+.form-inverse .formhead {
   font-weight: 700;
   margin-bottom: 15px;
 }
 
 @media (max-width: 767px) {
-  .callback .formhead {
+  .form-inverse .formhead {
     font-size: -webkit-calc(21px + 8.5 * ((100vw - 320px) / 1600));
     font-size: calc(21px + 8.5 * ((100vw - 320px) / 1600));
   }
 }
 
 @media (min-width: 767px) {
-  .callback .formhead {
+  .form-inverse .formhead {
     font-size: -webkit-calc(21px + 5 * ((100vw) / 1600));
     font-size: calc(21px + 5 * ((100vw) / 1600));
   }
