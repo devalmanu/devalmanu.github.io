@@ -263,6 +263,8 @@
 						</div> -->
 							</div>
 						</div>
+					</div>
+					<div class="s-services__nav">
 						<div class="swiper-button-prev">
 							<i class="fa fa-angle-double-left" aria-hidden="true"></i>
 						</div>
@@ -553,7 +555,7 @@
 								<input type="hidden" name="form_subject" value="Form subject">
 								<!-- END hidden required feilds -->
 								<input type="hidden" name="Страница" value="">
-								<div class="callback-logo"><img src="img/logo/DevMANU-black.svg"
+								<div class="callback-logo"><img src="img/logo/DevMANU-white.svg"
 										alt="Разработка сайтов">
 								</div>
 								<div class="formhead h2">Оставить заявку</div>
@@ -657,27 +659,7 @@
 	<div class="top"><i class="fa fa-angle-double-up" aria-hidden="true"></i>
 	</div>
 	<script>
-		gsap.registerPlugin(ScrollTrigger);
-		gsap.to("#hero-title", { opacity: 1, y: -20, duration: 1 });
-		gsap.to("#hero-text", { opacity: 1, y: -10, delay: 0.3 });
-
-		gsap.utils.toArray(".anim-block").forEach(sec => {
-			gsap.fromTo(sec,
-				{ opacity: 0, y: 50 },
-				{
-					opacity: 1,
-					y: 0,
-					duration: 0.8,
-					ease: "power2.out",
-					scrollTrigger: {
-						trigger: sec,
-						start: "top 85%",
-						once: true
-					}
-				}
-			);
-		});
-
+	
 		document.getElementById('callback').addEventListener('submit', async (e) => {
 			e.preventDefault();
 			const data = Object.fromEntries(new FormData(e.target));

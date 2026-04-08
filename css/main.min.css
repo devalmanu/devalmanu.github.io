@@ -124,8 +124,8 @@ textarea {
 input,
 textarea,
 select {
-  color: #333333;
-  caret-color: #333333;
+  color: #e0e0e0;
+  caret-color: #fafafa;
 }
 
 *::placeholder {
@@ -3927,13 +3927,15 @@ body.ishome.mm-wrapper_opened .site-header .top-line.scrolled {
   border: #ffffff 2px solid;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+
 }
 
 .button.button-white:hover {
   color: #ffffff;
+    transform: scale(1.02);
 }
 
 .text-center {
@@ -4262,6 +4264,7 @@ section.inverse.s-call {
 ul.carousel-services-list {
   text-align: left;
   list-style-type: disc;
+  margin-top: 10px;
 }
 
 ul.carousel-services-list li {
@@ -4300,10 +4303,6 @@ ul.carousel-services-list li {
   }
 }
 
-.carousel-services-item:hover .carousel-services-image {
-  opacity: 1;
-}
-
 .carousel-services-item .carousel-logo {
   text-align: center;
 }
@@ -4314,17 +4313,9 @@ ul.carousel-services-list li {
   height: auto;
 }
 
-.carousel-services .swiper-slide:nth-child(2n+2) .carousel-services-item {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
 .carousel-services-content {
   position: relative;
-  padding: 28px 8% 45px;
+  padding: 25px 8% 40px;
   height: 470px;
   border-radius: 7px;
 }
@@ -4361,7 +4352,7 @@ ul.carousel-services-list li {
 
 @media (max-width: 578px) {
   .carousel-services-content {
-    height: 360px;
+    height: 400px;
   }
 }
 
@@ -4392,15 +4383,22 @@ ul.carousel-services-list li {
   -webkit-backface-visibility: inherit;
   backface-visibility: inherit;
 }
-
-.carousel-services .owl-nav {
+.s-services .contaner {
+  position: relative;
+}
+.s-services .s-services__nav {
   position: absolute;
   width: 100%;
-  top: 0;
+  max-width: 1460px;
+  margin: auto;
+  top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+z-index: 3;
 }
 
-.carousel-services .swiper-button-prev,
-.carousel-services .swiper-button-next {
+.s-services .swiper-button-prev,
+.s-services .swiper-button-next {
   width: 2.1em;
   height: 2.1em;
   color: #2a303a;
@@ -4411,12 +4409,12 @@ ul.carousel-services-list li {
   position: absolute;
 }
 
-.carousel-services .swiper-button-prev {
-  left: 0;
+.s-services .swiper-button-prev {
+  left: 8px;
 }
 
-.carousel-services .swiper-button-next {
-  right: 0;
+.s-services .swiper-button-next {
+  right: 8px;
 }
 
 .s-about .h2,
@@ -4509,7 +4507,7 @@ ul.carousel-services-list li {
   right: 0;
   height: 100%;
   position: absolute;
-  background-color: #e9c170;
+  background-color: #2a303a;
 }
 
 .section-overlay::before {
@@ -4529,13 +4527,12 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  display: inline-block;
+  display: block;
   font-size: 15px;
   line-height: 1;
-  color: #383838;
   background-color: transparent;
   border-radius: 3px;
-  border: rgba(42, 48, 58, 0.15) 1px solid;
+  border: 1px solid #898484;
   padding: 10px 20px;
   outline: none;
   -webkit-box-shadow: none;
@@ -4621,7 +4618,7 @@ select::before {
 .callback input,
 .callback textarea,
 .callback select {
-  color: #ffffff;
+  color: #e0e0e0;
   width: 100%;
   margin-top: 15px;
 }
@@ -4629,25 +4626,25 @@ select::before {
 .callback input::-webkit-input-placeholder,
 .callback textarea::-webkit-input-placeholder,
 .callback select::-webkit-input-placeholder {
-  color: #ffffff;
+  color: #a0a0a8;
   opacity: 1;
 }
 
 .callback input::-moz-placeholder,
 .callback textarea::-moz-placeholder,
 .callback select::-moz-placeholder {
-  color: #ffffff;
+  color: #a0a0a8;
   opacity: 1;
 }
 
 .callback input::-mz-input-placeholder,
 .callback textarea::-mz-input-placeholder,
 .callback select::-mz-input-placeholder {
-  color: #ffffff;
+  color: #a0a0a8;
 }
 
 .callback option {
-  color: #383838;
+  color: #a0a0a8;
 }
 
 .callback .button {
@@ -4769,7 +4766,7 @@ select::before {
 }
 
 .main-footer {
-  background-color: #2a303a;
+  background-color: #161b22;
   padding: 3% 0;
   color: #ffffff;
   font-size: 15px;
@@ -4824,13 +4821,11 @@ select::before {
 
 .footer-copy {
   border-top: 1px solid #6b7280;
-  background-color: #2a303a;
+  background-color: #161b22;
   padding: 20px 0;
   color: #6b7280;
   font-size: 13px;
 }
-
-
 
 @media (max-width: 767px) {
   .footer-contact li .number {
@@ -4977,7 +4972,7 @@ select::before {
   }
 
   .s-call::before {
-    opacity: 0.9;
+    opacity: 0.7;
     width: 100%;
   }
 
