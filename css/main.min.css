@@ -1263,6 +1263,11 @@ section.inverse.s-call {
   text-align: center;
   position: relative;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20vh;
 }
 
 .header__offer .header__title p {
@@ -1334,7 +1339,7 @@ section.inverse.s-call {
 }
 
 .header__offer .header__subtitle {
-  margin-top: 2em;
+  margin-top: 0;
 }
 
 .header__offer .header__subtitle .header__text {
@@ -2539,6 +2544,7 @@ select::before {
   -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
+
 .overlay--active {
   opacity: 1;
   visibility: visible;
