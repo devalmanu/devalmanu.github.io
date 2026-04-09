@@ -686,20 +686,7 @@
 	</div>
 	<div class="top"><i class="fa fa-angle-double-up" aria-hidden="true"></i>
 	</div>
-	<script>
 
-		document.getElementById('callback').addEventListener('submit', async (e) => {
-			e.preventDefault();
-			const data = Object.fromEntries(new FormData(e.target));
-
-			await fetch('/api/send', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(data)
-			});
-			alert('Заявка отправлена');
-		});
-	</script>
 	<script src="js/swiper-bundle.min.js">
 	</script>
 	<script src="js/scripts.min.js">

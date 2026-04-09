@@ -1,10 +1,10 @@
-const TOKEN = `8612631410:AAFRV1PXbgLbSHd--QLGluUkNSN3Wwiko88`;
-const CHAT_ID = '493566464';
+// const TOKEN = `8612631410:AAFRV1PXbgLbSHd--QLGluUkNSN3Wwiko88`;
+// const CHAT_ID = '493566464';
 
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('callback');
   // !!! ВАЖНО: ВСТАВЬТЕ СЮДА URL ВАШЕГО WORKER'А !!!
-  const workerUrl = 'https://my-form-handler.YOUR_USERNAME.workers.dev';
+  const workerUrl = 'https://form-handler.devalmanu.workers.dev';
 
   if (form) {
     form.addEventListener('submit', async function (event) {
