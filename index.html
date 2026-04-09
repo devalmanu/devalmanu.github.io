@@ -700,47 +700,45 @@
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 			const form = document.getElementById('callback');
-			const workerUrl = 'https://form-handler.devalmanu.workers.dev';
+			const workerUrl = 'https://form-hundler.devalmanu.workers.dev/';
 
 			if (form) {
 				form.addEventListener('submit', async function (event) {
 					event.preventDefault();
 
 					const submitButton = form.querySelector('button[type="submit"]');
-					const originalButtonText = submitButton.textContent;
+					const originalText = submitButton.textContent;
 					submitButton.textContent = 'Отправляем...';
 					submitButton.disabled = true;
-					const formData = new FormData(form);
 
 					try {
-						// 4. Отправляем данные на наш Cloudflare Worker
+						const formData = new FormData(form);
+
+						console.log('Отправка на:', workerUrl); // Проверка URL
+
 						const response = await fetch(workerUrl, {
 							method: 'POST',
-							body: formData, // Worker обработает их как form-data
+							body: formData
 						});
 
-						const result = await response.json();
+						console.log('Статус ответа:', response.status);
 
-						if (response.ok && result.ok) {
-							// 5. УСПЕХ: Показываем ваше скрытое сообщение "Спасибо"
+						if (response.ok) {
 							const successDiv = form.querySelector('.success');
 							if (successDiv) {
 								successDiv.style.display = 'block';
-								// Скрыть сообщение через 5 секунд
-								setTimeout(() => { successDiv.style.display = 'none'; }, 5000);
+								setTimeout(() => successDiv.style.display = 'none', 5000);
 							}
-							// Очищаем форму
 							form.reset();
 						} else {
-							// 6. ОШИБКА: Сообщаем пользователю
-							alert(`Ошибка: ${result.error || 'Не удалось отправить заявку. Попробуйте позже.'}`);
+							const error = await response.json();
+							alert('Ошибка: ' + (error.error || 'Неизвестная ошибка'));
 						}
 					} catch (error) {
-						console.error('Ошибка при отправке:', error);
-						alert('Произошла сетевая ошибка. Проверьте соединение и попробуйте снова.');
+						console.error('Детали ошибки:', error);
+						alert('Ошибка: ' + error.message);
 					} finally {
-						// Возвращаем кнопку в исходное состояние
-						submitButton.textContent = originalButtonText;
+						submitButton.textContent = originalText;
 						submitButton.disabled = false;
 					}
 				});
