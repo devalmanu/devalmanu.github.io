@@ -584,16 +584,10 @@
 							<h2 class="formhead h2">Оставить заявку</h2>
 							<form class="callback anim-block" id="callback">
 								<div class="success"><span>Спасибо за заявку!</span></div>
-								<!-- hidden required feilds -->
-								<input type="hidden" name="project_name" value="DevManu">
-								<input type="hidden" name="admin_email" value="manuilova-1986@mail.ru">
-								<input type="hidden" name="form_subject" value="Form subject">
-								<!-- END hidden required feilds -->
-								<input type="hidden" name="Страница" value="">
 								<p>Заполните форму и мы перезвоним Вам в течение 20 минут</p>
 								<input type="text" name="name" placeholder="Ваше имя" autocomplete="on" required>
 								<input type="tel" name="phone" placeholder="Телефон" autocomplete="on" required>
-								<select name="Услуга">
+								<select name="sevices">
 									<option>Выберите услугу</option>
 									<option>Верстка сайта</option>
 									<option>Интерактивная верстка с анимациями</option>
@@ -605,7 +599,7 @@
 									<option>Сотрудничество</option>
 								</select>
 								<textarea name="message" placeholder="Сообщение"></textarea>
-								<button class="button">Отправить заявку</button>
+								<button class="button" type="submit">Отправить заявку</button>
 							</form>
 						</div>
 					</div>
