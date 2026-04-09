@@ -677,87 +677,69 @@
 	</div>
 	<div class="top"><i class="fa fa-angle-double-up" aria-hidden="true"></i>
 	</div>
-	
 	<script src="js/swiper-bundle.min.js">
 	</script>
 	<script src="js/scripts.min.js?v=2">
 	</script>
 	<script>
+		// Полностью изолируем обработчик формы от основного скрипта
 		(function () {
 			'use strict';
 
+			// Функция для проверки, не обработал ли уже событие основной скрипт
+			let formSubmitted = false;
+
 			function initFormHandler() {
 				const form = document.getElementById('callback');
-				const workerUrl = 'https://form-hundler.devalmanu.workers.dev';
+				if (!form) return;
 
-				if (!form) {
-					console.warn('Форма с id="callback" не найдена');
-					return;
-				}
+				// Перехватываем событие на самой ранней стадии
+				form.addEventListener('submit', function (event) {
+					if (formSubmitted) return;
+					formSubmitted = true;
 
-				form.addEventListener('submit', async function (event) {
 					event.preventDefault();
+					event.stopPropagation();
 
+					// Ваш код отправки...
+					const workerUrl = 'https://form-hundler.devalmanu.workers.dev';
 					const submitButton = form.querySelector('button[type="submit"]');
-					if (!submitButton) return;
 
-					const originalText = submitButton.textContent;
-					submitButton.textContent = 'Отправляем...';
-					submitButton.disabled = true;
+					if (submitButton) {
+						const originalText = submitButton.textContent;
+						submitButton.textContent = 'Отправляем...';
+						submitButton.disabled = true;
 
-					console.log('Отправка формы...');
-
-					try {
 						const formData = new FormData(form);
 
-						const response = await fetch(workerUrl, {
+						fetch(workerUrl, {
 							method: 'POST',
 							body: formData
-						});
-
-						console.log('Ответ получен, статус:', response.status);
-
-						if (response.ok) {
-							const result = await response.json();
-							console.log('Успех:', result);
-
-							const successDiv = form.querySelector('.success');
-							if (successDiv) {
-								successDiv.style.display = 'block';
-								setTimeout(() => {
-									successDiv.style.display = 'none';
-								}, 5000);
-							}
-							form.reset();
-						} else {
-							const error = await response.json();
-							console.error('Ошибка сервера:', error);
-							alert('Ошибка: ' + (error.error || 'Неизвестная ошибка'));
-						}
-					} catch (error) {
-						// Игнорируем ошибки от расширений
-						if (error.message && error.message.includes('message channel closed')) {
-							console.log('Расширение браузера помешало, но форма отправлена');
-							// Форма на самом деле отправилась успешно
-							const successDiv = form.querySelector('.success');
-							if (successDiv) {
-								successDiv.style.display = 'block';
-								setTimeout(() => {
-									successDiv.style.display = 'none';
-								}, 5000);
-							}
-							form.reset();
-						} else {
-							console.error('Сетевая ошибка:', error);
-							alert('Ошибка: ' + error.message);
-						}
-					} finally {
-						submitButton.textContent = originalText;
-						submitButton.disabled = false;
+						})
+							.then(response => response.json())
+							.then(result => {
+								const successDiv = form.querySelector('.success');
+								if (successDiv) {
+									successDiv.style.display = 'block';
+									setTimeout(() => successDiv.style.display = 'none', 5000);
+								}
+								form.reset();
+							})
+							.catch(error => {
+								console.error('Ошибка:', error);
+							})
+							.finally(() => {
+								submitButton.textContent = originalText;
+								submitButton.disabled = false;
+								setTimeout(() => { formSubmitted = false; }, 1000);
+							});
 					}
-				});
+
+					return false;
+				}, true); // true - перехватываем на фазе захвата (самый ранний этап)
 			}
 
+			// Ждем загрузки страницы
 			if (document.readyState === 'loading') {
 				document.addEventListener('DOMContentLoaded', initFormHandler);
 			} else {
