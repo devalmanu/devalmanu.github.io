@@ -573,7 +573,7 @@
 							<div class="callback-logo"><img src="img/logo/DevMANU-white.svg" alt="Разработка сайтов">
 							</div>
 							<h2 class="formhead h2">Оставить заявку</h2>
-							<form class="callback anim-block" id="callback">
+							<form class="callback anim-block" id="callback" onsubmit="sendForm(event); return false;">
 								<p>Заполните форму и мы перезвоним Вам в течение 20 минут</p>
 								<input type="text" name="name" placeholder="Ваше имя" autocomplete="on" required>
 								<input type="tel" name="phone" placeholder="Телефон" autocomplete="on" required>
@@ -682,71 +682,42 @@
 	<script src="js/scripts.min.js">
 	</script>
 	<script>
-		// Полностью изолируем обработчик формы от основного скрипта
-		(function () {
-			'use strict';
-
-			// Функция для проверки, не обработал ли уже событие основной скрипт
-			let formSubmitted = false;
-
-			function initFormHandler() {
-				const form = document.getElementById('callback');
-				if (!form) return;
-
-				// Перехватываем событие на самой ранней стадии
-				form.addEventListener('submit', function (event) {
-					if (formSubmitted) return;
-					formSubmitted = true;
-
-					event.preventDefault();
-					event.stopPropagation();
-
-					// Ваш код отправки...
-					const workerUrl = 'https://form-hundler.devalmanu.workers.dev';
-					const submitButton = form.querySelector('button[type="submit"]');
-
-					if (submitButton) {
-						const originalText = submitButton.textContent;
-						submitButton.textContent = 'Отправляем...';
-						submitButton.disabled = true;
-
-						const formData = new FormData(form);
-
-						fetch(workerUrl, {
-							method: 'POST',
-							body: formData
-						})
-							.then(response => response.json())
-							.then(result => {
-								const successDiv = form.querySelector('.success');
-								if (successDiv) {
-									successDiv.style.display = 'block';
-									setTimeout(() => successDiv.style.display = 'none', 5000);
-								}
-								form.reset();
-							})
-							.catch(error => {
-								console.error('Ошибка:', error);
-							})
-							.finally(() => {
-								submitButton.textContent = originalText;
-								submitButton.disabled = false;
-								setTimeout(() => { formSubmitted = false; }, 1000);
-							});
-					}
-
-					return false;
-				}, true); // true - перехватываем на фазе захвата (самый ранний этап)
-			}
-
-			// Ждем загрузки страницы
-			if (document.readyState === 'loading') {
-				document.addEventListener('DOMContentLoaded', initFormHandler);
-			} else {
-				initFormHandler();
-			}
-		})();
-	</script>
+function sendForm(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const button = form.querySelector('button[type="submit"]');
+    const originalText = button.textContent;
+    button.textContent = 'Отправляем...';
+    button.disabled = true;
+    
+    const formData = new FormData(form);
+    
+    fetch('https://form-hundler.devalmanu.workers.dev', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        const successDiv = form.querySelector('.success');
+        if (successDiv) {
+            successDiv.style.display = 'block';
+            setTimeout(() => successDiv.style.display = 'none', 5000);
+        }
+        form.reset();
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+        alert('Ошибка отправки');
+    })
+    .finally(() => {
+        button.textContent = originalText;
+        button.disabled = false;
+    });
+    
+    return false;
+}
+</script>
 
 </body>
 
