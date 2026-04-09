@@ -1231,7 +1231,6 @@ section {
 section.inverse {
   color: #ffffff;
   background-color: #2a303a;
-  background-image: url("../img/photos/about.jpg");
 }
 
 section.inverse.form-inverse {
