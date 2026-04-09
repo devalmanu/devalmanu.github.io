@@ -1728,14 +1728,15 @@ select::before {
 
 .success {
   display: none;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 10;
+  
+  color: #333333;
+  text-align: center;
+  padding: 10px 8px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  margin: 16px 0;
 }
 
 .success span {
@@ -1744,15 +1745,15 @@ select::before {
 
 @media (max-width: 767px) {
   .success span {
-    font-size: -webkit-calc(18px + 6.8 * ((100vw - 320px) / 1600));
-    font-size: calc(18px + 6.8 * ((100vw - 320px) / 1600));
+    font-size: -webkit-calc(16px + 6.5 * ((100vw - 320px) / 1600));
+    font-size: calc(16px + 6.5 * ((100vw - 320px) / 1600));
   }
 }
 
 @media (min-width: 767px) {
   .success span {
-    font-size: -webkit-calc(18px + 4 * ((100vw) / 1600));
-    font-size: calc(18px + 4 * ((100vw) / 1600));
+    font-size: -webkit-calc(16px + 4 * ((100vw) / 1600));
+    font-size: calc(16px + 4 * ((100vw) / 1600));
   }
 }
 
