@@ -713,14 +713,14 @@
 				try {
 					const formData = new FormData(form);
 
-					console.log('Отправка на:', workerUrl); // Проверка URL
+					// console.log('Отправка на:', workerUrl);
 
 					const response = await fetch(workerUrl, {
 						method: 'POST',
 						body: formData
 					});
 
-					console.log('Статус ответа:', response.status);
+					// console.log('Статус ответа:', response.status);
 
 					if (response.ok) {
 						const successDiv = form.querySelector('.success');

@@ -2248,7 +2248,6 @@ select::before {
   }
 }
 
-
 .burger {
   position: relative;
   width: 42px;
@@ -2346,7 +2345,7 @@ select::before {
 @media (max-width: 991.9px) {
   .burger {
     display: block;
-    z-index: 40;
+    z-index: 60;
   }
 }
 
