@@ -697,52 +697,6 @@
 	</div>
 	<div class="top"><i class="fa fa-angle-double-up" aria-hidden="true"></i>
 	</div>
-	<script>
-		const form = document.getElementById('callback');
-		const workerUrl = 'https://form-hundler.devalmanu.workers.dev';
-
-		if (form) {
-			form.addEventListener('submit', async function (event) {
-				event.preventDefault();
-
-				const submitButton = form.querySelector('button[type="submit"]');
-				const originalText = submitButton.textContent;
-				submitButton.textContent = 'Отправляем...';
-				submitButton.disabled = true;
-
-				try {
-					const formData = new FormData(form);
-
-					// console.log('Отправка на:', workerUrl);
-
-					const response = await fetch(workerUrl, {
-						method: 'POST',
-						body: formData
-					});
-
-					// console.log('Статус ответа:', response.status);
-
-					if (response.ok) {
-						const successDiv = form.querySelector('.success');
-						if (successDiv) {
-							successDiv.style.display = 'block';
-							setTimeout(() => successDiv.style.display = 'none', 5000);
-						}
-						form.reset();
-					} else {
-						const error = await response.json();
-						alert('Ошибка: ' + (error.error || 'Неизвестная ошибка'));
-					}
-				} catch (error) {
-					console.error('Детали ошибки:', error);
-					alert('Ошибка: ' + error.message);
-				} finally {
-					submitButton.textContent = originalText;
-					submitButton.disabled = false;
-				}
-			});
-		}
-	</script>
 	<script src="js/swiper-bundle.min.js">
 	</script>
 	<script src="js/scripts.min.js?v=2">
