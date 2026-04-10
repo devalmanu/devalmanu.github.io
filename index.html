@@ -682,31 +682,30 @@
 	<script src="js/scripts.min.js">
 	</script>
 	<script>
-// Простейший обработчик формы без изоляции
-document.getElementById('callback').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('button');
-    const original = btn.textContent;
-    btn.textContent = 'Отправка...';
-    btn.disabled = true;
-    
-    try {
-        const res = await fetch('https://form-hundler.devalmanu.workers.dev', {
-            method: 'POST',
-            body: new FormData(this)
-        });
-        if (res.ok) {
-            this.querySelector('.success').style.display = 'block';
-            this.reset();
-            setTimeout(() => this.querySelector('.success').style.display = 'none', 5000);
-        }
-    } catch(e) { console.log(e); }
-    finally {
-        btn.textContent = original;
-        btn.disabled = false;
-    }
-});
-</script>
+		document.getElementById('callback').addEventListener('submit', async function (e) {
+			e.preventDefault();
+			const btn = this.querySelector('button');
+			const original = btn.textContent;
+			btn.textContent = 'Отправка...';
+			btn.disabled = true;
+
+			try {
+				const res = await fetch('https://form-hundler.devalmanu.workers.dev', {
+					method: 'POST',
+					body: new FormData(this)
+				});
+				if (res.ok) {
+					this.querySelector('.success').style.display = 'block';
+					this.reset();
+					setTimeout(() => this.querySelector('.success').style.display = 'none', 5000);
+				}
+			} catch (e) { console.log(e); }
+			finally {
+				btn.textContent = original;
+				btn.disabled = false;
+			}
+		});
+	</script>
 </body>
 
 </html>
