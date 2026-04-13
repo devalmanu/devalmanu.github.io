@@ -5,7 +5,7 @@
    background-size: cover;
    position: relative;
    min-height: 850px;
-   background: url("/img/@2x/bg-main-image@2x.jpg") no-repeat center / cover;
+   background: url("../img/@2x/bg-main-image@2x.jpg") no-repeat center / cover;
 
    @include breakpoint(tablet) {
       padding: 160px 0 130px;
