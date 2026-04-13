@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
    const navItems = nav.querySelectorAll('a');
    const body = document.body;
    const header = document.querySelector('.header');
-   const inputs = document.querySelectorAll('input');
    const headerHeight = header.offsetHeight;
    const btnsPopup = document.querySelectorAll('.btn-popup');
    const modalOverlay = document.querySelector('.modal-overlay');
@@ -19,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       burger.classList.toggle('burger--active');
       nav.classList.toggle('nav--visible');
    });
-   
+
    // click item menu -> no-scroll + close menu
    navItems.forEach(el => {
       el.addEventListener('click', () => {
@@ -45,9 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
          let href = this.getAttribute('href').substring(1);
          const scrollTarget = document.getElementById(href);
-         const topOffsetHeader = document.querySelector('.header').offsetHeight;
          const elementPosition = scrollTarget.getBoundingClientRect().top;
-         const offsetPosition = elementPosition - topOffsetHeader;
+         const offsetPosition = elementPosition - headerHeight;
 
          window.scrollBy({
             top: offsetPosition,
@@ -73,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
    });
 
    modalOverlay.addEventListener('click', (e) => {
-
       if (e.target == modalOverlay) {
          modalOverlay.classList.remove('modal-overlay--visible');
          modalsWindows.forEach((el) => {
@@ -101,24 +98,14 @@ document.addEventListener('DOMContentLoaded', () => {
          new Choices(select, {
             searchEnabled: false,
             shouldSort: false,
+            silent: true,
          });
          let ariaLabel = select.getAttribute('aria-label');
          select.closest('.choices').setAttribute('aria-label', ariaLabel);
       });
-
    };
 
    defaultSelect();
-
-   if (inputs) {
-      inputs.forEach(input => {
-         input.addEventListener('input', (e) => {
-            if (input.value !== '') {
-               input.classList.add('filled');
-            }
-         });
-      })
-   }
 
    const range = document.querySelector('.range-input');
    if (range) {
@@ -135,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
    const costForm = document.querySelector('.form-сost-calculation');
    if (costForm) {
-      let btnCostForm = costForm.querySelector('.btn-submit');
       const validationCost = new JustValidate('.form-сost-calculation', {
          validateBeforeSubmitting: true,
          testingMode: true,
@@ -193,26 +179,24 @@ document.addEventListener('DOMContentLoaded', () => {
                errorMessage: 'Поле обязательно для заполнения',
             },
          ])
-         
+
          .onSuccess((event) => {
-            console.log('Проверка проходит и форма отправлена', event);
             openPopup('popup-success')
             let formData = new FormData(event.target);
-            console.log(...formData);
-            let xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-               if (xhr.readyState === 4) {
-                  if (xhr.status === 200) {
-                     console.log('Отправлено');
-                     // если проверка прошла показать popup
-                     openPopup('popup-success')
-                  } else {
-                     openPopup('popup-success-error')
-                  }
-               }
-            }
-            xhr.open('POST', costForm.action, true);
-            xhr.send(formData);
+            // console.log(...formData);
+            // let xhr = new XMLHttpRequest();
+            // xhr.onreadystatechange = function () {
+            //    if (xhr.readyState === 4) {
+            //       if (xhr.status === 200) {
+            //          console.log('Отправлено');
+            //          openPopup('popup-success')
+            //       } else {
+            //          openPopup('popup-success-error')
+            //       }
+            //    }
+            // }
+            // xhr.open('POST', costForm.action, true);
+            // xhr.send(formData);
             event.target.reset();
          });
    }
