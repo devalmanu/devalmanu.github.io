@@ -10,6 +10,7 @@
       column-gap: 78px;
       row-gap: 20px;
       flex-wrap: wrap;
+      padding-right: 3px;
       @include breakpoint(desktop) {
          justify-content: center;
          column-gap: 40px;
@@ -50,12 +51,16 @@
          }
       }
    }
-
+&__payment {
+   column-gap: 40px;
+}
+&__nav {
+   column-gap: 47px;
+}
    &__payment,
    &__nav {
       align-items: center;
       justify-content: center;
-      column-gap: 40px;
       @include breakpoint(desktop) {
          column-gap: 20px;
       }

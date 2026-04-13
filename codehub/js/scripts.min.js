@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
    const header = document.querySelector('.header');
    const inputs = document.querySelectorAll('input');
    const headerHeight = header.offsetHeight;
-
    const btnsPopup = document.querySelectorAll('.btn-popup');
    const modalOverlay = document.querySelector('.modal-overlay');
    const modalCloseAll = document.querySelectorAll('.modal-close');
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       burger.classList.toggle('burger--active');
       nav.classList.toggle('nav--visible');
    });
-
+   
    // click item menu -> no-scroll + close menu
    navItems.forEach(el => {
       el.addEventListener('click', () => {
@@ -45,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
          e.preventDefault();
 
          let href = this.getAttribute('href').substring(1);
-
          const scrollTarget = document.getElementById(href);
          const topOffsetHeader = document.querySelector('.header').offsetHeight;
          const elementPosition = scrollTarget.getBoundingClientRect().top;
@@ -70,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
    btnsPopup.forEach((el) => {
       el.addEventListener('click', (e) => {
          let path = e.currentTarget.getAttribute('data-path');
-
          openPopup(path)
       });
    });
@@ -88,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
    modalCloseAll.forEach((modalClose) => {
       modalClose.addEventListener('click', (e) => {
-
          if (e.target == modalClose) {
             modalOverlay.classList.remove('modal-overlay--visible');
             modalsWindows.forEach((el) => {
@@ -106,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
             searchEnabled: false,
             shouldSort: false,
          });
-
          let ariaLabel = select.getAttribute('aria-label');
          select.closest('.choices').setAttribute('aria-label', ariaLabel);
       });
@@ -114,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
    };
 
    defaultSelect();
-   // animate input
+
    if (inputs) {
       inputs.forEach(input => {
          input.addEventListener('input', (e) => {
@@ -128,8 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
    const range = document.querySelector('.range-input');
    if (range) {
       range.addEventListener('input', handleInputRange)
-
-      function handleInputRange() {
+      function handleInputRange(event) {
          event.target.parentNode.style.setProperty(
             '--value',
             event.target.value
@@ -140,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
    const costForm = document.querySelector('.form-сost-calculation');
-
    if (costForm) {
       let btnCostForm = costForm.querySelector('.btn-submit');
       const validationCost = new JustValidate('.form-сost-calculation', {
@@ -202,33 +195,24 @@ document.addEventListener('DOMContentLoaded', () => {
          ])
          
          .onSuccess((event) => {
-
             console.log('Проверка проходит и форма отправлена', event);
-            // если проверка прошла показать popup
             openPopup('popup-success')
-
             let formData = new FormData(event.target);
             console.log(...formData);
-
             let xhr = new XMLHttpRequest();
-
             xhr.onreadystatechange = function () {
                if (xhr.readyState === 4) {
-                  // let response = JSON.parse(xhr.responseText);
                   if (xhr.status === 200) {
                      console.log('Отправлено');
                      // если проверка прошла показать popup
                      openPopup('popup-success')
                   } else {
-                     // openPopup('popup-success-error')
-                     openPopup('popup-success')
+                     openPopup('popup-success-error')
                   }
                }
             }
-
             xhr.open('POST', costForm.action, true);
             xhr.send(formData);
-
             event.target.reset();
          });
    }
